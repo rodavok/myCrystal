@@ -4637,7 +4637,7 @@ CheckDanger:
 
 .no_danger
 	ld hl, wLowHealthAlarm
-	ld [h1], 0
+	ld [hl], 0
 	jr .done
 
 .danger
