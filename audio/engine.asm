@@ -578,7 +578,7 @@ PlayDanger:
 	add e
 	jr nz, .load
 	dec a
-+.load
+.load
 	ld [wLowHealthAlarm], a
 
 	; Enable channel 1 if it's off
