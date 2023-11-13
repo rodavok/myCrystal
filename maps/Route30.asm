@@ -85,7 +85,6 @@ TrainerYoungsterJoey:
 	loadtrainer YOUNGSTER, JOEY2
 	startbattle
 	reloadmapafterbattle
-	loadmem wJoeyFightCount, 2
 	clearflag ENGINE_JOEY_READY_FOR_REMATCH
 	end
 
@@ -93,7 +92,6 @@ TrainerYoungsterJoey:
 	loadtrainer YOUNGSTER, JOEY3
 	startbattle
 	reloadmapafterbattle
-	loadmem wJoeyFightCount, 3
 	clearflag ENGINE_JOEY_READY_FOR_REMATCH
 	end
 
@@ -101,7 +99,6 @@ TrainerYoungsterJoey:
 	loadtrainer YOUNGSTER, JOEY4
 	startbattle
 	reloadmapafterbattle
-	loadmem wJoeyFightCount, 4
 	clearflag ENGINE_JOEY_READY_FOR_REMATCH
 	end
 
