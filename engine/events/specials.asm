@@ -285,24 +285,34 @@ UnusedCheckUnusedTwoDayTimer:
 ActivateFishingSwarm:
 	ld a, [wScriptVar]
 	ld [wFishingSwarmFlag], a
-	ret
+	jr SetSwarmFlag
 
 StoreSwarmMapIndices::
-	ld a, c
-	and a
-	jr nz, .yanma
-; swarm dark cave violet entrance
 	ld a, d
-	ld [wDunsparceMapGroup], a
+	ld [wSwarmMapGroup], a
 	ld a, e
-	ld [wDunsparceMapNumber], a
+	ld [wSwarmMapGroup], a
+
+SetSwarmFlag:
+	ld hl, wDailyFlags1
+	set DAILYFLAGS1_SWARM_F, [hl]
 	ret
 
-.yanma
-	ld a, d
-	ld [wYanmaMapGroup], a
-	ld a, e
-	ld [wYanmaMapNumber], a
+CheckSwarmFlag::
+	ld hl, wDailyFlags1
+	bit DAILYFLAGS1_SWARM_F, [hl]
+	jr z, .clear_swarm
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.clear_swarm
+	ld a, 1
+	ld [wScriptVar], a
+	xor a
+	ld [wFishingSwarmFlag], a
+	ld [wSwarmMapGroup], a
+	ld [wSwarmMapNumber], a
 	ret
 
 CheckPokerus:
@@ -398,7 +408,7 @@ FadeOutMusic:
 	ld a, LOW(MUSIC_NONE)
 	ld [wMusicFadeID], a
 	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
+	ld [wMusicFadeID], a
 	ld a, $2
 	ld [wMusicFade], a
 	ret
