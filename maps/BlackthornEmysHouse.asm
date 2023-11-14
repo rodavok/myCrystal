@@ -1,5 +1,6 @@
 	object_const_def
 	const BLACKTHORNEMYSHOUSE_EMY
+	const BLACKTHORNEMYSHOUSE_TRADEBACKNPC
 
 BlackthornEmysHouse_MapScripts:
 	def_scene_scripts
@@ -10,6 +11,14 @@ Emy:
 	faceplayer
 	opentext
 	trade NPC_TRADE_EMY
+	waitbutton
+	closetext
+	end
+
+TradebackNPCScript:
+	faceplayer
+	opentext
+	special TradebackNPC
 	waitbutton
 	closetext
 	end
@@ -32,3 +41,4 @@ BlackthornEmysHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Emy, -1
+	object_event  5,  3, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TradebackNPCScript, -1
