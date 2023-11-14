@@ -279,84 +279,6 @@ NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-SwarmGrampsScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_SWARM
-	iftrue .skiprandomswarm
-	random 3
-	ifequal 0, .dunsparce
-	ifequal 1, .yanma
-    ifequal 2, .qwilfish
-
-.dunsparce
-	setflag ENGINE_SWARM
-	swarm DARK_CAVE_VIOLET_ENTRANCE
-	writetext SwarmDunsparceText
-	waitbutton
-	closetext
-	end
-
-.yanma
-	setflag ENGINE_SWARM
-	swarm ROUTE_35
-	writetext SwarmYanmaText
-	waitbutton
-	closetext
-	end
-
-.qwilfish
-	setflag ENGINE_SWARM
-	swarm ROUTE_32
-	writetext SwarmQwilfishText
-	waitbutton
-	closetext
-	end
-
-.skiprandomswarm
-	writetext SkipSwarmText
-	waitbutton
-	closetext
-	end
-
-SwarmDunsparceText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of DUNSPARCE"
-	cont "at DARK CAVE."
-	done
-	
-SwarmYanmaText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of YANMA"
-	cont "on ROUTE 35."
-	done
-	
-SwarmQwilfishText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of QWILFISH"
-	cont "on ROUTE 32."
-	done
-
-SkipSwarmText:
-	text "Finding rare"
-	line "#MON is so"
-
-	para "Exciting! Don't"
-	line "you think?"
-	done
-
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -377,8 +299,6 @@ NewBarkTown_MapEvents:
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
 
 	def_object_events
-	;Gramps should be moved somewhere else, probably a house in violet
-	object_event  2,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SwarmGrampsScript, -1
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
