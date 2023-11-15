@@ -2597,9 +2597,11 @@ SunfloraEvosAttacks:
 	db 1, POUND
 	db 4, GROWTH
 	db 10, RAZOR_LEAF
+	db 16, EMBER
 	db 19, SUNNY_DAY
 	db 31, PETAL_DANCE
 	db 46, SOLARBEAM
+	db 50, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
@@ -2673,9 +2675,12 @@ MurkrowEvosAttacks:
 	db 1, PECK
 	db 11, PURSUIT
 	db 16, HAZE
+	db 20, WING_ATTACK
 	db 26, NIGHT_SHADE
 	db 31, FAINT_ATTACK
+	db 35, DRILL_PECK
 	db 41, MEAN_LOOK
+	db 50, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
