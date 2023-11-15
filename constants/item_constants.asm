@@ -269,6 +269,7 @@ DEF TM01 EQU const_value
 	add_tm FIRE_PUNCH   ; f0
 	add_tm FURY_CUTTER  ; f1
 	add_tm NIGHTMARE    ; f2
+	add_tm AEROBLAST
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
@@ -290,6 +291,7 @@ DEF HM01 EQU const_value
 	add_hm FLASH        ; f7
 	add_hm WHIRLPOOL    ; f8
 	add_hm WATERFALL    ; f9
+	add_hm SOFTBOILED
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
 MACRO add_mt
