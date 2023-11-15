@@ -123,7 +123,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons OLIVINE_PORT
 	db 2 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, CHINCHOU
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 	end_water_wildmons
@@ -159,7 +159,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_35
 	db 4 percent ; encounter rate
 	db 20, PSYDUCK
-	db 15, PSYDUCK
+	db 15, MARILL
 	db 20, GOLDUCK
 	end_water_wildmons
 
@@ -172,8 +172,8 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_41
 	db 6 percent ; encounter rate
+	db 20, REMORAID
 	db 20, TENTACOOL
-	db 20, TENTACRUEL
 	db 20, MANTINE
 	end_water_wildmons
 
@@ -229,7 +229,7 @@ JohtoWaterWildMons:
 	def_water_wildmons CIANWOOD_CITY
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 15, TENTACOOL
+	db 20, MANTINE
 	db 20, TENTACRUEL
 	end_water_wildmons
 
@@ -263,9 +263,9 @@ JohtoWaterWildMons:
 
 	def_water_wildmons SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
-	db 35, POLIWHIRL
-	db 40, POLIWHIRL
-	db 35, POLIWAG
+	db 42, GOLDUCK
+	db 44, LAPRAS
+	db 44, QUAGSIRE
 	end_water_wildmons
 
 	db -1 ; end

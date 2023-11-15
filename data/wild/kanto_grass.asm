@@ -61,57 +61,57 @@ KantoGrassWildMons:
 	def_grass_wildmons ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, CUBONE
-	db 11, GEODUDE
-	db 12, MACHOP
-	db 12, ZUBAT
-	db 15, MACHOKE
-	db 12, MAROWAK
-	db 12, MAROWAK
+	db 26, CUBONE
+	db 26, GEODUDE
+	db 24, MACHOP
+	db 22, ZUBAT
+	db 25, MACHOKE
+	db 28, MAROWAK
+	db 26, MAROWAK
 	; day
-	db 10, CUBONE
-	db 11, GEODUDE
-	db 12, MACHOP
-	db 12, ZUBAT
-	db 15, MACHOKE
-	db 12, MAROWAK
-	db 12, MAROWAK
+	db 26, CUBONE
+	db 26, GEODUDE
+	db 24, MACHOP
+	db 22, ZUBAT
+	db 25, MACHOKE
+	db 28, MAROWAK
+	db 26, MAROWAK
 	; nite
-	db 12, ZUBAT
-	db 11, GEODUDE
-	db 12, GEODUDE
-	db 17, HAUNTER
-	db 15, ZUBAT
-	db 15, ZUBAT
-	db 15, ZUBAT
+	db 22, ZUBAT
+	db 26, GEODUDE
+	db 26, GEODUDE
+	db 25, HAUNTER
+	db 25, ZUBAT
+	db 25, ZUBAT
+	db 22, ZUBAT
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, CUBONE
-	db 14, GEODUDE
-	db 16, ONIX
-	db 12, ZUBAT
-	db 15, MAROWAK
-	db 15, KANGASKHAN
-	db 15, KANGASKHAN
+	db 22, CUBONE
+	db 24, GEODUDE
+	db 26, ONIX
+	db 22, ZUBAT
+	db 25, MAROWAK
+	db 28, KANGASKHAN
+	db 25, KANGASKHAN
 	; day
-	db 12, CUBONE
-	db 14, GEODUDE
-	db 16, ONIX
-	db 12, ZUBAT
-	db 15, MAROWAK
-	db 15, KANGASKHAN
-	db 15, KANGASKHAN
+	db 22, CUBONE
+	db 24, GEODUDE
+	db 26, ONIX
+	db 22, ZUBAT
+	db 25, MAROWAK
+	db 28, KANGASKHAN
+	db 25, KANGASKHAN
 	; nite
-	db 12, ZUBAT
-	db 14, GEODUDE
-	db 16, ONIX
-	db 15, ZUBAT
-	db 15, HAUNTER
-	db 15, GOLBAT
-	db 15, GOLBAT
+	db 22, ZUBAT
+	db 24, GEODUDE
+	db 26, ONIX
+	db 25, ZUBAT
+	db 25, HAUNTER
+	db 28, GOLBAT
+	db 25, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD
@@ -122,7 +122,7 @@ KantoGrassWildMons:
 	db 33, ONIX
 	db 34, GOLBAT
 	db 35, SANDSLASH
-	db 35, RHYDON
+	db 35, DONPHAN
 	db 35, RHYDON
 	; day
 	db 34, GRAVELER
@@ -130,7 +130,7 @@ KantoGrassWildMons:
 	db 33, ONIX
 	db 34, GOLBAT
 	db 35, SANDSLASH
-	db 35, RHYDON
+	db 35, DONPHAN
 	db 35, RHYDON
 	; nite
 	db 34, GOLBAT
@@ -138,8 +138,8 @@ KantoGrassWildMons:
 	db 32, ONIX
 	db 36, GRAVELER
 	db 38, GRAVELER
-	db 40, GRAVELER
-	db 40, GRAVELER
+	db 40, RHYDON
+	db 40, RHYDON
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS
@@ -839,7 +839,7 @@ KantoGrassWildMons:
 	db 40, POLIWHIRL
 	db 42, GOLBAT
 	db 42, GOLBAT
-	db 42, GOLBAT
+	db 42, SNEASEL
 	end_grass_wildmons
 
 	db -1 ; end

@@ -9,7 +9,7 @@ SwarmGrassWildMons:
 	db 3, GEODUDE
 	db 3, DUNSPARCE
 	db 2, ZUBAT
-	db 2, GEODUDE
+	db 4, TEDDIURSA
 	db 2, DUNSPARCE
 	db 4, DUNSPARCE
 	db 4, DUNSPARCE
@@ -17,7 +17,7 @@ SwarmGrassWildMons:
 	db 3, GEODUDE
 	db 3, DUNSPARCE
 	db 2, ZUBAT
-	db 2, GEODUDE
+	db 4, LARVITAR
 	db 2, DUNSPARCE
 	db 4, DUNSPARCE
 	db 4, DUNSPARCE
@@ -25,7 +25,7 @@ SwarmGrassWildMons:
 	db 3, GEODUDE
 	db 3, DUNSPARCE
 	db 2, ZUBAT
-	db 2, GEODUDE
+	db 4, LARVITAR
 	db 2, DUNSPARCE
 	db 4, DUNSPARCE
 	db 4, DUNSPARCE
