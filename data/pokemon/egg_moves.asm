@@ -10,6 +10,8 @@ SECTION "Egg Moves", ROMX
 
 INCLUDE "data/pokemon/egg_move_pointers.asm"
 
+EggMoves::
+
 BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
