@@ -176,6 +176,27 @@ Mom_GetScriptPointer:
 	writetext MomItsInYourRoomText
 	end
 
+.BedScript:
+	writetext MomHiHowAreYouText
+	writetext MomFoundADollText
+	writetext MomBoughtWithYourMoneyText
+	writetext MomItsInYourRoomText
+	end
+
+.PosterScript:
+	writetext MomHiHowAreYouText
+	writetext MomFoundADollText
+	writetext MomBoughtWithYourMoneyText
+	writetext MomItsInYourRoomText
+	end
+
+.PlantScript:
+	writetext MomHiHowAreYouText
+	writetext MomFoundADollText
+	writetext MomBoughtWithYourMoneyText
+	writetext MomItsInYourRoomText
+	end
+
 GetItemFromMom:
 	ld a, [wWhichMomItemSet]
 	and a

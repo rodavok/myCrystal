@@ -67,7 +67,7 @@ DEF NUM_DECO_ACTIONS EQU const_value - 1
 
 ; DecorationIDs indexes (see data/decorations/decorations.asm)
 	const_def
-	const FLAG_FEATHERY_BED
+	const DECOFLAG_FEATHERY_BED
 	const DECOFLAG_PINK_BED
 	const DECOFLAG_POLKADOT_BED
 	const DECOFLAG_PIKACHU_BED

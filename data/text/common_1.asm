@@ -375,6 +375,36 @@ _MomFoundADollText::
 	cont "adorable doll, so"
 	prompt
 
+_MomFoundAPlantText::
+	text "While shopping"
+	line "today, I saw this"
+	cont "gorgeous plant, so"
+	prompt
+
+_MomFoundABedText::
+	text "While shopping"
+	line "today, I saw this"
+	cont "comfy bed, so"
+	prompt
+
+_MomFoundAPosterText::
+	text "While shopping"
+	line "today, I saw this"
+	cont "cool poster, so"
+	prompt
+_MomFoundACarpetText::
+	text "While shopping"
+	line "today, I saw this"
+	cont "nice carpet, so"
+	prompt
+
+_MomFoundAConsoleText::
+	text "While shopping"
+	line "today, I saw the"
+	cont "latest console, so"
+	prompt
+	
+
 _MomItsInYourRoomText::
 	text "It's in your room."
 	line "You'll love it!"

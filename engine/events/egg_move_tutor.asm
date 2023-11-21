@@ -172,7 +172,6 @@ GetEggMoves:
 	ret
 
 
-
 CheckAlreadyInListEgg:
 	push hl
 	ld hl, wd002 + 1
