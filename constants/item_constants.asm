@@ -291,7 +291,6 @@ DEF HM01 EQU const_value
 	add_hm FLASH        ; f7
 	add_hm WHIRLPOOL    ; f8
 	add_hm WATERFALL    ; f9
-	add_hm SOFTBOILED
 DEF NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
 MACRO add_mt
@@ -304,14 +303,33 @@ MACRO add_mt
 ENDM
 
 DEF MT01 EQU const_value
-	add_mt FLAMETHROWER
-	add_mt THUNDERBOLT
-	add_mt ICE_BEAM
-	add_mt SOFTBOILED
+	add_mt FLAMETHROWER ; fa
+	add_mt THUNDERBOLT  ; fb
+	add_mt ICE_BEAM	    ; fc
+	add_mt SOFTBOILED	; fd
+	add_mt WATER_GUN    ; fe
+	add_mt FLAIL	    ; ff
+	add_mt METRONOME
 	add_mt MEGA_DRAIN
-	add_mt FIRE_SPIN
+	add_mt TAKE_DOWN
+	add_mt EGG_BOMB
+	add_mt PSYWAVE
 	add_mt BUBBLEBEAM
-	add_mt ABSORB
+	add_mt DRAGON_RAGE
+	add_mt RAZOR_WIND
+	; add_mt SUBMISSION
+	; add_mt SKY_ATTACK
+	; add_mt SKULL_BASH
+	; add_mt TRI_ATTACK
+	; add_mt HORN_DRILL
+	; add_mt FISSURE
+	; add_mt SELFDESTRUCT
+	; add_mt SWORDS_DANCE
+	; add_mt ROCK_SLIDE
+	; add_mt BODY_SLAM
+	; add_mt DOUBLE_EDGE
+	; add_mt EXPLOSION
+
 DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 DEF NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS

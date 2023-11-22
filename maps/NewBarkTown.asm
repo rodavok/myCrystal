@@ -22,83 +22,7 @@ NewBarkTownFlypointCallback:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
 
-StarterTutorScript:
-	faceplayer
-	opentext
-	writetext AskTeachAMoveText
-	yesorno
-	iffalse .Refused
-	writetext NewBarkTownStarterTutorWhichMoveShouldITeachText
-	loadmenu .MoveMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .MegaDrain
-	ifequal 2, .FireSpin
-	ifequal 3, .Bubble
-	ifequal 4, .Absorb
-	sjump .Incompatible
 
-.MegaDrain:
-	setval MEGA_DRAIN
-	writetext NewBarkTownStarterTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.FireSpin:
-	setval FIRE_SPIN
-	writetext NewBarkTownStarterTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.Bubblebeam:
-	setval BUBBLEBEAM
-	writetext NewBarkTownStarterTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.Absorb:
-	setval ABSORB
-	writetext NewBarkTownStarterTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-	
-.Refused:
-	writetext NewBarkTownStarterTutorAwwButTheyreAmazingText
-	waitbutton
-	closetext
-	end
-	
-.Incompatible:
-	writetext NewBarkTownStarterTutorBButText
-	waitbutton
-	closetext
-	end
-
-.TeachMove:
-	writetext NewBarkTownStarterTutorIfYouUnderstandYouveMadeItText
-	promptbutton
-	writetext NewBarkTownStarterTutorFarewellKidText
-	waitbutton
-	closetext
-
-.MoveMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "MEGA DRAIN@"
-	db "FIRE SPIN@"
-	db "BUBBLEBEAM@"
-	db "ABSORB@"
-	db "CANCEL@"
 NewBarkTown_TeacherStopsYouScene1:
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
@@ -356,61 +280,6 @@ NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-AskTeachAMoveText:
-	text "I can teach your"
-	line "starter amazing"
-
-	para "moves if you'd"
-	line "like."
-
-	para "Should I teach a"
-	line "new move?"
-	done
-
-
-NewBarkTownStarterTutorAwwButTheyreAmazingText:
-	text "Come back here"
-	line "if you want to"
-	
-	para "teach your"
-	line "starter a new"
-	cont "move!"
-	done
-
-NewBarkTownStarterTutorWhichMoveShouldITeachText:
-	text "Great! You won't"
-	line "regret it!"
-
-	para "Which move should"
-	line "I teach?"
-	done
-
-
-NewBarkTownStarterTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
-	done
-
-NewBarkTownStarterTutorFarewellKidText:
-	text "Farewell and"
-	line "good luck on"
-	cont "your journey!"
-	done
-
-NewBarkTownStarterTutorBButText:
-	text "Your starter"
-	line "can't learn this"
-	cont "move…"
-	done
-
-NewBarkTownStarterTutorMoveText:
-	text_start
-	done
-
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -434,4 +303,3 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event 14, 14, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StarterTutorScript, -1
