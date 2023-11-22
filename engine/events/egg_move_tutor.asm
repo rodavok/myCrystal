@@ -14,7 +14,7 @@ EggMoveTutor:
 	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld hl, .cost_to_learn
+	ld hl, .cost_to_relearn
 	ld de, hMoneyTemp
 	ld bc, 3
 	call CopyBytes
@@ -37,14 +37,14 @@ EggMoveTutor:
 	call IsAPokemon
 	jr c, .no_mon
 
-	call GetEggMoves
+	call GetRelearnableMoves
 	jr z, .no_moves
 
 	ld a, EGGMOVETUTORTEXT_WHICHMOVE
 	call PrintEggMoveTutorText
 	call JoyWaitAorB
 
-	call ChooseMoveToLearnEgg
+	call ChooseMoveToLearn
 	jr c, .skip_learn
 	ld a, [wMenuSelection]
 	ld [wTempSpecies], a
@@ -58,7 +58,7 @@ EggMoveTutor:
 	ld a, b
 	and a
 	jr z, .skip_learn
-	ld hl, .cost_to_learn
+	ld hl, .cost_to_relearn
 	ld de, hMoneyTemp
 	ld bc, 3
 	call CopyBytes
@@ -92,12 +92,12 @@ EggMoveTutor:
 	call PrintEggMoveTutorText
 	ret
 
-.cost_to_learn
+.cost_to_relearn
 	dt 1000
 
 GetEggMoves:
-	; Adapted from: Get moves relearnable by CurPartyMon
-	; Returns z if there are no egg moves.
+	; Get moves relearnable by CurPartyMon
+	; Returns z if no moves can be relearned.
 	ld hl, wd002
 	xor a
 	ld [hli], a
@@ -107,12 +107,6 @@ GetEggMoves:
 	call GetPartyParamLocation
 	ld a, [hl]
 	ld [wCurPartySpecies], a
-
-	push af
-	ld a, MON_LEVEL
-	call GetPartyParamLocation
-	ld a, [hl]
-	ld [wCurPartyLevel], a
 
 	ld b, 0
 	ld de, wd002 + 1
@@ -131,36 +125,25 @@ GetEggMoves:
 	ld a, BANK(EggMoves)
 	call GetFarByte
 	inc hl
-	and a
-	jr nz, .skip_evos
+	cp -1
+	jr z, .done
 
 .loop_moves
 	ld a, BANK(EggMoves)
 	call GetFarByte
 	inc hl
-	and a
+	cp -1
 	jr z, .done
-	ld c, a
-	ld a, [wCurPartyLevel]
-	cp c
-	ld a, BANK(EggMoves)
-	call GetFarByte
-	inc hl
-	jr c, .loop_moves
 
 	ld c, a
 	call CheckAlreadyInListEgg
 	jr c, .loop_moves
-	call CheckPokemonAlreadyKnowsMoveEgg
-	jr c, .loop_moves
+
 	ld a, c
 	ld [de], a
 	inc de
-	ld a, $ff
-	ld [de], a
-	pop bc
+
 	inc b
-	push bc
 	jr .loop_moves
 .done
 	pop bc
@@ -170,7 +153,6 @@ GetEggMoves:
 	ld [wd002], a
 	and a
 	ret
-
 
 CheckAlreadyInListEgg:
 	push hl
