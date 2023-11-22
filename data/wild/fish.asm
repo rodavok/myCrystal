@@ -25,9 +25,10 @@ FishGroups:
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
-	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     KRABBY,     10
+	db  35 percent,     MAGIKARP,   10
+	db  70 percent,     MAGIKARP,   10
+	db  90 percent + 1, KRABBY,     10
+	db 100 percent,     time_group 22
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     KRABBY,     20
@@ -231,3 +232,4 @@ TimeFishGroups:
 	db HORSEA,     40,  HORSEA,     40 ; 19
 	db TENTACOOL,  20,  TENTACOOL,  20 ; 20
 	db TENTACOOL,  40,  TENTACOOL,  40 ; 21
+	db CORSOLA,    15,  STARYU,     15 ; 22
