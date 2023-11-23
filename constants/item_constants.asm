@@ -307,12 +307,12 @@ DEF MT01 EQU const_value
 	add_mt THUNDERBOLT  ; fb
 	add_mt ICE_BEAM	    ; fc
 	add_mt SOFTBOILED	; fd
-	add_mt WATER_GUN    ; fe
-	add_mt FLAIL	    ; ff
+	;add_mt WATER_GUN    ; fe
+	;add_mt FLAIL	    ; ff
 	add_mt METRONOME
 	add_mt MEGA_DRAIN
 	add_mt TAKE_DOWN
-	add_mt EGG_BOMB
+	;add_mt EGG_BOMB
 	add_mt PSYWAVE
 	add_mt BUBBLEBEAM
 	add_mt DRAGON_RAGE
@@ -329,6 +329,9 @@ DEF MT01 EQU const_value
 	; add_mt BODY_SLAM
 	; add_mt DOUBLE_EDGE
 	; add_mt EXPLOSION
+	add_mt LOVELY_KISS
+	add_mt ANCIENTPOWER
+	add_mt FAINT_ATTACK
 
 DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 

@@ -31,6 +31,119 @@ EcruteakItemfinderGuy:
 	closetext
 	end
 
+EcruteakCityTutorScript:
+	faceplayer
+	opentext
+	writetext AskTeachAMoveText
+	yesorno
+	iffalse .Refused
+	writetext EcruteakCityTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .MegaDrain
+	ifequal 2, .Bubblebeam
+	ifequal 3, .AncientPower
+	ifequal 4, .LovelyKiss
+	ifequal 5, .DragonRage
+	ifequal 6, .TakeDown
+	ifequal 7, .Metronome
+	ifequal 8, .FaintAttack
+	sjump .Incompatible
+
+.MegaDrain:
+	setval MEGA_DRAIN
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Bubblebeam:
+	setval BUBBLEBEAM
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.AncientPower:
+	setval ANCIENTPOWER
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.LovelyKiss:
+	setval LOVELY_KISS
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.DragonRage:
+	setval DRAGON_RAGE
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.TakeDown:
+	setval TAKE_DOWN
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Metronome:
+	setval METRONOME
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.FaintAttack:
+	setval FAINT_ATTACK
+	writetext EcruteakCityTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext EcruteakCityTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext EcruteakCityTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext EcruteakCityTutorIfYouUnderstandYouveMadeItText
+	promptbutton
+	writetext EcruteakCityTutorFarewellKidText
+	waitbutton
+	closetext
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "MEGA DRAIN@"
+	db "BUBBLEBEAM@"
+	db "ANCIENTPOWER@"
+	db "LOVELY KISS@"
+	db "DRAGON RAGE@"
+	db "TAKE DOWN@"
+	db "METRONOME@"
+	db "FAINT ATTACK@"
+	db "CANCEL@"
 EcruteakHistoryBook:
 	opentext
 	writetext EcruteakHistoryBookText
@@ -160,6 +273,62 @@ EcruteakThreeMonText:
 	line "grassland."
 	done
 
+
+AskTeachAMoveText:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+EcruteakCityTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+EcruteakCityTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+EcruteakCityTutorIfYouUnderstandYouveMadeItText:
+	text "Great choice!"
+	line "You're on your"
+
+	para "way to becoming"
+	line "an even better"
+	cont "trainer."
+	done
+
+EcruteakCityTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+EcruteakCityTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+EcruteakCityTutorMoveText:
+	text_start
+	done
+
 EcruteakItemfinderHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -175,3 +344,4 @@ EcruteakItemfinderHouse_MapEvents:
 	def_object_events
 	object_event  2,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakItemfinderGuy, -1
 	object_event  3,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakHistoryBook, -1
+	object_event  5, 3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityTutorScript, -1
