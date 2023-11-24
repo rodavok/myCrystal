@@ -308,7 +308,7 @@ DEF MT01 EQU const_value
 	add_mt ICE_BEAM	    ; fc
 	add_mt SOFTBOILED	; fd
 	;add_mt WATER_GUN    ; fe
-	;add_mt FLAIL	    ; ff
+	add_mt FLAIL	    ; ff
 	add_mt METRONOME
 	add_mt MEGA_DRAIN
 	add_mt TAKE_DOWN
@@ -317,18 +317,18 @@ DEF MT01 EQU const_value
 	add_mt BUBBLEBEAM
 	add_mt DRAGON_RAGE
 	add_mt RAZOR_WIND
-	; add_mt SUBMISSION
-	; add_mt SKY_ATTACK
+	add_mt SUBMISSION
+	add_mt SKY_ATTACK
 	; add_mt SKULL_BASH
 	; add_mt TRI_ATTACK
 	; add_mt HORN_DRILL
 	; add_mt FISSURE
-	; add_mt SELFDESTRUCT
-	; add_mt SWORDS_DANCE
-	; add_mt ROCK_SLIDE
-	; add_mt BODY_SLAM
-	; add_mt DOUBLE_EDGE
-	; add_mt EXPLOSION
+	add_mt SELFDESTRUCT
+	add_mt SWORDS_DANCE
+	add_mt ROCK_SLIDE
+	add_mt BODY_SLAM
+	add_mt DOUBLE_EDGE
+	add_mt EXPLOSION
 	add_mt LOVELY_KISS
 	add_mt ANCIENTPOWER
 	add_mt FAINT_ATTACK
