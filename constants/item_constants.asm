@@ -303,35 +303,81 @@ MACRO add_mt
 ENDM
 
 DEF MT01 EQU const_value
-	add_mt FLAMETHROWER ; fa
-	add_mt THUNDERBOLT  ; fb
-	add_mt ICE_BEAM	    ; fc
-	add_mt SOFTBOILED	; fd
-	;add_mt WATER_GUN    ; fe
+	add_mt FLAMETHROWER ; fa ;gen 1 tm
+	add_mt THUNDERBOLT  ; fb ;gen 1 tm
+	add_mt ICE_BEAM	    ; fc ;gen 1 tm
+	add_mt SOFTBOILED	; fd ;gen 1 tm
+	;add_mt WATER_GUN   ; fe ;gen 1 tm
 	add_mt FLAIL	    ; ff
-	add_mt METRONOME
-	add_mt MEGA_DRAIN
-	add_mt TAKE_DOWN
-	;add_mt EGG_BOMB
-	add_mt PSYWAVE
-	add_mt BUBBLEBEAM
+	add_mt METRONOME    ;gen 1 tm
+	add_mt MEGA_DRAIN   ;gen 1 tm
+	add_mt TAKE_DOWN    ;gen 1 tm
+	;add_mt EGG_BOMB    ;gen 1 tm
+	add_mt BUBBLEBEAM	;gen 1 tm
 	add_mt DRAGON_RAGE
-	add_mt RAZOR_WIND
-	add_mt SUBMISSION
-	add_mt SKY_ATTACK
-	; add_mt SKULL_BASH
-	; add_mt TRI_ATTACK
+	add_mt RAZOR_WIND	;gen 1 tm
+	add_mt SUBMISSION	;gen 1 tm
+	add_mt SKY_ATTACK	;gen 1 tm
+	add_mt SKULL_BASH	;gen 1 tm
 	; add_mt HORN_DRILL
 	; add_mt FISSURE
-	add_mt SELFDESTRUCT
-	add_mt SWORDS_DANCE
-	add_mt ROCK_SLIDE
-	add_mt BODY_SLAM
-	add_mt DOUBLE_EDGE
-	add_mt EXPLOSION
+	add_mt SELFDESTRUCT	;gen 1 tm
+	add_mt SWORDS_DANCE ;gen 1 tm
+	add_mt ROCK_SLIDE	;gen 1 tm
+	add_mt BODY_SLAM    ;gen 1 tm
+	add_mt DOUBLE_EDGE  ;gen 1 tm
+	add_mt EXPLOSION    ;gen 1 tm
 	add_mt LOVELY_KISS
 	add_mt ANCIENTPOWER
 	add_mt FAINT_ATTACK
+	add_mt PETAL_DANCE
+	add_mt LIGHT_SCREEN ;gen 1 tm
+	add_mt BELLY_DRUM
+	add_mt BITE
+	add_mt SCREECH
+	add_mt COUNTER      ;gen 1 tm
+	add_mt PURSUIT
+	add_mt AMNESIA
+	add_mt REVERSAL
+	add_mt PSYBEAM
+	add_mt SUPERSONIC
+	add_mt BEAT_UP
+	add_mt QUICK_ATTACK
+	add_mt REFLECT		;gen 1 tm
+	add_mt PRESENT
+	add_mt FUTURE_SIGHT
+	;add_mt ENCORE
+	add_mt AURORA_BEAM
+	add_mt CRUNCH
+	;add_mt RAPID_SPIN
+	;add_mt FOCUS_ENERGY
+	add_mt HYPNOSIS
+	add_mt THRASH
+	add_mt BARRIER
+	;add_mt SWEET_KISS
+	add_mt PERISH_SONG
+	add_mt CHARM
+	add_mt MEDITATE
+	;add_mt MIRROR_MOVE
+	;add_mt LICK
+	add_mt FALSE_SWIPE
+	;add_mt SONICBOOM
+	;add_mt PAY_DAY
+	add_mt METAL_CLAW
+	add_mt MOONLIGHT
+	add_mt SYNTHESIS
+	add_mt BATON_PASS
+	add_mt CROSS_CHOP
+	add_mt GROWTH
+	add_mt HYDRO_PUMP
+	add_mt DRILL_PECK
+	add_mt DOUBLE_KICK
+	add_mt TRI_ATTACK	;gen 1 tm
+	add_mt FLAME_WHEEL
+	add_mt HEAL_BELL
+	add_mt MIRROR_COAT
+
+
 
 DEF NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
