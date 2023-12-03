@@ -376,6 +376,7 @@ DEF MT01 EQU const_value
 	add_mt FLAME_WHEEL
 	add_mt HEAL_BELL
 	add_mt MIRROR_COAT
+	add_mt THUNDER_WAVE
 
 
 
