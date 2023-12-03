@@ -377,6 +377,10 @@ DEF MT01 EQU const_value
 	add_mt HEAL_BELL
 	add_mt MIRROR_COAT
 	add_mt THUNDER_WAVE
+	;add_mt SING egg/event move
+	add_mt OUTRAGE
+	add_mt MORNING_SUN ;egg/event move
+	;add_mt LICK egg/event move
 
 
 
