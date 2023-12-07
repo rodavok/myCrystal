@@ -308,7 +308,7 @@ DEF MT01 EQU const_value
 	add_mt ICE_BEAM	    ; fc ;gen 1 tm
 	add_mt SOFTBOILED	; fd ;gen 1 tm
 	;add_mt WATER_GUN   ; fe ;gen 1 tm
-	add_mt FLAIL	    ; ff
+	;add_mt FLAIL	    ; ff
 	add_mt METRONOME    ;gen 1 tm
 	add_mt MEGA_DRAIN   ;gen 1 tm
 	add_mt TAKE_DOWN    ;gen 1 tm
