@@ -538,6 +538,7 @@ ZubatEvosAttacks:
 	db 12, BITE
 	db 15, GUST
 	db 19, CONFUSE_RAY
+	db 22, QUICK_ATTACK
 	db 27, WING_ATTACK
 	db 36, MEAN_LOOK
 	db 46, HAZE
@@ -553,6 +554,7 @@ GolbatEvosAttacks:
 	db 12, BITE
 	db 15, GUST
 	db 19, CONFUSE_RAY
+	db 22, QUICK_ATTACK
 	db 30, WING_ATTACK
 	db 42, MEAN_LOOK
 	db 55, HAZE
@@ -1033,6 +1035,7 @@ PonytaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
+	db 7, QUICK_ATTACK
 	db 8, TAIL_WHIP
 	db 13, EMBER
 	db 19, STOMP
@@ -1050,6 +1053,7 @@ RapidashEvosAttacks:
 	db 1, EMBER
 	db 4, GROWL
 	db 8, TAIL_WHIP
+	db 10, QUICK_ATTACK
 	db 13, EMBER
 	db 19, STOMP
 	db 26, FIRE_SPIN
@@ -1124,6 +1128,7 @@ FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 7, SAND_ATTACK
+	db 10, QUICK_ATTACK
 	db 13, LEER
 	db 16, GUST
 	db 19, FURY_ATTACK
@@ -1140,6 +1145,7 @@ DoduoEvosAttacks:
 	db 1, GROWL
 	db 9, PURSUIT
 	db 13, FURY_ATTACK
+	db 17, QUICK_ATTACK
 	db 21, TRI_ATTACK
 	db 25, RAGE
 	db 33, DRILL_PECK
@@ -1739,6 +1745,7 @@ PinsirEvosAttacks:
 	db 1, VICEGRIP
 	db 7, FOCUS_ENERGY
 	db 13, BIND
+	db 17, QUICK_ATTACK
 	db 19, SEISMIC_TOSS
 	db 25, HARDEN
 	db 31, GUILLOTINE
@@ -2417,6 +2424,7 @@ NatuEvosAttacks:
 	db 1, LEER
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
+	db 25, QUICK_ATTACK
 	db 30, FUTURE_SIGHT
 	db 40, CONFUSE_RAY
 	db 50, PSYCHIC_M
@@ -2429,6 +2437,7 @@ XatuEvosAttacks:
 	db 1, NIGHT_SHADE
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
+	db 25, QUICK_ATTACK
 	db 35, FUTURE_SIGHT
 	db 50, CONFUSE_RAY
 	db 65, PSYCHIC_M
@@ -2687,13 +2696,12 @@ MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 11, PURSUIT
+	db 14, QUICK_ATTACK
 	db 16, HAZE
 	db 20, WING_ATTACK
 	db 26, NIGHT_SHADE
 	db 31, FAINT_ATTACK
-	db 35, DRILL_PECK
 	db 41, MEAN_LOOK
-	db 50, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
@@ -3030,6 +3038,11 @@ OctilleryEvosAttacks:
 DelibirdEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PRESENT
+	db 14, QUICK_ATTACK
+	db 18, POWDER_SNOW
+	db 22, AURORA_BEAM
+	db 27, SPIKES
+	db 35, DRILL_PECK
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:

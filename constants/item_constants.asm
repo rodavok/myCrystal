@@ -342,7 +342,7 @@ DEF MT01 EQU const_value
 	add_mt PSYBEAM
 	add_mt SUPERSONIC
 	add_mt BEAT_UP
-	add_mt QUICK_ATTACK
+	;add_mt QUICK_ATTACK
 	add_mt REFLECT		;gen 1 tm
 	add_mt PRESENT
 	add_mt FUTURE_SIGHT
