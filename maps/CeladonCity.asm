@@ -33,29 +33,85 @@ CeladonCityPoliwrath:
 CeladonCityTeacher1Script:
 	jumptextfaceplayer CeladonCityTeacher1Text
 
-CeladonCityTutorSoftboiledScript:
+CeladonCityTutorScript:
 	faceplayer
 	opentext
-	writetext CeladonCityTutorSoftboiledText
+	writetext CeladonCityTutorText
 	waitbutton
-	writetext CeladonCityTutorSoftboiledText2
+	writetext CeladonCityTutorText2
 	yesorno
-	iffalse .TutorRefused
+	iffalse .Refused
+	writetext CeladonTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Softboiled
+	ifequal 2, .MorningSun
+	ifequal 3, .Moonlight
+	ifequal 4, .Synthesis
+	sjump .Incompatible
+
+.Softboiled:
 	setval SOFTBOILED
-	writetext CeladonCityTutorSoftboiledClear
+	writetext CeladonTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
-.TutorRefused
-	writetext CeladonCityTutorSoftboiledRefused
+	sjump .Incompatible
+
+.MorningSun:
+	setval MORNING_SUN
+	writetext CeladonTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Moonlight:
+	setval MOONLIGHT
+	writetext CeladonTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Synthesis:
+	setval SYNTHESIS
+	writetext CeladonTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext CeladonTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext CeladonTutorBButText
 	waitbutton
 	closetext
 	end
 
-.TeachMove
-	writetext CeladonCityTutorSoftboiledTaught
+.TeachMove:
+	writetext CeladonTutorIfYouUnderstandYouveMadeItText
+	promptbutton
+	writetext CeladonTutorFarewellKidText
 	waitbutton
 	closetext
-	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "SOFTBOILED@"
+	db "MORNING SUN@"
+	db "MOONLIGHT@"
+	db "SYNTHESIS@"
+	db "CANCEL@"
 CeladonCityGramps2Script:
 	jumptextfaceplayer CeladonCityGramps2Text
 
@@ -125,43 +181,6 @@ else
 	done
 endc
 
-CeladonCityTutorSoftboiledText:
-	text "Hello there!"
-	line "I've seen you"
-	cont "running around."
-
-	para "It must be good"
-	line "luck that brought"
-	cont "us together."
-	done
-
-CeladonCityTutorSoftboiledText2:
-	text "Would you like me"
-	line "to teach your"
-
-	para "#MON to use"
-	line "SOFTBOILED?"
-
-CeladonCityTutorSoftboiledRefused:
-	text "OK then."
-	done
-
-CeladonCityTutorSoftboiledClear:
-	text_start
-	done
-
-CeladonCityTutorSoftboiledTaught:
-	text "Now if your"
-	line "#MON is in a"
-
-	para "pinch, they can"
-	line "eat an egg"
-	cont "and restore HP."
-
-	para "Or if they are"
-	line "feeling a bit"
-	cont "hungry, hohoho!"
-	done
 
 CeladonCityGramps2Text:
 	text "Nihihi! This GYM"
@@ -287,6 +306,61 @@ CeladonCityTrainerTipsText:
 	cont "STORE!"
 	done
 
+CeladonCityTutorText:
+	text "Hello there!"
+	line "I've seen you"
+	cont "running around."
+
+	para "It must be good"
+	line "luck that brought"
+	cont "us together."
+	done
+
+CeladonCityTutorText2:
+	text "Would you like me"
+	line "to teach your"
+
+	para "#MON to use"
+	line "healing moves?"
+
+
+CeladonTutorAwwButTheyreAmazingText:
+	text "OK then."
+	done
+
+CeladonTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+CeladonTutorIfYouUnderstandYouveMadeItText:
+	text "Now if your"
+	line "#MON is in a"
+
+	para "pinch, they can"
+	line "restore HP."
+	done
+
+CeladonTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+CeladonTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+CeladonTutorMoveText:
+	text_start
+	done
+
 CeladonCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -317,7 +391,7 @@ CeladonCity_MapEvents:
 	object_event 26, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityFisherScript, -1
 	object_event 27, 11, SPRITE_POLIWAG, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonCityPoliwrath, -1
 	object_event 20, 24, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityTeacher1Script, -1
-	object_event 14, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonCityTutorSoftboiledScript, -1
+	object_event 14, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonCityTutorScript, -1
 	object_event  8, 31, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps2Script, -1
 	object_event 18, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonCityYoungster1Script, -1
 	object_event 24, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityYoungster2Script, -1

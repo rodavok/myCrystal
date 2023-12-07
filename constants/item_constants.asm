@@ -306,81 +306,107 @@ DEF MT01 EQU const_value
 	add_mt FLAMETHROWER ; fa ;gen 1 tm
 	add_mt THUNDERBOLT  ; fb ;gen 1 tm
 	add_mt ICE_BEAM	    ; fc ;gen 1 tm
-	add_mt SOFTBOILED	; fd ;gen 1 tm
 	;add_mt WATER_GUN   ; fe ;gen 1 tm
 	;add_mt FLAIL	    ; ff
-	add_mt METRONOME    ;gen 1 tm
-	add_mt MEGA_DRAIN   ;gen 1 tm
-	add_mt TAKE_DOWN    ;gen 1 tm
 	;add_mt EGG_BOMB    ;gen 1 tm
-	add_mt BUBBLEBEAM	;gen 1 tm
-	add_mt DRAGON_RAGE
-	add_mt RAZOR_WIND	;gen 1 tm
-	add_mt SUBMISSION	;gen 1 tm
-	add_mt SKY_ATTACK	;gen 1 tm
-	add_mt SKULL_BASH	;gen 1 tm
 	; add_mt HORN_DRILL
 	; add_mt FISSURE
-	add_mt SELFDESTRUCT	;gen 1 tm
-	add_mt SWORDS_DANCE ;gen 1 tm
-	add_mt ROCK_SLIDE	;gen 1 tm
-	add_mt BODY_SLAM    ;gen 1 tm
-	add_mt DOUBLE_EDGE  ;gen 1 tm
-	add_mt EXPLOSION    ;gen 1 tm
-	add_mt LOVELY_KISS
-	add_mt ANCIENTPOWER
-	add_mt FAINT_ATTACK
-	add_mt PETAL_DANCE
-	add_mt LIGHT_SCREEN ;gen 1 tm
-	add_mt BELLY_DRUM
-	add_mt BITE
-	add_mt SCREECH
-	add_mt COUNTER      ;gen 1 tm
-	add_mt PURSUIT
-	add_mt AMNESIA
-	add_mt REVERSAL
-	add_mt PSYBEAM
-	add_mt SUPERSONIC
-	add_mt BEAT_UP
+	;add_mt SING egg/event move
+	;add_mt LICK egg/event move
+	;add_mt PAY_DAY
+	;add_mt SONICBOOM
 	;add_mt QUICK_ATTACK
-	add_mt REFLECT		;gen 1 tm
-	add_mt PRESENT
-	add_mt FUTURE_SIGHT
 	;add_mt ENCORE
-	add_mt AURORA_BEAM
-	add_mt CRUNCH
 	;add_mt RAPID_SPIN
 	;add_mt FOCUS_ENERGY
-	add_mt HYPNOSIS
-	add_mt THRASH
-	add_mt BARRIER
-	;add_mt SWEET_KISS
-	add_mt PERISH_SONG
-	add_mt CHARM
-	add_mt MEDITATE
 	;add_mt MIRROR_MOVE
 	;add_mt LICK
-	add_mt FALSE_SWIPE
-	;add_mt SONICBOOM
-	;add_mt PAY_DAY
-	add_mt METAL_CLAW
-	add_mt MOONLIGHT
-	add_mt SYNTHESIS
-	add_mt BATON_PASS
-	add_mt CROSS_CHOP
+	;add_mt SWEET_KISS
+
+	;Cherrygrove
+	add_mt CHARM
+	add_mt SCREECH
 	add_mt GROWTH
-	add_mt HYDRO_PUMP
-	add_mt DRILL_PECK
+	add_mt MEDITATE
+
+	;Azeala
+	add_mt RAZOR_WIND	;gen 1 tm
+	add_mt DRAGON_RAGE
+	add_mt METRONOME    ;gen 1 tm
+	add_mt PRESENT
+	add_mt FALSE_SWIPE
+
+	;Goldenrod
+	add_mt BUBBLEBEAM	;gen 1 tm
+	add_mt MEGA_DRAIN   ;gen 1 tm
+	add_mt METAL_CLAW
 	add_mt DOUBLE_KICK
-	add_mt TRI_ATTACK	;gen 1 tm
+	add_mt ANCIENTPOWER
+	add_mt FAINT_ATTACK
+	add_mt TAKE_DOWN    ;gen 1 tm
+	add_mt THRASH
+
+    ;Ecruteak
+	add_mt PSYBEAM
 	add_mt FLAME_WHEEL
-	add_mt HEAL_BELL
-	add_mt MIRROR_COAT
+	add_mt AURORA_BEAM
+	add_mt BITE
+	add_mt HYPNOSIS
+	add_mt SUBMISSION	;gen 1 tm
+
+	;Blackthorn
+	add_mt ROCK_SLIDE	;gen 1 tm
+	add_mt SELFDESTRUCT ;gen 1 tm
+	add_mt BODY_SLAM    ;gen 1 tm
+	add_mt PETAL_DANCE
+
+	;Cerulean
 	add_mt THUNDER_WAVE
-	;add_mt SING egg/event move
-	add_mt OUTRAGE
+	add_mt LOVELY_KISS
+	add_mt FUTURE_SIGHT
+	add_mt SUPERSONIC
+	add_mt PERISH_SONG
+
+	;Lavender
+	add_mt MIRROR_COAT
+	add_mt COUNTER
+	add_mt REFLECT  ;gen 1 tm
+	add_mt LIGHT_SCREEN ;gen 1 tm
+
+	;Celadon
 	add_mt MORNING_SUN ;egg/event move
-	;add_mt LICK egg/event move
+	add_mt MOONLIGHT ;egg/event move
+	add_mt SYNTHESIS ;egg/event move
+	add_mt SOFTBOILED ;gen 1 tm
+	add_mt HEAL_BELL
+
+	;Fuscia
+	add_mt REVERSAL
+	add_mt BEAT_UP
+	add_mt PURSUIT
+	add_mt TRI_ATTACK	;gen 1 tm
+
+	;Pewter City
+	add_mt SKY_ATTACK	;gen 1 tm
+	add_mt DRILL_PECK
+	add_mt OUTRAGE
+	add_mt CROSS_CHOP
+	add_mt CRUNCH
+
+	;Viridian
+	add_mt BATON_PASS
+	add_mt BARRIER
+	add_mt AMNESIA
+	add_mt SWORDS_DANCE ;gen 1 tm
+
+	;Mt Silver
+	add_mt SKULL_BASH	;gen 1 tm
+	add_mt HYDRO_PUMP
+	add_mt EXPLOSION    ;gen 1 tm
+	add_mt BELLY_DRUM
+	add_mt DOUBLE_EDGE  ;gen 1 tm
+
+
 
 
 
