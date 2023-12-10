@@ -34,46 +34,46 @@ EcruteakItemfinderGuy:
 EcruteakCityTutorScript:
 	faceplayer
 	opentext
-	writetext AskTeachAMoveText
+	writetext ecruteakaskteachamovetext
 	yesorno
 	iffalse .Refused
 	writetext EcruteakCityTutorWhichMoveShouldITeachText
 	loadmenu .MoveMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .MegaDrain
-	ifequal 2, .Bubblebeam
-	ifequal 3, .AncientPower
-	ifequal 4, .LovelyKiss
+	ifequal 1, .Psybeam
+	ifequal 2, .Hypnosis
+	ifequal 3, .Submission
+	ifequal 4, .Bite
 	ifequal 5, .DragonRage
 	ifequal 6, .TakeDown
 	ifequal 7, .Metronome
 	ifequal 8, .FaintAttack
 	sjump .Incompatible
 
-.MegaDrain:
-	setval MEGA_DRAIN
+.Psybeam:
+	setval PSYBEAM
 	writetext EcruteakCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
-.Bubblebeam:
-	setval BUBBLEBEAM
+.Hypnosis:
+	setval HYPNOSIS
 	writetext EcruteakCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
-.AncientPower:
-	setval ANCIENTPOWER
+.Submission:
+	setval SUBMISSION
 	writetext EcruteakCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
-.LovelyKiss:
-	setval LOVELY_KISS
+.Bite:
+	setval BITE
 	writetext EcruteakCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -134,11 +134,11 @@ EcruteakCityTutorScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "MEGA DRAIN@"
-	db "BUBBLEBEAM@"
-	db "ANCIENTPOWER@"
-	db "LOVELY KISS@"
+	db 9 ; items
+	db "PSYBEAM@"
+	db "HYPNOSIS@"
+	db "SUBMISSION@"
+	db "BITE@"
 	db "DRAGON RAGE@"
 	db "TAKE DOWN@"
 	db "METRONOME@"
@@ -274,7 +274,7 @@ EcruteakThreeMonText:
 	done
 
 
-AskTeachAMoveText:
+ecruteakaskteachamovetext:
 	text "I can teach your"
 	line "#MON amazing"
 

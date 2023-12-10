@@ -452,6 +452,138 @@ AzaleaTownIlexForestSignText:
 	line "gate."
 	done
 
+AzaleaTutorScript:
+	faceplayer
+	opentext
+	writetext azaleaaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext AzaleaTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .RazorWind
+	ifequal 2, .DragonRage
+	ifequal 3, .Metronome
+	ifequal 4, .FalseSwipe
+	sjump .Incompatible
+
+.RazorWind:
+	setval RAZOR_WIND
+	writetext AzaleaTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.DragonRage:
+	setval DRAGON_RAGE
+	writetext AzaleaTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Metronome:
+	setval METRONOME
+	writetext AzaleaTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.FalseSwipe:
+	setval FALSE_SWIPE
+	writetext AzaleaTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext AzaleaTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext AzaleaTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext AzaleaTutorIfYouUnderstandYouveMadeItText
+	promptbutton
+	writetext AzaleaTutorFarewellKidText
+	waitbutton
+	closetext
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "RAZOR WIND@"
+	db "DRAGON RAGE@"
+	db "METRONOME@"
+	db "FALSE SWIPE@"
+	db "CANCEL@"
+
+azaleaaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+AzaleaTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+AzaleaTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+AzaleaTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+AzaleaTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+AzaleaTutorBButText:
+	text "Your starter"
+	line "can't learn this"
+	cont "move…"
+	done
+
+AzaleaTutorMoveText:
+	text_start
+	done
 AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -494,3 +626,5 @@ AzaleaTown_MapEvents:
 	object_event 11, 10, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_AZALEA_TOWN
 	object_event 10, 16, SPRITE_AZALEA_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownRocket2Script, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  6,  5, SPRITE_KURT_OUTSIDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownKurtScript, EVENT_AZALEA_TOWN_KURT
+	object_event 6, 14, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTutorScript, -1
+

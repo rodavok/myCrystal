@@ -329,66 +329,74 @@ DEF MT01 EQU const_value
 	add_mt GROWTH
 	add_mt MEDITATE
 
-	;Azeala
+	;Azalea
 	add_mt RAZOR_WIND	;gen 1 tm
 	add_mt DRAGON_RAGE
 	add_mt METRONOME    ;gen 1 tm
-	add_mt PRESENT
 	add_mt FALSE_SWIPE
 
 	;Goldenrod
 	add_mt BUBBLEBEAM	;gen 1 tm
-	add_mt MEGA_DRAIN   ;gen 1 tm
-	add_mt METAL_CLAW
-	add_mt DOUBLE_KICK
 	add_mt ANCIENTPOWER
 	add_mt FAINT_ATTACK
 	add_mt TAKE_DOWN    ;gen 1 tm
-	add_mt THRASH
 
     ;Ecruteak
 	add_mt PSYBEAM
-	add_mt FLAME_WHEEL
-	add_mt AURORA_BEAM
-	add_mt BITE
 	add_mt HYPNOSIS
 	add_mt SUBMISSION	;gen 1 tm
+	add_mt BITE
+
+	;Olivine
+	add_mt PRESENT
+	add_mt SUPERSONIC
+	add_mt METAL_CLAW
+	add_mt MEGA_DRAIN   ;gen 1 tm
+
+	;Cianwood
+	add_mt REVERSAL
+	add_mt BEAT_UP
+	add_mt MIRROR_COAT
+	add_mt COUNTER
+
+	;Mahogany
+	add_mt FLAME_WHEEL
+	add_mt AURORA_BEAM
+	add_mt DOUBLE_KICK
+	add_mt THRASH
+
 
 	;Blackthorn
 	add_mt ROCK_SLIDE	;gen 1 tm
 	add_mt SELFDESTRUCT ;gen 1 tm
-	add_mt BODY_SLAM    ;gen 1 tm
+	add_mt DRILL_PECK
 	add_mt PETAL_DANCE
 
 	;Cerulean
 	add_mt THUNDER_WAVE
 	add_mt LOVELY_KISS
 	add_mt FUTURE_SIGHT
-	add_mt SUPERSONIC
 	add_mt PERISH_SONG
 
 	;Lavender
-	add_mt MIRROR_COAT
-	add_mt COUNTER
 	add_mt REFLECT  ;gen 1 tm
 	add_mt LIGHT_SCREEN ;gen 1 tm
+	add_mt SKULL_BASH	;gen 1 tm
 
 	;Celadon
 	add_mt MORNING_SUN ;egg/event move
 	add_mt MOONLIGHT ;egg/event move
 	add_mt SYNTHESIS ;egg/event move
 	add_mt SOFTBOILED ;gen 1 tm
-	add_mt HEAL_BELL
 
 	;Fuscia
-	add_mt REVERSAL
-	add_mt BEAT_UP
 	add_mt PURSUIT
 	add_mt TRI_ATTACK	;gen 1 tm
+	add_mt HEAL_BELL
+	add_mt BODY_SLAM
 
 	;Pewter City
 	add_mt SKY_ATTACK	;gen 1 tm
-	add_mt DRILL_PECK
 	add_mt OUTRAGE
 	add_mt CROSS_CHOP
 	add_mt CRUNCH
@@ -400,7 +408,6 @@ DEF MT01 EQU const_value
 	add_mt SWORDS_DANCE ;gen 1 tm
 
 	;Mt Silver
-	add_mt SKULL_BASH	;gen 1 tm
 	add_mt HYDRO_PUMP
 	add_mt EXPLOSION    ;gen 1 tm
 	add_mt BELLY_DRUM
