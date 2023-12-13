@@ -121,10 +121,11 @@ EcruteakCityTutorScript:
 
 .TeachMove:
 	writetext EcruteakCityTutorIfYouUnderstandYouveMadeItText
-	promptbutton
+	waitbutton
 	writetext EcruteakCityTutorFarewellKidText
 	waitbutton
 	closetext
+	end
 
 .MoveMenuHeader:
 	db MENU_BACKUP_TILES ; flags

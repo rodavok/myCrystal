@@ -244,6 +244,141 @@ MahoganyGymSignText:
 	line "Winter's Harshness"
 	done
 
+MahoganyTutorScript:
+	faceplayer
+	opentext
+	writetext Mahoganyaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext MahoganyTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .FlameWheel
+	ifequal 2, .AuroraBeam
+	ifequal 3, .DoubleKick
+	ifequal 4, .Thrash
+	sjump .Incompatible
+
+.FlameWheel:
+	setval FLAME_WHEEL
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.AuroraBeam:
+	setval AURORA_BEAM
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.DoubleKick:
+	setval DOUBLE_KICK
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Thrash:
+	setval THRASH
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext MahoganyTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext MahoganyTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext MahoganyTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext MahoganyTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "FLAME WHEEL@"
+	db "AURORA BEAM@"
+	db "DOUBLE KICK@"
+	db "THRASH@"
+	db "CANCEL@"
+
+Mahoganyaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+MahoganyTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+MahoganyTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+MahoganyTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+MahoganyTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+MahoganyTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+MahoganyTutorMoveText:
+	text_start
+	done
+
+
 MahoganyTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -269,3 +404,4 @@ MahoganyTown_MapEvents:
 	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1
 	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MahoganyTownFisherScript, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event 12,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownLassScript, EVENT_MAHOGANY_MART_OWNERS
+	object_event  2, 9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTutorScript, -1

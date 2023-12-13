@@ -98,6 +98,140 @@ GoldenrodBikeShopBicycleText:
 	line "BICYCLE!"
 	done
 
+GoldenrodTutorScript:
+	faceplayer
+	opentext
+	writetext goldenrodaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext GoldenrodTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Bubblebeam
+	ifequal 2, .Ancientpower
+	ifequal 3, .FaintAttack
+	ifequal 4, .TakeDown
+	sjump .Incompatible
+
+.Bubblebeam:
+	setval BUBBLEBEAM
+	writetext GoldenrodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Ancientpower:
+	setval ANCIENTPOWER
+	writetext GoldenrodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.FaintAttack:
+	setval FAINT_ATTACK
+	writetext GoldenrodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.TakeDown:
+	setval TAKE_DOWN
+	writetext GoldenrodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext GoldenrodTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext GoldenrodTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext GoldenrodTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext GoldenrodTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "BUBBLEBEAM@"
+	db "ANCIENTPOWER@"
+	db "FAINT ATTACK@"
+	db "TAKE DOWN@"
+	db "CANCEL@"
+
+goldenrodaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+GoldenrodTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+GoldenrodTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+GoldenrodTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+GoldenrodTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+GoldenrodTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+GoldenrodTutorMoveText:
+	text_start
+	done
+
 GoldenrodBikeShop_MapEvents:
 	db 0, 0 ; filler
 
@@ -120,3 +254,5 @@ GoldenrodBikeShop_MapEvents:
 
 	def_object_events
 	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodBikeShopClerkScript, -1
+	object_event  4,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodTutorScript, -1
+

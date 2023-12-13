@@ -76,6 +76,140 @@ OlivineCafeSailorText:
 	line "stop eating!"
 	done
 
+OlivineTutorScript:
+	faceplayer
+	opentext
+	writetext Olivineaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext OlivineTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Present
+	ifequal 2, .Supersonic
+	ifequal 3, .MetalClaw
+	ifequal 4, .MegaDrain
+	sjump .Incompatible
+
+.Present:
+	setval PRESENT
+	writetext OlivineTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Supersonic:
+	setval SUPERSONIC
+	writetext OlivineTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.MetalClaw:
+	setval METAL_CLAW
+	writetext OlivineTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.MegaDrain:
+	setval MEGA_DRAIN
+	writetext OlivineTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext OlivineTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext OlivineTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext OlivineTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext OlivineTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "PRESENT@"
+	db "SUPERSONIC@"
+	db "METAL CLAW@"
+	db "MEGA DRAIN@"
+	db "CANCEL@"
+
+Olivineaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+OlivineTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+OlivineTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+OlivineTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+OlivineTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+OlivineTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+OlivineTutorMoveText:
+	text_start
+	done
+
 OlivineCafe_MapEvents:
 	db 0, 0 ; filler
 
@@ -91,3 +225,4 @@ OlivineCafe_MapEvents:
 	object_event  4,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
 	object_event  7,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
 	object_event  6,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1
+	object_event  5, 4, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineTutorScript, -1

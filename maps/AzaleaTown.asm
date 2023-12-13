@@ -510,10 +510,11 @@ AzaleaTutorScript:
 
 .TeachMove:
 	writetext AzaleaTutorIfYouUnderstandYouveMadeItText
-	promptbutton
+	waitbutton
 	writetext AzaleaTutorFarewellKidText
 	waitbutton
 	closetext
+	end
 
 .MoveMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -576,7 +577,7 @@ AzaleaTutorFarewellKidText:
 	done
 
 AzaleaTutorBButText:
-	text "Your starter"
+	text "Your #MON"
 	line "can't learn this"
 	cont "move…"
 	done

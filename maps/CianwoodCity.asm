@@ -377,6 +377,139 @@ CianwoodPokeSeerSignText:
 	line "AHEAD"
 	done
 
+CianwoodTutorScript:
+	faceplayer
+	opentext
+	writetext Cianwoodaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext CianwoodTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Reversal
+	ifequal 2, .BeatUp
+	ifequal 3, .MirrorCoat
+	ifequal 4, .Counter
+	sjump .Incompatible
+
+.Reversal:
+	setval REVERSAL
+	writetext CianwoodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.BeatUp:
+	setval BEAT_UP
+	writetext CianwoodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.MirrorCoat:
+	setval MIRROR_COAT
+	writetext CianwoodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Counter:
+	setval COUNTER
+	writetext CianwoodTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext CianwoodTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext CianwoodTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext CianwoodTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext CianwoodTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+	
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "REVERSAL@"
+	db "BEAT UP@"
+	db "MIRROR COAT@"
+	db "COUNTER@"
+	db "CANCEL@"
+
+Cianwoodaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+CianwoodTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+CianwoodTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+CianwoodTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+CianwoodTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+CianwoodTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+CianwoodTutorMoveText:
+	text_start
+	done
 CianwoodCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -415,3 +548,4 @@ CianwoodCity_MapEvents:
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
 	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
+	object_event  13, 45, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CianwoodTutorScript, -1
