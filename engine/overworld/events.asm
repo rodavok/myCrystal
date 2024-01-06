@@ -881,9 +881,6 @@ CountStep:
 	farcall CheckSpecialPhoneCall
 	jr c, .doscript
 
-	; If Repel wore off, don't count the step.
-	call DoRepelStep
-	jr c, .doscript
 
 	; Count the step for poison and total steps
 	ld hl, wPoisonStepCount
@@ -942,20 +939,6 @@ CountStep:
 	scf
 	ret
 
-DoRepelStep:
-	ld a, [wRepelEffect]
-	and a
-	ret z
-
-	dec a
-	ld [wRepelEffect], a
-	ret nz
-
-	ld a, BANK(RepelWoreOffScript)
-	ld hl, RepelWoreOffScript
-	call CallScript
-	scf
-	ret
 
 DoPlayerEvent:
 	ld a, [wScriptRunning]
