@@ -1,5 +1,9 @@
 	object_const_def
 	const VICTORYROAD_RIVAL
+	const VICTORYROAD_COOLTRAINER_M1
+	const VICTORYROAD_COOLTRAINER_M2
+	const VICTORYROAD_COOLTRAINER_F1
+	const VICTORYROAD_COOLTRAINER_F2
 	const VICTORYROAD_POKE_BALL1
 	const VICTORYROAD_POKE_BALL2
 	const VICTORYROAD_POKE_BALL3
@@ -13,6 +17,49 @@ VictoryRoad_MapScripts:
 
 	def_callbacks
 
+TrainerCooltrainermRoss:
+	trainer COOLTRAINERM, ROSS1, EVENT_BEAT_COOLTRAINERM_ROSS, CooltrainermRossSeenText, CooltrainermRossBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermRossAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCooltrainermTommy:
+	trainer COOLTRAINERM, TOMMY1, EVENT_BEAT_COOLTRAINERM_TOMMY, CooltrainermTommySeenText, CooltrainermTommyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermTommyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCooltrainerfSophie:
+	trainer COOLTRAINERF, SOPHIE, EVENT_BEAT_COOLTRAINERF_SOPHIE, CooltrainerfSophieSeenText, CooltrainerfSophieBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfSophieAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCooltrainerfDonna:
+	trainer COOLTRAINERF, DONNA, EVENT_BEAT_COOLTRAINERF_DONNA, CooltrainerfDonnaSeenText, CooltrainerfDonnaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfDonnaAfterBattleText
+	waitbutton
+	closetext
+	end
 VictoryRoadNoop1Scene:
 	end
 
@@ -103,9 +150,6 @@ VictoryRoadMaxRevive:
 VictoryRoadFullRestore:
 	itemball FULL_RESTORE
 
-VictoryRoadFullHeal:
-	itemball FULL_HEAL
-
 VictoryRoadHPUp:
 	itemball HP_UP
 
@@ -114,9 +158,6 @@ VictoryRoadLuckyEgg:
 
 VictoryRoadHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION
-
-VictoryRoadHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL
 
 VictoryRoadRivalBattleApproachMovement1:
 	step LEFT
@@ -239,6 +280,114 @@ VictoryRoadRivalVictoryText:
 	line "thing else."
 	done
 
+CooltrainermRossSeenText:
+	text "I'm making my"
+	line "final preparations"
+
+	para "for the #MON"
+	line "LEAGUE."
+	done
+
+CooltrainermRossBeatenText:
+	text "I blew it!"
+	done
+
+CooltrainermRossAfterBattleText:
+	text "It's going to be"
+	line "tough to win at"
+	cont "the LEAGUE."
+
+	para "I need to do some"
+	line "more training."
+
+	para "I hear that the"
+	line "LEAGUE's ELITE"
+
+	para "FOUR are tougher"
+	line "than GYM LEADERS."
+	done
+
+CooltrainermTommySeenText:
+	text "I'm making my"
+	line "final preparations"
+
+	para "for the #MON"
+	line "LEAGUE."
+	done
+
+CooltrainermTommyBeatenText:
+	text "I blew it!"
+	done
+
+CooltrainermTommyAfterBattleText:
+	text "It's going to be"
+	line "tough to win at"
+	cont "the LEAGUE."
+
+	para "I need to do some"
+	line "more training."
+
+	para "I hear that the"
+	line "LEAGUE's ELITE"
+
+	para "FOUR are tougher"
+	line "than GYM LEADERS."
+	done
+
+CooltrainerfSophieSeenText:
+	text "I'm making my"
+	line "final preparations"
+
+	para "for the #MON"
+	line "LEAGUE."
+	done
+
+CooltrainerfSophieBeatenText:
+	text "I blew it!"
+	done
+
+CooltrainerfSophieAfterBattleText:
+	text "It's going to be"
+	line "tough to win at"
+	cont "the LEAGUE."
+
+	para "I need to do some"
+	line "more training."
+
+	para "I hear that the"
+	line "LEAGUE's ELITE"
+
+	para "FOUR are tougher"
+	line "than GYM LEADERS."
+	done
+
+CooltrainerfDonnaSeenText:
+	text "I'm making my"
+	line "final preparations"
+
+	para "for the #MON"
+	line "LEAGUE."
+	done
+
+CooltrainerfDonnaBeatenText:
+	text "I blew it!"
+	done
+
+CooltrainerfDonnaAfterBattleText:
+	text "It's going to be"
+	line "tough to win at"
+	cont "the LEAGUE."
+
+	para "I need to do some"
+	line "more training."
+
+	para "I hear that the"
+	line "LEAGUE's ELITE"
+
+	para "FOUR are tougher"
+	line "than GYM LEADERS."
+	done
+
 VictoryRoad_MapEvents:
 	db 0, 0 ; filler
 
@@ -260,13 +409,16 @@ VictoryRoad_MapEvents:
 
 	def_bg_events
 	bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
-	bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
 
 	def_object_events
+	object_event  9, 60, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermRoss, -1
+	object_event  12, 28, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermTommy, -1
+	object_event 11, 38, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfSophie, -1
+	object_event 11, 14, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfDonna, -1
 	object_event 18, 13, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
 	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE
 	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
-	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
 	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP
-    object_event 19, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadLuckyEgg, EVENT_VICTORY_ROAD_LUCKY_EGG
+    object_event  4, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadLuckyEgg, EVENT_VICTORY_ROAD_LUCKY_EGG
+	

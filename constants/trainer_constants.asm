@@ -216,6 +216,8 @@ DEF KRIS EQU __trainer_class__
 	const STEVE ; unused
 	const ALLEN
 	const DARIN
+	const ROSS1
+	const TOMMY1
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -239,6 +241,8 @@ DEF KRIS EQU __trainer_class__
 	const REENA2
 	const REENA3
 	const CARA
+	const SOPHIE
+	const DONNA
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
