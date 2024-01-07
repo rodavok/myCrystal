@@ -18,7 +18,7 @@ VictoryRoad_MapScripts:
 	def_callbacks
 
 TrainerCooltrainermRoss:
-	trainer COOLTRAINERM, ROSS1, EVENT_BEAT_COOLTRAINERM_ROSS, CooltrainermRossSeenText, CooltrainermRossBeatenText, 0, .Script
+	trainer COOLTRAINERM, ROSS1, EVENT_BEAT_COOLTRAINERM_ROSS3, CooltrainermRossSeenText, CooltrainermRossBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -29,7 +29,7 @@ TrainerCooltrainermRoss:
 	end
 
 TrainerCooltrainermTommy:
-	trainer COOLTRAINERM, TOMMY1, EVENT_BEAT_COOLTRAINERM_TOMMY, CooltrainermTommySeenText, CooltrainermTommyBeatenText, 0, .Script
+	trainer COOLTRAINERM, TOMMY1, EVENT_BEAT_COOLTRAINERM_TOMMY3, CooltrainermTommySeenText, CooltrainermTommyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -40,7 +40,7 @@ TrainerCooltrainermTommy:
 	end
 
 TrainerCooltrainerfSophie:
-	trainer COOLTRAINERF, SOPHIE, EVENT_BEAT_COOLTRAINERF_SOPHIE, CooltrainerfSophieSeenText, CooltrainerfSophieBeatenText, 0, .Script
+	trainer COOLTRAINERF, SOPHIE, EVENT_BEAT_COOLTRAINERF_SOPHIE3, CooltrainerfSophieSeenText, CooltrainerfSophieBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -51,7 +51,7 @@ TrainerCooltrainerfSophie:
 	end
 
 TrainerCooltrainerfDonna:
-	trainer COOLTRAINERF, DONNA, EVENT_BEAT_COOLTRAINERF_DONNA, CooltrainerfDonnaSeenText, CooltrainerfDonnaBeatenText, 0, .Script
+	trainer COOLTRAINERF, DONNA, EVENT_BEAT_COOLTRAINERF_DONNA3, CooltrainerfDonnaSeenText, CooltrainerfDonnaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
