@@ -102,12 +102,11 @@ RockItemEncounter:
 	ret
 	
 .RockItems:
-	db 24, MAX_REVIVE
-	db 24, PP_MAX
-	db 24, NUGGET
-	db 24, STAR_PIECE
-	db 24, BIG_PEARL
-	db 24, DOME_FOSSIL
-	db 24, HELIX_FOSSIL
-	db 24, OLD_AMBER
+	db 32, MAX_REVIVE
+	db 32, NUGGET
+	db 32, STAR_PIECE
+	db 32, BIG_PEARL
+	db 32, DOME_FOSSIL
+	db 32, HELIX_FOSSIL
+	db 32, OLD_AMBER
 	db -1

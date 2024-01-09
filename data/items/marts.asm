@@ -34,6 +34,7 @@ Marts:
 	dw MartSaffron
 	dw MartMtMoon
 	dw MartIndigoPlateau
+	dw MartIndigoPlateauTM
 	dw MartUnderground
 	assert_table_length NUM_MARTS
 
@@ -75,9 +76,9 @@ MartAzalea:
 	db POTION
 	db SUPER_POTION
 	db ESCAPE_ROPE
-	db REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
+	db MUSIC_MAIL
 	db FLOWER_MAIL
 	db -1 ; end
 
@@ -106,11 +107,11 @@ MartGoldenrod2F2:
 	db POKE_BALL
 	db GREAT_BALL
 	db ESCAPE_ROPE
-	db REPEL
 	db REVIVE
 	db FULL_HEAL
 	db POKE_DOLL
 	db FLOWER_MAIL
+	db EON_MAIL
 	db -1 ; end
 
 MartGoldenrod3F:
@@ -174,7 +175,7 @@ MartOlivine:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db ICE_HEAL
-	db SUPER_REPEL
+	db LITEBLUEMAIL
 	db SURF_MAIL
 	db -1 ; end
 
@@ -201,16 +202,16 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 9 ; # items
+	db 10 ; # items
 	db RAGECANDYBAR
-	db GREAT_BALL
-	db SUPER_POTION
-	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db SUPER_REPEL
-	db REVIVE
+	db ENERGY_ROOT
+	db REVIVAL_HERB
+	db ULTRA_BALL
 	db FLOWER_MAIL
+	db FIRE_STONE
+	db WATER_STONE
+	db LEAF_STONE
+	db THUNDERSTONE
 	db -1 ; end
 
 MartBlackthorn:
@@ -221,9 +222,9 @@ MartBlackthorn:
 	db MAX_POTION
 	db FULL_HEAL
 	db REVIVE
-	db MAX_REPEL
 	db X_DEFEND
 	db X_ATTACK
+	db PORTRAITMAIL
 	db -1 ; end
 
 MartViridian:
@@ -241,9 +242,9 @@ MartViridian:
 
 MartPewter:
 	db 7 ; # items
-	db GREAT_BALL
-	db SUPER_POTION
-	db SUPER_REPEL
+	db ULTRA_BALL
+	db MOON_BALL
+	db HYPER_POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
@@ -254,8 +255,8 @@ MartCerulean:
 	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
-	db SUPER_POTION
-	db SUPER_REPEL
+	db LOVE_BALL
+	db HYPER_POTION
 	db FULL_HEAL
 	db X_DEFEND
 	db X_ATTACK
@@ -266,9 +267,9 @@ MartCerulean:
 MartLavender:
 	db 8 ; # items
 	db GREAT_BALL
+	db LURE_BALL
 	db POTION
 	db SUPER_POTION
-	db MAX_REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
@@ -294,8 +295,8 @@ MartCeladon2F1:
 	db HYPER_POTION
 	db MAX_POTION
 	db REVIVE
-	db SUPER_REPEL
-	db MAX_REPEL
+	db POKE_DOLL
+	db LOVELY_MAIL
 	db -1 ; end
 
 MartCeladon2F2:
@@ -323,9 +324,10 @@ MartCeladon3F:
 
 MartCeladon4F:
 	db 3 ; # items
-	db POKE_DOLL
-	db LOVELY_MAIL
-	db SURF_MAIL
+	db FIRE_STONE
+	db WATER_STONE
+	db LEAF_STONE
+	db THUNDERSTONE
 	db -1 ; end
 
 MartCeladon5F1:
@@ -355,8 +357,8 @@ MartFuchsia:
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
-	db MAX_REPEL
-	db FLOWER_MAIL
+	db MORPH_MAIL
+	db MIRAGE_MAIL
 	db -1 ; end
 
 MartSaffron:
@@ -373,23 +375,54 @@ MartSaffron:
 
 MartMtMoon:
 	db 6 ; # items
+	db MOON_BALL
 	db POKE_DOLL
 	db FRESH_WATER
 	db SODA_POP
 	db LEMONADE
-	db REPEL
 	db PORTRAITMAIL
 	db -1 ; end
 
 MartIndigoPlateau:
 	db 7 ; # items
 	db ULTRA_BALL
-	db MAX_REPEL
+	db ETHER
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_RESTORE
 	db REVIVE
 	db FULL_HEAL
+	db -1 ; end
+
+MartIndigoPlateauTM:
+	db 8 ; # items
+	db TM_MUD_SLAP
+	db TM_FURY_CUTTER
+	db TM_ATTRACT
+	db TM_SHADOW_BALL
+	db TM_DYNAMICPUNCH
+	db TM_ICY_WIND
+	db TM_DRAGONBREATH
+	db -1 ; end
+
+MartIndigoPlateauTM2:
+	db 10 ; # items
+	db TM_MUD_SLAP		;FALKNER
+	db TM_FURY_CUTTER	;BUGSY
+	db TM_ATTRACT		;WHITNEY
+	db TM_SHADOW_BALL	;SHADOW_BALL
+	db TM_DYNAMICPUNCH	;CHUCK
+	db TM_IRON_TAIL		;JASMINE
+	db TM_ICY_WIND		;PRYCE
+	db TM_DRAGONBREATH	;CLAIR
+						;SURGE
+						;MISTY
+	db TM_GIGA_DRAIN	;ERIKA
+	db TM_TOXIC			;JANINE
+						;SABRINA
+						;BROCK
+						;BLAINE
+						;BLUE
 	db -1 ; end
 
 MartUnderground:

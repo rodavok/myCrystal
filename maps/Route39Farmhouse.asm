@@ -1,4 +1,4 @@
-DEF ROUTE39FARMHOUSE_MILK_PRICE EQU 500
+DEF ROUTE39FARMHOUSE_MILK_PRICE EQU 2500
 
 	object_const_def
 	const ROUTE39FARMHOUSE_POKEFAN_M
@@ -29,7 +29,7 @@ FarmerMScript_SellMilk:
 	iffalse FarmerMScript_NoSale
 	checkmoney YOUR_MONEY, ROUTE39FARMHOUSE_MILK_PRICE
 	ifequal HAVE_LESS, FarmerMScript_NoMoney
-	giveitem MOOMOO_MILK
+	giveitem MOOMOO_MILK, 12
 	iffalse FarmerMScript_NoRoom
 	takemoney YOUR_MONEY, ROUTE39FARMHOUSE_MILK_PRICE
 	special PlaceMoneyTopRight
@@ -121,8 +121,8 @@ FarmerMText_BuyMilk:
 	para "Give it to #MON"
 	line "to restore HP!"
 
-	para "I'll give it to ya"
-	line "fer just ¥{d:ROUTE39FARMHOUSE_MILK_PRICE}."
+	para "It's just ¥{d:ROUTE39FARMHOUSE_MILK_PRICE}"
+	line "fer a dozen."
 	done
 
 FarmerMText_GotMilk:
