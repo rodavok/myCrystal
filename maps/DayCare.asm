@@ -49,10 +49,28 @@ DayCareManScript_Inside:
 	end
 
 .AlreadyHaveOddEgg:
+	checkitem EGG_TICKET
+	iftrue .TradeEggTicket
 	special DayCareMan
 	waitbutton
 	closetext
 	end
+
+.TradeEggTicket
+    writetext DayCareManText_GiveOddEggForTicket
+	promptbutton
+	closetext
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+	special GiveOddEgg
+	opentext
+	writetext DayCareText_GotOddEgg
+	playsound SFX_KEY_ITEM
+	waitsfx
+	writetext DayCareText_DescribeOddEgg
+	takeitem EGG_TICKET
+	waitbutton
+	closetext
 
 DayCareLadyScript:
 	faceplayer
@@ -123,6 +141,16 @@ DayCareManText_GiveOddEgg:
 
 	para "Then fine, this is"
 	line "yours to keep!"
+	done
+
+DayCareManText_GiveOddEggForTicket:
+	text "Is that an"
+	line "EGG TICKET?"
+
+	para "Would you like"
+	line "to trade that for"
+	
+	para "this ODD EGG?"
 	done
 
 DayCareText_ComeAgain: ; unreferenced
