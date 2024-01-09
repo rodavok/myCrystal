@@ -406,23 +406,15 @@ MartIndigoPlateauTM:
 	db -1 ; end
 
 MartIndigoPlateauTM2:
-	db 10 ; # items
-	db TM_MUD_SLAP		;FALKNER
-	db TM_FURY_CUTTER	;BUGSY
-	db TM_ATTRACT		;WHITNEY
-	db TM_SHADOW_BALL	;SHADOW_BALL
-	db TM_DYNAMICPUNCH	;CHUCK
-	db TM_IRON_TAIL		;JASMINE
-	db TM_ICY_WIND		;PRYCE
-	db TM_DRAGONBREATH	;CLAIR
-						;SURGE
-						;MISTY
-	db TM_GIGA_DRAIN	;ERIKA
-	db TM_TOXIC			;JANINE
-						;SABRINA
-						;BROCK
-						;BLAINE
-						;BLUE
+	db 8 ; # items (LIMITED TO 10, so probably just need to make a second merchant if there's a TM for every Kanto gym leader)
+						;SURGE  	THUNDERBOLT -> SPARK/THUNDER WAVE
+						;MISTY  	BUBBLEBEAM -> CLAMP/OCTAZOOKA/HYDRO PUMP
+	db TM_GIGA_DRAIN	;ERIKA		GIGA DRAIN
+	db TM_TOXIC			;JANINE 	TOXIC
+						;SABRINA 	PSYWAVE -> PSYCH UP
+						;BROCK  	BIDE -> ROCK SLIDE
+						;BLAINE 	FIRE BLAST -> FIRE SPIN / FLAME WHEEL
+						;BLUE		FISSURE
 	db -1 ; end
 
 MartUnderground:
