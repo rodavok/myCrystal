@@ -367,21 +367,22 @@ DEF MT01 EQU const_value
 
 
 	;Blackthorn
-	add_mt ROCK_SLIDE	;gen 1 tm
+	add_mt ROCK_SLIDE	; To TM from BROCK
 	add_mt SELFDESTRUCT ;gen 1 tm
 	add_mt DRILL_PECK
 	add_mt PETAL_DANCE
 
 	;Cerulean
-	add_mt THUNDER_WAVE
+	add_mt THUNDER_WAVE ; To TM from SURGE
 	add_mt LOVELY_KISS
 	add_mt FUTURE_SIGHT
-	add_mt PERISH_SONG
 
 	;Lavender
 	add_mt REFLECT  ;gen 1 tm
 	add_mt LIGHT_SCREEN ;gen 1 tm
 	add_mt SKULL_BASH	;gen 1 tm
+	add_mt PERISH_SONG
+
 
 	;Celadon
 	add_mt MORNING_SUN ;egg/event move
@@ -408,7 +409,7 @@ DEF MT01 EQU const_value
 	add_mt SWORDS_DANCE ;gen 1 tm
 
 	;Mt Silver
-	add_mt HYDRO_PUMP
+	add_mt HYDRO_PUMP   ; To TM from MISTY
 	add_mt EXPLOSION    ;gen 1 tm
 	add_mt BELLY_DRUM
 	add_mt DOUBLE_EDGE  ;gen 1 tm
