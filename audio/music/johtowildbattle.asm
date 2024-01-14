@@ -5,7 +5,7 @@ Music_JohtoWildBattle:
 	channel 3, Music_JohtoWildBattle_Ch3
 
 Music_JohtoWildBattle_Ch1:
-	tempo 104
+	tempo 104 ;104
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 2

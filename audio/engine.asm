@@ -2282,7 +2282,7 @@ Tempo:
 ; input:
 ; 	de: note length
 	; update Tempo
-	ld hl, CHANNEL_TEMPO
+	ld hl, CHANNEL_TEMPO * 4 ;slower cuz i play at a high speed
 	add hl, bc
 	ld [hl], e
 	inc hl

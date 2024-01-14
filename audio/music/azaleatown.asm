@@ -6,7 +6,7 @@ Music_AzaleaTown:
 	channel 4, Music_AzaleaTown_Ch4
 
 Music_AzaleaTown_Ch1:
-	tempo 160
+	tempo 160 ;160
 	volume 7, 7
 	duty_cycle 2
 	stereo_panning FALSE, TRUE

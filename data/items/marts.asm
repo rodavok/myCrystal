@@ -401,6 +401,7 @@ MartIndigoPlateauTM:
 	db TM_ATTRACT
 	db TM_SHADOW_BALL
 	db TM_DYNAMICPUNCH
+	db TM_IRON_TAIL
 	db TM_ICY_WIND
 	db TM_DRAGONBREATH
 	db -1 ; end

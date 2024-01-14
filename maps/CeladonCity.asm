@@ -322,6 +322,7 @@ CeladonCityTutorText2:
 
 	para "#MON to use"
 	line "healing moves?"
+	done
 
 
 CeladonTutorAwwButTheyreAmazingText:
