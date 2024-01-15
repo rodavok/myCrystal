@@ -67,4 +67,6 @@ BTTrainerClassSprites:
 	db SPRITE_BLUE
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET_GIRL
+	db SPRITE_ROCKET_BOSS
+
 	assert_table_length NUM_TRAINER_CLASSES - 1 ; exclude MYSTICALMAN

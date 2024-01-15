@@ -31,7 +31,7 @@ Unused_CheckShininess:
 	jr nz, .not_shiny
 
 ; Special
-	ld a, [hl]
+	ld a, [hl] 
 	and %1111
 	cp SHINY_SPC_DV
 	jr nz, .not_shiny
