@@ -5,7 +5,7 @@ DEF SHINY_DEF_DV EQU 10
 DEF SHINY_SPD_DV EQU 10
 DEF SHINY_SPC_DV EQU 10
 
-Unused_CheckShininess:
+CheckShininess:
 ; Check if a mon is shiny by DVs at bc.
 ; Return carry if shiny.
 ; ****Disabling this by renaming it Unused_CheckShininess
@@ -44,7 +44,7 @@ Unused_CheckShininess:
 	and a
 	ret
 
-CheckShininess:
+Unused_CheckShininess:
 ; Return carry if the DVs at hl are all 14 or higher.
 ; 
 
@@ -54,7 +54,7 @@ CheckShininess:
 	jr c, .not_shiny
 
 ; Defense
-	ld a, [hli]
+	ld a, [hl]
 	and %1111
 	cp 14
 	jr c, .not_shiny

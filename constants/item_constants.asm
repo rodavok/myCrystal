@@ -330,10 +330,10 @@ DEF MT01 EQU const_value
 	add_mt MEDITATE
 
 	;Azalea
-	add_mt RAZOR_WIND	;gen 1 tm
+	add_mt TELEPORT ;gen 1 tm
 	add_mt DRAGON_RAGE
 	add_mt METRONOME    ;gen 1 tm
-	add_mt FALSE_SWIPE
+	add_mt RAZOR_WIND ; gen 1 tm
 
 	;Goldenrod
 	add_mt BUBBLEBEAM	;gen 1 tm

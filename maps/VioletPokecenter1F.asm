@@ -33,6 +33,10 @@ VioletPokecenter1F_ElmsAideScript:
 	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext VioletPokecenterElmsAideGiveEggText
 	waitbutton
+	writetext VioletPokecenterElmsAideGiveRepelText
+	promptbutton
+	verbosegiveitem REPEL
+	waitbutton
 	closetext
 	readvar VAR_FACING
 	ifequal UP, .AideWalksAroundPlayer
@@ -155,6 +159,17 @@ VioletPokecenterElmsAideRefuseText:
 VioletPokecenterElmsAideAskEggText:
 	text "<PLAY_G>, will you"
 	line "take the EGG?"
+	done
+
+VioletPokecenterElmsAideGiveRepelText:
+	text "Good! You under-"
+	line "stand the true"
+
+	para "spirit of adven-"
+	line "ture."
+
+	para "I like that! Take"
+	line "this with you."
 	done
 
 VioletPokecenterFarawayLinkText: ; unreferenced

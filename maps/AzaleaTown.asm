@@ -462,14 +462,14 @@ AzaleaTutorScript:
 	loadmenu .MoveMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .RazorWind
+	ifequal 1, .Teleport
 	ifequal 2, .DragonRage
 	ifequal 3, .Metronome
-	ifequal 4, .FalseSwipe
+	ifequal 4, .RazorWind
 	sjump .Incompatible
 
-.RazorWind:
-	setval RAZOR_WIND
+.Teleport:
+	setval TELEPORT
 	writetext AzaleaTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -489,8 +489,8 @@ AzaleaTutorScript:
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
-.FalseSwipe:
-	setval FALSE_SWIPE
+.RazorWind:
+	setval RAZOR_WIND
 	writetext AzaleaTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -525,10 +525,10 @@ AzaleaTutorScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "RAZOR WIND@"
+	db "TELEPORT@"
 	db "DRAGON RAGE@"
 	db "METRONOME@"
-	db "FALSE SWIPE@"
+	db "RAZOR WIND@"
 	db "CANCEL@"
 
 azaleaaskteachamovetext:

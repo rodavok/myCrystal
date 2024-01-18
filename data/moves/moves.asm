@@ -223,7 +223,7 @@ Moves:
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,        90, 15, 100
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0
 	move SPARK,        EFFECT_PARALYZE_HIT,       65, ELECTRIC,     100, 20,  30
-	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        40, BUG,           95, 20,   0
+	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        30, BUG,           95, 20,   0
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,         90, 25,  10
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,       100,  5,   0
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,       100, 15,   0
@@ -261,8 +261,8 @@ Moves:
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,       100,  5,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,         100,  5,  10
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,        100, 15,  20
-	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,       80, PSYCHIC_TYPE,  90, 15,   0
-	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   20, FIGHTING,     100, 15,  50
+	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      100, PSYCHIC_TYPE, 100, 10,   0
+	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING,     100, 15,  50
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
 	assert_table_length NUM_ATTACKS
