@@ -1932,14 +1932,18 @@ FutureSight:
 	checkobedience
 	usedmovetext
 	doturn
+	critical
 	damagestats
 	damagecalc
 	futuresight
-	damagevariation ; skip here if last turn
+	stab
+	damagevariation
 	checkhit
 	moveanimnosub
 	failuretext
 	applydamage
+	criticaltext
+	supereffectivetext
 	checkfaint
 	buildopponentrage
 	endmove

@@ -34,6 +34,139 @@ TrainerHouseSign2:
 TrainerHouseIllegibleBook:
 	jumptext TrainerHouseIllegibleText
 
+ViridianTutorScript:
+	faceplayer
+	opentext
+	writetext Viridianaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext ViridianTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .BatonPass
+	ifequal 2, .Barrier
+	ifequal 3, .Amnesia
+	ifequal 4, .SwordsDance
+	sjump .Incompatible
+
+.BatonPass:
+	setval BATON_PASS 
+	writetext ViridianTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Barrier:
+	setval BARRIER
+	writetext ViridianTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Amnesia:
+	setval AMNESIA
+	writetext ViridianTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.SwordsDance:
+	setval SWORDS_DANCE
+	writetext ViridianTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext ViridianTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext ViridianTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext ViridianTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext ViridianTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "BATON PASS@"
+	db "BARRIER@"
+	db "AMNESIA@"
+	db "SWORDS DANCE@"
+	db "CANCEL@"
+
+Viridianaskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+ViridianTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+ViridianTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+ViridianTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+ViridianTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+ViridianTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+ViridianTutorMoveText:
+	text_start
+	done
+
 TrainerHouse1FReceptionistText:
 	text "Welcome to TRAINER"
 	line "HOUSE, the newest"
@@ -156,3 +289,4 @@ TrainerHouse1F_MapEvents:
 	object_event  6,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FCooltrainerFScript, -1
 	object_event  4,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FYoungsterScript, -1
 	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FGentlemanScript, -1
+	object_event  7,  6, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianTutorScript, -1

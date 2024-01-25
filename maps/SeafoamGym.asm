@@ -1,12 +1,14 @@
 	object_const_def
 	const SEAFOAMGYM_BLAINE
 	const SEAFOAMGYM_GYM_GUIDE
-
+	const SEAFOAM_ISLANDS_ARTICUNO
 SeafoamGym_MapScripts:
 	def_scene_scripts
 	scene_script SeafoamGymNoopScene ; unusable
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, SeafoamIslandsArticunoCallback
+
 
 SeafoamGymNoopScene:
 	end
@@ -59,6 +61,40 @@ SeafoamGymGuideScript:
 	waitbutton
 	closetext
 	end
+
+SeafoamIslandsArticunoCallback:
+	checkevent EVENT_FOUGHT_ARTICUNO
+	iftrue .NoAppear
+	checkitem SILVER_WING
+	iftrue .Appear
+	sjump .NoAppear
+
+.Appear:
+	appear SEAFOAM_ISLANDS_ARTICUNO
+	endcallback
+
+.NoAppear:
+	disappear SEAFOAM_ISLANDS_ARTICUNO
+	endcallback
+
+Articuno:
+	faceplayer
+	opentext
+	writetext ArticunoText
+	cry ARTICUNO
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_ARTICUNO
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon ARTICUNO, 45
+	startbattle
+	disappear SEAFOAM_ISLANDS_ARTICUNO
+	reloadmapafterbattle
+	end
+
+ArticunoText:
+	text "Gyaoo!"
+	done
 
 BlaineIntroText:
 	text "BLAINE: Waaah!"
@@ -168,3 +204,5 @@ SeafoamGym_MapEvents:
 	def_object_events
 	object_event  5,  2, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
 	object_event  6,  5, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, EVENT_SEAFOAM_GYM_GYM_GUIDE
+	object_event  4,  2, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLANDS_ARTICUNO
+

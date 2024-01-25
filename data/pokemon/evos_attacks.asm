@@ -2280,6 +2280,7 @@ SentretEvosAttacks:
 	db 17, FURY_SWIPES
 	db 25, SLAM
 	db 33, REST
+	db 37, SLASH
 	db 41, AMNESIA
 	db 0 ; no more level-up moves
 
@@ -2293,6 +2294,7 @@ FurretEvosAttacks:
 	db 18, FURY_SWIPES
 	db 28, SLAM
 	db 38, REST
+	db 40, SLASH
 	db 48, AMNESIA
 	db 0 ; no more level-up moves
 

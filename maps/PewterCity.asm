@@ -4,6 +4,7 @@
 	const PEWTERCITY_GRAMPS
 	const PEWTERCITY_FRUIT_TREE1
 	const PEWTERCITY_FRUIT_TREE2
+	const PEWTERCITY_TEACHER
 
 PewterCity_MapScripts:
 	def_scene_scripts
@@ -65,6 +66,139 @@ PewterCityFruitTree1:
 
 PewterCityFruitTree2:
 	fruittree FRUITTREE_PEWTER_CITY_2
+
+PewterTutorScript:
+	faceplayer
+	opentext
+	writetext Pewteraskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext PewterTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .SkyAttack
+	ifequal 2, .Outrage
+	ifequal 3, .CrossChop
+	ifequal 4, .Crunch
+	sjump .Incompatible
+
+.SkyAttack:
+	setval SKY_ATTACK 
+	writetext PewterTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Outrage:
+	setval OUTRAGE
+	writetext PewterTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.CrossChop:
+	setval CROSS_CHOP
+	writetext PewterTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Crunch:
+	setval CRUNCH
+	writetext PewterTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext PewterTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext PewterTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext PewterTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext PewterTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "SKY ATTACK@"
+	db "OUTRAGE@"
+	db "CROSS CHOP@"
+	db "CRUNCH@"
+	db "CANCEL@"
+
+Pewteraskteachamovetext:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+PewterTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+PewterTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+PewterTutorIfYouUnderstandYouveMadeItText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+PewterTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+PewterTutorBButText:
+	text "Your #MON"
+	line "can't learn this"
+	cont "move…"
+	done
+
+PewterTutorMoveText:
+	text_start
+	done
 
 PewterCityCooltrainerFText:
 	text "Have you visited"
@@ -177,3 +311,4 @@ PewterCity_MapEvents:
 	object_event 29, 17, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
+	object_event  6,  4, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterTutorScript, -1

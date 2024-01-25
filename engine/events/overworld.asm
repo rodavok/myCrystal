@@ -1414,7 +1414,7 @@ AskRockSmashText:
 	text_far _AskRockSmashText
 	text_end
 
-HasRockSmash:
+HasRockSmash: ;fix prompts for hms when player has another valid move
 	ld d, ROCK_SMASH
 	call CheckPartyMove
 	jr nc, .yes

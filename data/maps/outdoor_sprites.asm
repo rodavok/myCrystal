@@ -106,6 +106,7 @@ PewterGroupSprites:
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_BIRD
 
 CinnabarGroupSprites:
 	db SPRITE_SUICUNE
@@ -506,6 +507,7 @@ CianwoodGroupSprites:
 	db SPRITE_TAUROS
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
+	db SPRITE_TEACHER
 
 OlivineGroupSprites:
 	db SPRITE_SUICUNE
@@ -581,6 +583,7 @@ MahoganyGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_FRUIT_TREE
 	db SPRITE_POKE_BALL
+	db SPRITE_TEACHER
 
 BlackthornGroupSprites:
 	db SPRITE_SUICUNE
@@ -606,6 +609,7 @@ BlackthornGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_FRUIT_TREE
 	db SPRITE_POKE_BALL
+	db SPRITE_TEACHER
 
 DungeonsGroupSprites:
 	db SPRITE_SUICUNE
@@ -631,6 +635,7 @@ DungeonsGroupSprites:
 	db SPRITE_SCIENTIST
 	db SPRITE_POKE_BALL
 	db SPRITE_BOULDER
+	db SPRITE_BIRD
 
 FastShipGroupSprites:
 	db SPRITE_SUICUNE

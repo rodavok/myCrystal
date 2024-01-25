@@ -2,6 +2,8 @@
 	const MOUNTMOONSQUARE_FAIRY1
 	const MOUNTMOONSQUARE_FAIRY2
 	const MOUNTMOONSQUARE_ROCK
+	const MTMOONSQUARE_MOLTRES
+
 
 MountMoonSquare_MapScripts:
 	def_scene_scripts
@@ -10,6 +12,7 @@ MountMoonSquare_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, MountMoonSquareDisappearMoonStoneCallback
 	callback MAPCALLBACK_OBJECTS, MountMoonSquareDisappearRockCallback
+	callback MAPCALLBACK_OBJECTS, MtMoonMoltresCallback
 
 MountMoonSquareNoopScene:
 	end
@@ -21,6 +24,40 @@ MountMoonSquareDisappearMoonStoneCallback:
 MountMoonSquareDisappearRockCallback:
 	disappear MOUNTMOONSQUARE_ROCK
 	endcallback
+
+MtMoonMoltresCallback:
+	checkevent EVENT_FOUGHT_MOLTRES
+	iftrue .NoAppear
+	checktime DAY
+	iftrue .Appear
+	sjump .NoAppear
+
+.Appear:
+	appear MTMOONSQUARE_MOLTRES
+	endcallback
+
+.NoAppear:
+	disappear MTMOONSQUARE_MOLTRES
+	endcallback
+
+Moltres:
+	faceplayer
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MOLTRES
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon MOLTRES, 45
+	startbattle
+	disappear MTMOONSQUARE_MOLTRES
+	reloadmapafterbattle
+	end
+
+MoltresText:
+	text "Gyaoo!"
+	done
 
 ClefairyDance:
 	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
@@ -149,3 +186,5 @@ MountMoonSquare_MapEvents:
 	object_event  6,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonSquareRock, EVENT_MT_MOON_SQUARE_ROCK
+	object_event  8,  7, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Moltres, EVENT_MT_MOON_SQUARE_MOLTRES
+

@@ -208,7 +208,7 @@ INCLUDE "maps/ViridianPokecenter1F.asm"
 INCLUDE "maps/ViridianPokecenter2FBeta.asm"
 INCLUDE "maps/Route2NuggetHouse.asm"
 INCLUDE "maps/Route2Gate.asm"
-INCLUDE "maps/VictoryRoadGate.asm"
+;INCLUDE "maps/VictoryRoadGate.asm" had to move this because... ?
 
 
 SECTION "Map Scripts 12", ROMX
@@ -267,6 +267,7 @@ INCLUDE "maps/TinTower8F.asm"
 INCLUDE "maps/TinTower9F.asm"
 INCLUDE "maps/BurnedTower1F.asm"
 INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/VictoryRoadGate.asm"
 
 
 SECTION "Map Scripts 15", ROMX

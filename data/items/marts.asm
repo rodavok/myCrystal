@@ -34,7 +34,8 @@ Marts:
 	dw MartSaffron
 	dw MartMtMoon
 	dw MartIndigoPlateau
-	dw MartIndigoPlateauTM
+	dw MartIndigoPlateauTM1
+	dw MartIndigoPlateauTM2
 	dw MartUnderground
 	assert_table_length NUM_MARTS
 
@@ -394,7 +395,7 @@ MartIndigoPlateau:
 	db FULL_HEAL
 	db -1 ; end
 
-MartIndigoPlateauTM:
+MartIndigoPlateauTM1:
 	db 8 ; # items
 	db TM_MUD_SLAP
 	db TM_FURY_CUTTER
@@ -408,6 +409,12 @@ MartIndigoPlateauTM:
 
 MartIndigoPlateauTM2:
 	db 8 ; # items (LIMITED TO 10, so probably just need to make a second merchant if there's a TM for every Kanto gym leader)
+	db TM_EARTHQUAKE
+	db TM_CURSE
+	db TM_PSYCHIC_M
+	db TM_SLUDGE_BOMB
+	db TM_ZAP_CANNON
+	db TM_DREAM_EATER
 						;SURGE  	THUNDERBOLT -> SPARK/THUNDER WAVE
 						;MISTY  	BUBBLEBEAM -> CLAMP/OCTAZOOKA/HYDRO PUMP
 	db TM_GIGA_DRAIN	;ERIKA		GIGA DRAIN
