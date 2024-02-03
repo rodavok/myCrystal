@@ -533,7 +533,7 @@ AzaleaTutorScript:
 
 azaleaaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON some interesting"
 
 	para "moves if you'd"
 	line "like."
@@ -562,12 +562,11 @@ AzaleaTutorWhichMoveShouldITeachText:
 
 
 AzaleaTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
+	text "Use these moves"
+	line "to keep your"
 
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	para "opponents on"
+	line "their toes!"
 	done
 
 AzaleaTutorFarewellKidText:
@@ -577,9 +576,7 @@ AzaleaTutorFarewellKidText:
 	done
 
 AzaleaTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 AzaleaTutorMoveText:

@@ -45,10 +45,6 @@ EcruteakCityTutorScript:
 	ifequal 2, .Hypnosis
 	ifequal 3, .Submission
 	ifequal 4, .Bite
-	ifequal 5, .DragonRage
-	ifequal 6, .TakeDown
-	ifequal 7, .Metronome
-	ifequal 8, .FaintAttack
 	sjump .Incompatible
 
 .Psybeam:
@@ -74,34 +70,6 @@ EcruteakCityTutorScript:
 
 .Bite:
 	setval BITE
-	writetext EcruteakCityTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.DragonRage:
-	setval DRAGON_RAGE
-	writetext EcruteakCityTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.TakeDown:
-	setval TAKE_DOWN
-	writetext EcruteakCityTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.Metronome:
-	setval METRONOME
-	writetext EcruteakCityTutorMoveText
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	sjump .Incompatible
-
-.FaintAttack:
-	setval FAINT_ATTACK
 	writetext EcruteakCityTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -135,15 +103,11 @@ EcruteakCityTutorScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 9 ; items
+	db 5 ; items
 	db "PSYBEAM@"
 	db "HYPNOSIS@"
 	db "SUBMISSION@"
 	db "BITE@"
-	db "DRAGON RAGE@"
-	db "TAKE DOWN@"
-	db "METRONOME@"
-	db "FAINT ATTACK@"
 	db "CANCEL@"
 EcruteakHistoryBook:
 	opentext
@@ -277,7 +241,7 @@ EcruteakThreeMonText:
 
 ecruteakaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON some"
 
 	para "moves if you'd"
 	line "like."
@@ -306,13 +270,10 @@ EcruteakCityTutorWhichMoveShouldITeachText:
 
 
 EcruteakCityTutorIfYouUnderstandYouveMadeItText:
-	text "Great choice!"
-	line "You're on your"
-
-	para "way to becoming"
-	line "an even better"
-	cont "trainer."
+	text "Variety is the "
+	line "spice of life."
 	done
+
 
 EcruteakCityTutorFarewellKidText:
 	text "Farewell and"
@@ -321,9 +282,7 @@ EcruteakCityTutorFarewellKidText:
 	done
 
 EcruteakCityTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 EcruteakCityTutorMoveText:

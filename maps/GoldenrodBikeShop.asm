@@ -179,10 +179,10 @@ GoldenrodTutorScript:
 
 goldenrodaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON moderately"
 
-	para "moves if you'd"
-	line "like."
+	para "powerful moves."
+	line "How about it?"
 
 	para "Should I teach a"
 	line "new move?"
@@ -208,12 +208,8 @@ GoldenrodTutorWhichMoveShouldITeachText:
 
 
 GoldenrodTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	text "Variety is the "
+	line "spice of life."
 	done
 
 GoldenrodTutorFarewellKidText:
@@ -223,9 +219,7 @@ GoldenrodTutorFarewellKidText:
 	done
 
 GoldenrodTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 GoldenrodTutorMoveText:

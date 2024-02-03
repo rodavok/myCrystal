@@ -157,7 +157,7 @@ OlivineTutorScript:
 
 Olivineaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON some"
 
 	para "moves if you'd"
 	line "like."
@@ -186,12 +186,8 @@ OlivineTutorWhichMoveShouldITeachText:
 
 
 OlivineTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	text "Variety is the "
+	line "spice of life."
 	done
 
 OlivineTutorFarewellKidText:
@@ -201,9 +197,7 @@ OlivineTutorFarewellKidText:
 	done
 
 OlivineTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 OlivineTutorMoveText:

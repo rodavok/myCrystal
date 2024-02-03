@@ -624,12 +624,12 @@ GuideGentsHouseSignText:
 
 cherrygroveaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON moves that"
 
-	para "moves if you'd"
-	line "like."
+	para "affect STATS."
+	line "Would you like"
 
-	para "Should I teach a"
+	para "me to teach a"
 	line "new move?"
 	done
 
@@ -653,12 +653,10 @@ CherrygroveTutorWhichMoveShouldITeachText:
 
 
 CherrygroveTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
+	text "Raising your STATS"
+	line "can give your #MON"
 
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	para "an edge in battle."
 	done
 
 CherrygroveTutorFarewellKidText:
@@ -668,9 +666,7 @@ CherrygroveTutorFarewellKidText:
 	done
 
 CherrygroveTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 CherrygroveTutorMoveText:

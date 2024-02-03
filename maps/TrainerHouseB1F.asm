@@ -105,7 +105,7 @@ Movement_ExitTrainerHouseBattleRoom:
 	step_end
 
 Movement_TrainerHouseTurnBack:
-	step RIGHT
+	step RIGHT 
 	turn_head LEFT
 	step_end
 

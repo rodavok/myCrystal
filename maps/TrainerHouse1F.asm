@@ -115,15 +115,14 @@ ViridianTutorScript:
 
 Viridianaskteachamovetext:
 	text "I can teach your"
-	line "#MON amazing"
+	line "#MON moves that"
 
-	para "moves if you'd"
-	line "like."
+	para "affect STATS."
+	line "Would you like"
 
-	para "Should I teach a"
+	para "me to teach a"
 	line "new move?"
 	done
-
 
 ViridianTutorAwwButTheyreAmazingText:
 	text "Come back here"
@@ -143,12 +142,10 @@ ViridianTutorWhichMoveShouldITeachText:
 	done
 
 ViridianTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	text "Raising your STATS"
+	line "can give your #MON"
+	
+	para "an edge in battle."
 	done
 
 ViridianTutorFarewellKidText:
@@ -158,9 +155,7 @@ ViridianTutorFarewellKidText:
 	done
 
 ViridianTutorBButText:
-	text "Your #MON"
-	line "can't learn this"
-	cont "move…"
+	text "Okay then."
 	done
 
 ViridianTutorMoveText:

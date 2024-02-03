@@ -204,6 +204,130 @@ LakeOfRageMagikarpHouseUnusedRecordText:
 	text_ram wStringBuffer4
 	text_end
 
+MahoganyTutorScript:
+	faceplayer
+	opentext
+	writetext Mahoganyaskteachamovetext
+	yesorno
+	iffalse .Refused
+	writetext MahoganyTutorWhichMoveShouldITeachText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .FlameWheel
+	ifequal 2, .AuroraBeam
+	ifequal 3, .DoubleKick
+	ifequal 4, .Thrash
+	sjump .Incompatible
+
+.FlameWheel:
+	setval FLAME_WHEEL
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.AuroraBeam:
+	setval AURORA_BEAM
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.DoubleKick:
+	setval DOUBLE_KICK
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+
+.Thrash:
+	setval THRASH
+	writetext MahoganyTutorMoveText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	sjump .Incompatible
+	
+.Refused:
+	writetext MahoganyTutorAwwButTheyreAmazingText
+	waitbutton
+	closetext
+	end
+	
+.Incompatible:
+	writetext MahoganyTutorBButText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	writetext MahoganyTutorIfYouUnderstandYouveMadeItText
+	waitbutton
+	writetext MahoganyTutorFarewellKidText
+	waitbutton
+	closetext
+	end
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "FLAME WHEEL@"
+	db "AURORA BEAM@"
+	db "DOUBLE KICK@"
+	db "THRASH@"
+	db "CANCEL@"
+
+Mahoganyaskteachamovetext:
+	text "I can teach your"
+	line "#MON moderately"
+
+	para "powerful moves"
+	line "if you'd like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+
+MahoganyTutorAwwButTheyreAmazingText:
+	text "Come back here"
+	line "if you want to"
+	
+	para "teach your"
+	line "#MON a new"
+	cont "move!"
+	done
+
+MahoganyTutorWhichMoveShouldITeachText:
+	text "Great! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+
+MahoganyTutorIfYouUnderstandYouveMadeItText:
+	text "Variety is the"
+	line "spice of life."
+	done
+
+MahoganyTutorFarewellKidText:
+	text "Farewell and"
+	line "good luck on"
+	cont "your journey!"
+	done
+
+MahoganyTutorBButText:
+	text "Okay then."
+	done
+
 LakeOfRageMagikarpHouseUnusedDummyText: ; unreferenced
 	text_end
 
@@ -222,3 +346,5 @@ LakeOfRageMagikarpHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MagikarpLengthRaterScript, -1
+	object_event  2,  5, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTutorScript, -1
+
