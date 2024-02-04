@@ -459,6 +459,7 @@ ENDM
 	map_attributes DragonsDenB1F, DRAGONS_DEN_B1F, $71, 0
 	map_attributes DragonShrine, DRAGON_SHRINE, $00, 0
 	map_attributes TohjoFalls, TOHJO_FALLS, $09, 0
+	map_attributes TohjoFallsGiovanniRoom, TOHJO_FALLS, $09, 0
 	map_attributes OlivinePokecenter1F, OLIVINE_POKECENTER_1F, $00, 0
 	map_attributes OlivineGym, OLIVINE_GYM, $00, 0
 	map_attributes OlivineTimsHouse, OLIVINE_TIMS_HOUSE, $00, 0

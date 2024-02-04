@@ -283,7 +283,7 @@ Route27TMSolarbeam:
 	itemball TM_SOLARBEAM
 
 Route27RareCandy:
-	itemball RARE_CANDY
+	itemball EGG_TICKET
 
 Route27FisherStepLeftTwiceMovement:
 	step LEFT

@@ -285,10 +285,10 @@ MahoganyTutorScript:
 
 Mahoganyaskteachamovetext:
 	text "I can teach your"
-	line "#MON moderately"
+	line "#MON some "
 
-	para "powerful moves"
-	line "if you'd like."
+	para "moves if you'd"
+	line "like."
 
 	para "Should I teach a"
 	line "new move?"
@@ -346,5 +346,5 @@ LakeOfRageMagikarpHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MagikarpLengthRaterScript, -1
-	object_event  2,  5, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTutorScript, -1
+	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTutorScript, -1
 

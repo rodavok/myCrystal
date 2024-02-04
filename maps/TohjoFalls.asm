@@ -15,6 +15,8 @@ TohjoFalls_MapEvents:
 	def_warp_events
 	warp_event 13, 15, ROUTE_27, 2
 	warp_event 25, 15, ROUTE_27, 3
+	warp_event  3,  5, TOHJO_FALLS_GIOVANNI_ROOM, 1
+	
 
 	def_coord_events
 

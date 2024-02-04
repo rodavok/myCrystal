@@ -995,6 +995,9 @@ DragonsDenB1F_Blocks:
 TohjoFalls_Blocks:
 	INCBIN "maps/TohjoFalls.blk"
 
+TohjoFallsGiovanniRoom_Blocks:
+	INCBIN "maps/TohjoFalls.blk"
+
 RuinsOfAlphHoOhItemRoom_Blocks:
 RuinsOfAlphKabutoItemRoom_Blocks:
 RuinsOfAlphOmanyteItemRoom_Blocks:
