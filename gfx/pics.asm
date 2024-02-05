@@ -712,6 +712,9 @@ SECTION "Pics 19", ROMX
 
 RocketBossPic: INCBIN "gfx/trainers/giovanni.2bpp.lz"
 OmastarBackpic: INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
+KrisPic:        INCBIN "gfx/trainers/kris.2bpp.lz"
+NyqwilFrontpic: INCBIN "gfx/pokemon/nyqwil/front.animated.2bpp.lz"
+NyqwilBackpic:  INCBIN "gfx/pokemon/nyqwil/back.2bpp.lz"
 
 
 

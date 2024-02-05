@@ -1,0 +1,4 @@
+open 192.168.1.99:2121
+user rodavok wasser421
+put pokecrystal.gbc /ROMs/GBC/pokecrystal.gbc
+bye

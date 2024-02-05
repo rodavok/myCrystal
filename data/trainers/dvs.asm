@@ -71,4 +71,5 @@ TrainerClassDVs:
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn 15, 13, 13, 14 ; ROCKET_BOSS
+	dn 13, 12, 13, 13 ; KRIS_T
 	assert_table_length NUM_TRAINER_CLASSES

@@ -68,5 +68,6 @@ BTTrainerClassSprites:
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET_GIRL
 	db SPRITE_ROCKET_BOSS
-
-	assert_table_length NUM_TRAINER_CLASSES - 1 ; exclude MYSTICALMAN
+	db SPRITE_ROCKET_BOSS
+	db SPRITE_KRIS
+	assert_table_length NUM_TRAINER_CLASSES; - 1 ; exclude MYSTICALMAN

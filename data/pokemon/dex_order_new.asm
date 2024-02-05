@@ -163,6 +163,7 @@ NewPokedexOrder:
 	db NATU
 	db XATU
 	db QWILFISH
+	db NYQWIL
 	db TENTACOOL
 	db TENTACRUEL
 	db KRABBY

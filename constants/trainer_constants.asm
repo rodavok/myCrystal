@@ -710,4 +710,9 @@ DEF KRIS EQU __trainer_class__
 	trainerclass ROCKET_BOSS ; 44
 	const GIOVANNI
 
+	trainerclass KRIS_T
+	const KRIS1
+	const KRIS2
+	const KRIS3
+
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

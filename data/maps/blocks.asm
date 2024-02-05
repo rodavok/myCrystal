@@ -995,8 +995,6 @@ DragonsDenB1F_Blocks:
 TohjoFalls_Blocks:
 	INCBIN "maps/TohjoFalls.blk"
 
-TohjoFallsGiovanniRoom_Blocks:
-	INCBIN "maps/TohjoFalls.blk"
 
 RuinsOfAlphHoOhItemRoom_Blocks:
 RuinsOfAlphKabutoItemRoom_Blocks:
@@ -1048,3 +1046,8 @@ BetaBlank_Blocks: ; unreferenced
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+SECTION "Map Blocks 4", ROMX
+
+TohjoFallsGiovanniRoom_Blocks:
+	INCBIN "maps/TohjoFallsGiovanniRoom.blk"

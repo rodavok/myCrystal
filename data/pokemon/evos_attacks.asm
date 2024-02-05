@@ -2930,6 +2930,7 @@ GranbullEvosAttacks:
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
+	db EVOLVE_LEVEL, 34, NYQWIL
 	db 0 ; no more evolutions
 	db 1, SPIKES
 	db 1, TACKLE
@@ -2940,6 +2941,22 @@ QwilfishEvosAttacks:
 	db 28, PIN_MISSILE
 	db 37, TAKE_DOWN
 	db 46, HYDRO_PUMP
+	db 0 ; no more level-up moves
+
+NyqwilEvosAttacks:
+	db 0 ;no more evolutions
+	db 0 ; no more evolutions
+	db 1, SPIKES
+	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, BITE
+	db 10, HARDEN
+	db 10, MINIMIZE
+	db 19, WATER_GUN
+	db 28, PIN_MISSILE
+	db 37, TAKE_DOWN
+	db 45, CRUNCH
+	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 ScizorEvosAttacks:

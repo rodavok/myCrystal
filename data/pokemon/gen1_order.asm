@@ -252,5 +252,6 @@ Pokered_MonIndices:
 	db GRANBULL
 	db QWILFISH
 	db WOBBUFFET
-	db WOBBUFFET
+	;db WOBBUFFET
+	dw NYQWIL
 	assert_table_length NUM_POKEMON + 1
