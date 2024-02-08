@@ -2612,10 +2612,10 @@ PolitoedEvosAttacks:
 	db 13, WATER_GUN
 	db 19, DOUBLESLAP
 	db 27, RAIN_DANCE
-	db 35, BODY_SLAM
+	db 30, MEGA_DRAIN
+	db 35, PERISH_SONG
 	db 43, BELLY_DRUM
 	db 51, HYDRO_PUMP
-	db 35, PERISH_SONG
 	db 51, SWAGGER
 	db 0 ; no more level-up moves
 

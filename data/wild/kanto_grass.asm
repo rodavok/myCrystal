@@ -176,7 +176,7 @@ KantoGrassWildMons:
 	db 42, RATTATA
 	db 42, RATICATE
 	db 43, SENTRET
-	db 43, PIDGOTTO
+	db 43, PIDGEOTTO
 	db 46, FURRET
 	db 44, PIDGEOTTO
 	db 44, PIDGEY
@@ -184,7 +184,7 @@ KantoGrassWildMons:
 	db 42, RATTATA
 	db 42, RATICATE
 	db 43, SENTRET
-	db 43, PIDGOTTO
+	db 43, PIDGEOTTO
 	db 46, FURRET
 	db 44, PIDGEOTTO
 	db 44, PIDGEY
@@ -218,7 +218,7 @@ KantoGrassWildMons:
 	db 44, PIKACHU
 	; nite
 	db 43, HOOTHOOT
-	db 43, ARAIDOS
+	db 43, ARIADOS
 	db 45, HOOTHOOT
 	db 47, NOCTOWL
 	db 47, ARIADOS

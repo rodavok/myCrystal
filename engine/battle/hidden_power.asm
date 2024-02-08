@@ -56,6 +56,7 @@ HiddenPowerDamage:
 
 ; Divide by 2 and add 30 + 1
 	srl a
+	
 	add 30
 	inc a
 
@@ -100,7 +101,8 @@ HiddenPowerDamage:
 
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
-	ld a, d
+	;ld a, d
+	ld a, 65 ;
 	push af
 	farcall BattleCommand_DamageStats ; damagestats
 	pop af

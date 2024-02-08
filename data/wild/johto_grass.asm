@@ -9,7 +9,7 @@ JohtoGrassWildMons:
 	db 4, RATTATA
 	db 5, RATTATA
 	db 3, RATTATA
-	db 6, RATTATA
+	db 6, RATTATA                             
 	db 5, RATTATA
 	db 5, RATTATA
 	; day
@@ -1069,85 +1069,85 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 43, GRAVELER
-	db 44, URSARING
-	db 42, ONIX
-	db 45, MAGMAR
-	db 45, GOLBAT
-	db 20, LARVITAR
-	db 15, LARVITAR
+	db 53, GRAVELER
+	db 54, URSARING
+	db 52, ONIX
+	db 55, MAGMAR
+	db 55, GOLBAT
+	db 40, LARVITAR
+	db 45, LARVITAR
 	; day
-	db 43, GRAVELER
-	db 44, URSARING
-	db 42, ONIX
-	db 45, MAGMAR
-	db 45, GOLBAT
-	db 20, LARVITAR
-	db 15, LARVITAR
+	db 53, GRAVELER
+	db 54, URSARING
+	db 52, ONIX
+	db 55, MAGMAR
+	db 55, GOLBAT
+	db 40, LARVITAR
+	db 45, LARVITAR
 	; nite
-	db 43, GRAVELER
-	db 44, GOLBAT
-	db 42, ONIX
-	db 42, GOLBAT
-	db 45, GOLDUCK
-	db 46, GOLBAT
-	db 46, GOLBAT
+	db 53, GRAVELER
+	db 54, GOLBAT
+	db 52, ONIX
+	db 52, GOLBAT
+	db 55, GOLDUCK
+	db 56, GOLBAT
+	db 56, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 48, GOLBAT
-	db 48, MACHOKE
-	db 47, URSARING
-	db 46, PARASECT
-	db 48, PARASECT
-	db 15, LARVITAR
-	db 20, LARVITAR
+	db 58, GOLBAT
+	db 58, MACHOKE
+	db 57, URSARING
+	db 56, PARASECT
+	db 58, PARASECT
+	db 45, LARVITAR
+	db 40, LARVITAR
 	; day
-	db 48, GOLBAT
-	db 48, MACHOKE
-	db 47, URSARING
-	db 46, PARASECT
-	db 48, PARASECT
-	db 15, LARVITAR
-	db 20, LARVITAR
+	db 58, GOLBAT
+	db 58, MACHOKE
+	db 57, URSARING
+	db 56, PARASECT
+	db 58, PARASECT
+	db 45, LARVITAR
+	db 40, LARVITAR
 	; nite
-	db 48, GOLBAT
-	db 48, GOLDUCK
-	db 46, GOLBAT
-	db 46, PARASECT
-	db 48, PARASECT
-	db 45, MISDREAVUS
-	db 45, MISDREAVUS
+	db 58, GOLBAT
+	db 58, GOLDUCK
+	db 56, GOLBAT
+	db 56, PARASECT
+	db 58, PARASECT
+	db 55, MISDREAVUS
+	db 55, MISDREAVUS
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_3
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 50, URSARING
-	db 20, LARVITAR
-	db 15, LARVITAR
-	db 20, PUPITAR
+	db 61, GOLBAT
+	db 58, ONIX
+	db 58, GRAVELER
+	db 60, URSARING
+	db 40, LARVITAR
+	db 35, LARVITAR
+	db 45, PUPITAR
 	; day
-	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 50, URSARING
-	db 20, LARVITAR
-	db 15, LARVITAR
-	db 20, PUPITAR
+	db 61, GOLBAT
+	db 58, ONIX
+	db 58, GRAVELER
+	db 60, URSARING
+	db 40, LARVITAR
+	db 35, LARVITAR
+	db 45, PUPITAR
 	; nite
-	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 49, GOLBAT
-	db 45, GOLDUCK
-	db 53, GOLBAT
-	db 53, GOLBAT
+	db 61, GOLBAT
+	db 58, ONIX
+	db 58, GRAVELER
+	db 59, GOLBAT
+	db 55, GOLDUCK
+	db 63, GOLBAT
+	db 63, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
@@ -1685,29 +1685,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 43, DONPHAN
-	db 45, CHANSEY
-	db 44, URSARING
-	db 44, RAPIDASH
-	db 44, TANGELA
-	db 43, DODRIO
-	db 43, DODRIO
+	db 53, DONPHAN
+	db 55, CHANSEY
+	db 54, URSARING
+	db 54, RAPIDASH
+	db 54, TANGELA
+	db 53, DODRIO
+	db 53, DODRIO
 	; day
-	db 45, DONPHAN
-	db 45, CHANSEY
-	db 44, URSARING
-	db 44, RAPIDASH
-	db 44, TANGELA
-	db 43, DODRIO
-	db 43, DODRIO
+	db 55, DONPHAN
+	db 55, CHANSEY
+	db 54, URSARING
+	db 54, RAPIDASH
+	db 54, TANGELA
+	db 53, DODRIO
+	db 53, DODRIO
 	; nite
-	db 41, TANGELA
-	db 42, POLIWHIRL
-	db 45, RAPIDASH
-	db 44, POLIWHIRL
-	db 45, CHANSEY
-	db 44, GOLBAT
-	db 44, SNEASEL
+	db 51, TANGELA
+	db 52, POLIWHIRL
+	db 55, RAPIDASH
+	db 54, POLIWHIRL
+	db 55, CHANSEY
+	db 54, GOLBAT
+	db 54, SNEASEL
 	end_grass_wildmons
 
 	db -1 ; end
