@@ -101,8 +101,7 @@ HiddenPowerDamage:
 
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
-	;ld a, d
-	ld a, 65 ;
+	ld a, d
 	push af
 	farcall BattleCommand_DamageStats ; damagestats
 	pop af
