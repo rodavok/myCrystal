@@ -57,4 +57,4 @@ used_space.png
 .DS_STORE
 
 #zone.identifier files
-.Identifier
+*.Identifier
