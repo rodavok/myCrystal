@@ -14,6 +14,7 @@ Marts:
 	dw MartGoldenrod5F2
 	dw MartGoldenrod5F3
 	dw MartGoldenrod5F4
+	dw MartGoldenrod5F5
 	dw MartOlivine
 	dw MartEcruteak
 	dw MartMahogany1
@@ -165,6 +166,16 @@ MartGoldenrod5F4:
 	db TM_ICE_PUNCH
 	db TM_HEADBUTT
 	db TM_ROCK_SMASH
+	db -1 ; end
+
+MartGoldenrod5F5:
+	db 6 ; # items
+	db TM_THUNDERPUNCH
+	db TM_FIRE_PUNCH
+	db TM_ICE_PUNCH
+	db TM_HEADBUTT
+	db TM_ROCK_SMASH
+	db TM_HIDDEN_POWER
 	db -1 ; end
 
 MartOlivine:

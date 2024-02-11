@@ -25,6 +25,8 @@ GoldenrodDeptStore5FCheckIfSundayCallback:
 GoldenrodDeptStore5FClerkScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_TM10_HIDDEN_POWER
+	iftrue .hiddenpower
 	checkevent EVENT_GOT_TM02_HEADBUTT
 	iftrue .headbutt
 	checkevent EVENT_GOT_TM08_ROCK_SMASH
@@ -55,6 +57,14 @@ GoldenrodDeptStore5FClerkScript:
 	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_4
 	closetext
 	end
+
+; maybe one day i'll do the busywork to account for all possible combos
+; but for now, if you get hidden power you get rock smash and headbutt
+.hiddenpower
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_5
+	closetext
+	end
+
 
 GoldenrodDeptStore5FReceptionistScript:
 	faceplayer
