@@ -37,7 +37,6 @@ TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
 SECTION "Pics 2", ROMX
 
 BlastoiseFrontpic:   INCBIN "gfx/pokemon/blastoise/front.animated.2bpp.lz"
-RapidashFrontpic:    INCBIN "gfx/pokemon/rapidash/front.animated.2bpp.lz"
 MeganiumFrontpic:    INCBIN "gfx/pokemon/meganium/front.animated.2bpp.lz"
 NidoqueenFrontpic:   INCBIN "gfx/pokemon/nidoqueen/front.animated.2bpp.lz"
 HitmonleeFrontpic:   INCBIN "gfx/pokemon/hitmonlee/front.animated.2bpp.lz"
@@ -715,6 +714,8 @@ OmastarBackpic: INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
 KrisPic:        INCBIN "gfx/trainers/kris.2bpp.lz"
 NyqwilFrontpic: INCBIN "gfx/pokemon/nyqwil/front.animated.2bpp.lz"
 NyqwilBackpic:  INCBIN "gfx/pokemon/nyqwil/back.2bpp.lz"
+RapidashFrontpic: INCBIN "gfx/pokemon/rapidash/front.animated.2bpp.lz"
+
 
 
 
