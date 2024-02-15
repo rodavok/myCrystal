@@ -1051,3 +1051,6 @@ SECTION "Map Blocks 4", ROMX
 
 TohjoFallsGiovanniRoom_Blocks:
 	INCBIN "maps/TohjoFallsGiovanniRoom.blk"
+
+CeruleanCave_Blocks:
+	INCBIN "maps/CeruleanCave.blk"

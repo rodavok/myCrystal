@@ -170,4 +170,9 @@ KantoWaterWildMons:
 	db 38, TENTACRUEL
 	end_water_wildmons
 
+	def_water_wildmons CERULEAN_CAVE
+	db 10 percent ; encounter rate
+	db 60, SLOWBRO
+	db 62, KINGLER
+	db 60, SEADRA
 	db -1 ; end

@@ -844,3 +844,31 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	db -1 ; end
+
+	def_grass_wildmons CERULEAN_CAVE
+	db 10 percent, 10 percent, 15 percent ; encounter rates: morn/day/nite
+	; morn
+	db 65, CHANSEY
+	db 58, RAICHU
+	db 60, SANDSLASH
+	db 63, CHANSEY
+	db 56, WIGGLYTUFF
+	db 59, LICKITUNG
+	db 60, SLOWBRO
+	; day
+	db 65, CHANSEY
+	db 62, CHANSEY
+	db 60, MAGNETON
+	db 58, PRIMEAPE
+	db 56, MACHOKE
+	db 59, LICKITUNG
+	db 60, SLOWBRO
+	; nite
+	db 65, CHANSEY
+	db 63, CHANSEY
+	db 60, GOLBAT
+	db 62, GLOOM
+	db 63, HYPNO
+	db 64, RHYDON
+	db 60, SLOWBRO
+	end_grass_wildmons

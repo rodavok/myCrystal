@@ -617,6 +617,7 @@ InitializeEventsScript:
 	setevent EVENT_ROUTE_10_NORTH_ZAPDOS
 	setevent EVENT_MT_MOON_SQUARE_MOLTRES
 	setevent EVENT_SEAFOAM_ISLANDS_ARTICUNO
+	setevent EVENT_CERULEAN_CAVE_MEWTWO
 	endcallback
 
 AskNumber1MScript:
