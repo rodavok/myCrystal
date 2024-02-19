@@ -1054,3 +1054,6 @@ TohjoFallsGiovanniRoom_Blocks:
 
 CeruleanCave_Blocks:
 	INCBIN "maps/CeruleanCave.blk"
+
+SilverCaveMewRoom_Blocks:
+	INCBIN "maps/SilverCaveMewRoom.blk"

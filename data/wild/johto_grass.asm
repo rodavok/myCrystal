@@ -1153,29 +1153,57 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 48, GOLBAT
-	db 46, GOLBAT
-	db 50, MAGCARGO
-	db 46, PARASECT
-	db 48, PARASECT
-	db 50, RHYDON
+	db 55, GOLBAT
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 54, PARASECT
+	db 60, CHANSEY
+	db 55, RHYDON
 	db 55, URSARING
 	; day
-	db 48, GOLBAT
-	db 46, GOLBAT
-	db 50, MAGCARGO
-	db 46, PARASECT
-	db 48, PARASECT
-	db 50, RHYDON
-	db 52, PUPITAR
+	db 55, GOLBAT
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 54, PARASECT
+	db 60, CHANSEY
+	db 55, RHYDON
+	db 55, URSARING
 	; nite
-	db 45, MISDREAVUS
-	db 48, GOLBAT
-	db 50, MAGCARGO
-	db 46, GOLBAT
-	db 48, PARASECT
-	db 50, RHYDON
-	db 52, PUPITAR
+	db 55, MISDREAVUS
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 55, GOLBAT
+	db 52, PARASECT
+	db 56, RHYDON
+	db 54, PUPITAR
+	end_grass_wildmons
+
+	def_grass_wildmons SILVER_CAVE_MEW_ROOM
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 55, GOLBAT
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 54, PARASECT
+	db 60, CHANSEY
+	db 55, RHYDON
+	db 55, URSARING
+	; day
+	db 55, GOLBAT
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 54, PARASECT
+	db 60, CHANSEY
+	db 55, RHYDON
+	db 55, URSARING
+	; nite
+	db 55, MISDREAVUS
+	db 56, GOLBAT
+	db 58, MAGCARGO
+	db 55, GOLBAT
+	db 52, PARASECT
+	db 56, RHYDON
+	db 54, PUPITAR
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
@@ -1199,7 +1227,7 @@ JohtoGrassWildMons:
 	; nite
 	db 3, GEODUDE
 	db 2, ZUBAT
-	db 2, LARVITAR
+	db 2, DUNSPARCE
 	db 4, GEODUDE
 	db 2, ZUBAT
 	db 4, ZUBAT
@@ -1222,7 +1250,7 @@ JohtoGrassWildMons:
 	db 25, GRAVELER
 	db 25, URSARING
 	db 30, URSARING
-	db 23, LARVITAR
+	db 23, DUNSPARCE
 	db 23, GOLBAT
 	; nite
 	db 23, GEODUDE
@@ -1230,7 +1258,7 @@ JohtoGrassWildMons:
 	db 25, GRAVELER
 	db 20, WOBBUFFET
 	db 25, WOBBUFFET
-	db 23, LARVITAR
+	db 23, DUNSPARCE
 	db 23, GOLBAT
 	end_grass_wildmons
 
