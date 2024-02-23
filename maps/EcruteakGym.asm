@@ -24,6 +24,10 @@ EcruteakGymNoopScene:
 EcruteakGymMortyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch2
+    checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rematch1
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
 	writetext MortyIntroText
@@ -67,6 +71,25 @@ EcruteakGymMortyScript:
 .NoRoomForShadowBall:
 	closetext
 	end
+.Rematch1
+	writetext MortyRematchText1
+	waitbutton
+	closetext
+	winlosstext MortyWinLossText2, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle 
+	end
+.Rematch2
+	writetext MortyRematchText2
+	waitbutton
+	closetext
+	winlosstext MortyWinLossText2, 0
+	loadtrainer MORTY, MORTY3
+	startbattle
+	reloadmapafterbattle 
+	end
+
 
 EcruteakGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -272,6 +295,38 @@ MortyFightDoneText:
 
 	para "I envy you for"
 	line "that…"
+	done
+
+MortyRematchText1:
+	text "So, you've"
+	line "beaten the"
+	cont "ELITE FOUR."
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+MortyRematchText2:
+	text "So, you've"
+	line "beaten the"
+
+	para "CHAMPION of"
+	line "KANTO!"
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+MortyWinLossText2:
+	text "I'm impressed"
+	line "by your"
+	cont "power…"
+
+	para "You really"
+	line "are the true"
+    cont "CHAMPION..."
 	done
 
 SageJeffreySeenText:

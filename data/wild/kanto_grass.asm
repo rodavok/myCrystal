@@ -843,8 +843,6 @@ KantoGrassWildMons:
 	db 42, SNEASEL
 	end_grass_wildmons
 
-	db -1 ; end
-
 	def_grass_wildmons CERULEAN_CAVE
 	db 10 percent, 10 percent, 15 percent ; encounter rates: morn/day/nite
 	; morn
@@ -872,3 +870,33 @@ KantoGrassWildMons:
 	db 64, RHYDON
 	db 60, SLOWBRO
 	end_grass_wildmons
+
+	def_grass_wildmons SAFARI_ZONE_BETA
+	db 10 percent, 10 percent, 15 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, PARASECT
+	db 36, RHYHORN
+	db 37, EXEGGCUTE
+	db 36, NIDORINA
+	db 36, NIDORINO
+	db 37, KANGASKHAN
+	db 40, CHANSEY
+	; day
+	db 39, PARASECT
+	db 36, SCYTHER
+	db 37, EXEGGCUTE
+	db 36, NIDORINA
+	db 36, NIDORINO
+	db 37, TAUROS
+	db 40, CHANSEY
+	; nite
+	db 39, PARASECT
+	db 36, VENOMOTH
+	db 37, VENONAT
+	db 36, PINSIR
+	db 36, TANGELA
+	db 37, MAROWAK
+	db 40, CHANSEY
+	end_grass_wildmons
+
+	db -1 ; end

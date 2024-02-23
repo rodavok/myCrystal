@@ -1050,6 +1050,8 @@
 	const EVENT_BEAT_SAGE_KOJI
 ; Unused: next 116 events
 
+	const EVENT_BEAT_RED
+
 	const_next 1600
 ; Sprite visibility flags
 ; When these events are cleared, the sprite becomes visible; when set, the sprite is hidden.

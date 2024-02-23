@@ -15,6 +15,10 @@ MahoganyGym_MapScripts:
 MahoganyGymPryceScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch2
+    checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rematch1
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
 	writetext PryceText_Intro
@@ -49,6 +53,24 @@ MahoganyGymPryceScript:
 	waitbutton
 	closetext
 	end
+.Rematch1
+	writetext PryceRematchText1
+	waitbutton
+	closetext
+	winlosstext PryceWinLossText2, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle 
+	end
+.Rematch2
+	writetext PryceRematchText2
+	waitbutton
+	closetext
+	winlosstext PryceWinLossText2, 0
+	loadtrainer PRYCE, PRYCE3
+	startbattle
+	reloadmapafterbattle 
+	end
 
 PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
@@ -56,6 +78,8 @@ PryceScript_Defeat:
 MahoganyGym_NoRoomForIcyWind:
 	closetext
 	end
+
+
 
 MahoganyGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -234,6 +258,38 @@ PryceText_CherishYourPokemon:
 
 	para "Cherish your time"
 	line "together!"
+	done
+
+PryceRematchText1:
+	text "So, you've"
+	line "beaten the"
+	cont "ELITE FOUR."
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+PryceRematchText2:
+	text "So, you've"
+	line "beaten the"
+
+	para "CHAMPION of"
+	line "KANTO!"
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+PryceWinLossText2:
+	text "I'm impressed"
+	line "by your"
+	cont "power…"
+
+	para "You really"
+	line "are the true"
+    cont "CHAMPION..."
 	done
 
 BoarderRonaldSeenText:

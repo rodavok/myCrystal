@@ -2711,11 +2711,14 @@ YanmaEvosAttacks:
 	db 1, FORESIGHT
 	db 7, QUICK_ATTACK
 	db 13, DOUBLE_TEAM
+	db 17, TWISTER
 	db 19, SONICBOOM
 	db 25, DETECT
 	db 31, SUPERSONIC
+	db 34, DRAGONBREATH
 	db 37, WING_ATTACK
 	db 43, SCREECH
+	db 60, OUTRAGE
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:

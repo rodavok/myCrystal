@@ -15,6 +15,10 @@ AzaleaGym_MapScripts:
 AzaleaGymBugsyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch2
+    checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rematch1
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
 	writetext BugsyText_INeverLose
@@ -54,6 +58,24 @@ AzaleaGymBugsyScript:
 	waitbutton
 .NoRoomForFuryCutter:
 	closetext
+	end
+.Rematch1
+	writetext BugsyRematchText1
+	waitbutton
+	closetext
+	winlosstext BugsyWinLossText2, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle 
+	end
+.Rematch2
+	writetext BugsyRematchText2
+	waitbutton
+	closetext
+	winlosstext BugsyWinLossText2, 0
+	loadtrainer BUGSY, BUGSY3
+	startbattle
+	reloadmapafterbattle 
 	end
 
 AzaleaGymActivateRockets:
@@ -230,6 +252,37 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
+BugsyRematchText1:
+	text "So, you've"
+	line "beaten the"
+	cont "ELITE FOUR."
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+BugsyRematchText2:
+	text "So, you've"
+	line "beaten the"
+
+	para "CHAMPION of"
+	line "KANTO!"
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+BugsyWinLossText2:
+	text "I'm impressed"
+	line "by your"
+	cont "power…"
+
+	para "You really"
+	line "are the true"
+    cont "CHAMPION..."
+	done
 BugCatcherBennySeenText:
 	text "Bug #MON evolve"
 	line "young. So they get"

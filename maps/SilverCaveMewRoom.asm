@@ -44,7 +44,7 @@ SilverCaveMewRoom_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7,  23, SILVER_CAVE_OUTSIDE, 1
+	warp_event  7,  21, SILVER_CAVE_OUTSIDE, 3
 	warp_event  7,   1, SILVER_CAVE_ITEM_ROOMS, 3
 
 
@@ -53,4 +53,4 @@ SilverCaveMewRoom_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  7,  13, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Mew, EVENT_SILVER_CAVE_MEW_ROOM_MEW
+	object_event  7,  13, SPRITE_MONSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Mew, EVENT_SILVER_CAVE_MEW_ROOM_MEW

@@ -142,8 +142,8 @@ SilverCaveItemRooms_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 13,  3, SILVER_CAVE_ROOM_2, 3
-	warp_event  7, 15, SILVER_CAVE_ROOM_2, 4
+	warp_event 13,  3, SILVER_CAVE_ROOM_2,  3
+	warp_event  7, 15, SILVER_CAVE_ROOM_2,  4
 	warp_event  5,  3, SILVER_CAVE_MEW_ROOM, 2
 
 	def_coord_events

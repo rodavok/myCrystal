@@ -175,4 +175,12 @@ KantoWaterWildMons:
 	db 60, SLOWBRO
 	db 62, KINGLER
 	db 60, SEADRA
+	end_water_wildmons
+
+	def_water_wildmons SAFARI_ZONE_BETA
+	db 10 percent ; encounter rate
+	db 37, PSYDUCK
+	db 38, SLOWPOKE
+	db 39, SEAKING
+	end_water_wildmons
 	db -1 ; end

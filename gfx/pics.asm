@@ -131,7 +131,6 @@ WartortleFrontpic:   INCBIN "gfx/pokemon/wartortle/front.animated.2bpp.lz"
 LaprasFrontpic:      INCBIN "gfx/pokemon/lapras/front.animated.2bpp.lz"
 GolemFrontpic:       INCBIN "gfx/pokemon/golem/front.animated.2bpp.lz"
 PoliwhirlFrontpic:   INCBIN "gfx/pokemon/poliwhirl/front.animated.2bpp.lz"
-UrsaringFrontpic:    INCBIN "gfx/pokemon/ursaring/front.animated.2bpp.lz"
 HoundoomFrontpic:    INCBIN "gfx/pokemon/houndoom/front.animated.2bpp.lz"
 KabutopsFrontpic:    INCBIN "gfx/pokemon/kabutops/front.animated.2bpp.lz"
 AmpharosFrontpic:    INCBIN "gfx/pokemon/ampharos/front.animated.2bpp.lz"
@@ -715,6 +714,8 @@ KrisPic:        INCBIN "gfx/trainers/kris.2bpp.lz"
 NyqwilFrontpic: INCBIN "gfx/pokemon/nyqwil/front.animated.2bpp.lz"
 NyqwilBackpic:  INCBIN "gfx/pokemon/nyqwil/back.2bpp.lz"
 RapidashFrontpic: INCBIN "gfx/pokemon/rapidash/front.animated.2bpp.lz"
+UrsaringFrontpic:    INCBIN "gfx/pokemon/ursaring/front.animated.2bpp.lz"
+
 
 
 

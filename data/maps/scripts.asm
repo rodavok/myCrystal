@@ -393,7 +393,6 @@ INCLUDE "maps/Route43Gate.asm"
 INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
-INCLUDE "maps/OaksLab.asm"
 
 
 SECTION "Map Scripts 20", ROMX
@@ -405,6 +404,9 @@ INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
+
+INCLUDE "maps/OaksLab.asm"
+
 
 
 SECTION "Map Scripts 21", ROMX

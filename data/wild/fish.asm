@@ -142,23 +142,23 @@ FishGroups:
 .Gyarados_Super:
 	db  40 percent,     MAGIKARP,   40
 	db  70 percent,     time_group 15
-	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     MAGIKARP,   40
+	db  90 percent + 1, GYARADOS,   40
+	db 100 percent,     GYARADOS,   40
 
 .Dratini_2_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     MAGIKARP,   10
+	db 100 percent,     DRATINI,    15
 .Dratini_2_Good:
 	db  35 percent,     MAGIKARP,   10
 	db  70 percent,     MAGIKARP,   10
-	db  90 percent + 1, MAGIKARP,   10
+	db  90 percent + 1, DRATINI,    25
 	db 100 percent,     time_group 16
 .Dratini_2_Super:
 	db  40 percent,     MAGIKARP,   10
 	db  70 percent,     time_group 17
 	db  90 percent + 1, MAGIKARP,   10
-	db 100 percent,     DRAGONAIR,  10
+	db 100 percent,     DRAGONAIR,  40
 
 .WhirlIslands_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -184,7 +184,7 @@ FishGroups:
 .Qwilfish_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
-	db  90 percent + 1, TENTACOOL,  20
+	db  90 percent + 1, QWILFISH,  20
 	db 100 percent,     time_group 20
 .Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:

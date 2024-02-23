@@ -50,6 +50,31 @@ FuchsiaCityMartSign:
 FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
 
+FuchsiaCityChansey:
+	opentext
+	writetext FuchsiaCityChanseyText
+	cry CHANSEY
+	waitbutton
+	closetext
+	end
+FuchsiaCityChanseyText:
+	text "CHANSEY: Pipi!"
+	done
+
+
+FuchsiaCitySlowbro:
+	opentext
+	writetext FuchsiaCitySlowbroText
+	cry SLOWBRO
+	waitbutton
+	closetext
+	end
+
+FuchsiaCitySlowbroText:
+	text "SLOWBRO: Yarah?"
+	done
+
+
 FuchsiaCityYoungsterText:
 	text "One of the ELITE"
 	line "FOUR used to be"
@@ -69,11 +94,10 @@ FuchsiaCityPokefanMText:
 
 FuchsiaCityTeacherText:
 	text "The SAFARI ZONE is"
-	line "closed… It's sad,"
+	line "now a public park!"
 
-	para "considering it's"
-	line "FUCHSIA's main"
-	cont "attraction."
+	para "It's FUCHSIA's"
+	line "main attraction."
 	done
 
 FuchsiaCitySignText:
@@ -93,12 +117,7 @@ FuchsiaGymSignText:
 	done
 
 SafariZoneOfficeSignText:
-	text "There's a notice"
-	line "here…"
-
-	para "SAFARI ZONE OFFICE"
-	line "is closed until"
-	cont "further notice."
+	text "SAFARI ZONE OFFICE"
 	done
 
 WardensHomeSignText:
@@ -112,7 +131,7 @@ SafariZoneClosedSignText:
 
 	para "Therefore, the"
 	line "SAFARI ZONE is"
-	cont "closed."
+	cont "free to visit."
 	done
 
 NoLitteringSignText:
@@ -155,3 +174,6 @@ FuchsiaCity_MapEvents:
 	object_event 13,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokefanM, -1
 	object_event 16, 14, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityTeacher, -1
 	object_event  8,  1, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityFruitTree, -1
+	object_event  6,  6, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCitySlowbro, -1
+    object_event  30, 14, SPRITE_FAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityChansey, -1
+

@@ -21,6 +21,10 @@ GoldenrodGymNoop2Scene:
 
 GoldenrodGymWhitneyScript:
 	faceplayer
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch2
+    checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rematch1
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
 	opentext
@@ -77,6 +81,26 @@ GoldenrodGymWhitneyScript:
 	waitbutton
 .NoRoomForAttract:
 	closetext
+	end
+.Rematch1
+	opentext
+	writetext WhitneyRematchText1
+	waitbutton
+	closetext
+	winlosstext WhitneyWinLossText2, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle 
+	end
+.Rematch2
+	opentext
+	writetext WhitneyRematchText2
+	waitbutton
+	closetext
+	winlosstext WhitneyWinLossText2, 0
+	loadtrainer WHITNEY, WHITNEY3
+	startbattle
+	reloadmapafterbattle 
 	end
 
 GoldenrodGymActivateRockets:
@@ -262,6 +286,38 @@ WhitneyGoodCryText:
 
 	para "Come for a visit"
 	line "again! Bye-bye!"
+	done
+
+WhitneyRematchText1:
+	text "So, you've"
+	line "beaten the"
+	cont "ELITE FOUR."
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+WhitneyRematchText2:
+	text "So, you've"
+	line "beaten the"
+
+	para "CHAMPION of"
+	line "KANTO!"
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+WhitneyWinLossText2:
+	text "I'm impressed"
+	line "by your"
+	cont "power…"
+
+	para "You really"
+	line "are the true"
+    cont "CHAMPION..."
 	done
 
 LassCarrieSeenText:

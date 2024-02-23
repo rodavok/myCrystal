@@ -12,6 +12,10 @@ VioletGym_MapScripts:
 VioletGymFalknerScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch2
+    checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rematch1
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
 	writetext FalknerIntroText
@@ -52,6 +56,26 @@ VioletGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
+.Rematch1
+	writetext FalknerRematchText1
+	waitbutton
+	closetext
+	winlosstext FalknerWinLossText2, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle 
+	end
+.Rematch2
+	writetext FalknerRematchText2
+	waitbutton
+	closetext
+	winlosstext FalknerWinLossText2, 0
+	loadtrainer FALKNER, FALKNER3
+	startbattle
+	reloadmapafterbattle 
+	end
+
+
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -133,6 +157,28 @@ FalknerIntroText:
 	line "#MON!"
 	done
 
+FalknerRematchText1:
+	text "So, you've"
+	line "beaten the"
+	cont "ELITE FOUR."
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
+FalknerRematchText2:
+	text "So, you've"
+	line "beaten the"
+
+	para "CHAMPION of"
+	line "KANTO!"
+
+	para "Show me how"
+	line "strong you've"
+	cont "become!"
+	done
+
 FalknerWinLossText:
 	text "…Darn! My dad's"
 	line "cherished bird"
@@ -144,6 +190,16 @@ FalknerWinLossText:
 	para "It's the official"
 	line "#MON LEAGUE"
 	cont "ZEPHYRBADGE."
+	done
+
+FalknerWinLossText2:
+	text "I'm impressed"
+	line "by your"
+	cont "power…"
+
+	para "You really"
+	line "are the"
+    cont "CHAMPION!"
 	done
 
 ReceivedZephyrBadgeText:
