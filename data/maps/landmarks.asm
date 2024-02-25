@@ -99,7 +99,7 @@ Landmarks:
 	landmark  28,  52, VictoryRoadName
 	landmark  28,  44, Route23Name
 	landmark  28,  36, IndigoPlateauName
-	landmark  28,  92, Route26Name
+	landmark 148, 100, Route26Name
 	landmark  20, 100, Route27Name
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name

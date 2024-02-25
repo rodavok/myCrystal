@@ -123,9 +123,10 @@ ENDM
 	connection north, Route35, ROUTE_35, 5
 	connection south, Route34, ROUTE_34, 5
 
-	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST
+	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST | EAST
 	connection north, Route39, ROUTE_39, 5
 	connection west, Route40, ROUTE_40, 9
+	connection east, GoldenrodShore, GOLDENROD_SHORE, 7
 
 	map_attributes EcruteakCity, ECRUTEAK_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route37, ROUTE_37, 5
@@ -183,9 +184,10 @@ ENDM
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
 	connection east, AzaleaTown, AZALEA_TOWN, 18
 
-	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH
+	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH | WEST
 	connection north, Route36, ROUTE_36, 0
 	connection south, GoldenrodCity, GOLDENROD_CITY, -5
+	connection west, GoldenrodShore, GOLDENROD_SHORE, -1
 
 	map_attributes Route36, ROUTE_36, $05, NORTH | SOUTH | EAST
 	connection north, Route37, ROUTE_37, 10
@@ -377,6 +379,10 @@ ENDM
 	map_attributes Route10South, ROUTE_10_SOUTH, $2c, NORTH | SOUTH
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
+
+	map_attributes GoldenrodShore, GOLDENROD_SHORE, $2c, WEST | EAST
+	connection west, OlivineCity, OLIVINE_CITY, -7
+	connection east, Route35, ROUTE_35, 1
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0

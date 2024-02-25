@@ -86,6 +86,7 @@ INCLUDE "maps/Route36RuinsOfAlphGate.asm"
 INCLUDE "maps/Route36NationalParkGate.asm"
 
 
+
 SECTION "Map Scripts 6", ROMX
 
 INCLUDE "maps/Route8.asm"
@@ -482,7 +483,6 @@ INCLUDE "maps/Route23.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
 
-
 SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
@@ -490,3 +490,5 @@ INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/TohjoFallsGiovanniRoom.asm"
 INCLUDE "maps/CeruleanCave.asm"
 INCLUDE "maps/SilverCaveMewRoom.asm"
+INCLUDE "maps/GoldenrodShore.asm"
+

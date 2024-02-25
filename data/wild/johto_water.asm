@@ -235,9 +235,9 @@ JohtoWaterWildMons:
 
 	def_water_wildmons OLIVINE_CITY
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
 	db 20, TENTACRUEL
+	db 15, TENTACOOL
+	db 20, CHINCHOU
 	end_water_wildmons
 
 	def_water_wildmons ECRUTEAK_CITY
@@ -267,5 +267,11 @@ JohtoWaterWildMons:
 	db 44, LAPRAS
 	db 44, QUAGSIRE
 	end_water_wildmons
+
+	def_water_wildmons GOLDENROD_SHORE
+	db 6 percent
+	db 20, TENTACRUEL
+	db 15, TENTACOOL
+	db 20, CHINCHOU
 
 	db -1 ; end

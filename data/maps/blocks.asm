@@ -1057,3 +1057,5 @@ CeruleanCave_Blocks:
 
 SilverCaveMewRoom_Blocks:
 	INCBIN "maps/SilverCaveMewRoom.blk"
+GoldenrodShore_Blocks:
+	INCBIN "maps/GoldenrodShore.blk"
