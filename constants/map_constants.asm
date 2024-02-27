@@ -191,6 +191,7 @@ ENDM
 	map_const ROUTE_20,                                    30,  9 ;  6
 	map_const ROUTE_21,                                    10, 18 ;  7
 	map_const CINNABAR_ISLAND,                             10,  9 ;  8
+	map_const SEAFOAM_CAVE,                                12, 10 ;  9
 	endgroup
 
 	newgroup CERULEAN                                             ;  7
@@ -251,7 +252,7 @@ ENDM
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
-	map_const GOLDENROD_SHORE,								6, 13 ; 18
+	map_const GOLDENROD_SHORE,								7, 16 ; 18
 	endgroup
 
 	newgroup GOLDENROD                                            ; 11

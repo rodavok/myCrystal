@@ -491,4 +491,5 @@ INCLUDE "maps/TohjoFallsGiovanniRoom.asm"
 INCLUDE "maps/CeruleanCave.asm"
 INCLUDE "maps/SilverCaveMewRoom.asm"
 INCLUDE "maps/GoldenrodShore.asm"
+INCLUDE "maps/SeafoamCave.asm"
 
