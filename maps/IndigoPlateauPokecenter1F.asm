@@ -5,6 +5,7 @@
 	const INDIGOPLATEAUPOKECENTER1F_RIVAL
 	const INDIGOPLATEAUPOKECENTER1F_GRAMPS
 	const INDIGOPLATEAUPOKECENTER1F_ABRA
+	const INDIGOPLATEAUPOKECENTER1F_EUSINE
 
 IndigoPlateauPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -215,6 +216,92 @@ PlateauRivalLeavesMovement:
 	step DOWN
 	step_end
 
+PlateauEusineBattle1:
+	checkcode VAR_BADGES
+	if_not_equal 16, PlateauRivalScriptDone
+	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	iftrue PlateauRivalScriptDone
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, PlateauRivalScriptDone
+	ifequal MONDAY, PlateauRivalScriptDone
+	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal WEDNESDAY, PlateauRivalScriptDone
+	ifequal THURSDAY, PlateauRivalScriptDone
+	ifequal SATURDAY, PlateauRivalScriptDone
+	moveobject INDIGOPLATEAUPOKECENTER1F_EUSINE, 17, 9
+	appear INDIGOPLATEAUPOKECENTER1F_EUSINE
+	turnobject PLAYER, DOWN
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 15
+	applymovement INDIGOPLATEAUPOKECENTER1F_EUSINE, PlateauRivalMovement1
+	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	turnobject PLAYER, RIGHT
+	sjump PlateauRivalBattleCommon
+
+PlateauEusineBattle2:
+	checkcode VAR_BADGES
+	if_not_equal 16, PlateauRivalScriptDone
+	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	iftrue PlateauRivalScriptDone
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, PlateauRivalScriptDone
+	ifequal MONDAY, PlateauRivalScriptDone
+	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal WEDNESDAY, PlateauRivalScriptDone
+	ifequal THURSDAY, PlateauRivalScriptDone
+	ifequal SATURDAY, PlateauRivalScriptDone
+	appear INDIGOPLATEAUPOKECENTER1F_EUSINE
+	turnobject PLAYER, DOWN
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 15
+	applymovement INDIGOPLATEAUPOKECENTER1F_EUSINE, PlateauRivalMovement2
+	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	turnobject PLAYER, LEFT
+PlateauEusineBattleCommon:
+    checkevent EVENT_BEAT_RED
+	iftrue PlateauEusineBattleCommon2
+	opentext
+	writetext PlateauEusineText1
+	waitbutton
+	closetext
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	winlosstext PlateauEusineWinText, PlateauEusineLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_EUSINE
+	loadtrainer MYSTICALMAN, EUSINE2
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauEusinePostBattle
+
+PlateauEusineBattleCommon2:
+	opentext
+	writetext PlateauEusineText1
+	waitbutton
+	closetext
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	winlosstext PlateauEusineWinText, PlateauEusineLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_EUSINE
+	loadtrainer MYSTICALMAN, EUSINE3
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauEusinePostBattle
+
+PlateauEusinePostBattle:
+	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	opentext
+	writetext PlateauEusineText2
+	waitbutton
+	closetext
+	turnobject PLAYER, DOWN
+	applymovement INDIGOPLATEAUPOKECENTER1F_EUSINE, PlateauRivalLeavesMovement
+	disappear INDIGOPLATEAUPOKECENTER1F_EUSINE
+	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE
+	playmapmusic
+	setflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+
 IndigoPlateauPokecenter1FCooltrainerMText:
 	text "At the #MON"
 	line "LEAGUE, you'll get"
@@ -314,6 +401,55 @@ AbraText:
 	text "ABRA: Aabra…"
 	done
 
+PlateauEusineText1:
+	text "EUSINE: Yo,"
+	line "<PLAYER>!"
+
+	para "You taught"
+	line "me that I"
+	cont "need to become"
+
+	para "stronger if"
+	line "I want to meet"
+
+	para "legendary"
+	line "#MON."
+
+	para "So I trained"
+	line "to take on the"
+
+	para "#MON LEAGUE!"
+	line "Let me show"
+
+	para "you my power!"
+	done
+
+PlateauEusineWinText:
+	text "You're amazing,"
+	para "<PLAYER>!"
+	done
+
+PlateauEusineText2:
+	text "…Darn… I still"
+	line "can't win…"
+
+	para "I… I have to think"
+	line "more about my"
+	cont "#MON…"
+
+	para "Humph! Try not to"
+	line "lose!"
+	done
+
+PlateauEusineLoseText:
+	text "With this power,"
+
+	para "I will earn"
+	line "the respect"
+
+	para "of legends!"
+	done
+
 IndigoPlateauPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -326,6 +462,8 @@ IndigoPlateauPokecenter1F_MapEvents:
 	def_coord_events
 	coord_event 16,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauRivalBattle1
 	coord_event 17,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauRivalBattle2
+	coord_event 16,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauEusineBattle1
+	coord_event 17,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauEusineBattle2
 
 	def_bg_events
 
@@ -338,3 +476,5 @@ IndigoPlateauPokecenter1F_MapEvents:
 	object_event 16,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
 	object_event  0,  9, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY
+	object_event 16,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+

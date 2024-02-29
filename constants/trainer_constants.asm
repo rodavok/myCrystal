@@ -722,6 +722,8 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+	const EUSINE2
+	const EUSINE3
 
 	trainerclass ROCKET_BOSS ; 44
 	const GIOVANNI
