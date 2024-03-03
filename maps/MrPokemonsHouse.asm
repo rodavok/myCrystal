@@ -60,6 +60,8 @@ MrPokemonsHouse_MrPokemonScript:
 	end
 
 .AlwaysNewDiscoveries:
+	checkevent EVENT_GOT_MR_POKEMON_MON
+	iffalse .MrKantoStarter
 	writetext MrPokemonText_AlwaysNewDiscoveries
 	waitbutton
 	closetext
@@ -80,6 +82,61 @@ MrPokemonsHouse_MrPokemonScript:
 .full
 	closetext
 	end
+
+.MrKantoStarter
+	writetext MrTakeThisPokemonText
+	yesorno
+	iffalse .RefusedMrKantoMon
+	writetext MrPokemonHaveFun
+	promptbutton
+	waitsfx
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .KantoStarterCyndaquil
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .KantoStarterTotodile
+	writetext ReceivedMrCharmanderText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CHARMANDER, 5
+	setevent EVENT_GOT_MR_POKEMON_MON
+	writetext MrPokemonKantoMonsText
+	waitbutton
+	closetext
+	end
+.KantoStarterCyndaquil
+	writetext ReceivedMrSquirtleText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke SQUIRTLE, 5
+	setevent EVENT_GOT_MR_POKEMON_MON
+	writetext MrPokemonKantoMonsText
+	waitbutton
+	closetext
+
+.KantoStarterTotodile
+	writetext ReceivedMrBulbasaurText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke BULBASAUR, 5
+	setevent EVENT_GOT_MR_POKEMON_MON
+	writetext MrPokemonKantoMonsText
+	waitbutton
+	closetext
+ 
+.RefusedMrKantoMon
+	writetext MrPokemonSaidNoText
+	waitbutton
+	closetext
+	end
+.NoRoom
+	writetext MrPokemonPartyFullText
+	waitbutton
+	closetext
+	end
+
+	
 
 MrPokemonsHouse_OakScript:
 	playmusic MUSIC_PROF_OAK
@@ -368,6 +425,70 @@ MrPokemonsHouse_StrangeCoinsText:
 
 	para "Maybe they're from"
 	line "another country…"
+	done
+
+MrTakeThisPokemonText:
+	text "So, PROF.ELM"
+	line "gave you one of"
+	cont "his #MON."
+
+	para "Would you like"
+	line "another?"
+	cont "PROF.OAK brought"
+
+	para "it for me,"
+	line "but I think"
+
+	para "it'd be better"
+	line "off with a young"
+
+	para "TRAINER like"
+	line "yourself."
+	cont "What do you say?"
+	done
+
+MrPokemonHaveFun:
+	text "Great! Go"
+	line "travel the world"
+
+	para "together and"
+	line "discover lots"
+	cont "of #POKEMON!"
+
+	done
+
+ReceivedMrCharmanderText:
+	text "<PLAYER> received"
+	line "CHARMANDER!"
+	done
+ReceivedMrSquirtleText:
+	text "<PLAYER> received"
+	line "SQUIRTLE!"
+	done
+ReceivedMrBulbasaurText:
+	text "<PLAYER> received"
+	line "BULBASAUR!"
+	done
+MrPokemonKantoMonsText:
+	text "That's a rare"
+	line "#MON from"
+	cont "KANTO!"
+
+	text "Treat it well."
+	done 
+
+MrPokemonPartyFullText:
+	text "Whoa, wait. You"
+	line "can't carry any"
+	cont "more #MON."
+	done
+
+MrPokemonSaidNoText:
+	text "That's too bad."
+	line "Come back if"
+
+	para "you change your"
+	line "mind."
 	done
 
 MrPokemonsHouse_MapEvents:

@@ -245,12 +245,6 @@ MahoganyGymSignText:
 	done
 
 
-
-MahoganyTutorMoveText:
-	text_start
-	done
-
-
 MahoganyTown_MapEvents:
 	db 0, 0 ; filler
 

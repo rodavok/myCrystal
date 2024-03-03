@@ -104,6 +104,7 @@ MtSilverTutorScript:
 	db "EXPLOSION@"
 	db "BELLY DRUM@"
 	db "DOUBLE EDGE@"
+	db "CANCEL@"
 
 MtSilveraskteachamovetext:
 	text "I can teach your"

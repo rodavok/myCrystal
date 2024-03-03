@@ -312,6 +312,10 @@ MahoganyTutorWhichMoveShouldITeachText:
 	line "I teach?"
 	done
 
+MahoganyTutorMoveText:
+	text_start
+	done
+
 
 MahoganyTutorIfYouUnderstandYouveMadeItText:
 	text "Variety is the"
