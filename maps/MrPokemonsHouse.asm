@@ -448,12 +448,8 @@ MrTakeThisPokemonText:
 	done
 
 MrPokemonHaveFun:
-	text "Great! Go"
-	line "travel the world"
-
-	para "together and"
-	line "discover lots"
-	cont "of #POKEMON!"
+	text "Great! Here"
+	line "you go!"
 
 	done
 
@@ -474,7 +470,7 @@ MrPokemonKantoMonsText:
 	line "#MON from"
 	cont "KANTO!"
 
-	text "Treat it well."
+	para "Treat it well."
 	done 
 
 MrPokemonPartyFullText:

@@ -1219,7 +1219,7 @@ JohtoGrassWildMons:
 	; day
 	db 3, GEODUDE
 	db 2, ZUBAT
-	db 2, LARVITAR
+	db 2, GEODUDE
 	db 4, GEODUDE
 	db 2, ZUBAT
 	db 4, ZUBAT
@@ -1227,7 +1227,7 @@ JohtoGrassWildMons:
 	; nite
 	db 3, GEODUDE
 	db 2, ZUBAT
-	db 2, DUNSPARCE
+	db 2, GEODUDE
 	db 4, GEODUDE
 	db 2, ZUBAT
 	db 4, ZUBAT
@@ -1492,7 +1492,7 @@ JohtoGrassWildMons:
 	db 13, LEDYBA
 	db 14, VULPIX
 	db 15, PIDGEY
-	db 16, GROWLITHE
+	db 16, VULPIX
 	db 15, PIDGEOTTO
 	db 15, LEDIAN
 	db 15, LEDIAN

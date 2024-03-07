@@ -138,7 +138,7 @@ CherrygroveGroupSprites:
 
 ; Route37 and EcruteakCity are connected
 VioletGroupSprites:
-; Route32, Route35, Route36, Route37, VioletCity
+; Route32, Route35, Route36, Route37, VioletCity,  GoldenrodShore
 EcruteakGroupSprites:
 ; EcruteakCity
 	db SPRITE_FISHER
@@ -149,11 +149,15 @@ EcruteakGroupSprites:
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BUG_CATCHER
 	db SPRITE_SUPER_NERD
-	; 8 of max 9 walking sprites
+	db SPRITE_SAILOR
+	; 9 of max 9 walking sprites
 	db SPRITE_SUDOWOODO 
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SUICUNE
+	db SPRITE_ROCK
+	db SPRITE_TWIN
+	db SPRITE_POKEFAN_M
 	db 0 ; end
 
 AzaleaGroupSprites:
