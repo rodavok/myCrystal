@@ -707,7 +707,7 @@ Sfx_Item:
 
 Sfx_Item_Ch5:
 	toggle_sfx
-	tempo 108
+	tempo 50 ;108
 	volume 7, 7
 	vibrato 8, 2, 7
 	duty_cycle 2

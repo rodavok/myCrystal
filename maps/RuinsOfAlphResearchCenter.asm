@@ -389,6 +389,8 @@ RuinsOfAlphResearchCenterAcademicBooksText:
 
 FossilScientist:
 	faceplayer
+	; readvar VAR_UNOWNCOUNT
+	; ifequal #if greater than equal to 10 you can swap for kabuto/omanyte and if 20 you can get aerodactyl
 	opentext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1 ; remove the next two lines to immediately receive the fossil
 	iftrue .GaveScientistFossil

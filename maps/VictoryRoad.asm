@@ -82,6 +82,7 @@ VictoryRoadRivalLeft:
 	end
 
 VictoryRoadRivalRight:
+	moveobject VICTORYROAD_RIVAL, 19, 12
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
@@ -281,111 +282,90 @@ VictoryRoadRivalVictoryText:
 	done
 
 CooltrainermRossSeenText:
-	text "I'm making my"
-	line "final preparations"
+	text "This is the"
+	line "final test"
 
-	para "for the #MON"
-	line "LEAGUE."
+	para "before the"
+	line "#MON LEAGUE."
 	done
 
 CooltrainermRossBeatenText:
-	text "I blew it!"
+	text "You passed!"
 	done
 
 CooltrainermRossAfterBattleText:
-	text "It's going to be"
-	line "tough to win at"
-	cont "the LEAGUE."
+	text "This path is "
+	line "tough, but I"
+	cont "think you can"
 
-	para "I need to do some"
-	line "more training."
+	para "do it. Go on"
+	line "ahead. The"
 
-	para "I hear that the"
-	line "LEAGUE's ELITE"
-
-	para "FOUR are tougher"
-	line "than GYM LEADERS."
+	para "ELITE FOUR"
+	line "are waiting."
 	done
 
 CooltrainermTommySeenText:
-	text "I'm making my"
-	line "final preparations"
-
-	para "for the #MON"
-	line "LEAGUE."
+	text "Let's do this!"
 	done
 
 CooltrainermTommyBeatenText:
-	text "I blew it!"
+	text "You did it..."
 	done
 
 CooltrainermTommyAfterBattleText:
-	text "It's going to be"
-	line "tough to win at"
-	cont "the LEAGUE."
+	text "I was beaten by"
+	line "a fierce"
+	cont "TRAINER. He's"
 
-	para "I need to do some"
-	line "more training."
+	para "up ahead."
+	line "Be careful."
 
-	para "I hear that the"
-	line "LEAGUE's ELITE"
-
-	para "FOUR are tougher"
-	line "than GYM LEADERS."
+	para "He was ruthless."
 	done
 
 CooltrainerfSophieSeenText:
-	text "I'm making my"
-	line "final preparations"
+	text "I've gotten"
+	line "this far..."
 
-	para "for the #MON"
-	line "LEAGUE."
+	para "Nothing can"
+	line "stop me now!"
 	done
 
 CooltrainerfSophieBeatenText:
-	text "I blew it!"
+	text "It's over..."
 	done
 
 CooltrainerfSophieAfterBattleText:
-	text "It's going to be"
-	line "tough to win at"
-	cont "the LEAGUE."
+	text "I thought I had"
+	line "the perfect"
+	cont "defence."
 
-	para "I need to do some"
-	line "more training."
+	para "But there's"
+	line "more to #MON"
 
-	para "I hear that the"
-	line "LEAGUE's ELITE"
-
-	para "FOUR are tougher"
-	line "than GYM LEADERS."
+	para "battles than"
+	line "that."
 	done
 
 CooltrainerfDonnaSeenText:
-	text "I'm making my"
-	line "final preparations"
+	text "Everything I've"
+	line "worked towards"
 
-	para "for the #MON"
-	line "LEAGUE."
+	para "has come to this."
 	done
 
 CooltrainerfDonnaBeatenText:
-	text "I blew it!"
+	text "Was it all for"
+	line "nothing?"
 	done
 
 CooltrainerfDonnaAfterBattleText:
-	text "It's going to be"
-	line "tough to win at"
-	cont "the LEAGUE."
+	text "You can't stop"
+	line "now. Go forth"
+	cont "and become"
 
-	para "I need to do some"
-	line "more training."
-
-	para "I hear that the"
-	line "LEAGUE's ELITE"
-
-	para "FOUR are tougher"
-	line "than GYM LEADERS."
+	para "the CHAMPION!"
 	done
 
 VictoryRoad_MapEvents:

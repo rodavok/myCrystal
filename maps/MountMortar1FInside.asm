@@ -61,8 +61,8 @@ MountMortar1FInsideIron:
 MountMortar1FInsideUltraBall:
 	itemball ULTRA_BALL
 
-MountMortar1FInsideHiddenMaxRepel:
-	hiddenitem MAX_REPEL, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_MAX_REPEL
+MountMortar1FInsideHiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_MAX_REVIVE
 
 PokemaniacMillerSeenText:
 	text "I'm not losing"
@@ -128,7 +128,7 @@ MountMortar1FInside_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel
+	bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRevive
 
 	def_object_events
 	object_event 21, 43, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FBoulder, -1

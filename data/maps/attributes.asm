@@ -289,10 +289,10 @@ ENDM
 
 	map_attributes Route16, ROUTE_16, $0f, SOUTH | EAST
 	connection south, Route17, ROUTE_17, 0
-	connection east, CeladonCity, CELADON_CITY, -9
+	connection east, CeladonCity, CELADON_CITY, -7
 
 	map_attributes CeladonCity, CELADON_CITY, $0f, WEST | EAST
-	connection west, Route16, ROUTE_16, 9
+	connection west, Route16, ROUTE_16, 7
 	connection east, Route7, ROUTE_7, 5
 
 	map_attributes Route7, ROUTE_7, $0f, WEST | EAST
@@ -330,12 +330,12 @@ ENDM
 	connection east, Route11, ROUTE_11, 0
 
 	map_attributes Route6, ROUTE_6, $0f, NORTH | SOUTH
-	connection north, SaffronCity, SAFFRON_CITY, -5
+	connection north, SaffronCity, SAFFRON_CITY, -3
 	connection south, VermilionCity, VERMILION_CITY, -5
 
 	map_attributes SaffronCity, SAFFRON_CITY, $0f, NORTH | SOUTH | WEST | EAST
 	connection north, Route5, ROUTE_5, 5
-	connection south, Route6, ROUTE_6, 5
+	connection south, Route6, ROUTE_6, 3
 	connection west, Route7, ROUTE_7, 9
 	connection east, Route8, ROUTE_8, 9
 

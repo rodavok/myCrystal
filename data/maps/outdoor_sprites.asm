@@ -88,6 +88,7 @@ CeladonGroupSprites:
 	db SPRITE_POLIWAG
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_BIG_SNORLAX
 	db 0 ; end
 
 ; Route11 and Route12 are connected
@@ -202,6 +203,7 @@ CianwoodGroupSprites:
 	db SPRITE_SAILOR
 	db SPRITE_POKEFAN_F
 	db SPRITE_SUPER_NERD
+	db SPRITE_SWIMMER_GUY
 	; 8 of max 9 walking sprites
 	db SPRITE_TAUROS
 	db SPRITE_FRUIT_TREE

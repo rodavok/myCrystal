@@ -558,8 +558,6 @@ BlackthornCity_Blocks:
 SilverCaveOutside_Blocks:
 	INCBIN "maps/SilverCaveOutside.blk"
 
-Route6_Blocks:
-	INCBIN "maps/Route6.blk"
 
 Route7_Blocks:
 	INCBIN "maps/Route7.blk"
@@ -1063,3 +1061,7 @@ SeafoamCave_Blocks:
 
 Route30_Blocks:
 	INCBIN "maps/Route30.blk"
+
+
+Route6_Blocks:
+	INCBIN "maps/Route6.blk"

@@ -533,7 +533,8 @@ AzaleaTutorScript:
 
 azaleaaskteachamovetext:
 	text "I can teach your"
-	line "#MON some interesting"
+	line "#MON some"
+	cont  "interesting"
 
 	para "moves if you'd"
 	line "like."
