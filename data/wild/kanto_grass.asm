@@ -624,7 +624,7 @@ KantoGrassWildMons:
 	; morn
 	db 36, GRIMER
 	db 37, FEAROW
-	db 38, GRIMER
+	db 38, SLUGMA
 	db 39, FEAROW
 	db 39, FEAROW
 	db 40, MUK
@@ -640,8 +640,8 @@ KantoGrassWildMons:
 	; nite
 	db 36, GRIMER
 	db 37, GRIMER
-	db 38, GRIMER
-	db 39, GRIMER
+	db 38, SLUGMA
+	db 39, RATICATE
 	db 39, GRIMER
 	db 40, MUK
 	db 40, MUK
@@ -838,37 +838,37 @@ KantoGrassWildMons:
 	db 40, POLIWHIRL
 	db 40, GOLBAT
 	db 40, POLIWHIRL
-	db 42, GOLBAT
-	db 42, GOLBAT
 	db 42, SNEASEL
+	db 42, GOLBAT
+	db 45, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE
 	db 10 percent, 10 percent, 15 percent ; encounter rates: morn/day/nite
 	; morn
-	db 65, CHANSEY
+	db 60, SLOWBRO
 	db 58, RAICHU
 	db 60, SANDSLASH
 	db 63, CHANSEY
 	db 56, WIGGLYTUFF
 	db 59, LICKITUNG
-	db 60, SLOWBRO
-	; day
 	db 65, CHANSEY
-	db 62, CHANSEY
+	; day
+	db 60, SLOWBRO
+	db 62, PRIMEAPE
 	db 60, MAGNETON
-	db 58, PRIMEAPE
+	db 58, CHANSEY
 	db 56, MACHOKE
 	db 59, LICKITUNG
-	db 60, SLOWBRO
-	; nite
 	db 65, CHANSEY
-	db 63, CHANSEY
+	; nite
+	db 60, SLOWBRO
+	db 63, HYPNO
 	db 60, GOLBAT
 	db 62, GLOOM
-	db 63, HYPNO
+	db 63, CHANSEY
 	db 64, RHYDON
-	db 60, SLOWBRO
+	db 65, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons SAFARI_ZONE_BETA
@@ -883,10 +883,10 @@ KantoGrassWildMons:
 	db 40, CHANSEY
 	; day
 	db 39, PARASECT
-	db 36, SCYTHER
 	db 37, EXEGGCUTE
 	db 36, NIDORINA
 	db 36, NIDORINO
+	db 36, SCYTHER
 	db 37, TAUROS
 	db 40, CHANSEY
 	; nite

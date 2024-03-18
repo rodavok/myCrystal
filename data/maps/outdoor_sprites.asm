@@ -74,8 +74,8 @@ SaffronGroupSprites:
 	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
+	db SPRITE_BIRD
 	db 0 ; end
-
 CeladonGroupSprites:
 ; Route7, Route16, Route17, CeladonCity
 	db SPRITE_FISHER
@@ -111,6 +111,9 @@ FuchsiaGroupSprites:
 	db SPRITE_MACHOP
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_FAIRY
+	db SPRITE_SLOWPOKE
+	db SPRITE_BIRD
 	db 0 ; end
 
 IndigoGroupSprites:
@@ -291,6 +294,7 @@ FastShipGroupSprites:
 	; 6 of max 9 walking sprites
 	db SPRITE_HO_OH
 	db SPRITE_ROCK
+	db SPRITE_BIRD
 	db 0 ; end
 
 CableClubGroupSprites:

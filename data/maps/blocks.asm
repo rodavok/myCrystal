@@ -344,6 +344,8 @@ BlackthornPokecenter1F_Blocks:
 CinnabarPokecenter1F_Blocks:
 CeruleanPokecenter1F_Blocks:
 Route10Pokecenter1F_Blocks:
+
+Route3Pokecenter1F_Blocks:
 AzaleaPokecenter1F_Blocks:
 VioletPokecenter1F_Blocks:
 Route32Pokecenter1F_Blocks:

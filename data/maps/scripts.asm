@@ -492,4 +492,5 @@ INCLUDE "maps/CeruleanCave.asm"
 INCLUDE "maps/SilverCaveMewRoom.asm"
 INCLUDE "maps/GoldenrodShore.asm"
 INCLUDE "maps/SeafoamCave.asm"
+INCLUDE "maps/Route3Pokecenter1F.asm"
 

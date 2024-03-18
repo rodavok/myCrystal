@@ -236,7 +236,7 @@ ENDM
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
 	connection south, Route2, ROUTE_2, 5
-	connection east, Route3, ROUTE_3, 5
+	connection east, Route3, ROUTE_3, 1
 
 	map_attributes Route2, ROUTE_2, $0f, NORTH | SOUTH
 	connection north, PewterCity, PEWTER_CITY, -5
@@ -361,7 +361,7 @@ ENDM
 	connection south, Route24, ROUTE_24, 0
 
 	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
-	connection west, PewterCity, PEWTER_CITY, -5
+	connection west, PewterCity, PEWTER_CITY, -1 ;-1
 	connection east, Route4, ROUTE_4, 0
 
 	map_attributes Route4, ROUTE_4, $2c, WEST | EAST
@@ -708,3 +708,5 @@ ENDM
 	map_attributes CeruleanCave, CERULEAN_CAVE, $09, 0
 	map_attributes SilverCaveMewRoom, SILVER_CAVE_MEW_ROOM, $09, 0
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $09, 0
+	map_attributes Route3Pokecenter1F, ROUTE_3_POKECENTER_1F, $00, 0
+

@@ -316,6 +316,45 @@ RivalText_Training2:
 	line "of my way…"
 	done
 
+RivalGivesEgg:
+	para "Here. I want you"
+	line "to have this."
+
+RivalGivesEggPartyFull:
+	text "You can't carry"
+	line "any more #MON"
+	cont "with you."
+
+	para "Come back when"
+	line "you've made space."
+	done
+
+RivalEggRefused:
+	text "Fine."
+	line "If you don't want"
+	
+	para "it, that's your"
+	line "problem."
+	done
+
+RivalAfterEgg:
+	text "I shouldn't"
+	line "have stolen my"
+
+	para "#MON from PROF."
+	line "ELM's LAB. But"
+
+	para "it's my partner"
+	line "now."
+
+	para "We can't be"
+	line "separated."
+
+	para "We'll be ready"
+	line "to take you on"
+	cont "soon."
+	done
+	
 CooltrainermDarinSeenText:
 	text "You! How dare you"
 	line "enter uninvited!"

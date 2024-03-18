@@ -84,6 +84,13 @@ CeruleanCityFisherScript:
 	closetext
 	end
 
+CeruleanCaveGuardScript:
+	faceplayer
+	opentext
+	writetext CeruleanCaveGuardText
+	waitbutton
+	closetext
+
 CeruleanCityYoungsterScript:
 	faceplayer
 	opentext
@@ -273,6 +280,20 @@ CeruleanLockedDoorText:
 	text "It's locked…"
 	done
 
+CeruleanCaveGuardText:
+	text "This is"
+	line "CERULEAN"
+	cont "CAVE! Horribly"
+
+	para "strong #MON"
+	line "live in there!"
+	cont "Come back when"
+
+	para "you've become"
+	line "the ultimate"
+	cont "trainer!"
+	done
+	
 CeruleanCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -305,3 +326,5 @@ CeruleanCity_MapEvents:
 	object_event 21, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 	object_event 30, 26, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
+	object_event  0, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCaveGuardScript, EVENT_BEAT_RED
+
