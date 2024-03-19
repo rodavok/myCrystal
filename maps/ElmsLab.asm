@@ -157,6 +157,8 @@ LabTryToLeaveScript:
 	end
 
 CyndaquilPokeBallScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ElmGivesLeftoverCyndaquil 
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -185,8 +187,26 @@ CyndaquilPokeBallScript:
 	ifequal RIGHT, ElmDirectionsScript
 	applymovement PLAYER, AfterCyndaquilMovement
 	sjump ElmDirectionsScript
+.ElmGivesLeftoverCyndaquil:
+	opentext
+	writetext ElmTakeLeftover
+	promptbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, LeftoverPartyFull
+	disappear ELMSLAB_POKE_BALL1
+	waitsfx
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke CYNDAQUIL, 5, BERRY
+	closetext
+	end
 
 TotodilePokeBallScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ElmGivesLeftoverTotodile
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -213,8 +233,26 @@ TotodilePokeBallScript:
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
+.ElmGivesLeftoverTotodile:
+	opentext
+	writetext ElmTakeLeftover
+	promptbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, LeftoverPartyFull
+	disappear ELMSLAB_POKE_BALL2
+	waitsfx
+	getmonname STRING_BUFFER_3, TOTODILE
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke TOTODILE, 5, BERRY
+	closetext
+	end
 
 ChikoritaPokeBallScript:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ElmGivesLeftoverChikorita
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
@@ -241,6 +279,30 @@ ChikoritaPokeBallScript:
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
+.ElmGivesLeftoverChikorita:
+	opentext
+	writetext ElmTakeLeftover
+	promptbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, LeftoverPartyFull
+	disappear ELMSLAB_POKE_BALL3
+	waitsfx
+	getmonname STRING_BUFFER_3, CHIKORITA
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke CHIKORITA, 5, BERRY
+	closetext
+	end
+
+LeftoverPartyFull:
+	writetext ElmLeftoverPartyFull
+	waitbutton
+	closetext
+	end
+
+
 
 DidntChooseStarterScript:
 	writetext DidntChooseStarterText
@@ -1367,6 +1429,24 @@ ElmsLabPCText:
 	para "…It says on the"
 	line "screen…"
 	done
+
+ElmTakeLeftover:
+    text "You've proved"
+	line "yourself as a"
+	cont "trainer. I"
+
+	para "can trust you"
+	line "with this"
+	cont "#MON too."
+	done
+
+ElmLeftoverPartyFull:
+	text "Uh oh. Your"
+	line "party is full."
+	cont "Come back when"
+
+	para "you've made"
+	line "space."
 
 ElmsLab_MapEvents:
 	db 0, 0 ; filler

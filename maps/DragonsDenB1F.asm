@@ -33,6 +33,7 @@ DragonsDenB1FCheckRivalCallback:
 	readvar VAR_WEEKDAY
 	ifequal TUESDAY, .AppearRival
 	ifequal THURSDAY, .AppearRival
+	ifequal SATURDAY, .AppearRival
 	disappear DRAGONSDENB1F_RIVAL
 	endcallback
 
@@ -163,13 +164,66 @@ DragonsDenB1FRivalScript:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	special RestartMapMusic
 	end
-
 .RivalTalkAgain:
+	checkevent EVENT_RECEIVED_RIVAL_EGG
+	iffalse .RivalGivesEgg
 	writetext RivalText_Training2
 	waitbutton
 	closetext
 	special RestartMapMusic
 	end
+.RivalGivesEgg:
+	faceplayer
+	opentext
+	writetext RivalGivesEggText
+	yesorno
+	iffalse .RivalRefusedEgg
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .Chikorita
+	giveegg TOTODILE, EGG_LEVEL
+	getstring STRING_BUFFER_4, .eggname
+	sjump .RivalGaveEgg
+.Totodile
+	giveegg CHIKORITA, EGG_LEVEL
+	getstring STRING_BUFFER_4, .eggname
+	sjump .RivalGaveEgg
+.Chikorita
+	giveegg CYNDAQUIL, EGG_LEVEL
+	getstring STRING_BUFFER_4, .eggname
+	sjump .RivalGaveEgg
+.RivalRefusedEgg
+	writetext RivalEggRefused
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
+.PartyFull
+	writetext RivalGivesEggPartyFull
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
+.RivalGaveEgg
+	scall .RivalGaveEggToPlayer
+	setevent EVENT_RECEIVED_RIVAL_EGG
+	writetext RivalAfterEgg
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
+.eggname
+	db "EGG@"
+.RivalGaveEggToPlayer
+	jumpstd ReceiveTogepiEggScript
+	end
+
+
+
+
 
 DragonShrineSignpost:
 	jumptext DragonShrineSignpostText
@@ -316,9 +370,10 @@ RivalText_Training2:
 	line "of my way…"
 	done
 
-RivalGivesEgg:
-	para "Here. I want you"
+RivalGivesEggText:
+	text "Here. I want you"
 	line "to have this."
+	done
 
 RivalGivesEggPartyFull:
 	text "You can't carry"

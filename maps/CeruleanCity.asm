@@ -90,6 +90,7 @@ CeruleanCaveGuardScript:
 	writetext CeruleanCaveGuardText
 	waitbutton
 	closetext
+	end
 
 CeruleanCityYoungsterScript:
 	faceplayer
