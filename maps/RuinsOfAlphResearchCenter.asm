@@ -11,7 +11,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, RuinsOfAlphResearchCenterScientistCallback
 
-RuinsOfAlphResearchCenterNoopScene:
+RuinsOfAlphResearchCenterNo  opScene:
 	end
 
 RuinsOfAlphResearchCenterGetUnownDexScene:
@@ -478,7 +478,6 @@ FossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	waitbutton
-	writetext FossilScientistMonText
 	givepoke AERODACTYL, 30
 	closetext
 	end
@@ -494,7 +493,6 @@ FossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	waitbutton
-	writetext FossilScientistMonText
 	givepoke KABUTO, 30
 	closetext
 	end
@@ -510,7 +508,6 @@ FossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	waitbutton
-	writetext FossilScientistMonText
 	givepoke OMANYTE, 30
 	closetext
 	end

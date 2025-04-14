@@ -114,6 +114,7 @@ MrPokemonsHouse_MrPokemonScript:
 	writetext MrPokemonKantoMonsText
 	waitbutton
 	closetext
+	end
 
 .KantoStarterTotodile
 	writetext ReceivedMrBulbasaurText
@@ -124,6 +125,7 @@ MrPokemonsHouse_MrPokemonScript:
 	writetext MrPokemonKantoMonsText
 	waitbutton
 	closetext
+	end
  
 .RefusedMrKantoMon
 	writetext MrPokemonSaidNoText

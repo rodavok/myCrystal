@@ -214,7 +214,7 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 10 ; # items
+	db 9 ; # items
 	db RAGECANDYBAR
 	db ENERGY_ROOT
 	db REVIVAL_HERB

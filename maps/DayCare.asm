@@ -71,6 +71,7 @@ DayCareManScript_Inside:
 	takeitem EGG_TICKET
 	waitbutton
 	closetext
+	end
 
 DayCareLadyScript:
 	faceplayer
