@@ -16,7 +16,7 @@ GoldenrodPokecenter1FNurseScript:
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
 	setval SUICUNE
-	special FindPartyMonThatSpecies
+	special MonCheck
 	iftrue .gsball
 	end
 
@@ -48,7 +48,7 @@ GoldenrodPokecenter1F_GSBallSceneLeft:
 
 GoldenrodPokecenter1F_GSBallSceneRight:
 	setval SUICUNE
-	special FindPartyMonThatSpecies
+	special MonCheck
 	iftrue .gsball
 	end
 
