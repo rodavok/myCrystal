@@ -11,7 +11,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, RuinsOfAlphResearchCenterScientistCallback
 
-RuinsOfAlphResearchCenterNo  opScene:
+RuinsOfAlphResearchCenterNoopScene:
 	end
 
 RuinsOfAlphResearchCenterGetUnownDexScene:

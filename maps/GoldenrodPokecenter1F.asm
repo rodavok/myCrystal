@@ -24,7 +24,7 @@ GoldenrodPokecenter1F_GSBallSceneLeft:
 	checkevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
 	iftrue .cancel
 	playsound SFX_EXIT_BUILDING
-	moveobject GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST, 0, 7
+	moveobject GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST, 2, 14
 	disappear GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST
 	appear GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST
 	playmusic MUSIC_SHOW_ME_AROUND
@@ -56,7 +56,7 @@ GoldenrodPokecenter1F_GSBallSceneRight:
 	checkevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
 	iftrue .cancel
 	playsound SFX_EXIT_BUILDING
-	moveobject GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST, 0, 7
+	moveobject GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST, 3, 14
 	disappear GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST
 	appear GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST
 	playmusic MUSIC_SHOW_ME_AROUND
@@ -119,7 +119,7 @@ GoldenrodPokecenter1FPokefanF:
 	end
 
 GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtLeftDoorwayTileMovement:
-	step UP
+	step RIGHT
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -130,11 +130,10 @@ GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromLeftDoorwayTileMovement:
 	step LEFT
 	step LEFT
 	step LEFT
-	step DOWN
+	step LEFT
 	step_end
 
 GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtRightDoorwayTileMovement:
-	step UP
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -147,7 +146,6 @@ GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement:
 	step LEFT
 	step LEFT
 	step LEFT
-	step DOWN
 	step_end
 
 GoldenrodPokecomCenterWelcomeToTradeCornerText: ; unreferenced
