@@ -12,10 +12,10 @@ DEF prob_total = 0
 ; Pichu
 	prob 8
 	prob 1
-; Cleffa
+; Clefairy
 	prob 16
 	prob 3
-; Igglybuff
+; Jigglypuff
 	prob 16
 	prob 3
 ; Smoochum
@@ -88,7 +88,7 @@ OddEggs:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db CLEFAIRY
 	db NO_ITEM
 	db POUND, CHARM, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
@@ -114,7 +114,7 @@ OddEggs:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db CLEFAIRY
 	db NO_ITEM
 	db POUND, CHARM, DIZZY_PUNCH, 0
 	dw 00768 ; OT ID
@@ -140,7 +140,7 @@ OddEggs:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db IGGLYBUFF
+	db JIGGLYPUFF
 	db NO_ITEM
 	db SING, CHARM, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
@@ -166,7 +166,7 @@ OddEggs:
 	bigdw 7 ; SDef
 	db "EGG@@@@@@@@"
 
-	db IGGLYBUFF
+	db JIGGLYPUFF
 	db NO_ITEM
 	db SING, CHARM, DIZZY_PUNCH, 0
 	dw 00768 ; OT ID
