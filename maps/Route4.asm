@@ -122,16 +122,16 @@ Route4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12,  5, MOUNT_MOON, 2
+	warp_event 2,  5, MOUNT_MOON, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 13,  7, BGEVENT_READ, MtMoonSquareSign
-	bg_event 20,  3, BGEVENT_ITEM, Route4HiddenUltraBall
+	bg_event 13,  5, BGEVENT_READ, MtMoonSquareSign
+	bg_event 16,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 
 	def_object_events
 	object_event 27,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event 19,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
-	object_event 31,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
-	object_event 36,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
+	object_event 33,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
+	object_event 40,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
