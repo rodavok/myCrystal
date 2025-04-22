@@ -15,8 +15,10 @@ OaksLabNoopScene: ; unreferenced
 Oak:
 	faceplayer
 	opentext
-	checkevent EVENT_OPENED_MT_SILVER
+	checkevent EVENT_GOT_151_OAK_MON
 	iftrue .CheckPokedex
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .CheckCaughtMons
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
 	iftrue .CheckBadges
 	writetext OakWelcomeKantoText
@@ -28,11 +30,65 @@ Oak:
 	ifequal NUM_JOHTO_BADGES, .Complain
 	sjump .AhGood
 
+.CheckCaughtMons:
+    writetext OakStarterText
+	readvar VAR_DEXCAUGHT
+	ifgreater 150 .GiveOakStarter
+	sjump .CheckPokedex
+
 .CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
 	special ProfOaksPCBoot
 	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
+
+
+.GiveOakStarter:
+	writetext OakTakeThisPokemonText
+	promptbutton
+	waitsfx
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .KantoStarterCyndaquil
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .KantoStarterTotodile
+	writetext ReceivedOakSquirtleText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke SQUIRTLE, 5
+	setevent EVENT_GOT_151_OAK_MON
+	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
+.KantoStarterCyndaquil:
+	writetext ReceivedOakBulbasaurText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke BULBASAUR, 5
+	setevent EVENT_GOT_151_OAK_MON
+	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
+
+.KantoStarterTotodile:
+	writetext ReceivedOakCharmanderText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CHARMANDER, 5
+	setevent EVENT_GOT_151_OAK_MON
+	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
+ 
+.NoRoom:
+	writetext OakPartyFullText
 	waitbutton
 	closetext
 	end
@@ -103,6 +159,15 @@ OakLabGoodbyeText:
 	line "area, I hope you"
 	cont "come visit again."
 	done
+
+OakStarterText:
+	text "I'll give you a"
+	line "special @MON if"
+
+	para "you catch 151"
+	line "unique species!"
+	done
+
 
 OakOpenMtSilverText:
 	text "OAK: Wow! That's"
@@ -252,6 +317,42 @@ OaksLabPCText:
 
 	para "ELM in NEW BARK"
 	line "TOWN 8-)"
+	done
+
+OakTakeThisPokemonText:
+	text "Wow! You caught"
+	line "over 151 #MON!"
+
+	para "Three years ago"
+	line "we thought there"
+	cont "were only 151"
+
+	para "species. But we"
+	line "now know there"
+	cont "are many more!"
+
+	para "As a reward,"
+	line "Here's another"
+	cont "rare #MON!"
+	done
+
+ReceivedOakCharmanderText:
+	text "<PLAYER> received"
+	line "CHARMANDER!"
+	done
+ReceivedOakSquirtleText:
+	text "<PLAYER> received"
+	line "SQUIRTLE!"
+	done
+ReceivedOakBulbasaurText:
+	text "<PLAYER> received"
+	line "BULBASAUR!"
+	done
+
+OakPartyFullText:
+	text "Whoa, wait. You"
+	line "can't carry any"
+	cont "more #MON."
 	done
 
 OaksLab_MapEvents:

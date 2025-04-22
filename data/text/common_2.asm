@@ -1277,11 +1277,13 @@ _OakRating10::
 	done
 
 _OakRating11::
-	text "I'm impressed."
-	line "You're evolving"
+	text "Over 150 species!"
+	cont "Great work! Come"
+	line "to my lab in"
 
-	para "#MON, not just"
-	line "catching them."
+	para "PALLET TOWN."
+	line "I have a rare"
+	cont "#MON for you."
 	done
 
 _OakRating12::

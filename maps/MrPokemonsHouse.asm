@@ -76,14 +76,14 @@ MrPokemonsHouse_MrPokemonScript:
 	takeitem RED_SCALE
 	sjump .AlwaysNewDiscoveries
 
-.refused
+.refused:
 	writetext MrPokemonText_Disappointed
 	waitbutton
-.full
+.full:
 	closetext
 	end
 
-.MrKantoStarter
+.MrKantoStarter:
 	writetext MrTakeThisPokemonText
 	yesorno
 	iffalse .RefusedMrKantoMon
@@ -105,7 +105,7 @@ MrPokemonsHouse_MrPokemonScript:
 	waitbutton
 	closetext
 	end
-.KantoStarterCyndaquil
+.KantoStarterCyndaquil:
 	writetext ReceivedMrSquirtleText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -116,7 +116,7 @@ MrPokemonsHouse_MrPokemonScript:
 	closetext
 	end
 
-.KantoStarterTotodile
+.KantoStarterTotodile:
 	writetext ReceivedMrBulbasaurText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -127,12 +127,12 @@ MrPokemonsHouse_MrPokemonScript:
 	closetext
 	end
  
-.RefusedMrKantoMon
+.RefusedMrKantoMon:
 	writetext MrPokemonSaidNoText
 	waitbutton
 	closetext
 	end
-.NoRoom
+.NoRoom:
 	writetext MrPokemonPartyFullText
 	waitbutton
 	closetext

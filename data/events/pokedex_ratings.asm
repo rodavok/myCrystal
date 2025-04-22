@@ -17,7 +17,7 @@ OakRatings:
 	rating 109, SFX_DEX_FANFARE_80_109,       OakRating08
 	rating 124, SFX_CAUGHT_MON,               OakRating09
 	rating 139, SFX_CAUGHT_MON,               OakRating10
-	rating 154, SFX_DEX_FANFARE_140_169,      OakRating11
+	rating 151, SFX_DEX_FANFARE_140_169,      OakRating11
 	rating 169, SFX_DEX_FANFARE_140_169,      OakRating12
 	rating 184, SFX_DEX_FANFARE_170_199,      OakRating13
 	rating 199, SFX_DEX_FANFARE_170_199,      OakRating14
