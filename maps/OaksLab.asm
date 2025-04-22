@@ -33,7 +33,7 @@ Oak:
 .CheckCaughtMons:
     writetext OakStarterText
 	readvar VAR_DEXCAUGHT
-	ifgreater 150 .GiveOakStarter
+	ifgreater 150, .GiveOakStarter
 	sjump .CheckPokedex
 
 .CheckPokedex:
@@ -75,7 +75,6 @@ Oak:
 	waitbutton
 	closetext
 	end
-
 .KantoStarterTotodile:
 	writetext ReceivedOakCharmanderText
 	playsound SFX_CAUGHT_MON
@@ -86,7 +85,6 @@ Oak:
 	waitbutton
 	closetext
 	end
- 
 .NoRoom:
 	writetext OakPartyFullText
 	waitbutton

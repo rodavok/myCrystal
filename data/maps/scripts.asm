@@ -162,6 +162,7 @@ INCLUDE "maps/Route27SandstormHouse.asm"
 INCLUDE "maps/Route29Route46Gate.asm"
 
 
+
 SECTION "Map Scripts 10", ROMX
 
 INCLUDE "maps/Route22.asm"
@@ -249,6 +250,8 @@ INCLUDE "maps/BrunosRoom.asm"
 INCLUDE "maps/KarensRoom.asm"
 INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
+INCLUDE "maps/OaksLab.asm"
+
 
 
 SECTION "Map Scripts 14", ROMX
@@ -405,9 +408,6 @@ INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
-
-INCLUDE "maps/OaksLab.asm"
-
 
 
 SECTION "Map Scripts 21", ROMX
