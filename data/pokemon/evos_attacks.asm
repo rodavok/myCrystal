@@ -472,11 +472,11 @@ NidokingEvosAttacks:
 ClefairyEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, CLEFABLE
 	db 0 ; no more evolutions
+	db 1, SWEET_KISS
 	db 1, POUND
 	db 1, GROWL
 	db 4, ENCORE
 	db 8, SING
-	db 10, SWEET_KISS
 	db 13, DOUBLESLAP
 	db 19, MINIMIZE
 	db 26, DEFENSE_CURL
@@ -529,10 +529,10 @@ NinetalesEvosAttacks:
 JigglypuffEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, WIGGLYTUFF
 	db 0 ; no more evolutions
+	db 1, SWEET_KISS
 	db 1, SING
 	db 4, DEFENSE_CURL
 	db 9, POUND
-	db 10, SWEET_KISS
 	db 14, DISABLE
 	db 19, ROLLOUT
 	db 24, DOUBLESLAP
@@ -3152,9 +3152,9 @@ MantineEvosAttacks:
 	db 10, SUPERSONIC
 	db 18, BUBBLEBEAM
 	db 25, TAKE_DOWN
+	db 27, WING_ATTACK
 	db 32, AGILITY
 	db 38, TWISTER
-	db 40, WING_ATTACK
 	db 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
 

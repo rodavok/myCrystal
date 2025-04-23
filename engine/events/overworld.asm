@@ -508,8 +508,27 @@ TrySurfOW::
 
 	ld d, SURF
 	call CheckPartyMove
-	jr c, .quit
+	jr nc, .SurfFound
 
+	ld d, HYDRO_PUMP
+	call CheckPartyMove
+	jr nc, .SurfFound
+
+	ld d, WATERFALL
+	call CheckPartyMove
+	jr nc, .SurfFound
+
+	ld d, WHIRLPOOL
+	call CheckPartyMove
+	jr nc, .SurfFound
+
+	ld d, OCTAZOOKA
+	call CheckPartyMove
+	jr nc, .SurfFound
+
+	jr .quit
+
+.SurfFound:
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .quit
@@ -705,7 +724,23 @@ Script_UsedWaterfall:
 TryWaterfallOW::
 	ld d, WATERFALL
 	call CheckPartyMove
-	jr c, .failed
+	jr nc, .WaterfallFound
+
+	ld d, HYDRO_PUMP
+	call CheckPartyMove
+	jr nc, .WaterfallFound
+
+	ld d, OCTAZOOKA
+	call CheckPartyMove
+	jr nc, .WaterfallFound
+
+	ld d, CRABHAMMER
+	call CheckPartyMove
+	jr nc, .WaterfallFound
+
+	jr .failed
+
+.WaterfallFound
 	ld de, ENGINE_RISINGBADGE
 	call CheckEngineFlag
 	jr c, .failed
@@ -1054,14 +1089,26 @@ BouldersMayMoveText:
 	text_end
 
 TryStrengthOW:
-	ld d, STRENGTH
-	call CheckPartyMove
-	jr c, .nope
-
 	ld de, ENGINE_PLAINBADGE
 	call CheckEngineFlag
 	jr c, .nope
 
+	ld d, STRENGTH
+	call CheckPartyMove
+	jr nc, .StrengthFound
+	ld d, DOUBLE_EDGE
+	call CheckPartyMove
+	jr nc, .StrengthFound
+	ld d, BODY_SLAM
+	call CheckPartyMove
+	jr nc, .StrengthFound
+	ld d, CRABHAMMER
+	call CheckPartyMove
+	jr nc, .StrengthFound
+
+	jr .nope
+
+.StrengthFound
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
 	jr z, .already_using
@@ -1190,7 +1237,31 @@ DisappearWhirlpool:
 TryWhirlpoolOW::
 	ld d, WHIRLPOOL
 	call CheckPartyMove
-	jr c, .failed
+	jr nc, .WhirlpoolFound
+
+	ld d, WATERFALL
+	call CheckPartyMove
+	jr nc, .WhirlpoolFound
+
+	ld d, CLAMP
+	call CheckPartyMove
+	jr nc, .WhirlpoolFound
+
+	ld d, HYDRO_PUMP
+	call CheckPartyMove
+	jr nc, .WhirlpoolFound
+
+	ld d, OCTAZOOKA
+	call CheckPartyMove
+	jr nc, .WhirlpoolFound
+
+	ld d, CRABHAMMER
+	call CheckPartyMove
+	jr nc, .WhirlpoolFound
+
+	jr .failed
+
+.WhirlpoolFound
 	ld de, ENGINE_GLACIERBADGE
 	call CheckEngineFlag
 	jr c, .failed
@@ -1416,6 +1487,18 @@ AskRockSmashText:
 
 HasRockSmash: ;fix prompts for hms when player has another valid move
 	ld d, ROCK_SMASH
+	call CheckPartyMove
+	jr nc, .yes
+	ld d, DYNAMICPUNCH
+	call CheckPartyMove
+	jr nc, .yes
+	ld d, KARATE_CHOP
+	call CheckPartyMove
+	jr nc, .yes
+	ld d, CROSS_CHOP
+	call CheckPartyMove
+	jr nc, .yes
+	ld d, CRABHAMMER
 	call CheckPartyMove
 	jr nc, .yes
 ; no
@@ -1769,8 +1852,19 @@ GotOffBikeText:
 TryCutOW::
 	ld d, CUT
 	call CheckPartyMove
-	jr c, .cant_cut
+	jr nc, .can_cut
 
+	ld d, SLASH
+	call CheckPartyMove
+	jr nc, .can_cut
+
+	ld d, FURY_CUTTER
+	call CheckPartyMove
+	jr nc, .can_cut
+
+	jr .cant_cut
+
+.can_cut
 	ld de, ENGINE_HIVEBADGE
 	call CheckEngineFlag
 	jr c, .cant_cut

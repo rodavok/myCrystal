@@ -230,9 +230,10 @@ BillsGrandpaYouDontHaveItTextText:
 
 BillsGrandpaShownPokemonText:
 	text "Ah, so that is"
-	line "@"
-	text_ram wStringBuffer3
-	text "?"
+	line "the #MON my"
+
+	para "grandson told me"
+	line "about?"
 
 	para "Isn't it cute!"
 	line "That's so kind of"
