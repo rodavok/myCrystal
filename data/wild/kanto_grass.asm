@@ -257,17 +257,17 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_4
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, FEAROW
-	db 35, RATTATA
 	db 38, EKANS
+	db 35, RATTATA
+	db 42, FEAROW
 	db 40, RATICATE
 	db 40, ARBOK
 	db 40, SANDSHREW
 	db 40, SANDSLASH
 	; day
-	db 42, FEAROW
-	db 35, RATTATA
 	db 38, EKANS
+	db 35, RATTATA
+	db 42, FEAROW
 	db 40, RATICATE
 	db 40, ARBOK
 	db 40, SANDSHREW
@@ -331,7 +331,7 @@ KantoGrassWildMons:
 	; nite
 	db 33, MEOWTH
 	db 33, DROWZEE
-	db 34, MAGNEMITE
+	db 34, ODDISH
 	db 35, GOLDUCK
 	db 32, JIGGLYPUFF
 	db 35, HYPNO
@@ -594,27 +594,27 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_17
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 40, FEAROW
-	db 39, GRIMER
-	db 41, GRIMER
+	db 39, FEAROW
+	db 36, GRIMER
+	db 37, GRIMER
 	db 42, FEAROW
-	db 43, GRIMER
-	db 43, MUK
-	db 43, MUK
+	db 37, GRIMER
+	db 38, MUK
+	db 42, MUK
 	; day
-	db 40, FEAROW
+	db 38, FEAROW
 	db 39, SLUGMA
-	db 39, GRIMER
+	db 37, GRIMER
 	db 42, FEAROW
 	db 38, SLUGMA
 	db 38, MUK
 	db 42, MUK
 	; nite
-	db 40, GRIMER
-	db 39, GRIMER
-	db 41, GRIMER
-	db 42, GRIMER
-	db 43, GRIMER
+	db 36, GRIMER
+	db 37, GRIMER
+	db 37, GRIMER
+	db 38, GRIMER
+	db 38, GRIMER
 	db 43, MUK
 	db 43, MUK
 	end_grass_wildmons
@@ -879,22 +879,22 @@ KantoGrassWildMons:
 	db 37, EXEGGCUTE
 	db 36, NIDORINA
 	db 36, NIDORINO
-	db 37, KANGASKHAN
+	db 39, KANGASKHAN
 	db 40, CHANSEY
 	; day
 	db 39, PARASECT
 	db 37, EXEGGCUTE
 	db 36, NIDORINA
 	db 36, NIDORINO
-	db 36, SCYTHER
+	db 39, SCYTHER
 	db 37, TAUROS
 	db 40, CHANSEY
 	; nite
 	db 39, PARASECT
 	db 36, VENOMOTH
 	db 37, VENONAT
-	db 36, PINSIR
 	db 36, TANGELA
+	db 39, PINSIR
 	db 37, MAROWAK
 	db 40, CHANSEY
 	end_grass_wildmons

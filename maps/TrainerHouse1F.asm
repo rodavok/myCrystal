@@ -143,9 +143,8 @@ ViridianTutorWhichMoveShouldITeachText:
 
 ViridianTutorIfYouUnderstandYouveMadeItText:
 	text "Raising your STATS"
-	line "can give your #MON"
-	
-	para "an edge in battle."
+	line "can give you an"
+	cont "edge in battle."
 	done
 
 ViridianTutorFarewellKidText:

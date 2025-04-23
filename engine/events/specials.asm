@@ -377,6 +377,8 @@ SnorlaxAwake:
 	db 35, 10 ; below
 	db 36,  8 ; right
 	db 36,  9 ; right
+	db 19, 10 ; left celadon
+	db 19, 11 ; left celadon
 	db 22, 10 ; right celadon
 	db 22, 11 ; right celadon
 	db -1
