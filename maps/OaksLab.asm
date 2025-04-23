@@ -15,10 +15,8 @@ OaksLabNoopScene: ; unreferenced
 Oak:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_151_OAK_MON
-	iftrue .CheckPokedex
 	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .CheckCaughtMons
+	iftrue .CheckPokedex
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
 	iftrue .CheckBadges
 	writetext OakWelcomeKantoText
@@ -30,21 +28,27 @@ Oak:
 	ifequal NUM_JOHTO_BADGES, .Complain
 	sjump .AhGood
 
-.CheckCaughtMons:
-    writetext OakStarterText
-	readvar VAR_DEXCAUGHT
-	ifgreater 150, .GiveOakStarter
-	sjump .CheckPokedex
 
 .CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
 	special ProfOaksPCBoot
+	checkevent EVENT_GOT_151_OAK_MON
+    iffalse .CheckCaughtMons
 	writetext OakLabGoodbyeText
 	waitbutton
 	closetext
 	end
 
+.CheckCaughtMons:
+    writetext OakStarterText
+	waitbutton
+	readvar VAR_DEXCAUGHT
+	ifgreater 150, .GiveOakStarter
+	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
 
 .GiveOakStarter:
 	writetext OakTakeThisPokemonText
@@ -160,10 +164,10 @@ OakLabGoodbyeText:
 
 OakStarterText:
 	text "I'll give you a"
-	line "special @MON if"
+	line "rare #MON when"
 
-	para "you catch 151"
-	line "unique species!"
+	para "you've caught 151"
+	line "different species!"
 	done
 
 
