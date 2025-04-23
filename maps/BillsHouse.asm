@@ -36,6 +36,11 @@ BillsGrandpa:
 	special MonCheck
 	iffalse .SaidNo
 	scall .ExcitedToSee
+	refreshscreen
+	pokepic LICKITUNG
+	cry LICKITUNG
+	waitbutton
+	closepokepic
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
 	sjump .ShowedLickitung
@@ -44,10 +49,15 @@ BillsGrandpa:
 	writetext BillsGrandpaOddishText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	scall .ExcitedToSee
 	setval ODDISH
 	special MonCheck
 	iffalse .SaidNo
+	scall .ExcitedToSee
+	refreshscreen
+	pokepic ODDISH
+	cry ODDISH
+	waitbutton
+	closepokepic
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
 	sjump .ShowedOddish
@@ -56,10 +66,15 @@ BillsGrandpa:
 	writetext BillsGrandpaStaryuText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	scall .ExcitedToSee
 	setval STARYU
 	special MonCheck
 	iffalse .SaidNo
+	scall .ExcitedToSee
+	refreshscreen
+	pokepic STARYU
+	cry STARYU
+	waitbutton
+	closepokepic
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_STARYU_TO_BILLS_GRANDPA
 	sjump .ShowedStaryu
@@ -68,10 +83,14 @@ BillsGrandpa:
 	writetext BillsGrandpaGrowlitheText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	scall .ExcitedToSee
 	setval GROWLITHE
 	special MonCheck
 	iffalse .SaidNo
+	scall .ExcitedToSee
+	pokepic GROWLITHE
+	cry GROWLITHE
+	waitbutton
+	closepokepic
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
 	sjump .ShowedGrowlitheVulpix
@@ -80,10 +99,14 @@ BillsGrandpa:
 	writetext BillsGrandpaPichuText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	scall .ExcitedToSee
 	setval PICHU
 	special MonCheck
 	iffalse .SaidNo
+	scall .ExcitedToSee
+	pokepic PICHU
+	cry PICHU
+	waitbutton
+	closepokepic
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	sjump .ShowedPichu
