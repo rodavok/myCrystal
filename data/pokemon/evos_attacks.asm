@@ -476,6 +476,7 @@ ClefairyEvosAttacks:
 	db 1, GROWL
 	db 4, ENCORE
 	db 8, SING
+	db 10, SWEET_KISS
 	db 13, DOUBLESLAP
 	db 19, MINIMIZE
 	db 26, DEFENSE_CURL
@@ -531,6 +532,7 @@ JigglypuffEvosAttacks:
 	db 1, SING
 	db 4, DEFENSE_CURL
 	db 9, POUND
+	db 10, SWEET_KISS
 	db 14, DISABLE
 	db 19, ROLLOUT
 	db 24, DOUBLESLAP
@@ -2442,7 +2444,6 @@ PichuEvosAttacks:
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, CHARM
@@ -2452,7 +2453,6 @@ CleffaEvosAttacks:
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, JIGGLYPUFF
 	db 0 ; no more evolutions
 	db 1, SING
 	db 1, CHARM

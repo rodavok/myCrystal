@@ -514,7 +514,7 @@ PichuEggMoves:
 	db DOUBLESLAP
 	db -1 ; end
 
-CleffaEggMoves:
+ClefairyEggMoves:
 	db PRESENT
 	db METRONOME
 	db AMNESIA
@@ -523,7 +523,7 @@ CleffaEggMoves:
 	db MIMIC
 	db -1 ; end
 
-IgglybuffEggMoves:
+JigglypuffEggMoves:
 	db PERISH_SONG
 	db PRESENT
 	db FAINT_ATTACK
