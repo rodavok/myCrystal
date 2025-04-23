@@ -32,12 +32,10 @@ BillsGrandpa:
 	writetext BillsGrandpaLickitungText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	yesorno
+	setval LICKITUNG
+	special MonCheck
 	iffalse .SaidNo
 	scall .ExcitedToSee
-	special BillsGrandfather
-	iffalse .SaidNo
-	ifnotequal LICKITUNG, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
 	sjump .ShowedLickitung
@@ -46,12 +44,10 @@ BillsGrandpa:
 	writetext BillsGrandpaOddishText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	yesorno
-	iffalse .SaidNo
 	scall .ExcitedToSee
-	special BillsGrandfather
+	setval ODDISH
+	special MonCheck
 	iffalse .SaidNo
-	ifnotequal ODDISH, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
 	sjump .ShowedOddish
@@ -60,42 +56,22 @@ BillsGrandpa:
 	writetext BillsGrandpaStaryuText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	yesorno
-	iffalse .SaidNo
 	scall .ExcitedToSee
-	special BillsGrandfather
+	setval STARYU
+	special MonCheck
 	iffalse .SaidNo
-	ifnotequal STARYU, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_STARYU_TO_BILLS_GRANDPA
 	sjump .ShowedStaryu
 
 .GotWaterStone:
-	checkver
-	iftrue .AskVulpix
 	writetext BillsGrandpaGrowlitheText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	yesorno
-	iffalse .SaidNo
 	scall .ExcitedToSee
-	special BillsGrandfather
+	setval GROWLITHE
+	special MonCheck
 	iffalse .SaidNo
-	ifnotequal GROWLITHE, .WrongPokemon
-	scall .CorrectPokemon
-	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	sjump .ShowedGrowlitheVulpix
-
-.AskVulpix:
-	writetext BillsGrandpaVulpixText
-	promptbutton
-	writetext BillsGrandpaAskToSeeMonText
-	yesorno
-	iffalse .SaidNo
-	scall .ExcitedToSee
-	special BillsGrandfather
-	iffalse .SaidNo
-	ifnotequal VULPIX, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
 	sjump .ShowedGrowlitheVulpix
@@ -104,12 +80,10 @@ BillsGrandpa:
 	writetext BillsGrandpaPichuText
 	promptbutton
 	writetext BillsGrandpaAskToSeeMonText
-	yesorno
-	iffalse .SaidNo
 	scall .ExcitedToSee
-	special BillsGrandfather
+	setval PICHU
+	special MonCheck
 	iffalse .SaidNo
-	ifnotequal PICHU, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	sjump .ShowedPichu
@@ -199,11 +173,6 @@ BillsGrandpa:
 	closetext
 	end
 
-.WrongPokemon:
-	writetext BillsGrandpaWrongPokemonText
-	waitbutton
-	closetext
-	end
 
 .BagFull:
 	closetext
@@ -269,14 +238,6 @@ BillsGrandpaShownAllThePokemonText:
 
 	para "I've lived such a"
 	line "long life."
-	done
-
-BillsGrandpaWrongPokemonText:
-	text "Hm?"
-
-	para "That's not the"
-	line "#MON that I was"
-	cont "told about."
 	done
 
 BillsGrandpaLickitungText:
