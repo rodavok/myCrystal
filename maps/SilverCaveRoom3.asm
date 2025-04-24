@@ -13,6 +13,8 @@ Red:
 	writetext RedSeenText
 	waitbutton
 	closetext
+	checkevent EVENT_BEAT_RED
+	iftrue Red2
 	winlosstext RedWinLossText, RedWinLossText
 	loadtrainer RED, RED1
 	startbattle
@@ -34,6 +36,29 @@ Red:
 	refreshscreen
 	credits
 	end
+
+Red2:
+	winlosstext RedWinLossText, RedWinLossText
+	loadtrainer RED, RED2
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	special FadeOutMusic
+	opentext
+	writetext RedLeavesText
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear SILVERCAVEROOM3_RED
+	pause 15
+	special FadeInQuickly
+	pause 30
+	special HealParty
+	refreshscreen
+	credits
+	end
+
 
 RedSeenText:
 	text "<……>"

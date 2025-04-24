@@ -45,6 +45,8 @@ KogaScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_KOGA
 	iftrue KogaScript_AfterBattle
+	checkevent EVENT_BEAT_RED
+	iftrue KogaScript_Battle2
 	writetext KogaScript_KogaBeforeText
 	waitbutton
 	closetext
@@ -64,6 +66,28 @@ KogaScript_Battle:
 	setevent EVENT_KOGAS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+KogaScript_Battle2:
+	writetext KogaScript_KogaBeforeText
+	waitbutton
+	closetext
+	winlosstext KogaScript_KogaBeatenText, 0
+	loadtrainer KOGA, KOGA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_KOGA
+	opentext
+	writetext KogaScript_KogaDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_KOGAS_ROOM_EXIT_OPEN
+	waitsfx
+	end
+
 
 KogaScript_AfterBattle:
 	writetext KogaScript_KogaDefeatText

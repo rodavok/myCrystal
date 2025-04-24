@@ -45,6 +45,8 @@ KarenScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_KAREN
 	iftrue KarenScript_AfterBattle
+	checkevent EVENT_BEAT_RED
+	iftrue KarenScript_Battle2
 	writetext KarenScript_KarenBeforeText
 	waitbutton
 	closetext
@@ -64,6 +66,28 @@ KarenScript_Battle:
 	setevent EVENT_KARENS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+KarenScript_Battle2:
+	writetext KarenScript_KarenBeforeText
+	waitbutton
+	closetext
+	winlosstext KarenScript_KarenBeatenText, 0
+	loadtrainer KAREN, KAREN2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_KAREN
+	opentext
+	writetext KarenScript_KarenDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_KARENS_ROOM_EXIT_OPEN
+	waitsfx
+	end
+
 
 KarenScript_AfterBattle:
 	writetext KarenScript_KarenDefeatText
