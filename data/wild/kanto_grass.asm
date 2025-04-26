@@ -5,25 +5,25 @@ KantoGrassWildMons:
 	def_grass_wildmons DIGLETTS_CAVE
 	db 4 percent, 2 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, DIGLETT
-	db 26, DIGLETT
-	db 32, DIGLETT
+	db 37, DIGLETT
+	db 36, DIGLETT
+	db 35, DIGLETT
 	db 44, DIGLETT
 	db 44, DUGTRIO
 	db 44, DUGTRIO
 	db 44, DUGTRIO
 	; day
-	db 23, DIGLETT
-	db 26, DIGLETT
-	db 32, DIGLETT
+	db 37, DIGLETT
+	db 36, DIGLETT
+	db 35, DIGLETT
 	db 44, DIGLETT
 	db 44, DUGTRIO
 	db 44, DUGTRIO
 	db 44, DUGTRIO
 	; nite
-	db 38, DIGLETT
-	db 42, DIGLETT
-	db 44, DIGLETT
+	db 37, DIGLETT
+	db 36, DIGLETT
+	db 35, DIGLETT
 	db 40, DIGLETT
 	db 50, DUGTRIO
 	db 48, DUGTRIO
@@ -33,29 +33,29 @@ KantoGrassWildMons:
 	def_grass_wildmons MOUNT_MOON
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 26, GOLBAT
-	db 28, GEODUDE
-	db 28, SANDSLASH
-	db 32, PARASECT
-	db 30, GRAVELER
-	db 28, CLEFAIRY
-	db 28, CLEFAIRY
+	db 38, GOLBAT
+	db 37, GEODUDE
+	db 41, SANDSLASH
+	db 39, PARASECT
+	db 41, GRAVELER
+	db 35, CLEFAIRY
+	db 35, CLEFAIRY
 	; day
-	db 26, GOLBAT
-	db 28, GEODUDE
-	db 28, SANDSLASH
-	db 32, PARASECT
-	db 30, GRAVELER
-	db 28, CLEFAIRY
-	db 28, CLEFAIRY
+	db 38, GOLBAT
+	db 37, GEODUDE
+	db 41, SANDSLASH
+	db 39, PARASECT
+	db 41, GRAVELER
+	db 35, CLEFAIRY
+	db 35, CLEFAIRY
 	; nite
-	db 26, GOLBAT
-	db 28, GEODUDE
-	db 28, SANDSLASH
-	db 32, PARASECT
-	db 30, GRAVELER
-	db 28, CLEFAIRY
-	db 28, CLEFAIRY
+	db 38, GOLBAT
+	db 37, GEODUDE
+	db 41, SANDSLASH
+	db 39, PARASECT
+	db 41, GRAVELER
+	db 35, CLEFAIRY
+	db 35, CLEFAIRY
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_1F
@@ -89,25 +89,25 @@ KantoGrassWildMons:
 	def_grass_wildmons ROCK_TUNNEL_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, CUBONE
-	db 34, GRAVELER
-	db 36, ONIX
-	db 32, GOLBAT
-	db 35, MAROWAK
+	db 36, CUBONE
+	db 37, GRAVELER
+	db 38, ONIX
+	db 36, GOLBAT
+	db 38, MAROWAK
 	db 38, KANGASKHAN
-	db 35, KANGASKHAN
+	db 40, KANGASKHAN
 	; day
-	db 32, CUBONE
-	db 34, GRAVELER
-	db 36, ONIX
-	db 32, GOLBAT
-	db 35, MAROWAK
+	db 36, CUBONE
+	db 37, GRAVELER
+	db 38, ONIX
+	db 36, GOLBAT
+	db 38, MAROWAK
 	db 38, KANGASKHAN
-	db 35, KANGASKHAN
+	db 40, KANGASKHAN
 	; nite
-	db 32, ZUBAT
-	db 38, GRAVELER
-	db 37, ONIX
+	db 36, ZUBAT
+	db 37, GRAVELER
+	db 38, ONIX
 	db 36, ZUBAT
 	db 38, HAUNTER
 	db 38, GOLBAT
@@ -231,17 +231,17 @@ KantoGrassWildMons:
 	; morn
 	db 42, FEAROW
 	db 35, RATTATA
-	db 38, EKANS
+	db 38, ARBOK
 	db 40, RATICATE
-	db 40, ARBOK
+	db 36, JIGGLYPUFF
 	db 40, SANDSHREW
 	db 40, SANDSLASH
 	; day
 	db 42, FEAROW
 	db 35, RATTATA
-	db 38, EKANS
+	db 38, ARBOK
 	db 40, RATICATE
-	db 40, ARBOK
+	db 36, JIGGLYPUFF
 	db 40, SANDSHREW
 	db 40, SANDSLASH
 	; nite
@@ -250,8 +250,8 @@ KantoGrassWildMons:
 	db 40, RATICATE
 	db 36, GOLBAT
 	db 35, ARBOK
-	db 36, CLEFAIRY
-	db 36, CLEFAIRY
+	db 36, JIGGLYPUFF
+	db 36, JIGGLYPUFF
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_4
