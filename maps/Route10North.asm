@@ -5,12 +5,8 @@ Route10North_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, .Flypoint
 	callback MAPCALLBACK_OBJECTS, Route10NorthZapdosCallback
 
-.Flypoint:
-	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
-	return
 Route10NorthZapdosCallback:
 	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppear
