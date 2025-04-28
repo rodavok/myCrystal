@@ -113,6 +113,7 @@ AlphabeticalPokedexOrder:
 	db LARVITAR
 	db LEDIAN
 	db LEDYBA
+	db LICKING
 	db LICKITUNG
 	db LUGIA
 	db MACHAMP

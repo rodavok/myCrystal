@@ -510,7 +510,9 @@ PokemonPicPointers::
 	dba_pic CelebiBackpic
 	dba_pic NyqwilFrontpic
 	dba_pic NyqwilBackpic
+	dba_pic LickingFrontpic
+	dba_pic LickingBackpic
 	assert_table_length NUM_POKEMON
 	dba_pic EggPic
-	dbw -1, -1 ; unused
+	;dbw -1, -1 ; unused
 	assert_table_length EGG

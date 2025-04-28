@@ -253,4 +253,5 @@ PokedexDataPointerTable:
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
 	dw NyqwilPokedexEntry
+	dw LickingPokedexEntry
 	assert_table_length NUM_POKEMON

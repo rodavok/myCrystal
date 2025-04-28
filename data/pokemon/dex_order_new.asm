@@ -181,6 +181,7 @@ NewPokedexOrder:
 	db SEEL
 	db DEWGONG
 	db LICKITUNG
+	db LICKING
 	db TANGELA
 	db EEVEE
 	db VAPOREON

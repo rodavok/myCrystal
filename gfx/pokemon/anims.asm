@@ -250,4 +250,6 @@ LugiaAnimation:      INCLUDE "gfx/pokemon/lugia/anim.asm"
 HoOhAnimation:       INCLUDE "gfx/pokemon/ho_oh/anim.asm"
 CelebiAnimation:     INCLUDE "gfx/pokemon/celebi/anim.asm"
 NyqwilAnimation:     INCLUDE "gfx/pokemon/nyqwil/anim.asm"
+LickingAnimation:    INCLUDE "gfx/pokemon/licking/anim.asm"
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
+

@@ -254,4 +254,5 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
 	db ICON_FISH        ; NYQWIL
+	db ICON_MONSTER     ; LICKING
 	assert_table_length NUM_POKEMON
