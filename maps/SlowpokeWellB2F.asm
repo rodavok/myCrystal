@@ -10,8 +10,8 @@ SlowpokeWellB2F_MapScripts:
 SlowpokeWellB2FGymGuideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
-	iftrue .GotKingsRock
+	; checkevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
+	; iftrue .GotKingsRock
 	writetext SlowpokeWellB2FGymGuideText
 	promptbutton
 	verbosegiveitem KINGS_ROCK

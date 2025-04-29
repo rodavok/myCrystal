@@ -1536,7 +1536,7 @@ HitmonchanEvosAttacks:
 	db 0 ; no more level-up moves
 
 LickitungEvosAttacks:
-	db EVOLVE_LEVEL, 38, LICKING  
+	db EVOLVE_TRADE, KINGS_ROCK, LICKING
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 7, SUPERSONIC
@@ -1552,12 +1552,14 @@ LickitungEvosAttacks:
 LickingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LICK
+	db 1, SLEEP_TALK
+	db 1, REST
 	db 7, SUPERSONIC
 	db 13, DEFENSE_CURL
 	db 19, STOMP
 	db 25, WRAP
 	db 31, DISABLE
-	db 38, SLAM
+	db 38, DRAGONBREATH
 	db 44, SCREECH
 	db 46, REST
 	db 50, SLEEP_TALK
@@ -2966,7 +2968,6 @@ QwilfishEvosAttacks:
 
 NyqwilEvosAttacks:
 	db 0 ;no more evolutions
-	db 0 ; no more evolutions
 	db 1, SPIKES
 	db 1, TACKLE
 	db 1, POISON_STING

@@ -8,13 +8,13 @@ EggMovePointers::
 	dw NoEggMoves
 	dw SquirtleEggMoves
 	dw NoEggMoves
+	dw NoEggMoves ;Blastoise
 	dw NoEggMoves
 	dw NoEggMoves
+	dw NoEggMoves ;Butterfree
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw NoEggMoves ;Beedrill
 	dw PidgeyEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -25,7 +25,7 @@ EggMovePointers::
 	dw EkansEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw NoEggMoves ;Raichu
 	dw SandshrewEggMoves
 	dw NoEggMoves
 	dw NidoranFEggMoves
@@ -252,5 +252,8 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	db NoEggmoves
+	dw NoEggMoves
+	; dw NoEggMoves
+	; dw NoEggMoves
 	assert_table_length NUM_POKEMON
+

@@ -258,7 +258,7 @@ PokemonCries::
 	mon_cry CRY_AIPOM,         0,  384 ; HO_OH
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
 	mon_cry CRY_SLOWKING,     95,  384 ; NYQWIL
-	mon_cry CRY_SEEL,        -50,  s300 ; LICKING
+	mon_cry CRY_SEEL,        -50,  300 ; LICKING
 
 	assert_table_length NUM_POKEMON
 	mon_cry CRY_NIDORAN_M,     0,    0 ; 254

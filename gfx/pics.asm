@@ -716,7 +716,7 @@ NyqwilBackpic:  INCBIN "gfx/pokemon/nyqwil/back.2bpp.lz"
 RapidashFrontpic: INCBIN "gfx/pokemon/rapidash/front.animated.2bpp.lz"
 UrsaringFrontpic:    INCBIN "gfx/pokemon/ursaring/front.animated.2bpp.lz"
 LickingFrontpic: INCBIN "gfx/pokemon/licking/front.animated.2bpp.lz"
-LickingFrontpic: INCBIN "gfx/pokemon/licking/back.2bpp.lz"
+LickingBackpic: INCBIN "gfx/pokemon/licking/back.2bpp.lz"
 
 
 
