@@ -1493,9 +1493,12 @@
 	const EVENT_SNORLAX_ROUTE16
 	const EVENT_FOUGHT_ROUTE16_SNORLAX
 	const EVENT_GOT_151_OAK_MON
+	const EVENT_INDIGO_TM_CLERK_1
+	const EVENT_INDIGO_TM_CLERK_2
 
 
-; Unused: next 48 events
+
+; Unused: next 46 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

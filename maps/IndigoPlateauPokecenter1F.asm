@@ -42,17 +42,20 @@ IndigoPlateauPokecenter1FPrepareElite4Callback:
 	setevent EVENT_LANCES_ROOM_OAK_AND_MARY
 	endcallback
 
+	
+
+
 PlateauRivalBattle1:
 	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
 	iffalse PlateauRivalScriptDone
-	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT ; Is this fight only done once? 
 	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY ;Monday and Wednesday
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal FRIDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
+	;readvar VAR_WEEKDAY ;Monday and Wednesday
+	;ifequal SUNDAY, PlateauRivalScriptDone
+	;ifequal TUESDAY, PlateauRivalScriptDone
+	;ifequal THURSDAY, PlateauRivalScriptDone
+	;ifequal FRIDAY, PlateauRivalScriptDone
+	;ifequal SATURDAY, PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_RIVAL, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_RIVAL
 	turnobject PLAYER, DOWN
@@ -221,7 +224,7 @@ PlateauEusineBattle1:
 	if_not_equal 16, PlateauRivalScriptDone
 	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
 	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY
+	readvar VAR_WEEKDAY ;FRIDAY
 	ifequal SUNDAY, PlateauRivalScriptDone
 	ifequal MONDAY, PlateauRivalScriptDone
 	ifequal TUESDAY, PlateauRivalScriptDone
@@ -405,23 +408,20 @@ PlateauEusineText1:
 	text "EUSINE: Yo,"
 	line "<PLAYER>!"
 
-	para "You taught"
-	line "me that I"
-	cont "need to become"
+	para "You taught me that"
+	line "I need to become"
+	cont "stronger if I want"
 
-	para "stronger if"
-	line "I want to meet"
-
-	para "legendary"
+	para "to meet legendary"
 	line "#MON."
 
-	para "So I trained"
-	line "to take on the"
+	para "So I trained to"
+	line "take on the #-"
+	cont "MON LEAGUE!"
 
-	para "#MON LEAGUE!"
-	line "Let me show"
+	para "Let me show you"
 
-	para "you my power!"
+	para "my power!"
 	done
 
 PlateauEusineWinText:
@@ -430,8 +430,8 @@ PlateauEusineWinText:
 	done
 
 PlateauEusineText2:
-	text "…Darn… I still"
-	line "can't win…"
+	text "I still can't"
+	line "win…"
 
 	para "I… I have to think"
 	line "more about my"
@@ -470,8 +470,8 @@ IndigoPlateauPokecenter1F_MapEvents:
 	def_object_events
 	object_event  3,  7, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event 11,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
-	object_event 12,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScriptTM1, EVENT_BEAT_ELITE_FOUR
-	object_event 13,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScriptTM2, EVENT_BEAT_RED
+	object_event 12,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScriptTM1, EVENT_INDIGO_TM_CLERK_1
+	object_event 13,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScriptTM2, EVENT_INDIGO_TM_CLERK_2
 	object_event 11, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
 	object_event 16,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY

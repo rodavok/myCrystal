@@ -615,6 +615,8 @@ InitializeEventsScript:
 	setevent EVENT_MT_MOON_SQUARE_MOLTRES
 	setevent EVENT_SEAFOAM_ISLANDS_ARTICUNO
 	setevent EVENT_CERULEAN_CAVE_MEWTWO
+	setevent EVENT_INDIGO_TM_CLERK1
+	setevent EVENT_INDIGO_TM_CLERK2
 	endcallback
 
 AskNumber1MScript:
