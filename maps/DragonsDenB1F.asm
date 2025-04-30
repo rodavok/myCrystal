@@ -173,8 +173,6 @@ DragonsDenB1FRivalScript:
 	special RestartMapMusic
 	end
 .RivalGivesEgg:
-	faceplayer
-	opentext
 	writetext RivalGivesEggText
 	yesorno
 	iffalse .RivalRefusedEgg
@@ -393,21 +391,20 @@ RivalEggRefused:
 	done
 
 RivalAfterEgg:
-	text "I shouldn't"
-	line "have stolen my"
+	text "I shouldn't have"
+	line "stolen my #MON"
 
-	para "#MON from PROF."
-	line "ELM's LAB. But"
+	para "from PROF. ELM'S"
+	line "LAB. But we're"
+	cont "partners now."
 
-	para "it's my partner"
-	line "now."
 
 	para "We can't be"
 	line "separated."
 
 	para "We'll be ready"
 	line "to take you on"
-	cont "soon."
+	cont "again soon."
 	done
 	
 CooltrainermDarinSeenText:
@@ -517,7 +514,7 @@ DragonsDenB1F_MapEvents:
 	def_object_events
 	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 30, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGONS_DEN_CLAIR
-	object_event 20, 23, SPRITE_RIVAL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FRivalScript, EVENT_RIVAL_DRAGONS_DEN
+	object_event 20, 23, SPRITE_RIVAL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FRivalScript, -1 ;EVENT_RIVAL_DRAGONS_DEN
 	object_event 20,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermDarin, -1
 	object_event  8,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1
 	object_event  4, 17, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia1, -1
