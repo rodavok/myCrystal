@@ -542,7 +542,7 @@ JohtoGrassWildMons:
 	db 19, ZUBAT
 	db 21, SLOWPOKE
 	db 23, GOLBAT
-	db 23, SLOWPOKE
+	db 23, LICKITUNG
 	db 23, SLOWPOKE
 	; day
 	db 21, ZUBAT
@@ -550,7 +550,7 @@ JohtoGrassWildMons:
 	db 19, ZUBAT
 	db 21, SLOWPOKE
 	db 23, GOLBAT
-	db 23, SLOWPOKE
+	db 23, LICKITUNG
 	db 23, SLOWPOKE
 	; nite
 	db 21, ZUBAT

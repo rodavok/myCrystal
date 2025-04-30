@@ -291,7 +291,7 @@ StoreSwarmMapIndices::
 	ld a, d
 	ld [wSwarmMapGroup], a
 	ld a, e
-	ld [wSwarmMapGroup], a
+	ld [wSwarmMapNumber], a
 
 SetSwarmFlag:
 	ld hl, wDailyFlags1
