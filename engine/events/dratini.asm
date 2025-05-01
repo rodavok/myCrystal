@@ -72,17 +72,17 @@ GiveDratini:
 .Moveset0:
 ; Dratini does not normally learn Extremespeed. This is a special gift.
 ; Dratini sucks for a long time so this cool gift also includes Outrage so it can at least be a little useful
-	db WRAP
+	db LEER
 	db THUNDER_WAVE
 	db OUTRAGE
 	db EXTREMESPEED
 	db 0
 .Moveset1:
-; This is the normal moveset of a level 15 Dratini
-	db WRAP
+; This is the normal moveset of a level 25 Dratini
 	db LEER
 	db THUNDER_WAVE
 	db TWISTER
+	db DRAGON_RAGE
 	db 0
 
 .GetNthPartyMon:

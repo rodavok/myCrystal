@@ -1677,8 +1677,8 @@ JohtoGrassWildMons:
 	db 23, GRAVELER
 	db 24, GLIGAR
 	db 25, GLIGAR
-	db 27, LARVITAR
 	db 27, GRAVELER
+	db 27, LARVITAR
 	db 27, GRAVELER
 	end_grass_wildmons
 

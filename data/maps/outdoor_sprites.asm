@@ -172,7 +172,8 @@ AzaleaGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_ROCKET 
 	db SPRITE_LASS
-	; 6 of max 9 walking sprites
+	db SPRITE_RIVAL
+	; 7 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWPOKE
 	db SPRITE_KURT ; non-walking version of SPRITE_KURT

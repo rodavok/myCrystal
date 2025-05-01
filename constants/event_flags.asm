@@ -1495,9 +1495,7 @@
 	const EVENT_GOT_151_OAK_MON
 	const EVENT_INDIGO_TM_CLERK_1
 	const EVENT_INDIGO_TM_CLERK_2
-
-
-
+	const EVENT_INDIGO_PLATEAU_POKECENTER_EUSINE
 ; Unused: next 46 events
 
 	const_next 2048

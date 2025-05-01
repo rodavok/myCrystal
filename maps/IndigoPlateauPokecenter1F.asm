@@ -1,6 +1,8 @@
 	object_const_def
 	const INDIGOPLATEAUPOKECENTER1F_NURSE
-	const INDIGOPLATEAUPOKECENTER1F_CLERK
+	const INDIGOPLATEAUPOKECENTER1F_CLERK1
+	const INDIGOPLATEAUPOKECENTER1F_CLERK2
+	const INDIGOPLATEAUPOKECENTER1F_CLERK3
 	const INDIGOPLATEAUPOKECENTER1F_COOLTRAINER_M
 	const INDIGOPLATEAUPOKECENTER1F_RIVAL
 	const INDIGOPLATEAUPOKECENTER1F_GRAMPS
@@ -10,6 +12,8 @@
 IndigoPlateauPokecenter1F_MapScripts:
 	def_scene_scripts
 	scene_script IndigoPlateauPokecenter1FNoopScene, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE
+	scene_script IndigoPlateauPokecenter1FNoopScene, SCENE_INDIGOPLATEAUPOKECENTER1F_EUSINE_BATTLE
+
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, IndigoPlateauPokecenter1FPrepareElite4Callback
@@ -50,12 +54,12 @@ PlateauRivalBattle1:
 	iffalse PlateauRivalScriptDone
 	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT ; Is this fight only done once? 
 	iftrue PlateauRivalScriptDone
-	;readvar VAR_WEEKDAY ;Monday and Wednesday
-	;ifequal SUNDAY, PlateauRivalScriptDone
-	;ifequal TUESDAY, PlateauRivalScriptDone
-	;ifequal THURSDAY, PlateauRivalScriptDone
-	;ifequal FRIDAY, PlateauRivalScriptDone
-	;ifequal SATURDAY, PlateauRivalScriptDone
+	readvar VAR_WEEKDAY ;Monday and Wednesday
+	ifequal SUNDAY, PlateauEusineBattle1
+	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal THURSDAY, PlateauRivalScriptDone
+	ifequal FRIDAY, PlateauEusineBattle1
+	ifequal SATURDAY, PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_RIVAL, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_RIVAL
 	turnobject PLAYER, DOWN
@@ -73,11 +77,12 @@ PlateauRivalBattle2:
 	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
 	iftrue PlateauRivalScriptDone
 	readvar VAR_WEEKDAY
-	;ifequal SUNDAY, PlateauRivalScriptDone
-	;ifequal TUESDAY, PlateauRivalScriptDone
-	;ifequal THURSDAY, PlateauRivalScriptDone
-	;ifequal FRIDAY, PlateauRivalScriptDone
-	;ifequal SATURDAY, PlateauRivalScriptDone
+	ifequal SUNDAY, PlateauEusineBattle2
+	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal THURSDAY, PlateauRivalScriptDone
+	ifequal FRIDAY, PlateauEusineBattle2
+	ifequal SATURDAY, PlateauRivalScriptDone
+	moveobject INDIGOPLATEAUPOKECENTER1F_RIVAL, 16, 9
 	appear INDIGOPLATEAUPOKECENTER1F_RIVAL
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -220,17 +225,8 @@ PlateauRivalLeavesMovement:
 	step_end
 
 PlateauEusineBattle1:
-	checkcode VAR_BADGES
-	if_not_equal 16, PlateauRivalScriptDone
-	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
-	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY ;FRIDAY
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal MONDAY, PlateauRivalScriptDone
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal WEDNESDAY, PlateauRivalScriptDone
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
+	checkflag EVENT_BEAT_ELITE_FOUR
+	iffalse PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_EUSINE, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_EUSINE
 	turnobject PLAYER, DOWN
@@ -243,17 +239,9 @@ PlateauEusineBattle1:
 	sjump PlateauRivalBattleCommon
 
 PlateauEusineBattle2:
-	checkcode VAR_BADGES
-	if_not_equal 16, PlateauRivalScriptDone
-	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
-	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal MONDAY, PlateauRivalScriptDone
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal WEDNESDAY, PlateauRivalScriptDone
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
+	checkflag EVENT_BEAT_ELITE_FOUR
+	iffalse PlateauRivalScriptDone
+	moveobject INDIGOPLATEAUPOKECENTER1F_EUSINE, 16, 9
 	appear INDIGOPLATEAUPOKECENTER1F_EUSINE
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -269,7 +257,7 @@ PlateauEusineBattleCommon:
 	writetext PlateauEusineText1
 	waitbutton
 	closetext
-	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_EUSINE
 	winlosstext PlateauEusineWinText, PlateauEusineLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_EUSINE
 	loadtrainer MYSTICALMAN, EUSINE2
@@ -283,7 +271,7 @@ PlateauEusineBattleCommon2:
 	writetext PlateauEusineText1
 	waitbutton
 	closetext
-	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_EUSINE
 	winlosstext PlateauEusineWinText, PlateauEusineLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_EUSINE
 	loadtrainer MYSTICALMAN, EUSINE3
@@ -301,7 +289,7 @@ PlateauEusinePostBattle:
 	turnobject PLAYER, DOWN
 	applymovement INDIGOPLATEAUPOKECENTER1F_EUSINE, PlateauRivalLeavesMovement
 	disappear INDIGOPLATEAUPOKECENTER1F_EUSINE
-	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE
+	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_EUSINE_BATTLE
 	playmapmusic
 	setflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
 
@@ -462,8 +450,6 @@ IndigoPlateauPokecenter1F_MapEvents:
 	def_coord_events
 	coord_event 16,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauRivalBattle1
 	coord_event 17,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauRivalBattle2
-	coord_event 16,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauEusineBattle1
-	coord_event 17,  4, SCENE_INDIGOPLATEAUPOKECENTER1F_RIVAL_BATTLE, PlateauEusineBattle2
 
 	def_bg_events
 
@@ -476,5 +462,5 @@ IndigoPlateauPokecenter1F_MapEvents:
 	object_event 16,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
 	object_event  0,  9, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY
-	object_event 16,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_EUSINE
+	object_event 16,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 

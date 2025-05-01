@@ -21,6 +21,7 @@ Red:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_RED
+	clearevent EVENT_INDIGO_TM_CLERK_2
 	special FadeOutMusic
 	opentext
 	writetext RedLeavesText
