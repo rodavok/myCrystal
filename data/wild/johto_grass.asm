@@ -290,7 +290,7 @@ JohtoGrassWildMons:
 	db 15, RATTATA
 	db 14, ZUBAT
 	db 15, RATTATA
-	db 15, SLUGMA
+	db 15, RATTATA
 	db 15, RATICATE
 	; day
 	db 13, RATTATA
@@ -298,7 +298,7 @@ JohtoGrassWildMons:
 	db 15, RATTATA
 	db 14, ZUBAT
 	db 15, RATTATA
-	db 15, SLUGMA
+	db 15, RATTATA
 	db 15, RATICATE
 	; nite
 	db 13, RATTATA
@@ -317,7 +317,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, SLUGMA
+	db 12, RATTATA
 	db 16, MAGMAR
 	db 16, WEEZING
 	; day
@@ -325,7 +325,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, SLUGMA
+	db 12, RATTATA
 	db 16, MAGMAR
 	db 16, WEEZING
 	; nite
@@ -333,7 +333,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 16, KOFFING
 	db 15, ZUBAT
-	db 12, MAGBY
+	db 12, RATTATA
 	db 16, MAGMAR
 	db 16, WEEZING
 	end_grass_wildmons

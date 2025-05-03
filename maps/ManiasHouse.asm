@@ -59,6 +59,8 @@ ManiaScript:
 	ifequal SHUCKIE_FAINTED, .default_postevent
 	; SHUCKIE_RETURNED
 	writetext ManiaText_ThankYou
+	verbosegiveitem PP_UP ;BERRY_JUICE
+	iffalse .BagFull
 	waitbutton
 	closetext
 	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
@@ -92,6 +94,10 @@ ManiaScript:
 .default_postevent
 	writetext ManiaText_HappinessSpeech
 	waitbutton
+	closetext
+	end
+
+.BagFull
 	closetext
 	end
 

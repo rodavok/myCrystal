@@ -8,7 +8,7 @@ GiveShuckle:
 ; Level 15 Shuckle.
 	ld a, SHUCKLE
 	ld [wCurPartySpecies], a
-	ld a, 15
+	ld a, 23
 	ld [wCurPartyLevel], a
 
 	predef TryAddMonToParty

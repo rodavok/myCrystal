@@ -291,7 +291,10 @@ PlateauEusinePostBattle:
 	disappear INDIGOPLATEAUPOKECENTER1F_EUSINE
 	setscene SCENE_INDIGOPLATEAUPOKECENTER1F_EUSINE_BATTLE
 	playmapmusic
-	setflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	setflag ENGINE_INDIGO_PLATEAU_EUSINE_FIGHT
+	end ;possibly needed?
+
+	
 
 IndigoPlateauPokecenter1FCooltrainerMText:
 	text "At the #MON"
@@ -407,9 +410,9 @@ PlateauEusineText1:
 	line "take on the #-"
 	cont "MON LEAGUE!"
 
-	para "Let me show you"
-
-	para "my power!"
+	para "Now! Let me show"
+	line "you my power!"
+	para 
 	done
 
 PlateauEusineWinText:

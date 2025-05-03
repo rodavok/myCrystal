@@ -187,4 +187,5 @@ SpecialsPointers::
 	add_special TradebackNPC
 	add_special MoveRelearner
 	add_special EggMoveTutor
+	add_special HiddenPowerGuru
 	

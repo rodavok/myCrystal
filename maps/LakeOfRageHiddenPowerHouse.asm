@@ -18,12 +18,14 @@ HiddenPowerGuy:
 	setevent EVENT_GOT_TM10_HIDDEN_POWER
 	writetext HiddenPowerGuyText2
 	waitbutton
-	closetext
-	end
+	sjump .CheckHiddenPower
 .AlreadyGotItem:
 	writetext HiddenPowerGuyText3
 	waitbutton
+.CheckHiddenPower:
+	special HiddenPowerGuru
 .Done:
+	waitbutton
 	closetext
 	end
 
