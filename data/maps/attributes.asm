@@ -126,7 +126,7 @@ ENDM
 	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST | EAST
 	connection north, Route39, ROUTE_39, 5
 	connection west, Route40, ROUTE_40, 9
-	connection east, GoldenrodShore, GOLDENROD_SHORE, 7
+	connection east, GoldenrodShore, GOLDENROD_SHORE, 6
 
 	map_attributes EcruteakCity, ECRUTEAK_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route37, ROUTE_37, 5
@@ -381,7 +381,7 @@ ENDM
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes GoldenrodShore, GOLDENROD_SHORE, $2c, WEST | EAST
-	connection west, OlivineCity, OLIVINE_CITY, -7
+	connection west, OlivineCity, OLIVINE_CITY, -6
 	connection east, Route35, ROUTE_35, 1
 
 	map_attributes Route23, ROUTE_23, $0f, 0
