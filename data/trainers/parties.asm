@@ -2641,7 +2641,7 @@ BurglarGroup:
 	; BURGLAR (3)
 	db "COREY@", TRAINERTYPE_NORMAL
 	db 45, KOFFING
-	db 43, MAGMAR
+	db 46, MAGMAR
 	db 45, WEEZING
 	db -1 ; end
 

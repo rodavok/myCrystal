@@ -1573,28 +1573,28 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, EKANS
+	db 14, MANKEY
 	db 14, SPEAROW
-	db 15, MANKEY
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, MANKEY
+	db 15, EKANS
+	db 16, MAREEP
+	db 15, RATICATE
+	db 16, ARBOK
 	db 16, FEAROW
 	; day
-	db 13, EKANS
+	db 14, MANKEY
 	db 14, SPEAROW
-	db 15, MANKEY
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, MANKEY
+	db 15, EKANS
+	db 16, MAREEP
+	db 15, RATICATE
+	db 16, ARBOK
 	db 16, FEAROW
 	; nite
 	db 13, RATTATA
 	db 14, ZUBAT
-	db 15, RATICATE
-	db 16, MANKEY
+	db 15, MANKEY
+	db 16, RATICATE
 	db 15, MARILL
-	db 16, MURKROW
+	db 16, MAREEP
 	db 16, GOLBAT
 	end_grass_wildmons
 
@@ -1613,7 +1613,7 @@ JohtoGrassWildMons:
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
 	db 15, GIRAFARIG
-	db 17, RATICATE
+	db 17, MAREEP
 	db 17, FLAAFFY
 	db 17, FURRET
 	; nite
@@ -1621,8 +1621,8 @@ JohtoGrassWildMons:
 	db 16, NOCTOWL
 	db 16, RATICATE
 	db 17, GIRAFARIG
-	db 17, MURKROW
 	db 17, VENOMOTH
+	db 17, FLAAFFY
 	db 17, VENOMOTH
 	end_grass_wildmons
 
