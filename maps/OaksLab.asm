@@ -60,16 +60,6 @@ Oak:
 	iftrue .KantoStarterCyndaquil
 	checkevent EVENT_GOT_TOTODILE_FROM_ELM
 	iftrue .KantoStarterTotodile
-	writetext ReceivedOakSquirtleText
-	playsound SFX_CAUGHT_MON
-	waitsfx
-	givepoke SQUIRTLE, 5
-	setevent EVENT_GOT_151_OAK_MON
-	writetext OakLabGoodbyeText
-	waitbutton
-	closetext
-	end
-.KantoStarterCyndaquil:
 	writetext ReceivedOakBulbasaurText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -79,11 +69,21 @@ Oak:
 	waitbutton
 	closetext
 	end
-.KantoStarterTotodile:
+.KantoStarterCyndaquil:
 	writetext ReceivedOakCharmanderText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke CHARMANDER, 5
+	setevent EVENT_GOT_151_OAK_MON
+	writetext OakLabGoodbyeText
+	waitbutton
+	closetext
+	end
+.KantoStarterTotodile:
+	writetext ReceivedOakSquirtleText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke SQUIRTLE, 5
 	setevent EVENT_GOT_151_OAK_MON
 	writetext OakLabGoodbyeText
 	waitbutton

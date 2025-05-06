@@ -20,6 +20,7 @@ AsleepTreeMonsDay:
 	db NOCTOWL
 	db SPINARAK
 	db HERACROSS
+	db MURKROW
 	db -1 ; end
 
 AsleepTreeMonsMorn:
@@ -28,4 +29,5 @@ AsleepTreeMonsMorn:
 	db NOCTOWL
 	db SPINARAK
 	db HERACROSS
+	db MURKROW
 	db -1 ; end
