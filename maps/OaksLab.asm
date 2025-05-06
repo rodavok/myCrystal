@@ -41,6 +41,7 @@ Oak:
 	end
 
 .CheckCaughtMons:
+	waitbutton
     writetext OakStarterText
 	waitbutton
 	readvar VAR_DEXCAUGHT

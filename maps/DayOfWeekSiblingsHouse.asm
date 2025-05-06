@@ -39,6 +39,8 @@ DayOfWeekSiblingsHousePokedexScript:
 	writetext DayOfWeekSiblingsHousePokedexText2
 	yesorno
 	iffalse .End
+	writetext DayOfWeekSiblingsHousePokedexText3
+	waitbutton
 	checkevent EVENT_MET_MONICA_OF_MONDAY
 	iffalse .Tuscany
 	writetext MonicaLocText
@@ -111,14 +113,13 @@ DayOfWeekSiblingHouseMonicaScript:
 	waitbutton
 	closetext
 	end
-
 .KantoStarterTotodile:
-	writetext ReceivedMrCharmanderText
+	writetext ReceivedWeekCharmanderText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke CHARMANDER, 5
 	setevent EVENT_GOT_WEEK_KANTO_MON
-	writetext WeeknKantoMonsText
+	writetext WeekKantoMonsText
 	waitbutton
 	closetext
 	end
@@ -157,47 +158,52 @@ DayOfWeekSiblingsHousePokedexText2:
 	para "Keep reading?"
 	done
 
+DayOfWeekSiblingsHousePokedexText3:
+	text "Remaining"
+	line "Siblings:"
+	done
+
 MonicaLocText:
 	text "Monday, MONICA"
 	line "ROUTE 40"
 	done
 
 TuscanyLocText:
-	para "Tuesday, TUSCANY"
+	text "Tuesday, TUSCANY"
 	line "ROUTE 29"
 	done
 
 WesLocText:
-	para "Wednesday, WESLEY"
+	text "Wednesday, WESLEY"
 	line "LAKE OF RAGE"
 	done
 
 ArthurLocText:
-	para "Thursday, ARTHUR"
+	text "Thursday, ARTHUR"
 	line "ROUTE 36"
 	done
 
 FriedaLocText:
-	para "Friday, FRIEDA"
+	text "Friday, FRIEDA"
 	line "ROUTE 32"
 	done
 
 SantosLocText:
-	para "Saturday, SANTOS"
+	text "Saturday, SANTOS"
 	line "BLACKTHORN CITY"
 	done
 
 SunnyLocText:
-	para "Sunday, SUNNY"
+	text "Sunday, SUNNY"
 	line "ROUTE 37"
 	done
 
 KeepReading:
-	para "Keep reading?"
+	text "Keep reading?"
 	done
 
 DayOfWeekSiblingsHousePokedexText4:
-	para "Come back when"
+	text "Come back when"
 	line "you've met us all"
 	
 	para "for an extra spec-"
@@ -225,7 +231,6 @@ WeekTakeThisPokemonText:
 	line "as a gift!"
 	done
 
-
 ReceivedWeekSquirtleText:
 	text "<PLAYER> received"
 	line "SQUIRTLE!"
@@ -241,14 +246,13 @@ ReceivedWeekCharmanderText:
 	line "CHARMANDER!"
 	done
 
-
 WeekKantoMonsText:
 	text "This is a rare"
 	line "#MON native to"
 	cont "KANTO!"
 
-	text "Maybe you can tra-"
-	line "in it up at the"
+	para "Maybe you can rai-"
+	line "se to take on the"
 	cont "#MON LEAGUE!"
 	done
 
@@ -285,5 +289,5 @@ DayOfWeekSiblingsHouse_MapEvents:
 
 	def_object_events
 	object_event  3,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingsHousePokedexScript, -1
-	object_event  2,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_DAYOFWEEKSIBLINGHOUSE_MONICA
+	object_event  2,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingHouseMonicaScript, -1 ;EVENT_GOT_WEEK_KANTO_MON 
 
