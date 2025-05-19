@@ -144,7 +144,7 @@ Moves:
 	move CLAMP,        EFFECT_TRAP_TARGET,        35, WATER,         75, 10,   0
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,       100, 20,   0
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        100, NORMAL,       100, 15,   0
-	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, NORMAL,       100, 15,   0
+	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, ROCK,         100, 15,   0
 	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,       100, 35,  10
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC_TYPE, 100, 20,   0
 	move KINESIS,      EFFECT_ACCURACY_DOWN,       0, PSYCHIC_TYPE,  80, 15,   0
@@ -267,6 +267,6 @@ Moves:
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
 	move CROSS_CUTTER, EFFECT_NORMAL_HIT,		  50, BUG,          100, 10,   0
 	move DRAGON_DANCE, EFFECT_ATTACK_UP,          0, DRAGON,        100, 20,   0 ; EFFECT_ATK_SPE_UP
-	move WEATHER_BALL, EFFECT_NORMAL_HIT,       50, NORMAL,       100, 10,   0 ; EFFECT_WEATHER_BALL
+	move WEATHER_BALL, EFFECT_NORMAL_HIT,         50, NORMAL,       100, 10,   0 ; EFFECT_WEATHER_BALL
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0
 	assert_table_length NUM_ATTACKS
