@@ -165,7 +165,7 @@ MoveDescriptions::
 	dw SuperFangDescription
 	dw SlashDescription
 	dw SubstituteDescription
-	dw StruggleDescription
+	dw AquaRingDescription
 	dw SketchDescription
 	dw TripleKickDescription
 	dw ThiefDescription
@@ -252,18 +252,14 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw CrossCutterDescription
+	dw DragonDanceDescription
+	dw WeatherBallDescription
+	dw StruggleDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
-	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
-MoveFFDescription:
 Move00Description:
 	db "?@"
 
@@ -923,9 +919,9 @@ SubstituteDescription:
 	db   "Makes a decoy with"
 	next "1/4 user's max HP.@"
 
-StruggleDescription:
-	db   "Used only if all"
-	next "PP are exhausted.@"
+AquaRingDescription:
+	db   "Restores a little"
+	next "HP every turn.@"
 
 SketchDescription:
 	db   "Copies the foe's"
@@ -1270,3 +1266,19 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+CrossCutterDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+DragonDanceDescription:
+	db   "Raises SPCL.ATK"
+	next "and SPEED rating.@"
+
+WeatherBallDescription:
+	db   "Changes type to"
+	next "match the weather."
+
+StruggleDescription:
+	db   "Used only if all"
+	next "PP are exhausted.@"

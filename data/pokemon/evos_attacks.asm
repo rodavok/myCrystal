@@ -644,6 +644,7 @@ ParasEvosAttacks:
 	db 13, POISONPOWDER
 	db 19, LEECH_LIFE
 	db 25, SPORE
+	db 27, CROSS_CUTTER,
 	db 31, SLASH
 	db 37, GROWTH
 	db 43, GIGA_DRAIN
@@ -658,6 +659,7 @@ ParasectEvosAttacks:
 	db 13, POISONPOWDER
 	db 19, LEECH_LIFE
 	db 28, SPORE
+	db 32, CROSS_CUTTER
 	db 37, SLASH
 	db 46, GROWTH
 	db 55, GIGA_DRAIN
@@ -1180,6 +1182,7 @@ MagnetonEvosAttacks:
 
 FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SLASH
 	db 1, PECK
 	db 7, SAND_ATTACK
 	db 10, QUICK_ATTACK
@@ -1776,9 +1779,10 @@ ScytherEvosAttacks:
 	db 12, PURSUIT
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
-	db 30, WING_ATTACK
-	db 36, SLASH
-	db 42, SWORDS_DANCE
+	db 28, SLASH
+	db 32, WING_ATTACK
+	db 38, CROSS_CUTTER
+	db 44, SWORDS_DANCE
 	db 48, DOUBLE_TEAM
 	db 0 ; no more level-up moves
 
@@ -1834,7 +1838,8 @@ PinsirEvosAttacks:
 	db 13, BIND
 	db 17, QUICK_ATTACK
 	db 19, SEISMIC_TOSS
-	db 25, HARDEN
+	db 23, CROSS_CUTTER
+	db 28, HARDEN
 	db 31, GUILLOTINE
 	db 37, SUBMISSION
 	db 43, SWORDS_DANCE
@@ -2908,7 +2913,8 @@ GligarEvosAttacks:
 	db 25, WING_ATTACK
 	db 28, FAINT_ATTACK
 	db 36, SLASH
-	db 44, SCREECH
+	db 42, SCREECH
+	db 44, CROSS_CUTTER
 	db 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
@@ -2989,9 +2995,10 @@ ScizorEvosAttacks:
 	db 12, PURSUIT
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
-	db 30, METAL_CLAW
-	db 36, SLASH
-	db 42, SWORDS_DANCE
+	db 28, SLASH
+	db 32, METAL_CLAW
+	db 40, CROSS_CUTTER
+	db 44, SWORDS_DANCE
 	db 48, DOUBLE_TEAM
 	db 0 ; no more level-up moves
 

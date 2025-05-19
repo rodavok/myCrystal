@@ -269,7 +269,11 @@ DEF TM01 EQU const_value
 	add_tm FIRE_PUNCH   ; f0
 	add_tm FURY_CUTTER  ; f1
 	add_tm NIGHTMARE    ; f2
-	add_tm AEROBLAST
+	add_tm CROSS_CUTTER ; f3
+	add_tm DRAGON_DANCE ; f4
+	add_tm WEATHER_BALL ; f5
+	add_tm AQUA_RING    ; f6
+	add_tm AEROBLAST    ; f7
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm
@@ -413,6 +417,8 @@ DEF MT01 EQU const_value
 	add_mt EXPLOSION    ;gen 1 tm
 	add_mt BELLY_DRUM
 	add_mt DOUBLE_EDGE  ;gen 1 tm
+
+;I think there's too many
 
 
 

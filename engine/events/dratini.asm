@@ -71,10 +71,10 @@ GiveDratini:
 .Movesets:
 .Moveset0:
 ; Dratini does not normally learn Extremespeed. This is a special gift.
-; Dratini sucks for a long time so this cool gift also includes Outrage so it can at least be a little useful
+; Dratini sucks for a long time so this cool gift also includes Dragon Dance so it can at least be a little useful
 	db LEER
 	db THUNDER_WAVE
-	db OUTRAGE
+	db DRAGON_DANCE
 	db EXTREMESPEED
 	db 0
 .Moveset1:

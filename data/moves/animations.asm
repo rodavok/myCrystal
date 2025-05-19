@@ -166,7 +166,7 @@ BattleAnimations::
 	dw BattleAnim_SuperFang
 	dw BattleAnim_Slash
 	dw BattleAnim_Substitute
-	dw BattleAnim_Struggle
+	dw BattleAnim_AquaRing
 	dw BattleAnim_Sketch
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
@@ -253,13 +253,14 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+	dw BattleAnim_CrossCutter
+	dw BattleAnim_DragonDance
+	dw BattleAnim_WeatherBall
+	dw BattleAnim_Struggle
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_Dummy
-	dw BattleAnim_Dummy
-	dw BattleAnim_Dummy
-	dw BattleAnim_SweetScent2
 	assert_table_length $100
 ; $100
+	dw BattleAnim_SweetScent2
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
@@ -2982,6 +2983,7 @@ BattleAnim_PsychicM:
 	anim_wait 4
 	anim_ret
 
+BattleAnim_WeatherBall:
 BattleAnim_Sludge:
 	anim_1gfx BATTLE_ANIM_GFX_POISON
 	anim_call BattleAnimSub_Sludge
@@ -3837,6 +3839,7 @@ BattleAnim_Spark:
 	anim_wait 32
 	anim_ret
 
+
 BattleAnim_FuryCutter:
 	anim_1gfx BATTLE_ANIM_GFX_CUT
 .loop
@@ -4658,6 +4661,58 @@ BattleAnim_BeatUp:
 	anim_obj BATTLE_ANIM_OBJ_HIT_BIG_YFIX, 136, 48, $0
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
+BattleAnim_DragonDance:
+	anim_1gfx BATTLE_ANIM_GFX_SPEED
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING, $0, BG_EFFECT_USER, $40
+	anim_sound 0, 0, SFX_SHARPEN
+	anim_wait 64
+	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING
+	anim_wait 1
+	anim_bgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT, $0, BG_EFFECT_USER, $40
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 44, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 36, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 52, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 28, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 60, 108, $6
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 20, 108, $8
+	anim_wait 2
+	anim_obj BATTLE_ANIM_OBJ_FOCUS, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 8
+	anim_incbgeffect BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
+BattleAnim_CrossCutter:
+	anim_1gfx BATTLE_ANIM_GFX_CUT
+	anim_obj BATTLE_ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 112, 40, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AquaRing:
+	anim_1gfx BATTLE_ANIM_GFX_STATUS
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_USER, $20
+	anim_sound 0, 0, SFX_PSYBEAM
+	anim_obj BATTLE_ANIM_OBJ_PSYCH_UP, 44, 88, $0
+	anim_obj BATTLE_ANIM_OBJ_PSYCH_UP, 44, 88, $10
+	anim_obj BATTLE_ANIM_OBJ_PSYCH_UP, 44, 88, $20
+	anim_obj BATTLE_ANIM_OBJ_PSYCH_UP, 44, 88, $30
+	anim_wait 64
+	anim_incbgeffect BATTLE_BG_EFFECT_CYCLE_MON_LIGHT_DARK_REPEATING
+	anim_call BattleAnim_ShowMon_0
+	anim_wait 16
 	anim_ret
 
 BattleAnimSub_Drain:

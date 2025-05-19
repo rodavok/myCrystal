@@ -77,7 +77,6 @@ ROMX $13
 	"bank13_2"
 ROMX $14
 	"bank14"
-	"Unused Egg Pic"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
@@ -204,6 +203,7 @@ ROMX $4a
 	"Pics 3"
 ROMX $4b
 	"Pics 4"
+	"Unused Egg Pic"
 ROMX $4c
 	"Pics 5"
 ROMX $4d
