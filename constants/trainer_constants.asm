@@ -31,42 +31,35 @@ DEF KRIS EQU __trainer_class__
 	trainerclass FALKNER ; 1
 	const FALKNER1
 	const FALKNER2
-	const FALKNER3
 
 	trainerclass WHITNEY ; 2
 	const WHITNEY1
 	const WHITNEY2
-	const WHITNEY3
 
 	trainerclass BUGSY ; 3
 	const BUGSY1
 	const BUGSY2
-	const BUGSY3
 
 	trainerclass MORTY ; 4
 	const MORTY1
 	const MORTY2
-	const MORTY3
 
 	trainerclass PRYCE ; 5
 	const PRYCE1
 	const PRYCE2
-	const PRYCE3
 
 	trainerclass JASMINE ; 6
 	const JASMINE1
 	const JASMINE2
-	const JASMINE3
 
 	trainerclass CHUCK ; 7
 	const CHUCK1
 	const CHUCK2
-	const CHUCK3
 
 	trainerclass CLAIR ; 8
 	const CLAIR1
 	const CLAIR2
-	const CLAIR3
+
 
 	trainerclass RIVAL1 ; 9
 	const RIVAL1_1_CHIKORITA
@@ -291,31 +284,34 @@ DEF KRIS EQU __trainer_class__
 	const MILLER
 
 	trainerclass GRUNTM ; 1f
-	const GRUNTM_1
-	const GRUNTM_2
-	const GRUNTM_3
-	const GRUNTM_4
-	const GRUNTM_5
-	const GRUNTM_6
-	const GRUNTM_7
-	const GRUNTM_8
-	const GRUNTM_9
-	const GRUNTM_10
-	const GRUNTM_11
-	const GRUNTM_13
-	const GRUNTM_14
-	const GRUNTM_15
-	const GRUNTM_16
-	const GRUNTM_17
-	const GRUNTM_18
-	const GRUNTM_19
-	const GRUNTM_20
-	const GRUNTM_21
-	const GRUNTM_24
-	const GRUNTM_25
-	const GRUNTM_28
-	const GRUNTM_29
-	const GRUNTM_31
+	const GRUNTM_1	;1
+	const GRUNTM_2	;2
+	const GRUNTM_3	;3
+	const GRUNTM_4	;4
+	const GRUNTM_5	;5
+	const GRUNTM_6	;6
+	const GRUNTM_7	;7
+	const GRUNTM_8	;8
+	const GRUNTM_9	;9
+	const GRUNTM_10	;10
+	const GRUNTM_11	;11
+	const GRUNTM_12 ;12
+	const GRUNTM_13	;13
+	const GRUNTM_14 ;14
+	const GRUNTM_15	;15
+	const GRUNTM_16	;16
+	const GRUNTM_17	;17
+	const GRUNTM_18	;18
+	const GRUNTM_19	;19
+	const GRUNTM_20	;20	
+	const GRUNTM_21	;21
+	const GRUNTM_24	;22
+	const GRUNTM_25	;25
+	const GRUNTM_26	;26
+	const GRUNTM_28	;28
+	const GRUNTM_29 ;29
+	const GRUNTM_30 ;30
+	const GRUNTM_31	;31
 
 	trainerclass GENTLEMAN ; 20
 	const PRESTON
@@ -508,6 +504,7 @@ DEF KRIS EQU __trainer_class__
 	const HORTON
 
 	trainerclass BLACKBELT_T ; 32
+	const KENJI
 	const YOSHI
 	const LAO
 	const NOB

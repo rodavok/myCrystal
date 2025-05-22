@@ -16,9 +16,7 @@ AzaleaGymBugsyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_RED
-	iftrue .Rematch2
-    checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Rematch1
+	iftrue .Rematch
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
 	writetext BugsyText_INeverLose
@@ -59,23 +57,29 @@ AzaleaGymBugsyScript:
 .NoRoomForFuryCutter:
 	closetext
 	end
-.Rematch1
-	writetext BugsyRematchText1
+.Rematch
+	checkflag ENGINE_BUGSY_REMATCH
+	iftrue .RematchDone
+	writetext BugsyRematchText
+	yesorno
+	iffalse .Refused
 	waitbutton
 	closetext
-	winlosstext BugsyWinLossText2, 0
+	winlosstext BugsyWinLossText, 0
 	loadtrainer BUGSY, BUGSY2
 	startbattle
 	reloadmapafterbattle 
+	setflag ENGINE_BUGSY_REMATCH
 	end
-.Rematch2
-	writetext BugsyRematchText2
+.RematchDone
+	writetext BugsyRematchDoneText
 	waitbutton
 	closetext
-	winlosstext BugsyWinLossText2, 0
-	loadtrainer BUGSY, BUGSY3
-	startbattle
-	reloadmapafterbattle 
+	end
+.Refused
+	writetext BugsyRefusedText
+	waitbutton
+	closetext
 	end
 
 AzaleaGymActivateRockets:
@@ -252,37 +256,44 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
-BugsyRematchText1:
-	text "So, you've"
-	line "beaten the"
-	cont "ELITE FOUR."
+BugsyRematchText:
+	text "Congratulations"
+	line "on beating the"
+	cont "CHAMPION!"
 
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "My BUG #MON"
+	line "have also gotten"
+	cont "stronger!"
+
+	para "Do you want to ch-"
+	line "allenge us again?"
 	done
 
-BugsyRematchText2:
-	text "So, you've"
-	line "beaten the"
+BugsyRematchDoneText:
+	text "I need to do more"
+	line "research."
 
-	para "CHAMPION of"
-	line "KANTO!"
-
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "You can battle me"
+	line "again tomorrow."
 	done
 
-BugsyWinLossText2:
-	text "I'm impressed"
-	line "by your"
-	cont "power…"
+BugsyRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
-	para "You really"
-	line "are the true"
-    cont "CHAMPION..."
+BugsyWinLossText:
+	text "Wow... only the"
+	line "CHAMPION can stand"
+	
+	para "up to the might of"
+	line "my BUG #MON!"
 	done
+
 BugCatcherBennySeenText:
 	text "Bug #MON evolve"
 	line "young. So they get"

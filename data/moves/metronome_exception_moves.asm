@@ -12,5 +12,9 @@ MetronomeExcepts:
 	db ENDURE
 	db DESTINY_BOND
 	db SLEEP_TALK
-	db THIEF
+	db NIGHTMARE
+	db DREAM_EATER
+	db SNORE 
+	db FORESIGHT
+	db BIDE  
 	db -1

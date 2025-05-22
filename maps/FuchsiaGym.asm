@@ -12,6 +12,8 @@ FuchsiaGym_MapScripts:
 	def_callbacks
 
 FuchsiaGymJanineScript:
+	checkflag EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_SOULBADGE
 	iftrue .FightDone
 	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
@@ -53,6 +55,30 @@ FuchsiaGymJanineScript:
 	setevent EVENT_GOT_TM06_TOXIC
 .AfterTM:
 	writetext JanineText_ApplyMyself
+	waitbutton
+	closetext
+	end
+.Rematch
+	checkflag ENGINE_JANINE_REMATCH
+	iftrue .RematchDone
+	writetext JanineRematchText
+	yesorno
+	iffalse .Refused
+	waitbutton
+	closetext
+	winlosstext JanineWinLossText1, 0
+	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_JANINE_REMATCH
+	end
+.RematchDone
+	writetext JanineRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext JanineRefusedText
 	waitbutton
 	closetext
 	end
@@ -284,6 +310,41 @@ JanineText_ApplyMyself:
 	line "better than both"
 	cont "Father and you!"
 	done
+
+JanineRematchText:
+	text "You beat my dad?"
+	line "You must be quite"
+	cont "the trainer!"
+
+	para "But I've got stro-"
+	line "nger too! Wanna ch-"
+	cont "allenge me again?"
+	done
+
+JanineWinLossText1:
+	text "No wonder KOGA"
+	line "lost to you!"
+
+	para "You really are"
+	line "the CHAMPION..."
+	done
+
+JanineRematchDoneText:
+	text "Wow! You're one"
+	line "tough trainer!"
+
+	para "You can battle me"
+	line "again tomorrow."
+	done
+
+JanineRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 LassAliceBeforeText:
 	text "Fufufu!"

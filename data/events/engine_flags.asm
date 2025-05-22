@@ -124,6 +124,22 @@ EngineFlags:
 	engine_flag wDailyFlags2, DAILYFLAGS2_BUENAS_PASSWORD_F
 	engine_flag wDailyFlags2, DAILYFLAGS2_INDIGO_PLATEAU_EUSINE_FIGHT_F
 
+	engine_flag wDailyFlags3, DAILYFLAGS3_FALKNER_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_BUGSY_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_WHITNEY_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_MORTY_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_CHUCK_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_JASMINE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_PRYCE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_CLAIR_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_SURGE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_SABRINA_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_ERIKA_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_JANINE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_MISTY_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_BROCK_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_BLAINE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_BLUE_REMATCH_F
 
 	engine_flag wSwarmFlags, SWARMFLAGS_BUENAS_PASSWORD_F
 	engine_flag wSwarmFlags, SWARMFLAGS_GOLDENROD_DEPT_STORE_SALE_F

@@ -22,9 +22,7 @@ GoldenrodGymNoop2Scene:
 GoldenrodGymWhitneyScript:
 	faceplayer
 	checkevent EVENT_BEAT_RED
-	iftrue .Rematch2
-    checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Rematch1
+	iftrue .Rematch
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
 	opentext
@@ -82,25 +80,31 @@ GoldenrodGymWhitneyScript:
 .NoRoomForAttract:
 	closetext
 	end
-.Rematch1
+
+.Rematch
+	checkflag ENGINE_WHITNEY_REMATCH
+	iftrue .RematchDone
 	opentext
-	writetext WhitneyRematchText1
+	writetext WhitneyRematchText
+	yesorno
+	iffalse .Refused
 	waitbutton
 	closetext
-	winlosstext WhitneyWinLossText2, 0
+	winlosstext WhitneyWinLossText, 0
 	loadtrainer WHITNEY, WHITNEY2
 	startbattle
 	reloadmapafterbattle 
+	setflag ENGINE_WHITNEY_REMATCH
 	end
-.Rematch2
-	opentext
-	writetext WhitneyRematchText2
+.RematchDone
+	writetext WhitneyRematchDoneText
 	waitbutton
 	closetext
-	winlosstext WhitneyWinLossText2, 0
-	loadtrainer WHITNEY, WHITNEY3
-	startbattle
-	reloadmapafterbattle 
+	end
+.Refused
+	writetext WhitneyRefusedText
+	waitbutton
+	closetext
 	end
 
 GoldenrodGymActivateRockets:
@@ -137,6 +141,7 @@ WhitneyCriesScript:
 	setscene SCENE_GOLDENRODGYM_NOOP
 	clearevent EVENT_MADE_WHITNEY_CRY
 	end
+
 
 TrainerLassBridget:
 	trainer LASS, BRIDGET, EVENT_BEAT_LASS_BRIDGET, LassBridgetSeenText, LassBridgetBeatenText, 0, .Script
@@ -288,37 +293,39 @@ WhitneyGoodCryText:
 	line "again! Bye-bye!"
 	done
 
-WhitneyRematchText1:
-	text "So, you've"
-	line "beaten the"
-	cont "ELITE FOUR."
+WhitneyRematchText:
+	text "WHITNEY: What?"
+	line "you beat the CHAM-"
+	cont "PION? No way!"
 
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "I got stronger to-"
+	line "o! Let's have a"
+	cont "rematch! Please?"
+
+	para "I promise I won't"
+	line "cry this time!"
 	done
 
-WhitneyRematchText2:
-	text "So, you've"
-	line "beaten the"
-
-	para "CHAMPION of"
-	line "KANTO!"
-
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+WhitneyWinLossText:
+	text "You meanie!"
+	line "Go a little easy"
+	cont "on me!"
 	done
 
-WhitneyWinLossText2:
-	text "I'm impressed"
-	line "by your"
-	cont "power…"
-
-	para "You really"
-	line "are the true"
-    cont "CHAMPION..."
+WhitneyRematchDoneText:
+	text "Sniff..."
+	line "You can battle me"
+	cont "again tomorrow..."
 	done
+
+WhitneyRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 LassCarrieSeenText:
 	text "Don't let my"

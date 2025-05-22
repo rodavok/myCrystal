@@ -13,9 +13,7 @@ VioletGymFalknerScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_RED
-	iftrue .Rematch2
-    checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Rematch1
+	iftrue .Rematch
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
 	writetext FalknerIntroText
@@ -56,23 +54,29 @@ VioletGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
-.Rematch1
-	writetext FalknerRematchText1
+.Rematch
+	checkflag ENGINE_FALKNER_REMATCH
+	iftrue .RematchDone
+	writetext FalknerRematchText
+	yesorno
+	iffalse .Refused
 	waitbutton
 	closetext
 	winlosstext FalknerWinLossText2, 0
 	loadtrainer FALKNER, FALKNER2
 	startbattle
 	reloadmapafterbattle 
+	setflag ENGINE_FALKNER_REMATCH
 	end
-.Rematch2
-	writetext FalknerRematchText2
+.RematchDone
+	writetext FalknerRematchDoneText
 	waitbutton
 	closetext
-	winlosstext FalknerWinLossText2, 0
-	loadtrainer FALKNER, FALKNER3
-	startbattle
-	reloadmapafterbattle 
+	end
+.Refused
+	writetext FalknerRefusedText
+	waitbutton
+	closetext
 	end
 
 
@@ -157,26 +161,22 @@ FalknerIntroText:
 	line "#MON!"
 	done
 
-FalknerRematchText1:
-	text "So, you've"
-	line "beaten the"
-	cont "ELITE FOUR."
+FalknerRematchText:
+	text "Remember me?"
+	line "Your GYM CHALLENGE"
+	cont "started here."
 
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "Since then I've g-"
+	line "otten stronger!"
+	
+	para "So! Do you want to"
+	line "take on my ultima-"
+	cont "te bird #MON team?"
 	done
 
-FalknerRematchText2:
-	text "So, you've"
-	line "beaten the"
-
-	para "CHAMPION of"
-	line "KANTO!"
-
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+ChallengeAccepted:
+	text "Alright!"
+	line "Let's battle!"
 	done
 
 FalknerWinLossText:
@@ -193,9 +193,9 @@ FalknerWinLossText:
 	done
 
 FalknerWinLossText2:
-	text "I'm impressed"
-	line "by your"
-	cont "power…"
+	text "Even now, you're"
+	line "soaring higher th-"
+	cont "an me..."
 
 	para "You really"
 	line "are the"
@@ -261,6 +261,21 @@ FalknerFightDoneText:
 	line "master!"
 	done
 
+FalknerRematchDoneText:
+	text "You're too strong!"
+	line "You can battle me"
+	cont "again tomorrow."
+	done
+
+FalknerRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
+	
 BirdKeeperRodSeenText:
 	text "The keyword is"
 	line "guts!"

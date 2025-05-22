@@ -25,9 +25,7 @@ EcruteakGymMortyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_RED
-	iftrue .Rematch2
-    checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Rematch1
+	iftrue .Rematch
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
 	writetext MortyIntroText
@@ -71,24 +69,31 @@ EcruteakGymMortyScript:
 .NoRoomForShadowBall:
 	closetext
 	end
-.Rematch1
-	writetext MortyRematchText1
+.Rematch
+	checkflag ENGINE_MORTY_REMATCH
+	iftrue .RematchDone
+	writetext MortyRematchText
+	yesorno
+	iffalse .Refused
 	waitbutton
 	closetext
-	winlosstext MortyWinLossText2, 0
+	winlosstext MortyWinLossText1, 0
 	loadtrainer MORTY, MORTY2
 	startbattle
 	reloadmapafterbattle 
+	setflag ENGINE_MORTY_REMATCH
 	end
-.Rematch2
-	writetext MortyRematchText2
+.RematchDone
+	writetext MortyRematchDoneText
 	waitbutton
 	closetext
-	winlosstext MortyWinLossText2, 0
-	loadtrainer MORTY, MORTY3
-	startbattle
-	reloadmapafterbattle 
 	end
+.Refused
+	writetext MortyRefusedText
+	waitbutton
+	closetext
+	end
+
 
 
 EcruteakGymActivateRockets:
@@ -297,7 +302,7 @@ MortyFightDoneText:
 	line "that…"
 	done
 
-MortyRematchText1:
+MortyRematchText:
 	text "So, you've"
 	line "beaten the"
 	cont "ELITE FOUR."
@@ -307,19 +312,7 @@ MortyRematchText1:
 	cont "become!"
 	done
 
-MortyRematchText2:
-	text "So, you've"
-	line "beaten the"
-
-	para "CHAMPION of"
-	line "KANTO!"
-
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
-	done
-
-MortyWinLossText2:
+MortyWinLossText1:
 	text "I'm impressed"
 	line "by your"
 	cont "power…"
@@ -328,6 +321,24 @@ MortyWinLossText2:
 	line "are the true"
     cont "CHAMPION..."
 	done
+
+MortyRematchDoneText:
+	text "Whew! That was some"
+	line "fight!"
+
+	para "You can battle me"
+	line "again tomorrow."
+	done
+
+MortyRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
+	
 
 SageJeffreySeenText:
 	text "I spent the spring"

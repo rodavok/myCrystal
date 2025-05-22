@@ -430,29 +430,27 @@ MrPokemonsHouse_StrangeCoinsText:
 	done
 
 MrTakeThisPokemonText:
-	text "So, PROF.ELM"
-	line "gave you one of"
-	cont "his #MON."
+	text "So, PROF.ELM gave"
+	line "you one of his ra-"
+	cont "re #MON."
 
 	para "Would you like"
 	line "another?"
 	cont "PROF.OAK brought"
 
-	para "it for me,"
-	line "but I think"
+	para "it for me, but"
+	line "I think it'd be"
 
-	para "it'd be better"
-	line "off with a young"
+	para "better off with a"
+	line "young trainer like"
 
-	para "TRAINER like"
-	line "yourself."
-	cont "What do you say?"
+	para "yourself. What do"
+	line "you say?"
 	done
 
 MrPokemonHaveFun:
 	text "Great! Here"
 	line "you go!"
-
 	done
 
 ReceivedMrCharmanderText:

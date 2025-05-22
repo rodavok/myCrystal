@@ -1456,24 +1456,29 @@ GruntMGroup:
 	db 27, RATTATA
 	db -1 ; end
 
-	; ; GRUNTM (12) Not used
-	; db "GRUNT@", TRAINERTYPE_NORMAL
-	; db 29, RATTATA
-	; db -1 ; end
+	; GRUNTM (12)
+	db "EXECUTIVE@", TRAINERTYPE_NORMAL
+	db 33, HOUNDOUR
+	db -1 ; end
 
-	; GRUNTM (13)
+	; GRUNTM (13) Not used
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 29, RATTATA
+	db -1 ; end
+
+	; GRUNTM (14)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 28, RATICATE
 	db 28, GOLBAT
 	db -1 ; end
 
-	; GRUNTM (14)
+	; GRUNTM (15)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 28, GRIMER
 	db 27, WEEZING
 	db -1 ; end
 
-	; GRUNTM (15)
+	; GRUNTM (16)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 20, RATTATA
 	db 20, RATTATA
@@ -1481,61 +1486,74 @@ GruntMGroup:
 	db 20, RATTATA
 	db -1 ; end
 
-	; GRUNTM (16)
+	; GRUNTM (17)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 24, GOLBAT
 	db -1 ; end
 
-	; GRUNTM (17)
+	; GRUNTM (18)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 21, RATTATA
 	db 21, ZUBAT
 	db 21, RATTATA
 	db -1 ; end
 
-	; GRUNTM (18)
+	; GRUNTM (19)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 23, VENONAT
 	db 23, VENONAT
 	db -1 ; end
 
-	; GRUNTM (19)
+	; GRUNTM (20)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 20, DROWZEE
 	db 21, ZUBAT
 	db -1 ; end
 
-	; GRUNTM (20)
+	; GRUNTM (21)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 20, ZUBAT
 	db 21, GRIMER
 	db 22, RATTATA
 	db -1 ; end
 
-	; GRUNTM (21)
+	; GRUNTM (24)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 29, KOFFING
 	db 29, KOFFING
 	db -1 ; end
 
-	; GRUNTM (22)
+	; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 27, KOFFING
 	db 27, MUK
 	db -1 ; end
 
-	; GRUNTM (23)
+	; GRUNTM (26)
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 18, RATTATA
+	db 18, RATTATA
+	db -1 ; end
+
+	; GRUNTM (28)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 26, RATICATE
 	db -1 ; end
 
-	; GRUNTM (24)
+	; GRUNTM (29)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db  9, RATTATA
 	db  9, RATTATA
 	db -1 ; end
 
-	; GRUNTM (35)
+	; GRUNTM (30)
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 25, GOLBAT
+	db 25, GOLBAT
+	db 30, ARBOK
+	db -1 ; end
+
+	; GRUNTM (31)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 53, GOLBAT
 	db 55, RATICATE
@@ -2678,12 +2696,12 @@ BlackbeltGroup:
 	db 35, MACHOKE
 	db -1 ; end
 
-	; ; BLACKBELT_T (9)
-	; db "WAI@", TRAINERTYPE_NORMAL
-	; db 40, MACHOKE
-	; db 42, MACHOKE
-	; db 44, MACHOKE
-	; db -1 ; end
+	; BLACKBELT_T (9)
+	db "WAI@", TRAINERTYPE_NORMAL
+	db 40, MACHOKE
+	db 42, MACHOKE
+	db 44, MACHOKE
+	db -1 ; end
 
 ExecutiveMGroup:
 	; EXECUTIVEM (1)

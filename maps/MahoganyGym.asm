@@ -16,9 +16,7 @@ MahoganyGymPryceScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_RED
-	iftrue .Rematch2
-    checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .Rematch1
+	iftrue .Rematch
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
 	writetext PryceText_Intro
@@ -53,24 +51,29 @@ MahoganyGymPryceScript:
 	waitbutton
 	closetext
 	end
-.Rematch1
-	writetext PryceRematchText1
+.Rematch
+	checkflag ENGINE_PRYCE_REMATCH
+	iftrue .RematchDone
+	writetext PryceRematchText
 	waitbutton
 	closetext
-	winlosstext PryceWinLossText2, 0
+	winlosstext PryceWinLossText, 0
 	loadtrainer PRYCE, PRYCE2
 	startbattle
 	reloadmapafterbattle 
+	setflag ENGINE_PRYCE_REMATCH
 	end
-.Rematch2
-	writetext PryceRematchText2
+.RematchDone
+	writetext PryceRematchDoneText
 	waitbutton
 	closetext
-	winlosstext PryceWinLossText2, 0
-	loadtrainer PRYCE, PRYCE3
-	startbattle
-	reloadmapafterbattle 
 	end
+.Refused
+	writetext PryceRefusedText
+	waitbutton
+	closetext
+	end
+
 
 PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
@@ -260,36 +263,36 @@ PryceText_CherishYourPokemon:
 	line "together!"
 	done
 
-PryceRematchText1:
-	text "So, you've"
-	line "beaten the"
-	cont "ELITE FOUR."
+PryceRematchText:
+	text "So, you've beaten"
+	line "the CHAMPION!"
 
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "Care to show this"
+	line "old man how strong"
+	cont "you've become?"
 	done
 
-PryceRematchText2:
-	text "So, you've"
-	line "beaten the"
+PryceRematchDoneText:
+	text "That's enough for"
+	line "today."
 
-	para "CHAMPION of"
-	line "KANTO!"
-
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "You can battle me"
+	line "again tomorrow."
 	done
 
-PryceWinLossText2:
-	text "I'm impressed"
-	line "by your"
-	cont "power…"
+PryceRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
-	para "You really"
-	line "are the true"
-    cont "CHAMPION..."
+PryceWinLossText:
+	text "Impressive!"
+	line "You are quite the"
+	cont "trainer!"
 	done
 
 BoarderRonaldSeenText:

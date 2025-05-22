@@ -21,85 +21,23 @@ PokecomCenterAdminOfficeMobileComputer1:
 	opentext
 	writetext PokecomCenterAdminOfficeMobileComputer1Text
 	waitbutton
-.loop:
-	reloadmappart
-	loadmenu .Computer1MenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .PokeComClub
-	ifequal 2, .MobileCenter
-	sjump .Quit
-
-.PokeComClub:
-	opentext
 	writetext PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub
-	waitbutton
-	sjump .loop
-
-.MobileCenter:
-	opentext
+	waitbutton 
 	writetext PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter
-	waitbutton
-	sjump .loop
-
-.Quit:
-	closetext
+	closetext 
 	end
-
-.Computer1MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 8
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "COM CLUB" ;"#　つうしん　クラブ@" ; # COM CLUB
-	db "MOBILE CENTER" ;"モバイルセンター@" ; MOBILE CENTER
-	db "QUIT" ;やめる@" ; QUIT
 
 PokecomCenterAdminOfficeMobileComputer2:
 	opentext
 	writetext PokecomCenterAdminOfficeMobileComputer2Text
 	waitbutton
-.loop:
-	reloadmappart
-	loadmenu .Computer2MenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .UsePhone
-	ifequal 2, .DontUsePhone
-	sjump .Quit
-
-.UsePhone:
-	opentext
 	writetext PokecomCenterAdminOfficeMobileComputer2Text_UsePhone
 	waitbutton
-	sjump .loop
-
-.DontUsePhone:
-	opentext
 	writetext PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone
 	waitbutton
-	sjump .loop
-
-.Quit:
 	closetext
 	end
 
-.Computer2MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, 8
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "Use phone" ;"でんわ<WO>つかうとき@" ; Use phone
-	db "Don't use phone" ;"でんわ<GA>つながらないとき@" ; Don't use phone
-	db "QUIT" ; "やめる@" ; QUIT
 
 PokecomCenterAdminOfficeMobileComputer3:
 	jumptext PokecomCenterAdminOfficeMobileComputer3Text
