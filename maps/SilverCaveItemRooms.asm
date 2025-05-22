@@ -90,24 +90,22 @@ GiovanniScript2:
 	end
 
 GiovanniText_LeaveMeAlone2:
-	text "I don't know"
-	line "why you have"
+	text "I don't know why"
+	line "you have come"
+	cont "here. I have heard"
 
-	para "come here."
-	line "I have heard"
-
-	para "Team Rocket"
-	line "calling for me."
-
-	para "I didn't want"
-	line "to help them."
+	para "TEAM ROCKET calli-"
+	line "ng for me. They a-"
+	cont "re foolish. I did-"
+ 	cont "n't want to help"
+	line "them."
 
 	para "I am in exile."
     line "Leave me alone!"
 	done
 
 GiovanniText_Loss2:
-    text "..."
+    text "…"
     done
 
 GiovanniText_IWasRight2:
@@ -115,7 +113,7 @@ GiovanniText_IWasRight2:
 	line "stronger than"
 	cont "that boy I met"
 
-	para "three years ago..."
+	para "three years ago…"
 	line "I was right to"
 
 	para "abandon them."

@@ -303,23 +303,21 @@ MortyFightDoneText:
 	done
 
 MortyRematchText:
-	text "So, you've"
-	line "beaten the"
-	cont "ELITE FOUR."
+	text "So, you've beaten"
+	line "the CHAMPION."
 
-	para "Show me how"
-	line "strong you've"
-	cont "become!"
+	para "Want to show me"
+	line "how strong you've"
+	cont "become?"
 	done
 
 MortyWinLossText1:
 	text "I'm impressed"
-	line "by your"
-	cont "power…"
+	line "by your power…"
 
 	para "You really"
 	line "are the true"
-    cont "CHAMPION..."
+    cont "CHAMPION…"
 	done
 
 MortyRematchDoneText:

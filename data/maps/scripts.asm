@@ -227,7 +227,6 @@ INCLUDE "maps/Route38EcruteakGate.asm"
 INCLUDE "maps/Route39Barn.asm"
 INCLUDE "maps/Route39Farmhouse.asm"
 INCLUDE "maps/ManiasHouse.asm"
-INCLUDE "maps/CianwoodGym.asm"
 INCLUDE "maps/CianwoodPokecenter1F.asm"
 INCLUDE "maps/CianwoodPharmacy.asm"
 INCLUDE "maps/CianwoodPhotoStudio.asm"
@@ -251,7 +250,6 @@ INCLUDE "maps/KarensRoom.asm"
 INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
 INCLUDE "maps/OaksLab.asm"
-
 
 
 SECTION "Map Scripts 14", ROMX
@@ -408,6 +406,8 @@ INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
+INCLUDE "maps/CianwoodGym.asm"
+
 
 
 SECTION "Map Scripts 21", ROMX

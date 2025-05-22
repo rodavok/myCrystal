@@ -17,6 +17,8 @@ CianwoodGym_MapScripts:
 CianwoodGymChuckScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .FightDone
 	writetext ChuckIntroText1
@@ -72,6 +74,32 @@ CianwoodGymChuckScript:
 .BagFull:
 	closetext
 	end
+.Rematch
+	checkflag ENGINE_CHUCK_REMATCH
+	iftrue .RematchDone
+	writetext ChuckRematchText
+	yesorno
+	iffalse .Refused
+	waitbutton
+	closetext
+	winlosstext ChuckWinLossText1, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_CHUCK_REMATCH
+	end
+.RematchDone
+	writetext ChuckRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext ChuckRefusedText
+	waitbutton
+	closetext
+	end
+
+
 
 CianwoodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -237,6 +265,38 @@ ChuckAfterText:
 	line "going to train 24"
 	cont "hours a day!"
 	done
+
+ChuckRematchText:
+	text "I've been training"
+	line "nonstop since our"
+
+	para "last battle. Want"
+	line "to challenge me"
+	cont "once more?"
+	done
+
+ChuckWinLossText1:
+	text "My training wasn't"
+	line "enough to overpow-"
+	cont "er you!"
+	done
+
+ChuckRematchDoneText:
+	text "Whahaha! That was"
+	line "a fierce fight!"
+
+	para "You can battle me"
+	line "again tomorrow."
+	done
+
+ChuckRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 BlackbeltYoshiSeenText:
 	text "My #MON and I"

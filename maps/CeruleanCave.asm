@@ -36,7 +36,7 @@ Mewtwo:
 	end
 
 MewtwoText:
-	text "..."
+	text "…"
 	done
 
 

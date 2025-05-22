@@ -10,6 +10,8 @@ OlivineGym_MapScripts:
 OlivineGymJasmineScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .FightDone
 	writetext Jasmine_SteelTypeIntro
@@ -44,6 +46,30 @@ OlivineGymJasmineScript:
 	writetext Jasmine_GoodLuck
 	waitbutton
 .NoRoomForIronTail:
+	closetext
+	end
+.Rematch
+	checkflag ENGINE_JASMINE_REMATCH
+	iftrue .RematchDone
+	writetext JasmineRematchText
+	yesorno
+	iffalse .Refused
+	waitbutton
+	closetext
+	winlosstext JasmineWinLossText1, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_JASMINE_REMATCH
+	end
+.RematchDone
+	writetext JasmineRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext JasmineRefusedText
+	waitbutton
 	closetext
 	end
 
@@ -161,6 +187,43 @@ Jasmine_GoodLuck:
 	line "how to say this,"
 	cont "but good luck…"
 	done
+
+JasmineRematchText:
+	text "…Um… You've beat"
+	line "the CHAMPION…"
+	cont "haven't you?"
+
+	para "Let me challenge."
+	line "you again. This"
+	cont "time, AMPHY will"
+	
+	para "join my team!"
+	line "What do you say?"
+	cont "Shall we battle?"
+	done
+
+JasmineWinLossText1:
+	text "…Wow… No wonder"
+	line "you beat the CHAM-"
+	cont "PION…"
+	done
+
+JasmineRematchDoneText:
+	text "…That was a good"
+	line "battle…"
+
+	para "You can battle me"
+	line "again tomorrow…"
+	done
+
+JasmineRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 OlivineGymGuideText:
 	text "JASMINE uses the"

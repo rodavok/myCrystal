@@ -326,7 +326,7 @@ JanineWinLossText1:
 	line "lost to you!"
 
 	para "You really are"
-	line "the CHAMPION..."
+	line "the CHAMPION…"
 	done
 
 JanineRematchDoneText:

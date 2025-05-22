@@ -313,9 +313,9 @@ WhitneyWinLossText:
 	done
 
 WhitneyRematchDoneText:
-	text "Sniff..."
+	text "Sniff…"
 	line "You can battle me"
-	cont "again tomorrow..."
+	cont "again tomorrow…"
 	done
 
 WhitneyRefusedText:

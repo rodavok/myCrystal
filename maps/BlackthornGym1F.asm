@@ -29,6 +29,8 @@ BlackthornGym1FBouldersCallback:
 BlackthornGymClairScript:
 	faceplayer
 	opentext
+	checkflag EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_RISINGBADGE
 	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
@@ -86,6 +88,31 @@ BlackthornGymClairScript:
 
 .GotTM24:
 	writetext BlackthornGymClairText_League
+	waitbutton
+	closetext
+	end
+	
+.Rematch
+	checkflag ENGINE_CLAIR_REMATCH
+	iftrue .RematchDone
+	writetext ClairRematchText
+	yesorno
+	iffalse .Refused
+	waitbutton
+	closetext
+	winlosstext ClairWinLossText1, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_CLAIR_REMATCH
+	end
+.RematchDone
+	writetext ClairRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext ClairRefusedText
 	waitbutton
 	closetext
 	end
@@ -282,6 +309,52 @@ BlackthornGymClairText_League:
 	para "Give it every-"
 	line "thing you've got."
 	done
+
+ClairRematchText:
+	text "You've beaten"
+	line "LANCE too? Now"
+	cont "I don't feel so" 
+
+	para "bad about losing"
+	line "to you back then."
+
+	para "But! This time is"
+	line "different!"
+	cont "I've trained to be"
+
+	para "even stronger than"
+	line "LANCE! Think you"
+	cont "can take me?"
+	done
+
+ClairWinLossText1:
+	text "Darn… You must be"
+	line "the strongest tra-"
+	cont "iner in all of"
+
+	para "JOHTO… No… In"
+	line "all the world!"
+	done
+
+
+ClairRematchDoneText:
+	text "Fine! I admit it…"
+	line "You're the strong-"
+	cont "est… For now!"
+
+	para "You better not stop"
+	line "training or else"
+	cont "I'll catch up to you!"
+
+
+ClairRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 CooltrainermPaulSeenText:
 	text "Your first battle"

@@ -287,7 +287,7 @@ BugsyRefusedText:
 	done 
 
 BugsyWinLossText:
-	text "Wow... only the"
+	text "Wow… only the"
 	line "CHAMPION can stand"
 	
 	para "up to the might of"

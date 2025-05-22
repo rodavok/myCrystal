@@ -59,7 +59,7 @@ GiovanniText_LeaveMeAlone:
 	done
 
 GiovanniText_Loss:
-    text "..."
+    text "…"
     done
 
 GiovanniText_IWasRight:
@@ -67,7 +67,7 @@ GiovanniText_IWasRight:
 	line "stronger than"
 	cont "that boy I met"
 
-	para "three years ago..."
+	para "three years ago…"
 	line "I was right to"
 
 	para "abandon them."
