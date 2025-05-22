@@ -275,6 +275,7 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
+GoldenrodPierGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 BetaAzaleaTown_Blocks: ; unreferenced
@@ -1067,3 +1068,6 @@ Route30_Blocks:
 
 Route6_Blocks:
 	INCBIN "maps/Route6.blk"
+
+GoldenrodPier_Blocks:
+	INCBIN "maps/GoldenrodPier.blk"

@@ -1,7 +1,7 @@
 MACRO map_attributes
 ;\1: map name
 ;\2: map id
-;\3: border block
+;\3: border block ; this defines what is shown when you reach the map border - this is why you see roofs where there should be water, etc. 
 ;\4: connections: combo of NORTH, SOUTH, WEST, and/or EAST, or 0 for none
 	DEF CURRENT_MAP_WIDTH = \2_WIDTH
 	DEF CURRENT_MAP_HEIGHT = \2_HEIGHT
@@ -120,8 +120,8 @@ ENDM
 	connection east, Route41, ROUTE_41, 0
 
 	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH
-	connection north, Route35, ROUTE_35, 5
-	connection south, Route34, ROUTE_34, 5
+	connection north, Route35, ROUTE_35, 7
+	connection south, Route34, ROUTE_34, 7
 
 	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST | EAST
 	connection north, Route39, ROUTE_39, 5
@@ -181,12 +181,12 @@ ENDM
 	connection west, AzaleaTown, AZALEA_TOWN, 0
 
 	map_attributes Route34, ROUTE_34, $05, NORTH | EAST
-	connection north, GoldenrodCity, GOLDENROD_CITY, -5
+	connection north, GoldenrodCity, GOLDENROD_CITY, -7
 	connection east, AzaleaTown, AZALEA_TOWN, 18
 
 	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH | WEST
 	connection north, Route36, ROUTE_36, 0
-	connection south, GoldenrodCity, GOLDENROD_CITY, -5
+	connection south, GoldenrodCity, GOLDENROD_CITY, -7
 	connection west, GoldenrodShore, GOLDENROD_SHORE, -1
 
 	map_attributes Route36, ROUTE_36, $05, NORTH | SOUTH | EAST
@@ -210,9 +210,10 @@ ENDM
 	connection south, Route41, ROUTE_41, -15
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
-	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
+	map_attributes Route41, ROUTE_41, $35, NORTH | WEST | EAST
 	connection north, Route40, ROUTE_40, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
+	connection east, GoldenrodPier, GOLDENROD_PIER, 11
 
 	map_attributes Route42, ROUTE_42, $05, WEST | EAST
 	connection west, EcruteakCity, ECRUTEAK_CITY, -9
@@ -380,9 +381,12 @@ ENDM
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
-	map_attributes GoldenrodShore, GOLDENROD_SHORE, $2c, WEST | EAST
+	map_attributes GoldenrodShore, GOLDENROD_SHORE, $35, WEST | EAST
 	connection west, OlivineCity, OLIVINE_CITY, -6
 	connection east, Route35, ROUTE_35, 1
+
+	map_attributes GoldenrodPier, GOLDENROD_PIER, $2c, WEST
+	connection west, Route41, ROUTE_41, -11
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
@@ -709,4 +713,5 @@ ENDM
 	map_attributes SilverCaveMewRoom, SILVER_CAVE_MEW_ROOM, $09, 0
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $09, 0
 	map_attributes Route3Pokecenter1F, ROUTE_3_POKECENTER_1F, $00, 0
+	map_attributes GoldenrodPierGate, GOLDENROD_PIER_GATE, $00, 0
 

@@ -392,6 +392,8 @@ FossilScientist:
 	; readvar VAR_UNOWNCOUNT
 	; ifequal #if greater than equal to 10 you can swap for kabuto/omanyte and if 20 you can get aerodactyl
 	opentext
+	readvar VAR_UNOWNCOUNT
+	ifless 15, .NotReadyYet
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1 ; remove the next two lines to immediately receive the fossil
 	iftrue .GaveScientistFossil
 	checkevent EVENT_GAVE_SCIENTIST_OLD_AMBER
@@ -409,6 +411,11 @@ FossilScientist:
 	ifequal REVIVE_DOME_FOSSIL, .DomeFossil
 	ifequal REVIVE_HELIX_FOSSIL, .HelixFossil
 	sjump .No
+
+.NotReadyYet
+	writetext FossilScientistNotReadyText
+	waitbutton
+	end
 
 .OldAmber
 	checkitem OLD_AMBER
@@ -541,6 +548,10 @@ FossilScientistIntroText:
 	para "I study here rare"
 	line "#MON fossils!"
 
+	para "My fossil resurre-"
+	line "ctor finally is"
+	cont "complete!"
+
 	para "You! Have you a"
 	line "fossil for me?"
 	done
@@ -607,6 +618,32 @@ FossilScientistReceiveText:
 	text "!"
 	done
 
+FossilScientistNotReadyText:
+	text "Hiya!"
+
+	para "I am important"
+	line "doctor!"
+
+	para "I study here rare"
+	line "#MON fossils!"
+
+	para "I building amazi-"
+	line "ng fossil resurre-"
+	cont "ctor for making"
+
+	para "fossils live on-"
+	line "ce more! But!"
+
+	para "Will take time!"
+	line "Maybe you catch 15"
+	cont "different UNOWN,"
+
+	para "by then maybe I"
+	line "be done my with"
+	cont "work, perhaps."
+	done
+
+
 RuinsOfAlphResearchCenter_MapEvents:
 	db 0, 0 ; filler
 
@@ -625,4 +662,4 @@ RuinsOfAlphResearchCenter_MapEvents:
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist1Script, -1
 	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist2Script, -1
 	object_event  2,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist3Script, EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
-    object_event  3,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FossilScientist, -1
+    object_event  3,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FossilScientist, 

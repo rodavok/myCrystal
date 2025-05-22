@@ -257,7 +257,7 @@ ENDM
 
 	newgroup GOLDENROD                                            ; 11
 	map_const ROUTE_34,                                    10, 27 ;  1
-	map_const GOLDENROD_CITY,                              20, 18 ;  2
+	map_const GOLDENROD_CITY,                              22, 18 ;  2
 	map_const GOLDENROD_GYM,                               10,  9 ;  3
 	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  4
 	map_const GOLDENROD_HAPPINESS_RATER,                    4,  4 ;  5
@@ -441,6 +441,8 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
+	map_const GOLDENROD_PIER,							   13, 13
+	map_const GOLDENROD_PIER_GATE, 						    5,  4
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23
