@@ -29,7 +29,7 @@ BlackthornGym1FBouldersCallback:
 BlackthornGymClairScript:
 	faceplayer
 	opentext
-	checkflag EVENT_BEAT_RED
+	checkevent EVENT_BEAT_RED
 	iftrue .Rematch
 	checkflag ENGINE_RISINGBADGE
 	iftrue .AlreadyGotBadge

@@ -2,9 +2,14 @@
 	const GOLDENRODPOKECENTER1F_NURSE
 	const GOLDENRODPOKECENTER1F_PCC_TRADE_CORNER_RECEPTIONIST
 	const GOLDENRODPOKECENTER1F_GAMEBOY_KID
-	const GOLDENRODPOKECENTER1F_LASS
+	const GOLDENRODPOKECENTER1F_LASS1
 	const GOLDENRODPOKECENTER1F_POKEFAN_F
+	const GOLDENRODPOKECENTER1F_SUPER_NERD
+	const GOLDENRODPOKECENTER1F_LASS2
 	const GOLDENRODPOKECENTER1F_GRAMPS
+	const GOLDENRODPOKECENTER1F_YOUNGSTER
+	const GOLDENRODPOKECENTER1F_ROCKER
+	const GOLDENRODPOKECENTER1F_TEACHER
 
 GoldenrodPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -85,6 +90,27 @@ GoldenrodPokecenter1FGameboyKidScript:
 GoldenrodPokecenter1FLassScript:
 	jumptextfaceplayer GoldenrodPokecenter1FLassText
 
+GoldenrodPokecomCenterPerson1Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson1Text
+
+GoldenrodPokecomCenterPerson3Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson3Text
+
+GoldenrodPokecomCenterPerson13Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson13Text
+
+GoldenrodPokecomCenterPerson6Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson6Text
+
+GoldenrodPokecomCenterPerson8Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson8Text
+
+GoldenrodPokecomCenterPerson7Script:
+	jumptextfaceplayer GoldenrodPokecomCenterPerson7Text
+
+GoldenrodPokecomCenterWelcomeToTradeCornerScript:
+	jumptextfaceplayer GoldenrodPokecomCenterWelcomeToTradeCornerText
+
 GoldenrodPokecenter1FPokefanF:
 	faceplayer
 	opentext
@@ -149,7 +175,14 @@ GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement:
 	step LEFT
 	step_end
 
-GoldenrodPokecomCenterWelcomeToTradeCornerText: ; unreferenced
+
+GoldenrodPokecomCenterNewsMachineNotYet:
+	jumptext GoldenrodPokecomCenterNewsMachineNotYetText
+
+GoldenrodPokecomCenterSign:
+	jumptext GoldenrodPokecomCenterSignText
+	
+GoldenrodPokecomCenterWelcomeToTradeCornerText: 
 	text "Hello! Welcome to"
 	line "#COM CENTER"
 	cont "TRADE CORNER."
@@ -530,7 +563,7 @@ GoldenrodPokecomCenterSaveBeforeNewsMachineText: ; unreferenced
 	line "MACHINE."
 	done
 
-GoldenrodPokecomCenterPerson1Text: ; unreferenced
+GoldenrodPokecomCenterPerson1Text:
 	text "Whoa, this #MON"
 	line "CENTER is huge."
 
@@ -569,7 +602,7 @@ GoldenrodPokecomCenterPerson2Text: ; unreferenced
 	line "friends!"
 	done
 
-GoldenrodPokecomCenterPerson3Text: ; unreferenced
+GoldenrodPokecomCenterPerson3Text: 
 	text "They said you can"
 	line "trade #MON with"
 
@@ -600,7 +633,7 @@ GoldenrodPokecomCenterPerson5Text: ; unreferenced
 	line "name!"
 	done
 
-GoldenrodPokecomCenterPerson6Text: ; unreferenced
+GoldenrodPokecomCenterPerson6Text:
 	text "What is the NEWS"
 	line "MACHINE?"
 
@@ -609,7 +642,7 @@ GoldenrodPokecomCenterPerson6Text: ; unreferenced
 	cont "than the radio?"
 	done
 
-GoldenrodPokecomCenterPerson7Text: ; unreferenced
+GoldenrodPokecomCenterPerson7Text:
 	text "The #COM CENTER"
 	line "will link with all"
 
@@ -623,7 +656,7 @@ GoldenrodPokecomCenterPerson7Text: ; unreferenced
 	line "sorts of people."
 	done
 
-GoldenrodPokecomCenterPerson8Text: ; unreferenced
+GoldenrodPokecomCenterPerson8Text:
 	text "The machines here"
 	line "can't be used yet."
 
@@ -690,7 +723,7 @@ GoldenrodPokecomCenterPerson12Text: ; unreferenced
 	line "preparations…"
 	done
 
-GoldenrodPokecomCenterPerson13Text: ; unreferenced
+GoldenrodPokecomCenterPerson13Text:
 	text "Just seeing all"
 	line "these new things"
 
@@ -815,13 +848,21 @@ GoldenrodPokecenter1F_MapEvents:
 	coord_event  7, 15, SCENE_GOLDENRODPOKECENTER1F_GS_BALL, GoldenrodPokecenter1F_GSBallSceneRight
 
 	def_bg_events
-	coord_event  24, 3, BGEVENT_READ, GoldenrodPokecomCenterNewsMachineNotYetText
-	coord_event   2, 9, BGEVENT_READ, GoldenrodPokecomCenterSignText
+	coord_event  23, 3, BGEVENT_READ, GoldenrodPokecomCenterNewsMachineNotYet
+	coord_event   2, 9, BGEVENT_READ, GoldenrodPokecomCenterSign
 
 	def_object_events
 	object_event  7,  7, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
-	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event 10,  7, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FGameboyKidScript, -1
-	object_event  1, 12, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FLassScript, -1
-	object_event 11, 15, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FPokefanF, -1
+	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterWelcomeToTradeCornerScript, -1
+	object_event 11,  12, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FGameboyKidScript, -1
+	object_event  3, 11, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FLassScript, -1
+	object_event 14, 14, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FPokefanF, -1
+	object_event  8, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson1Script, -1
+	object_event  18, 9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson3Script, -1
+	object_event 19, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson13Script, -1
+	object_event 23,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson6Script, -1
+	object_event 21,  6, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson8Script, -1
+	object_event 27, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecomCenterPerson7Script, -1
+
+
 	;object_event  0,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecom????, -1

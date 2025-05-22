@@ -210,10 +210,10 @@ ENDM
 	connection south, Route41, ROUTE_41, -15
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
-	map_attributes Route41, ROUTE_41, $35, NORTH | WEST | EAST
+	map_attributes Route41, ROUTE_41, $3D, NORTH | WEST | EAST
 	connection north, Route40, ROUTE_40, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
-	connection east, GoldenrodPier, GOLDENROD_PIER, 11
+	connection east, GoldenrodPier, GOLDENROD_PIER, 7
 
 	map_attributes Route42, ROUTE_42, $05, WEST | EAST
 	connection west, EcruteakCity, ECRUTEAK_CITY, -9
@@ -386,7 +386,7 @@ ENDM
 	connection east, Route35, ROUTE_35, 1
 
 	map_attributes GoldenrodPier, GOLDENROD_PIER, $2c, WEST
-	connection west, Route41, ROUTE_41, -11
+	connection west, Route41, ROUTE_41, -7
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
