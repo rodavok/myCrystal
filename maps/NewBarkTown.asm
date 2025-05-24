@@ -2,6 +2,8 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_RIVAL
+	const NEWBARKTOWN_KRIS
+
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
@@ -187,6 +189,45 @@ NewBarkTown_RivalReturnsToTheShadowsMovement:
 	step RIGHT
 	step_end
 
+KrisScript:
+	special FadeOutMusic
+	faceplayer
+	opentext
+	writetext KrisSeenText
+	waitbutton
+	closetext
+	winlosstext KrisWinLossText, KrisWinLossText
+	loadtrainer KRIS_T, KRIS
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	special FadeOutMusic
+	opentext
+	writetext KrisLeavesText
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear NEWBARKTOWN_KRIS
+	pause 15
+	special FadeInQuickly
+	end
+
+KrisSeenText:
+	text "<……>"
+	line "<……>"
+	done
+
+KrisWinLossText:
+	text "…"
+	done
+
+KrisLeavesText:
+	text "<……>"
+	line "<……>"
+	done
+	
+
 Text_GearIsImpressive:
 	text "Wow, your #GEAR"
 	line "is impressive!"
@@ -303,3 +344,5 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event 17,  6, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KrisScript, EVENT_GOT_MASTER_BALL_FROM_ELM
+

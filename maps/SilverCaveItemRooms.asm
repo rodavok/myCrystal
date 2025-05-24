@@ -2,7 +2,6 @@
 	const SILVERCAVEITEMROOMS_POKE_BALL1
 	const SILVERCAVEITEMROOMS_POKE_BALL2
 	const SILVERCAVEITEMROOMS_GIOVANNI
-	const SILVERCAVEITEMROOMS_KRIS
 
 SilverCaveItemRooms_MapScripts:
 	def_scene_scripts
@@ -14,44 +13,6 @@ SilverCaveItemRoomsMaxRevive:
 
 SilverCaveItemRoomsFullRestore:
 	itemball FULL_RESTORE
-
-KrisScript:
-	special FadeOutMusic
-	faceplayer
-	opentext
-	writetext KrisSeenText
-	waitbutton
-	closetext
-	winlosstext KrisWinLossText, KrisWinLossText
-	loadtrainer KRIS_T, KRIS3
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	special FadeOutMusic
-	opentext
-	writetext KrisLeavesText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear SILVERCAVEROOM3_RED
-	pause 15
-	special FadeInQuickly
-	end
-
-KrisSeenText:
-	text "<……>"
-	line "<……>"
-	done
-
-KrisWinLossText:
-	text "…"
-	done
-
-KrisLeavesText:
-	text "<……>"
-	line "<……>"
-	done
 
 GiovanniScript2:
 	faceplayer
@@ -152,5 +113,3 @@ SilverCaveItemRooms_MapEvents:
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
 	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
 	object_event 17, 10, SPRITE_ROCKET_BOSS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GiovanniScript2, -1
-	object_event  4,  2, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KrisScript, EVENT_RED_IN_MT_SILVER
-

@@ -1342,13 +1342,6 @@ Sketch:
 	sketch
 	endmove
 
-DefrostOpponent:
-	checkobedience
-	usedmovetext
-	doturn
-	defrostopponent
-	endmove
-
 SleepTalk:
 	checkobedience
 	usedmovetext
