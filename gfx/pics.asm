@@ -249,7 +249,6 @@ MisdreavusFrontpic:  INCBIN "gfx/pokemon/misdreavus/front.animated.2bpp.lz"
 HoundourFrontpic:    INCBIN "gfx/pokemon/houndour/front.animated.2bpp.lz"
 MankeyFrontpic:      INCBIN "gfx/pokemon/mankey/front.animated.2bpp.lz"
 CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
-MediumPic:           INCBIN "gfx/trainers/medium.2bpp.lz"
 PinecoFrontpic:      INCBIN "gfx/pokemon/pineco/front.animated.2bpp.lz"
 KrabbyFrontpic:      INCBIN "gfx/pokemon/krabby/front.animated.2bpp.lz"
 FisherPic:           INCBIN "gfx/trainers/fisher.2bpp.lz"
@@ -717,6 +716,8 @@ JynxFrontpic:    INCBIN "gfx/pokemon/jynx/front.animated.2bpp.lz"
 PyropedFrontpic: INCBIN "gfx/pokemon/pyroped/front.animated.2bpp.lz"
 YanmatoFrontpic: INCBIN "gfx/pokemon/yanmato/front.animated.2bpp.lz"
 YanmatoBackpic:  INCBIN "gfx/pokemon/yanmato/back.2bpp.lz"
+MediumPic:       INCBIN "gfx/trainers/medium.2bpp.lz"
+
 
 
 
