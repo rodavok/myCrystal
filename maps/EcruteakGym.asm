@@ -263,7 +263,7 @@ MortyText_FogBadgeSpeech:
 	text "By having FOG-"
 	line "BADGE, #MON up"
 
-	para "to L50 will obey"
+	para "to L30 will obey"
 	line "you."
 
 	para "Also, #MON that"

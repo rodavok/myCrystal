@@ -230,7 +230,7 @@ ChuckExplainBadgeText:
 	text "STORMBADGE makes"
 	line "all #MON up to"
 
-	para "L70 obey, even"
+	para "L40 obey, even"
 	line "traded ones."
 
 	para "It also lets your"
