@@ -652,6 +652,7 @@ RuinsOfAlphResearchCenter_MapEvents:
 	warp_event  3,  7, RUINS_OF_ALPH_OUTSIDE, 6
 
 	def_coord_events
+	
 
 	def_bg_events
 	bg_event  6,  5, BGEVENT_READ, RuinsOfAlphResearchCenterBookshelf

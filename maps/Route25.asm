@@ -10,6 +10,7 @@
 	const ROUTE25_SUPER_NERD
 	const ROUTE25_COOLTRAINER_M2
 	const ROUTE25_POKE_BALL
+	const ROUTE25_SUICUNE
 
 Route25_MapScripts:
 	def_scene_scripts
@@ -17,12 +18,21 @@ Route25_MapScripts:
 	scene_script Route25Noop2Scene, SCENE_ROUTE25_MISTYS_DATE
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, Route25SuicuneCallback
 
 Route25Noop1Scene:
 	end
 
 Route25Noop2Scene:
 	end
+
+Route25SuicuneCallback:
+	checkevent EVENT_BEAT_RED
+	iftrue .Done
+	disappear ROUTE25_SUICUNE
+.Done: 
+	endcallback
+
 
 Route25MistyDate1Script:
 	showemote EMOTE_HEART, ROUTE25_MISTY, 15
@@ -234,6 +244,26 @@ Route25MistyLeavesMovement:
 	step LEFT
 	step LEFT
 	step_end
+
+Route25SuicuneBattleScript:
+	opentext
+	writetext SurpriseText
+	cry SUICUNE
+	pause 20
+	closetext
+	loadwildmon SUICUNE, 60
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
+	startbattle
+	dontrestartmapmusic
+	disappear ROUTE25_SUICUNE
+	setevent EVENT_FOUGHT_SSUICUNE
+	pause 20
+	playmapmusic
+	end
+
+SurpriseText:
+	text "...!"
+	done
 
 Route25MistyDateText:
 	text "MISTY: Aww! Why"
@@ -453,3 +483,5 @@ Route25_MapEvents:
 	object_event 31,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSupernerdPat, -1
 	object_event 37,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerCooltrainermKevin, -1
 	object_event 32,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route25Protein, EVENT_ROUTE_25_PROTEIN
+	object_event 48,  9, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route25SuicuneBattleScript, EVENT_FOUGHT_SSUICUNE
+

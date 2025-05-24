@@ -174,8 +174,8 @@ MonMenuIcons:
 	db ICON_FISH        ; CHINCHOU
 	db ICON_FISH        ; LANTURN
 	db ICON_PIKACHU     ; PICHU
-	db ICON_CLEFAIRY    ; CLEFFA
-	db ICON_JIGGLYPUFF  ; IGGLYBUFF
+	db ICON_LAPRAS      ; PYROPED
+	db ICON_BUG         ; YANMATO
 	db ICON_CLEFAIRY    ; TOGEPI
 	db ICON_BIRD        ; TOGETIC
 	db ICON_BIRD        ; NATU

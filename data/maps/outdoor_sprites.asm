@@ -75,6 +75,7 @@ SaffronGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
 	db SPRITE_BIRD
+	db SPRITE_SUICUNE
 	db 0 ; end
 CeladonGroupSprites:
 ; Route7, Route16, Route17, CeladonCity

@@ -172,8 +172,8 @@ AnimationPointers:
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw PichuAnimation
-	dw CleffaAnimation
-	dw IgglybuffAnimation
+	dw PyropedAnimation
+	dw YanmatoAnimation
 	dw TogepiAnimation
 	dw TogeticAnimation
 	dw NatuAnimation

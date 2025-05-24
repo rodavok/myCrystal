@@ -101,7 +101,7 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | WEST | EAST
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | WEST | EAST
 	connection north, Route30, ROUTE_30, 5
 	connection west, Route32, ROUTE_32, -32
 	connection east, Route29, ROUTE_29, 0
@@ -210,7 +210,7 @@ ENDM
 	connection south, Route41, ROUTE_41, -15
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
-	map_attributes Route41, ROUTE_41, $3D, NORTH | WEST | EAST
+	map_attributes Route41, ROUTE_41, $35, NORTH | WEST | EAST
 	connection north, Route40, ROUTE_40, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
 	connection east, GoldenrodPier, GOLDENROD_PIER, 7
@@ -385,7 +385,7 @@ ENDM
 	connection west, OlivineCity, OLIVINE_CITY, -6
 	connection east, Route35, ROUTE_35, 1
 
-	map_attributes GoldenrodPier, GOLDENROD_PIER, $2c, WEST
+	map_attributes GoldenrodPier, GOLDENROD_PIER, $35, WEST
 	connection west, Route41, ROUTE_41, -7
 
 	map_attributes Route23, ROUTE_23, $0f, 0

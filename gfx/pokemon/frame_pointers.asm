@@ -172,8 +172,8 @@ FramesPointers:
 	dw ChinchouFrames
 	dw LanturnFrames
 	dw PichuFrames
-	dw CleffaFrames
-	dw IgglybuffFrames
+	dw PyropedFrames
+	dw YanmatoFrames
 	dw TogepiFrames
 	dw TogeticFrames
 	dw NatuFrames

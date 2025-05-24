@@ -30,7 +30,6 @@ AlphabeticalPokedexOrder:
 	db CHINCHOU
 	db CLEFABLE
 	db CLEFAIRY
-	db CLEFFA
 	db CLOYSTER
 	db CORSOLA
 	db CROBAT
@@ -93,7 +92,6 @@ AlphabeticalPokedexOrder:
 	db HOUNDOOM
 	db HOUNDOUR
 	db HYPNO
-	db IGGLYBUFF
 	db IVYSAUR
 	db JIGGLYPUFF
 	db JOLTEON
@@ -178,6 +176,7 @@ AlphabeticalPokedexOrder:
 	db PRIMEAPE
 	db PSYDUCK
 	db PUPITAR
+	db PYROPED
 	db QUAGSIRE
 	db QUILAVA
 	db QWILFISH
@@ -253,6 +252,7 @@ AlphabeticalPokedexOrder:
 	db WOOPER
 	db XATU
 	db YANMA
+	db YANMATO
 	db ZAPDOS
 	db ZUBAT
 	assert_table_length NUM_POKEMON

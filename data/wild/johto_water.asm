@@ -159,7 +159,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_35
 	db 4 percent ; encounter rate
 	db 20, PSYDUCK
-	db 18, MARILL
+	db 18, PSYDUCK
 	db 20, GOLDUCK
 	end_water_wildmons
 
@@ -173,7 +173,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_41
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 20, REMORAID
+	db 20, TENTACRUEL
 	db 20, MANTINE
 	end_water_wildmons
 
@@ -274,4 +274,9 @@ JohtoWaterWildMons:
 	db 15, TENTACOOL
 	db 20, CHINCHOU
 
+	def_water_wildmons GOLDENROD_PIER
+	db 6 percent
+	db 20, TENTACOOL
+	db 20, TENTACRUEL
+	db 20, MANTINE
 	db -1 ; end

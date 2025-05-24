@@ -12,6 +12,14 @@ Route16FuchsiaSpeechHouseSuperNerdScript:
 Route16FuchsiaSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
+Pachi:
+	faceplayer
+	opentext
+	trade NPC_TRADE_PACHI
+	waitbutton
+	closetext
+	end
+
 Route16FuchsiaSpeechHouseSuperNerdText:
 	text "If you cruise down"
 	line "CYCLING ROAD, you"
@@ -35,3 +43,5 @@ Route16FuchsiaSpeechHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route16FuchsiaSpeechHouseSuperNerdScript, -1
+	object_event  6,  5, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Pachi, -1
+

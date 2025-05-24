@@ -41,10 +41,8 @@ NewPokedexOrder:
 	db ZUBAT
 	db GOLBAT
 	db CROBAT
-	db CLEFFA
 	db CLEFAIRY
 	db CLEFABLE
-	db IGGLYBUFF
 	db JIGGLYPUFF
 	db WIGGLYTUFF
 	db TOGEPI
@@ -103,6 +101,7 @@ NewPokedexOrder:
 	db NIDORINO
 	db NIDOKING
 	db YANMA
+	db YANMATO 
 	db SUNKERN
 	db SUNFLORA
 	db EXEGGCUTE
@@ -180,6 +179,7 @@ NewPokedexOrder:
 	db LANTURN
 	db SEEL
 	db DEWGONG
+	db PYROPED
 	db LICKITUNG
 	db LICKING
 	db TANGELA

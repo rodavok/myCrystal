@@ -212,8 +212,8 @@ Pokered_MonIndices:
 	db CHINCHOU
 	db LANTURN
 	db PICHU
-	db CLEFFA
-	db IGGLYBUFF
+	db PYROPED
+	db YANMATO
 	db TOGEPI
 	db TOGETIC
 	db NATU

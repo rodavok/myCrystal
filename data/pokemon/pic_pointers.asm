@@ -347,10 +347,10 @@ PokemonPicPointers::
 	dba_pic LanturnBackpic
 	dba_pic PichuFrontpic
 	dba_pic PichuBackpic
-	dba_pic CleffaFrontpic
-	dba_pic CleffaBackpic
-	dba_pic IgglybuffFrontpic
-	dba_pic IgglybuffBackpic
+	dba_pic PyropedFrontpic
+	dba_pic PyropedBackpic
+	dba_pic YanmatoFrontpic
+	dba_pic YanmatoBackpic
 	dba_pic TogepiFrontpic
 	dba_pic TogepiBackpic
 	dba_pic TogeticFrontpic

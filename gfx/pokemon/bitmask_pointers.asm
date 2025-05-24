@@ -172,8 +172,8 @@ BitmasksPointers:
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
 	dw PichuBitmasks
-	dw CleffaBitmasks
-	dw IgglybuffBitmasks
+	dw PyropedBitmasks
+	dw YanmatoBitmasks
 	dw TogepiBitmasks
 	dw TogeticBitmasks
 	dw NatuBitmasks

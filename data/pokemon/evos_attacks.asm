@@ -1225,6 +1225,7 @@ DodrioEvosAttacks:
 
 SeelEvosAttacks:
 	db EVOLVE_LEVEL, 34, DEWGONG
+	db EVOLVE_ITEM, FIRE_STONE, PYROPED
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 5, GROWL
@@ -2468,22 +2469,34 @@ PichuEvosAttacks:
 	db 11, SWEET_KISS
 	db 0 ; no more level-up moves
 
-CleffaEvosAttacks:
+PyropedEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
-	db 1, CHARM
-	db 4, ENCORE
-	db 8, SING
-	db 13, SWEET_KISS
+	db 1, HEADBUTT
+	db 1, GROWL
+	db 1, AURORA_BEAM
+	db 5, GROWL
+	db 16, FLAME_WHEEL
+	db 21, REST
+	db 32, SLAM
+	db 43, FLAMETHROWER
+	db 60, SAFEGUARD
 	db 0 ; no more level-up moves
 
-IgglybuffEvosAttacks:
+YanmatoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SING
-	db 1, CHARM
-	db 4, DEFENSE_CURL
-	db 9, POUND
-	db 14, SWEET_KISS
+	db 1, TACKLE
+	db 1, FORESIGHT
+	db 7, QUICK_ATTACK
+	db 13, DOUBLE_TEAM
+	db 17, SONICBOOM
+	db 19, SUPERSONIC
+	db 25, DETECT
+	db 27, WING_ATTACK
+	db 33, ANCIENTPOWER
+	db 36, DRAGONBREATH
+	db 38, HYPNOSIS
+	db 43, SCREECH
+	db 60, OUTRAGE
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:
@@ -2731,19 +2744,19 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
+	db EVOLVE_LEVEL, 36, YANMATO
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, FORESIGHT
 	db 7, QUICK_ATTACK
 	db 13, DOUBLE_TEAM
-	db 17, TWISTER
-	db 19, SONICBOOM
+	db 17, SONICBOOM
+	db 19, SUPERSONIC
 	db 25, DETECT
-	db 31, SUPERSONIC
-	db 34, DRAGONBREATH
-	db 37, WING_ATTACK
+	db 27, WING_ATTACK
+	db 33, ANCIENTPOWER
+	db 38, HYPNOSIS
 	db 43, SCREECH
-	db 60, OUTRAGE
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:

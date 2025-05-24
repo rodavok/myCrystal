@@ -12,7 +12,7 @@ FuchsiaGym_MapScripts:
 	def_callbacks
 
 FuchsiaGymJanineScript:
-	checkflag EVENT_BEAT_RED
+	checkevent EVENT_BEAT_RED
 	iftrue .Rematch
 	checkflag ENGINE_SOULBADGE
 	iftrue .FightDone
@@ -59,6 +59,8 @@ FuchsiaGymJanineScript:
 	closetext
 	end
 .Rematch
+	faceplayer
+	opentext
 	checkflag ENGINE_JANINE_REMATCH
 	iftrue .RematchDone
 	writetext JanineRematchText
