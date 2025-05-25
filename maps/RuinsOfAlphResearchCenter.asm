@@ -415,6 +415,7 @@ FossilScientist:
 .NotReadyYet
 	writetext FossilScientistNotReadyText
 	waitbutton
+	closetext
 	end
 
 .OldAmber
@@ -641,6 +642,7 @@ FossilScientistNotReadyText:
 	para "by then maybe I"
 	line "be done my with"
 	cont "work, perhaps."
+
 	done
 
 
