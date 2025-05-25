@@ -155,6 +155,7 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 90
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 91
 	map_const VICTORY_ROAD,                                10, 36 ; 92
+	map_const VIRIDIAN_FOREST, 							   17, 24 ; 93
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
@@ -309,7 +310,7 @@ ENDM
 
 	newgroup PEWTER                                               ; 14
 	map_const ROUTE_3,                                     33,  12 ;  1
-	map_const PEWTER_CITY,                                 20, 18 ;  2
+	map_const PEWTER_CITY,                                 20,  18 ;  2
 	map_const PEWTER_NIDORAN_SPEECH_HOUSE,                  4,  4 ;  3
 	map_const PEWTER_GYM,                                   5,  7 ;  4
 	map_const PEWTER_MART,                                  6,  4 ;  5
@@ -317,6 +318,8 @@ ENDM
 	map_const PEWTER_POKECENTER_2F_BETA,                    8,  4 ;  7
 	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   4,  4 ;  8
 	map_const ROUTE_3_POKECENTER_1F,                        5,  4 ;  9
+	map_const MUSEUM_1F,								   10,  4 ; 10
+	map_const MUSEUM_2F, 								    7,  4 ; 11
 	endgroup
 
 	newgroup FAST_SHIP                                            ; 15
@@ -459,6 +462,9 @@ ENDM
 	map_const ROUTE_2_NUGGET_HOUSE,                         4,  4 ; 11
 	map_const ROUTE_2_GATE,                                 5,  4 ; 12
 	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
+	map_const VIRIDIAN_FOREST_GATE_S,					    5,  4 ; 14 
+	map_const VIRIDIAN_FOREST_GATE_N,					    5,  4 ; 15
+
 	endgroup
 
 	newgroup NEW_BARK                                             ; 24

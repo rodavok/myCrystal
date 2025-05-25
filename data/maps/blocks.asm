@@ -1065,9 +1065,25 @@ SeafoamCave_Blocks:
 Route30_Blocks:
 	INCBIN "maps/Route30.blk"
 
-
 Route6_Blocks:
 	INCBIN "maps/Route6.blk"
 
 GoldenrodPier_Blocks:
 	INCBIN "maps/GoldenrodPier.blk"
+
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"
+
+KantoGateNS_Blocks:
+	INCBIN "maps/KantoGateNS.blk"
+
+Museum1F_Blocks:
+	INCBIN "maps/Museum1F.blk"
+
+Museum2F_Blocks:
+	INCBIN "maps/Museum2F.blk"
+
+ViridianForestGateN_Blocks:
+ViridianForestGateS_Blocks:
+	INCBIN "maps/KantoGateNS.blk"
+

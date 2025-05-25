@@ -714,4 +714,9 @@ ENDM
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $09, 0
 	map_attributes Route3Pokecenter1F, ROUTE_3_POKECENTER_1F, $00, 0
 	map_attributes GoldenrodPierGate, GOLDENROD_PIER_GATE, $00, 0
+	map_attributes ViridianForestGateS, VIRIDIAN_FOREST_GATE_S, $00, 0
+	map_attributes ViridianForestGateN, VIRIDIAN_FOREST_GATE_N, $00, 0
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $02, 0
+	map_attributes Museum1F, MUSEUM_1F, $00, 0
+	map_attributes Museum2F, MUSEUM_2F, $00, 0
 
