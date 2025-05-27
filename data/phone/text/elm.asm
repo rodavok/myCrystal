@@ -209,3 +209,41 @@ ElmPhoneGotAholdOfSomethingNeatText:
 
 	para "See you later!"
 	done
+
+ElmPhoneRadioTowerRocketTakeoverEndedText:
+	text "Hello, <PLAY_G>?"
+	line "About that thing"
+
+	para "with the radio br-"
+	line "oadcasts… Well,"
+
+	para "they're back to"
+	line "normal! I wonder"
+
+	para "what that was abo-"
+	line "ut? Maybe it was"
+
+	para "just a prank. TEAM"
+	line "ROCKET disbanded"
+	cont "three years ago!"
+
+	para "See you later!"
+	done
+
+ElmPhoneGSBallReadyText:
+	text "Hello, <PLAY_G>?"
+	line "KURT just called."
+
+	para "He said there is"
+	line "something for you"
+
+	para "at the GOLDENROD"
+	line "#COM CENTER."
+
+	para "He said to bring"
+	line "it to him after"
+
+	para "you've picked it"
+	line "up. I wonder what"
+	cont "it could be?"
+	done

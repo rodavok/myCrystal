@@ -19,7 +19,7 @@ GoldenrodPierSailorText:
     done
 
 GoldenrodPierSignText:
-    text "GOLDENROD Pier"
+    text "GOLDENROD PIER"
     done
 
 GoldenrodPier_MapEvents:

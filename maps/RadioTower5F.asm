@@ -60,9 +60,38 @@ Director:
 	end
 
 .TrueDirector:
+	checkevent EVENT_GOT_CLEAR_BELL
+	iffalse .GiveKeyItems
 	writetext RadioTower5FDirectorText
 	waitbutton
 	closetext
+	end
+
+.GiveKeyItems:
+	writetext RadioTower5FDirectorBeatGiovanniText
+	waitbutton 
+	writetext RadioTower5FDirectorThankYouText
+	promptbutton
+	verbosegiveitem CLEAR_BELL
+	setevent EVENT_GOT_CLEAR_BELL
+	checkitem BASEMENT_KEY
+	iftrue .HasBasementKey
+	verbosegiveitem BASEMENT_KEY
+.HasBasementKey
+	checkevent .HasCardKey
+	iftrue .HasCardKey
+	verbosegiveitem CARD_KEY
+	setevent EVENT_RECEIVED_CARD_KEY
+	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
+	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
+	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+.HasCardKey
+	writetext RadioTower5FDirectorOfficeDescribeClearBellText
+	promptbutton
+	verbosegiveitem CLEAR_BELL
+	setevent EVENT_GOT_CLEAR_BELL
+	waitbutton 
+	closetext 
 	end
 
 TrainerExecutivef1:
@@ -111,6 +140,7 @@ RadioTower5FRocketBossScript:
 	clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
 	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	setevent EVENT_BEAT_GIOVANNI
 	special PlayMapMusic
 	disappear RADIOTOWER5F_DIRECTOR
 	moveobject RADIOTOWER5F_DIRECTOR, 12, 0
@@ -386,6 +416,57 @@ RadioTower5FDirectorDescribeClearBellText:
 	line "my OFFICE."
 	done
 
+RadioTower5FDirectorOfficeDescribeClearBellText:
+	text "There used to be a"
+	line "tower right here"
+	cont "in GOLDENROD CITY."
+
+	para "But it was old and"
+	line "creaky."
+
+	para "So we replaced it"
+	line "with our RADIO"
+	cont "TOWER."
+
+	para "We dug up that"
+	line "bell during"
+	cont "construction."
+
+	para "I heard that all"
+	line "sorts of #MON"
+
+	para "lived in GOLDENROD"
+	line "in the past."
+
+	para "Perhaps…"
+
+	para "That bell has some"
+	line "connection to the"
+
+	para "TIN TOWER in"
+	line "ECRUTEAK CITY…"
+
+	para "Ah!"
+
+	para "That reminds me…"
+
+	para "I overheard TEAM"
+	line "ROCKET whispering."
+
+	para "Apparently, some-"
+	line "thing is going on"
+	cont "at the TIN TOWER."
+
+	para "I have no idea"
+	line "what is happening,"
+
+	para "but you might look"
+	line "into it."
+	
+	para "Thanks once more"
+	line "for saving us all!"
+	done
+
 RadioTower5FDirectorText:
 	text "DIRECTOR: Hello,"
 	line "<PLAY_G>!"
@@ -403,6 +484,25 @@ RadioTower5FDirectorText:
 	line "if people enjoyed"
 	cont "our programs."
 	done
+
+RadioTower5FDirectorBeatGiovanniText:
+	text "DIRECTOR: Hello!"
+
+	para "The RADIO TOWER"
+	line "was taken over by"
+
+	para "TEAM ROCKET! But"
+	line "then they received"
+
+	para "a call from their"
+	line "leader to stand"
+
+	para "down. They all le-"
+	line "ft in a hurry."
+
+	para "What? You defeated"
+	line "GIOVANNI?"
+	done 
 
 BenText:
 	text "BEN: Do you listen"

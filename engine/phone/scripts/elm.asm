@@ -68,6 +68,8 @@ ElmPhoneCallerScript:
 	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
 	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_MASTERBALL, .gift
+	ifequal SPECIALCALL_GIOVANNIDEFEATED, .defeatedrocket
+	ifequal SPECIALCALL_GSBALLREADY, .gsballready
 	farwritetext ElmPhoneDiscoveredPokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
@@ -92,6 +94,16 @@ ElmPhoneCallerScript:
 
 .gift
 	farwritetext ElmPhoneGiftText
+	specialphonecall SPECIALCALL_NONE
+	end
+
+.defeatedrocket
+	farwritetext ElmPhoneRadioTowerRocketTakeoverEndedText
+	specialphonecall SPECIALCALL_NONE
+	end
+
+.gsballready
+	farwritetext ElmPhoneGSBallReadyText
 	specialphonecall SPECIALCALL_NONE
 	end
 

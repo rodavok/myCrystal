@@ -17,7 +17,7 @@ GoldenrodShoreSign:
     jumptext GoldenrodShoreSignText
 
 GoldenrodShoreSignText:
-		text "Goldenrod Shore"
+		text "GOLDENROD SHORE"
 		done
 
 GoldenrodShore_MapEvents:
