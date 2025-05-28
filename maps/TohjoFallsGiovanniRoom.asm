@@ -135,7 +135,7 @@ GiovanniRocketsDefeatedText:
 	
 	para "Go show your stre-"
 	line "ngth to the world."
-	end
+	done
 
 TohjoFallsGiovanniRoom_MapEvents:
 	db 0, 0 ; filler

@@ -78,7 +78,7 @@ Director:
 	iftrue .HasBasementKey
 	verbosegiveitem BASEMENT_KEY
 .HasBasementKey
-	checkevent .HasCardKey
+	checkitem CARD_KEY
 	iftrue .HasCardKey
 	verbosegiveitem CARD_KEY
 	setevent EVENT_RECEIVED_CARD_KEY
@@ -87,9 +87,6 @@ Director:
 	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
 .HasCardKey
 	writetext RadioTower5FDirectorOfficeDescribeClearBellText
-	promptbutton
-	verbosegiveitem CLEAR_BELL
-	setevent EVENT_GOT_CLEAR_BELL
 	waitbutton 
 	closetext 
 	end

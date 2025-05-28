@@ -1498,7 +1498,8 @@
 	const EVENT_INDIGO_PLATEAU_POKECENTER_EUSINE
 	const EVENT_DAYOFWEEKSIBLINGHOUSE_MONICA
 	const EVENT_GOT_WEEK_KANTO_MON
-; Unused: next 44 events
+	const EVENT_ILEX_FOREST_TM51
+; Unused: next 43 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

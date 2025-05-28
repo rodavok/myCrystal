@@ -467,6 +467,7 @@ NidokingEvosAttacks:
 	db 27, FOCUS_ENERGY
 	db 36, FURY_ATTACK
 	db 46, HORN_DRILL
+	db 58, MEGAHORN
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
@@ -1711,6 +1712,7 @@ GoldeenEvosAttacks:
 	db 38, WATERFALL
 	db 43, HORN_DRILL
 	db 52, AGILITY
+	db 57, MEGAHORN
 	db 0 ; no more level-up moves
 
 SeakingEvosAttacks:
@@ -1725,6 +1727,7 @@ SeakingEvosAttacks:
 	db 41, WATERFALL
 	db 49, HORN_DRILL
 	db 61, AGILITY
+	db 69, MEGAHORN
 	db 0 ; no more level-up moves
 
 StaryuEvosAttacks:

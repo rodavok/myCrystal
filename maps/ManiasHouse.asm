@@ -59,6 +59,7 @@ ManiaScript:
 	ifequal SHUCKIE_FAINTED, .default_postevent
 	; SHUCKIE_RETURNED
 	writetext ManiaText_ThankYou
+	promptbutton
 	verbosegiveitem PP_UP ;BERRY_JUICE
 	iffalse .BagFull
 	waitbutton

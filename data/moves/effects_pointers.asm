@@ -27,7 +27,7 @@ MoveEffectsPointers:
 	dw AccuracyDown
 	dw EvasionDown
 	dw ResetStats
-	dw Bide
+	;dw DefenseUp
 	dw Rampage
 	dw ForceSwitch
 	dw MultiHit
