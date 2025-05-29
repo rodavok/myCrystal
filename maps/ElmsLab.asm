@@ -464,6 +464,7 @@ ElmGiveMasterBallScript:
 	verbosegiveitem MASTER_BALL
 	iffalse .notdone
 	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
+	setmapscene NEW_BARK_TOWN, SCENE_KRIS_BATTLE
 	writetext ElmGiveMasterBallText2
 	waitbutton
 .notdone

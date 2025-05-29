@@ -2,16 +2,19 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_RIVAL
-	const NEWBARKTOWN_KRIS
+	const NEWBARKTOWN_CAL_KRIS
 
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
 	scene_script NewBarkTownNoop1Scene, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU
 	scene_script NewBarkTownNoop2Scene, SCENE_NEWBARKTOWN_NOOP
+	scene_script NewBarkTownNoop3Scene, SCENE_KRIS_BATTLE
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, NewBarkTownFlypointCallback
+	callback MAPCALLBACK_OBJECTS, NewBarkKrisCallback
+
 
 NewBarkTownNoop1Scene:
 	end
@@ -19,9 +22,32 @@ NewBarkTownNoop1Scene:
 NewBarkTownNoop2Scene:
 	end
 
+NewBarkTownNoop3Scene:
+	end
+
+
+
 NewBarkTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
+	endcallback
+
+NewBarkKrisCallback:
+	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
+	iffalse .KrisDisappears
+	appear NEWBARKTOWN_CAL_KRIS
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .Cal 
+	variablesprite SPRITE_CAL_KRIS, SPRITE_KRIS
+	special LoadUsedSpritesGFX
+	endcallback
+.Cal 
+	appear NEWBARKTOWN_CAL_KRIS
+	variablesprite SPRITE_CAL_KRIS, SPRITE_CAL
+	special LoadUsedSpritesGFX
+	endcallback
+.KrisDisappears
+	disappear NEWBARKTOWN_CAL_KRIS
 	endcallback
 
 
@@ -104,6 +130,83 @@ NewBarkTownTeacherScript:
 	closetext
 	end
 
+KrisBattle3Scene:
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
+	applymovement NEWBARKTOWN_CAL_KRIS, NewBarkTownCalKris2StepsDownMovement
+	sjump KrisSeenScript
+
+KrisBattle2Scene:
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
+	applymovement NEWBARKTOWN_CAL_KRIS, NewBarkTownCalKris1StepDownMovement
+	sjump KrisSeenScript
+KrisBattle1Scene:
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
+KrisSeenScript:
+	turnobject PLAYER, UP 
+	opentext 
+	writetext KrisSeenText
+	promptbutton
+	closetext 
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .chikorita
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femcyndaquil
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS3
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femcyndaquil
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL2
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.totodile
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femtotodile
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS1
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femtotodile
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL3
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.chikorita
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femchikorita
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS2
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femchikorita
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL4
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+
+.returnfrombattle
+	opentext 
+	writetext KrisAfterBattleText
+	waitbutton
+	closetext
+	setscene SCENE_NEWBARKTOWN_NOOP
+	setevent EVENT_BEAT_KRIS
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear NEWBARKTOWN_CAL_KRIS
+	pause 15
+	special FadeInQuickly
+	end
+
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
@@ -139,6 +242,15 @@ NewBarkTownElmsLabSign:
 
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
+
+NewBarkTownCalKris2StepsDownMovement:
+	step DOWN 
+	step DOWN 
+	step_end
+
+NewBarkTownCalKris1StepDownMovement:
+	step DOWN 
+	step_end
 
 NewBarkTown_TeacherRunsToYouMovement1:
 	step LEFT
@@ -189,42 +301,27 @@ NewBarkTown_RivalReturnsToTheShadowsMovement:
 	step RIGHT
 	step_end
 
-KrisScript:
-	special FadeOutMusic
-	faceplayer
-	opentext
-	writetext KrisSeenText
-	waitbutton
-	closetext
-	winlosstext KrisWinLossText, KrisWinLossText
-	loadtrainer KRIS_T, KRIS
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	special FadeOutMusic
-	opentext
-	writetext KrisLeavesText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	disappear NEWBARKTOWN_KRIS
-	pause 15
-	special FadeInQuickly
-	end
 
 KrisSeenText:
-	text "<……>"
-	line "<……>"
+	text "Hey! I'm one of"
+	line "PROF. ELM's resea-"
+	cont "rch assistants."
+
+	para "Are you headed to"
+	line "the #MON LEAGUE?"
+
+	para "Me too! Let's see"
+	line "how tough you are!"
 	done
 
-KrisWinLossText:
-	text "…"
+KrisBeatenText:
+	text "No way!"
 	done
 
-KrisLeavesText:
-	text "<……>"
-	line "<……>"
+KrisAfterBattleText:
+	text "Heh… Looks like"
+	line "I have more train-"
+	cont "ing to do…"
 	done
 	
 
@@ -333,6 +430,9 @@ NewBarkTown_MapEvents:
 	def_coord_events
 	coord_event  1,  8, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene1
 	coord_event  1,  9, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene2
+	coord_event 17,  7, SCENE_KRIS_BATTLE, KrisBattle1Scene
+	coord_event 17,  8, SCENE_KRIS_BATTLE, KrisBattle2Scene
+	coord_event 17,  9, SCENE_KRIS_BATTLE, KrisBattle3Scene
 
 	def_bg_events
 	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign
@@ -340,9 +440,10 @@ NewBarkTown_MapEvents:
 	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
 
+
 	def_object_events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event 17,  6, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KrisScript, EVENT_GOT_MASTER_BALL_FROM_ELM
+	object_event 17,  6, SPRITE_CAL_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 3, KrisSeenScript, EVENT_BEAT_KRIS
 

@@ -125,6 +125,20 @@ IndigoGroupSprites:
 ; Route29 and CherrygroveCity are connected
 NewBarkGroupSprites:
 ; Route26, Route27, Route29, NewBarkTown
+	db SPRITE_RIVAL
+	db SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_YOUNGSTER
+	db SPRITE_CAL_KRIS
+	db SPRITE_GRAMPS
+	db SPRITE_BUG_CATCHER
+	db SPRITE_COOLTRAINER_F
+	; max 9 of 9 walking sprites
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
+	db SPRITE_LASS
+	db 0 ; end
 CherrygroveGroupSprites:
 ; Route30, Route31, CherrygroveCity
 	db SPRITE_RIVAL
