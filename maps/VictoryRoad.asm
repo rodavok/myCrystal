@@ -282,11 +282,10 @@ VictoryRoadRivalVictoryText:
 	done
 
 CooltrainermRossSeenText:
-	text "This is the"
-	line "final test"
+	text "This is the final"
+	line "test before the"
 
-	para "before the"
-	line "#MON LEAGUE."
+	para "#MON LEAGUE."
 	done
 
 CooltrainermRossBeatenText:
@@ -294,15 +293,12 @@ CooltrainermRossBeatenText:
 	done
 
 CooltrainermRossAfterBattleText:
-	text "This path is "
-	line "tough, but I"
-	cont "think you can"
+	text "This path is tough"
+	line "but I think you"
+	cont "can do it. Go on"
 
-	para "do it. Go on"
-	line "ahead. The"
-
-	para "ELITE FOUR"
-	line "are waiting."
+	para "ahead. The ELITE"
+	line "FOUR are waiting."
 	done
 
 CooltrainermTommySeenText:
@@ -314,22 +310,19 @@ CooltrainermTommyBeatenText:
 	done
 
 CooltrainermTommyAfterBattleText:
-	text "I was beaten by"
-	line "a fierce"
-	cont "TRAINER. He's"
+	text "I was beaten by a"
+	line "fierce TRAINER."
 
-	para "up ahead."
+	para "He's up ahead."
 	line "Be careful."
 
 	para "He was ruthless."
 	done
 
 CooltrainerfSophieSeenText:
-	text "I've gotten"
-	line "this far..."
-
-	para "Nothing can"
-	line "stop me now!"
+	text "I've gotten this"
+	line "far… Nothing can"
+	cont "stop me now!"
 	done
 
 CooltrainerfSophieBeatenText:
@@ -341,18 +334,15 @@ CooltrainerfSophieAfterBattleText:
 	line "the perfect"
 	cont "defence."
 
-	para "But there's"
-	line "more to #MON"
-
-	para "battles than"
-	line "that."
+	para "But there's more"
+	line "to #MON battles"
+	cont "than that."
 	done
 
 CooltrainerfDonnaSeenText:
 	text "Everything I've"
-	line "worked towards"
-
-	para "has come to this."
+	line "worked towards has"
+	cont "come to this."
 	done
 
 CooltrainerfDonnaBeatenText:
@@ -362,8 +352,8 @@ CooltrainerfDonnaBeatenText:
 
 CooltrainerfDonnaAfterBattleText:
 	text "You can't stop"
-	line "now. Go forth"
-	cont "and become"
+	line "now. Go forth and"
+	cont "become"
 
 	para "the CHAMPION!"
 	done

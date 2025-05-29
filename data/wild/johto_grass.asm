@@ -51,7 +51,7 @@ JohtoGrassWildMons:
 	; nite
 	db 3, GASTLY
 	db 4, GASTLY
-	db 5, MISDREAVUS
+	db 5, RATTATA
 	db 3, RATTATA
 	db 6, GASTLY
 	db 5, RATTATA

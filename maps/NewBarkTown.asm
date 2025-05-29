@@ -33,6 +33,8 @@ NewBarkTownFlypointCallback:
 	endcallback
 
 NewBarkKrisCallback:
+	checkevent EVENT_BEAT_KRIS
+	iftrue .KrisDisappears
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iffalse .KrisDisappears
 	appear NEWBARKTOWN_CAL_KRIS
@@ -307,8 +309,8 @@ KrisSeenText:
 	line "PROF. ELM's resea-"
 	cont "rch assistants."
 
-	para "Are you headed to"
-	line "the #MON LEAGUE?"
+	para "Did you complete"
+	line "the GYM CHALLENGE?"
 
 	para "Me too! Let's see"
 	line "how tough you are!"
