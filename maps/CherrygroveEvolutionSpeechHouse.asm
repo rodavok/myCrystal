@@ -65,7 +65,7 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 	
 	.marill
 		setflag ENGINE_SWARM
-		swarm ROUTE_41
+		swarm ROUTE_42
 		writetext SwarmMarillText
 		waitbutton
 		closetext
@@ -73,7 +73,7 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 
 	.remoraid
 		setflag ENGINE_SWARM
-		swarm ROUTE_42
+		swarm ROUTE_41
 		writetext SwarmRemoraidText
 		waitbutton
 		closetext

@@ -1783,8 +1783,8 @@ ScytherEvosAttacks:
 	db 12, PURSUIT
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
-	db 28, SLASH
-	db 32, WING_ATTACK
+	db 26, SLASH
+	db 30, WING_ATTACK
 	db 38, CROSS_CUTTER
 	db 44, SWORDS_DANCE
 	db 48, DOUBLE_TEAM
@@ -3005,14 +3005,15 @@ NyqwilEvosAttacks:
 
 ScizorEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, WING_ATTACK
 	db 1, QUICK_ATTACK
 	db 1, LEER
 	db 6, FOCUS_ENERGY
 	db 12, PURSUIT
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
-	db 28, SLASH
-	db 32, METAL_CLAW
+	db 26, SLASH
+	db 30, METAL_CLAW
 	db 40, CROSS_CUTTER
 	db 44, SWORDS_DANCE
 	db 48, DOUBLE_TEAM

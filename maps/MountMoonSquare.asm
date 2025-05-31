@@ -33,6 +33,8 @@ MtMoonMoltresCallback:
 	sjump .NoAppear
 
 .Appear:
+	checkitem SILVER_WING
+	iffalse .NoAppear
 	appear MTMOONSQUARE_MOLTRES
 	endcallback
 

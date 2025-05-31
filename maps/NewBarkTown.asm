@@ -203,8 +203,8 @@ KrisSeenScript:
 	setscene SCENE_NEWBARKTOWN_NOOP
 	setevent EVENT_BEAT_KRIS
 	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
 	disappear NEWBARKTOWN_CAL_KRIS
+	special ReloadSpritesNoPalettes
 	pause 15
 	special FadeInQuickly
 	end

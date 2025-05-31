@@ -24,6 +24,9 @@ DaysOfWeekSiblingHouseMonicaCallback:
 	iffalse .MonicaDisappears
 	checkevent EVENT_MET_SUNNY_OF_SUNDAY
 	iffalse .MonicaDisappears
+    sjump .MonicaAppears
+	
+.MonicaAppears
 	appear DAYSOFWEEKSIBLINGHOUSE_MONICA
 	endcallback
 
@@ -42,32 +45,39 @@ DayOfWeekSiblingsHousePokedexScript:
 	writetext DayOfWeekSiblingsHousePokedexText3
 	waitbutton
 	checkevent EVENT_MET_MONICA_OF_MONDAY
-	iffalse .Tuscany
+	iftrue .Tuscany
 	writetext MonicaLocText
+	waitbutton
 .Tuscany
 	checkevent EVENT_MET_TUSCANY_OF_TUESDAY
-	iffalse .Wes
+	iftrue .Wes
 	writetext TuscanyLocText
+	waitbutton
 .Wes
 	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
-	iffalse .Arthur
+	iftrue .Arthur
 	writetext WesLocText
+	waitbutton
 .Arthur
     checkevent EVENT_MET_ARTHUR_OF_THURSDAY
-	iffalse .Frieda
+	iftrue .Frieda
 	writetext ArthurLocText
+	waitbutton
 .Frieda
 	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
-	iffalse .Santos
+	iftrue .Santos
 	writetext FriedaLocText
+	waitbutton
 .Santos
     checkevent EVENT_MET_SANTOS_OF_SATURDAY
-	iffalse .Sunny
+	iftrue .Sunny
 	writetext SantosLocText
+	waitbutton
 .Sunny
 	checkevent EVENT_MET_SUNNY_OF_SUNDAY
-	iffalse .WeekNext
+	iftrue .WeekNext
 	writetext SunnyLocText
+	waitbutton
 .WeekNext
 	writetext KeepReading
 	yesorno
@@ -289,5 +299,5 @@ DayOfWeekSiblingsHouse_MapEvents:
 
 	def_object_events
 	object_event  3,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingsHousePokedexScript, -1
-	object_event  2,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingHouseMonicaScript, -1 ;EVENT_GOT_WEEK_KANTO_MON 
+	object_event  2,  3, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingHouseMonicaScript, EVENT_GOT_WEEK_KANTO_MON 
 

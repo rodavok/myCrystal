@@ -13,7 +13,12 @@ CeruleanTradeSpeechHouseGrannyScript:
 	jumptextfaceplayer CeruleanTradeSpeechHouseGrannyText
 
 CeruleanTradeSpeechHouseGrampsScript:
-	jumptextfaceplayer CeruleanTradeSpeechHouseGrampsText
+	faceplayer
+	opentext
+	trade NPC_TRADE_YOSHINO
+	waitbutton
+	closetext
+	end
 
 CeruleanTradeSpeechHouseRhydonScript:
 	opentext
