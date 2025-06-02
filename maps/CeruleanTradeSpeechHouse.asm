@@ -43,9 +43,9 @@ CeruleanTradeSpeechHouseGrannyText:
 	cont "trades."
 	done
 
-CeruleanTradeSpeechHouseGrampsText:
-	text "Ah… I'm so happy…"
-	done
+; CeruleanTradeSpeechHouseGrampsText:
+; 	text "Ah… I'm so happy…"
+; 	done
 
 CeruleanTradeSpeechHouseRhydonText:
 	text "KANGASKHAN: Garu"

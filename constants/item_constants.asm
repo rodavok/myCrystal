@@ -317,7 +317,6 @@ DEF MT01 EQU const_value
 	; add_mt FISSURE
 	;add_mt SING egg/event move
 	;add_mt LICK egg/event move
-	;add_mt PAY_DAY
 	;add_mt SONICBOOM
 	;add_mt QUICK_ATTACK
 	;add_mt ENCORE
@@ -395,10 +394,11 @@ DEF MT01 EQU const_value
 	add_mt SOFTBOILED ;gen 1 tm
 
 	;Fuscia
-	add_mt PURSUIT
+	;add_mt PURSUIT
 	add_mt TRI_ATTACK	;gen 1 tm
 	add_mt HEAL_BELL
 	add_mt BODY_SLAM
+	add_mt PAY_DAY
 
 	;Pewter City
 	add_mt SKY_ATTACK	;gen 1 tm
