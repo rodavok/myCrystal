@@ -15,7 +15,6 @@ MomItems_1:
 
 MomItems_2:
 ;Single-time prizes that happen when savings reach a certain threshold (col2). Costs (col3)
-	;momitem    900,   600, MOM_DOLL, DECO_PIKACHU_DOLL
 	momitem   2500,  1000, MOM_DOLL, DECO_PINK_BED
 	momitem   5000,   600, MOM_DOLL, DECO_SQUIRTLE_DOLL
 	;momitem   9000,  3500, MOM_DOLL, DECO_GREEN_CARPET
@@ -32,11 +31,9 @@ MomItems_2:
 	momitem  50000,  8000, MOM_DOLL, DECO_PIKACHU_DOLL
 	momitem  65000,  8000, MOM_DOLL, DECO_GENGAR_DOLL
 	momitem  75000,  5000, MOM_DOLL, DECO_POLKADOT_BED
-	;momitem  90000,  3000, MOM_DOLL, DECO_PIKACHU_POSTER
 	momitem 100000,  7500, MOM_DOLL, DECO_BIG_SNORLAX_DOLL
 	;momitem 122800,  7500, MOM_DOLL, DECO_BIG_ONIX_DOLL
 	;momitem 145600,  7500, MOM_DOLL, DECO_BIG_LAPRAS_DOLL
-	;momitem 168400,  7500, MOM_DOLL, DECO_PIKACHU_BED
 .End
 
 	dt 0 ; unused

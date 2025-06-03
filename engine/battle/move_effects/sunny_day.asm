@@ -7,7 +7,7 @@ BattleCommand_StartSun:
 ; 	ld de, wEnemyMonType1
 ; 	ld bc, wEnemyStatLevels
 
-; .go
+; ; .go
 
 ; ; Sunny Day is different for Grass-types.
 

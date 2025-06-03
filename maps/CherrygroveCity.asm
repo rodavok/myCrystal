@@ -658,9 +658,10 @@ CherrygroveTutorWhichMoveShouldITeachText:
 
 CherrygroveTutorIfYouUnderstandYouveMadeItText:
 	text "Raising your STATS"
-	line "can give your #MON"
+	line "can give your"
 
-	para "an edge in battle."
+	para "#MON an edge"
+	line "in battle."
 	done
 
 CherrygroveTutorFarewellKidText:

@@ -7,6 +7,7 @@
 	const GOLDENRODDEPTSTOREROOF_POKEFAN_M
 	const GOLDENRODDEPTSTOREROOF_TEACHER
 	const GOLDENRODDEPTSTOREROOF_BUG_CATCHER
+	const GOLDENRODDEPTPIKA_POKEFAN
 
 GoldenrodDeptStoreRoof_MapScripts:
 	def_scene_scripts
@@ -91,6 +92,99 @@ Binoculars3:
 
 PokeDollVendingMachine:
 	jumptext PokeDollVendingMachineText
+
+GoldenRodPikaPokefanScript:
+	faceplayer
+	opentext
+	writetext GoldenrodDeptPikaPokefanShopText
+	waitbutton
+GoldenrodDeptPikaPokefan_LoopScript:
+	writetext GoldenrodDeptPikaPokefan_AskWhichPikaText
+	special PlaceMoneyTopRight
+	loadmenu GoldenrodDeptPikaPokefanMenu
+	verticalmenu
+	closewindow
+	ifequal 1, .Pika1
+	ifequal 2, .Pika2
+	ifequal 3, .Pika3
+	jump GoldenrodDeptPikaPokefan_Cancel
+	
+.Pika1
+	checkmoney YOUR_MONEY, 3500
+	ifequal HAVE_LESS, GoldenrodDeptPikaPokefanNotEnoughMoney
+	writetext GoldenrodDeptPikaPokefan_AreYouSureText
+	yesorno
+	iffalse GoldenrodDeptPikaPokefan_Cancel
+	checkevent EVENT_DECO_SURFING_PIKACHU_DOLL
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_SURFING_PIKACHU_DOLL
+	takemoney YOUR_MONEY, 3500
+	jump GoldenrodDeptPikaPokefan_FinishScript
+	end
+	
+.Pika2
+	checkmoney YOUR_MONEY, 7500
+	ifequal HAVE_LESS, GoldenrodDeptPikaPokefanNotEnoughMoney
+	writetext GoldenrodDeptPikaPokefan_AreYouSureText
+	yesorno
+	iffalse GoldenrodDeptPikaPokefan_Cancel
+	checkevent EVENT_DECO_POSTER_2
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_POSTER_2
+	takemoney YOUR_MONEY, 7500
+	jump GoldenrodDeptPikaPokefan_FinishScript
+	end
+	
+.Pika3
+	checkmoney YOUR_MONEY, 11500
+	ifequal HAVE_LESS, GoldenrodDeptPikaPokefanNotEnoughMoney
+	writetext GoldenrodDeptPikaPokefan_AreYouSureText
+	yesorno
+	iffalse GoldenrodDeptPikaPokefan_Cancel
+	checkevent EVENT_DECO_BED_4
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_BED_4
+	takemoney YOUR_MONEY, 11500
+	jump GoldenrodDeptPikaPokefan_FinishScript
+	end
+	
+.AlreadyHaveDecorItem
+	writetext GoldenrodDeptPikaPokefan_AlreadyHaveDecoText
+	waitbutton
+	jump GoldenrodDeptPikaPokefan_LoopScript
+	
+		
+GoldenrodDeptPikaPokefanMenu:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 4, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "PIKA DOLL   ¥3500@"
+	db "PIKA POSTER ¥7500@"
+	db "PIKA BED  ¥115000@"
+	
+GoldenrodDeptPikaPokefan_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodDeptPikaPokefan_HereYouGoText
+	waitbutton
+	jump GoldenrodDeptPikaPokefan_LoopScript
+
+GoldenrodDeptPikaPokefan_Cancel:
+	writetext GoldenrodDeptPikaPokefanTakeCare
+	waitbutton
+	closetext
+	end
+		
+GoldenrodDeptPikaPokefanNotEnoughMoney:
+	writetext GoldenrodDeptPikaPokefanNotEnoughMoneyText
+	waitbutton
+	closetext
+	end
 
 GoldenrodDeptStoreRoofPokefanFText:
 	text "Whew, I'm tired."
@@ -209,6 +303,47 @@ PokeDollVendingMachineText:
 	line "empty…"
 	done
 
+GoldenrodDeptPikaPokefanShopText:
+	text "Hehehe! I sell the"
+	line "latest PIKACHU"
+	cont "merchandise!"
+
+	para "Want to take look"
+	cont "at mywares?"
+	done
+	
+GoldenrodDeptPikaPokefan_AskWhichPikaText:
+	text "Which DECORATION"
+	line "caught your eye?"
+	done
+	
+GoldenrodDeptPikaPokefan_AreYouSureText:
+	text "Are you sure?"
+	done
+
+GoldenrodDeptPikaPokefan_AlreadyHaveDecoText:
+	text "You already have"
+	line "this DECORATION!"
+	done
+
+GoldenrodDeptPikaPokefan_HereYouGoText:
+	text "Here you go! We"
+	line "will deliver this"
+	cont "item to your home"
+	cont "without delay!"
+	done
+
+GoldenrodDeptPikaPokefanNotEnoughMoneyText:
+	text "I'm sorry, but it"
+	line "seems you don't"
+	cont "have enough money."
+	done
+	
+GoldenrodDeptPikaPokefanTakeCare:
+	text "It was a pleasure."
+	line "Take care!"
+	done
+
 GoldenrodDeptStoreRoof_MapEvents:
 	db 0, 0 ; filler
 
@@ -231,4 +366,6 @@ GoldenrodDeptStoreRoof_MapEvents:
 	object_event 14,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
 	object_event  7,  0, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofPokefanMScript, EVENT_GOLDENROD_SALE_OFF
 	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofTeacherScript, EVENT_GOLDENROD_SALE_OFF
-	object_event  1,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofBugCatcherScript, EVENT_GOLDENROD_SALE_OFF
+	object_event  7,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofBugCatcherScript, EVENT_GOLDENROD_SALE_OFF
+	object_event  1,  6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenRodPikaPokefanScript, EVENT_GOLDENROD_SALE_OFF
+

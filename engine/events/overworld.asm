@@ -1862,6 +1862,9 @@ TryCutOW::
 	call CheckPartyMove
 	jr nc, .can_cut
 
+	ld d, CROSS_CUTTER
+	call CheckPartyMove
+	jr nc, .can_cut
 	jr .cant_cut
 
 .can_cut

@@ -552,7 +552,6 @@ SunkernBackpic:      INCBIN "gfx/pokemon/sunkern/back.2bpp.lz"
 LaprasBackpic:       INCBIN "gfx/pokemon/lapras/back.2bpp.lz"
 MagbyBackpic:        INCBIN "gfx/pokemon/magby/back.2bpp.lz"
 DragonairBackpic:    INCBIN "gfx/pokemon/dragonair/back.2bpp.lz"
-ZapdosBackpic:       INCBIN "gfx/pokemon/zapdos/back.2bpp.lz"
 ChikoritaBackpic:    INCBIN "gfx/pokemon/chikorita/back.2bpp.lz"
 CorsolaBackpic:      INCBIN "gfx/pokemon/corsola/back.2bpp.lz"
 ChinchouBackpic:     INCBIN "gfx/pokemon/chinchou/back.2bpp.lz"
@@ -717,6 +716,8 @@ PyropedFrontpic: INCBIN "gfx/pokemon/pyroped/front.animated.2bpp.lz"
 YanmatoFrontpic: INCBIN "gfx/pokemon/yanmato/front.animated.2bpp.lz"
 YanmatoBackpic:  INCBIN "gfx/pokemon/yanmato/back.2bpp.lz"
 MediumPic:       INCBIN "gfx/trainers/medium.2bpp.lz"
+ZapdosBackpic:       INCBIN "gfx/pokemon/zapdos/back.2bpp.lz"
+
 
 
 
