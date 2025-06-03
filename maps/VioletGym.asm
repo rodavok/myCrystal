@@ -60,6 +60,7 @@ VioletGymFalknerScript:
 	writetext FalknerRematchText
 	yesorno
 	iffalse .Refused
+	writetext FalknerChallengeAccepted
 	waitbutton
 	closetext
 	winlosstext FalknerWinLossText2, 0
@@ -174,7 +175,7 @@ FalknerRematchText:
 	cont "te bird #MON team?"
 	done
 
-ChallengeAccepted:
+FalknerChallengeAccepted:
 	text "Alright!"
 	line "Let's battle!"
 	done

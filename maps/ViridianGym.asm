@@ -10,6 +10,8 @@ ViridianGym_MapScripts:
 ViridianGymBlueScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_EARTHBADGE
 	iftrue .FightDone
 	writetext LeaderBlueBeforeText
@@ -32,6 +34,32 @@ ViridianGymBlueScript:
 
 .FightDone:
 	writetext LeaderBlueEpilogueText
+	waitbutton
+	closetext
+	end
+
+.Rematch
+	checkflag ENGINE_BLUE_REMATCH
+	iftrue .RematchDone
+	writetext BlueRematchText
+	yesorno
+	iffalse .Refused
+	writetext BlueChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext BlueWinLossText2, 0
+	loadtrainer BLUE, BLUE2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_BLUE_REMATCH
+	end
+.RematchDone
+	writetext BlueRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext BlueRefusedText
 	waitbutton
 	closetext
 	end
@@ -165,6 +193,75 @@ ViridianGymGuideWinText:
 
 	para "battle. It brought"
 	line "tears to my eyes."
+	done
+
+
+BlueRematchText:
+	text "BLUE: Yo! You beat"
+	line "RED? Tch… I don't"
+	cont "believe it…"
+
+	para "There's no way you"
+	line "could beat KANTO's"
+	cont "strongest trainer."
+
+	para "Want to prove your"
+	line "victory?"
+
+	para "My team's gotten"
+	line "way stronger too."
+
+	para "How about it?"
+	line "Let's have another"
+	cont "battle?"
+	done
+
+BlueChallengeAccepted:
+	text "BLUE: Hah! That's"
+	line "what I wanted to"
+	cont "hear!"
+
+	para "This time I won't"
+	line "hold back at all."
+
+	para "Let's see if you"
+	line "can handle my"
+	cont "real power!"
+
+	para "Here I come!"
+	done
+
+BlueWinLossText2:
+	text "BLUE: Damn it!"
+
+	para "I can't believe"
+	line "it… You beat me"
+	cont "again!"
+	done
+
+BlueRematchDoneText:
+	text "BLUE: That was a"
+	line "good battle, but"
+
+	para "I'm totally beat"
+	line "right now."
+
+	para "Give me some time"
+	line "to rest and train"
+	cont "my #MON."
+
+	para "Come back tomorrow"
+	line "if you want"
+	cont "another rematch!"
+	done
+
+BlueRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
 	done
 
 ViridianGym_MapEvents:

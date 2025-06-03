@@ -14,6 +14,8 @@ CeladonGym_MapScripts:
 CeladonGymErikaScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_RAINBOWBADGE
 	iftrue .FightDone
 	writetext ErikaBeforeBattleText
@@ -43,6 +45,31 @@ CeladonGymErikaScript:
 	setevent EVENT_GOT_TM19_GIGA_DRAIN
 .GotGigaDrain:
 	writetext ErikaAfterBattleText
+	waitbutton
+	closetext
+	end
+.Rematch
+	checkflag ENGINE_ERIKA_REMATCH
+	iftrue .RematchDone
+	writetext ErikaRematchText
+	yesorno
+	iffalse .Refused
+	writetext ErikaChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext ErikaWinLossText2, 0
+	loadtrainer ERIKA, ERIKA2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_ERIKA_REMATCH
+	end
+.RematchDone
+	writetext ErikaRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext ErikaRefusedText
 	waitbutton
 	closetext
 	end
@@ -186,6 +213,60 @@ ErikaAfterBattleText:
 	para "trainers spurs me"
 	line "to do better…"
 	done
+
+ErikaRematchText:
+	text "ERIKA: Oh, hello"
+	line "again…"
+
+	para "Would you care for"
+	line "another gentle"
+	cont "battle?"
+
+	para "My grass #MON"
+	line "have been waiting"
+	cont "for a rematch…"
+	done
+
+ErikaChallengeAccepted:
+	text "ERIKA: How"
+	line "wonderful…"
+
+	para "Let's fill the air"
+	line "with the fragrance"
+	cont "of battle…"
+	done
+
+ErikaWinLossText2:
+	text "ERIKA: Oh my…"
+	line "You've bested me"
+	cont "once again…"
+
+	para "Your skill blooms"
+	line "like a beautiful"
+	cont "flower…"
+
+	para "Such grace in"
+	line "battle… I am"
+	cont "truly impressed…"
+	done
+
+ErikaRematchDoneText:
+	text "ERIKA: That was a"
+	line "lovely battle…"
+
+	para "Please return"
+	line "tomorrow if you"
+	cont "wish…"
+	done
+
+ErikaRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 LassMichelleSeenText:
 	text "Do you think a"

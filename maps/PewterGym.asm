@@ -11,6 +11,8 @@ PewterGym_MapScripts:
 PewterGymBrockScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_BOULDERBADGE
 	iftrue .FightDone
 	writetext BrockIntroText
@@ -37,7 +39,32 @@ PewterGymBrockScript:
 	waitbutton
 	closetext
 	end
-
+.Rematch
+	checkflag ENGINE_BROCK_REMATCH
+	iftrue .RematchDone
+	writetext BrockRematchText
+	yesorno
+	iffalse .Refused
+	writetext BrockChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext BrockWinLossText2, 0
+	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_BROCK_REMATCH
+	end
+.RematchDone
+	writetext BrockRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext BrockRefusedText
+	waitbutton
+	closetext
+	end
+	
 TrainerCamperJerry:
 	trainer CAMPER, JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
 
@@ -143,6 +170,59 @@ BrockFightDoneText:
 	cont "come a lot strong-"
 	cont "er too."
 	done
+BrockRematchText:
+	text "BROCK: Hey there,"
+	line "<PLAY_G>! Good to"
+	
+	para "see you again."
+	line "My rock-type #-"
+	cont "MON have been"
+	
+	para "training hard"
+	line "since our last"
+	cont "battle."
+	
+	para "Want to test your"
+	line "skills against my"
+	cont "improved team?"
+	done
+
+
+BrockChallengeAccepted:
+	text "Alright!"
+	line "Let's battle!"
+	done
+
+BrockWinLossText2:
+	text "BROCK: Incredible!"
+	line "You managed to"
+	cont "break through my"
+	
+	para "rock-solid"
+	line "defense again."
+	
+	para "You truly are an"
+	line "amazing trainer,"
+	cont "<PLAY_G>."
+	done
+
+BrockRematchDoneText:
+	text "BROCK: That was"
+	line "an intense battle!"
+	
+	para "Come back tomorrow"
+	line "if you want to"
+	cont "battle again."
+	done
+
+BrockRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 CamperJerrySeenText:
 	text "The trainers of"

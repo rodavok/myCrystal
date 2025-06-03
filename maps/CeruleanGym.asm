@@ -59,6 +59,8 @@ CeruleanGymGruntRunsOutScript:
 CeruleanGymMistyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .FightDone
 	writetext MistyIntroText
@@ -82,6 +84,33 @@ CeruleanGymMistyScript:
 	waitbutton
 	closetext
 	end
+.Rematch
+	checkflag ENGINE_MISTY_REMATCH
+	iftrue .RematchDone
+	writetext MistyRematchText
+	yesorno
+	iffalse .Refused
+	writetext MistyChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext MistyWinLossText2, 0
+	loadtrainer MISTY, MISTY2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_MISTY_REMATCH
+	end
+.RematchDone
+	writetext MistyRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext MistyRefusedText
+	waitbutton
+	closetext
+	end
+
+	
 
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script
@@ -282,6 +311,51 @@ MistyFightDoneText:
 	para "I can battle some"
 	line "skilled trainers."
 	done
+
+MistyRematchText:
+	text "MISTY: Oh, it's"
+	line "you again!"
+
+	para "I travelled all"
+	line "over JOHTO train-"
+	cont "ing my #MON!"
+
+	para "Want to see how"
+	line "I've improved?"
+	done
+
+MistyChallengeAccepted:
+	text "Alright!"
+	line "Let's battle!"
+	done
+
+MistyWinLossText2:
+	text "MISTY: You really"
+	line "know how to make"
+	cont "waves…"
+	done
+
+MistyRematchDoneText:
+	text "MISTY: I'm all"
+	line "worn out for now…"
+
+	para "But I'll keep"
+	line "training my"
+	cont "#MON!"
+
+	para "Come back tomor-"
+	line "row if you want"
+	cont "another battle!"
+	done
+
+MistyRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 SwimmerfDianaSeenText:
 	text "Sorry about being"

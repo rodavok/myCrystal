@@ -13,6 +13,8 @@ VermilionGym_MapScripts:
 VermilionGymSurgeScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .FightDone
 	writetext LtSurgeIntroText
@@ -38,6 +40,32 @@ VermilionGymSurgeScript:
 
 .FightDone:
 	writetext LtSurgeFightDoneText
+	waitbutton
+	closetext
+	end
+
+.Rematch
+	checkflag ENGINE_SURGE_REMATCH
+	iftrue .RematchDone
+	writetext SurgeRematchText
+	yesorno
+	iffalse .Refused
+	writetext SurgeChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext SurgeWinLossText2, 0
+	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_SURGE_REMATCH
+	end
+.RematchDone
+	writetext SurgeRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext SurgeRefusedText
 	waitbutton
 	closetext
 	end
@@ -165,6 +193,48 @@ GentlemanGregorySeenText:
 	para "Not if I can help"
 	line "it!"
 	done
+
+SurgeRematchText:
+	text "SURGE: Hey, kid!"
+	line "Still slugging and"
+	cont "chugging away?"
+
+	para "I've gotten stron-"
+	line "ger since our last"
+	cont "battle."
+	
+	para "Do you want to"
+	line "take me on at full"
+	cont "power?"
+	done
+
+SurgeChallengeAccepted:
+	text "Alright!"
+	line "Let's battle!"
+	done
+
+SurgeWinLossText2:
+	text "Shocking…"
+
+	para "You really"
+	line "are the"
+	cont "CHAMPION!"
+	done
+
+SurgeRematchDoneText:
+	text "I'm beat, kid."
+	line "You can battle me"
+	cont "again tomorrow."
+	done
+
+SurgeRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 GentlemanGregoryBeatenText:
 	text "Sorry I failed"

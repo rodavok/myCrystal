@@ -14,6 +14,8 @@ SaffronGym_MapScripts:
 SaffronGymSabrinaScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_RED
+	iftrue .Rematch
 	checkflag ENGINE_MARSHBADGE
 	iftrue .FightDone
 	writetext SabrinaIntroText
@@ -40,6 +42,32 @@ SaffronGymSabrinaScript:
 
 .FightDone:
 	writetext SabrinaFightDoneText
+	waitbutton
+	closetext
+	end
+
+.Rematch
+	checkflag ENGINE_SABRINA_REMATCH
+	iftrue .RematchDone
+	writetext SabrinaRematchText
+	yesorno
+	iffalse .Refused
+	writetext SabrinaChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext SabrinaWinLossText2, 0
+	loadtrainer SABRINA, SABRINA2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_SABRINA_REMATCH
+	end
+.RematchDone
+	writetext SabrinaRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext SabrinaRefusedText
 	waitbutton
 	closetext
 	end
@@ -287,6 +315,46 @@ SaffronGymGuideWinText:
 	text "That was another"
 	line "fantastic battle!"
 	done
+
+SabrinaRematchText:
+	text "My psychic power"
+	line "has grown more"
+	cont "powerful…"
+
+	para "But now the future"
+	line "looks unclear…"
+	
+	para "Would you like to"
+	line "battle me?"
+	done
+
+SabrinaChallengeAccepted:
+	text "Alright!"
+	line "Let's battle!"
+	done
+
+SabrinaWinLossText2:
+	text "Your future is"
+	line "looking bright!"
+	done
+
+SabrinaRematchDoneText:
+	text "You've overwhelmed"
+	line "my psychic power…"
+
+	para "But I forsee you"
+	line "returning again"
+	cont "tomorrow…"
+	done
+
+SabrinaRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 
 SaffronGym_MapEvents:
 	db 0, 0 ; filler

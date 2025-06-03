@@ -43,6 +43,32 @@ SeafoamGymBlaineScript:
 	closetext
 	end
 
+.Rematch
+	checkflag ENGINE_BLAINE_REMATCH
+	iftrue .RematchDone
+	writetext BlaineRematchText
+	yesorno
+	iffalse .Refused
+	writetext BlaineChallengeAccepted
+	waitbutton
+	closetext
+	winlosstext BlaineWinLossText2, 0
+	loadtrainer BLAINE, BLAINE2
+	startbattle
+	reloadmapafterbattle 
+	setflag ENGINE_BLAINE_REMATCH
+	end
+.RematchDone
+	writetext BlaineRematchDoneText
+	waitbutton
+	closetext
+	end
+.Refused
+	writetext BlaineRefusedText
+	waitbutton
+	closetext
+	end
+
 SeafoamGymGuideScript:
 	faceplayer
 	opentext
@@ -122,6 +148,48 @@ BlaineFightDoneText:
 	line "Just you watch!"
 	done
 
+BlaineRematchText:
+	text "BLAINE: Hey there,"
+	line "hotshot trainer!"
+
+	para "Want to feel the"
+	line "heat again?"
+
+	para "How about a"
+	line "rematch?"
+	done
+
+BlaineChallengeAccepted:
+	text "BLAINE: Waaah!"
+	line "That's the spirit!"
+
+	para "Let's battle!"
+	done
+
+BlaineWinLossText2:
+	text "BLAINE: Waaah!"
+	line "Burned out again!"
+	done
+
+BlaineRematchDoneText:
+	text "BLAINE: Whew!"
+	line "That was intense!"
+
+	para "Come back"
+	line "tomorrow, and"
+
+	para "we'll heat things"
+	line "up again!"
+	done
+
+BlaineRefusedText:
+	text "Oh? You're not"
+	line "ready? Well, you"
+	
+	para "can come back"
+	line "for a rematch"
+	cont "anytime."
+	done 
 SeafoamGymGuideWinText:
 	text "Yo!"
 
