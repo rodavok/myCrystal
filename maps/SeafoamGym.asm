@@ -227,6 +227,8 @@ SeafoamGym_MapEvents:
 
 	def_warp_events
 	warp_event  5,  5, ROUTE_20, 1
+	warp_event  3,  5, SEAFOAM_ISLANDS_1F, 2
+
 
 	def_coord_events
 

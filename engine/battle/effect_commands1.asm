@@ -1146,7 +1146,7 @@ BattleCommand_Critical:
 
 ; +2 critical level
 	ld c, 2
-	jr .Tally
+	jr .FocusEnergy
 
 .Farfetchd:
 	cp FARFETCH_D
@@ -1157,7 +1157,7 @@ BattleCommand_Critical:
 
 ; +2 critical level
 	ld c, 2
-	jr .Tally
+	jr .FocusEnergy
 
 .FocusEnergy:
 	ld a, BATTLE_VARS_SUBSTATUS4
@@ -2859,6 +2859,18 @@ EnemyAttackDamage:
 	ret
 
 INCLUDE "engine/battle/move_effects/beat_up.asm"
+
+INCLUDE "engine/battle/move_effects/hidden_power.asm"
+
+INCLUDE "engine/battle/move_effects/rain_dance.asm"
+
+INCLUDE "engine/battle/move_effects/sunny_day.asm"
+
+INCLUDE "engine/battle/move_effects/belly_drum.asm"
+
+INCLUDE "engine/battle/move_effects/psych_up.asm"
+
+INCLUDE "engine/battle/move_effects/mirror_coat.asm"
 
 BattleCommand_ClearMissDamage:
 	ld a, [wAttackMissed]
@@ -6480,17 +6492,6 @@ BattleCommand_TimeBasedHealContinue:
 	dw GetHalfMaxHP
 	dw GetMaxHP
 
-INCLUDE "engine/battle/move_effects/hidden_power.asm"
-
-INCLUDE "engine/battle/move_effects/rain_dance.asm"
-
-INCLUDE "engine/battle/move_effects/sunny_day.asm"
-
-INCLUDE "engine/battle/move_effects/belly_drum.asm"
-
-INCLUDE "engine/battle/move_effects/psych_up.asm"
-
-INCLUDE "engine/battle/move_effects/mirror_coat.asm"
 
 BattleCommand_DoubleMinimizeDamage:
 	ld hl, wEnemyMinimized

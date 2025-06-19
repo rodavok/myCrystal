@@ -27,6 +27,7 @@ INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
 
 
+
 SECTION "Songs 2", ROMX
 
 INCLUDE "audio/music/route1.asm"
@@ -60,7 +61,6 @@ INCLUDE "audio/music/magnettrain.asm"
 INCLUDE "audio/music/lavendertown.asm"
 INCLUDE "audio/music/dancinghall.asm"
 INCLUDE "audio/music/contestresults.asm"
-INCLUDE "audio/music/route30.asm"
 
 
 SECTION "Songs 3", ROMX
@@ -71,7 +71,6 @@ INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"
 INCLUDE "audio/music/evolution.asm"
 INCLUDE "audio/music/printer.asm"
-
 
 SECTION "Songs 4", ROMX
 
@@ -136,7 +135,15 @@ INCLUDE "audio/music/battletowertheme.asm"
 INCLUDE "audio/music/suicunebattle.asm"
 INCLUDE "audio/music/battletowerlobby.asm"
 INCLUDE "audio/music/mobilecenter.asm"
+INCLUDE "audio/music/route30.asm"
 
+SECTION "Songs 6", romx
+
+INCLUDE "audio/music/kantorbywildbattle.asm"
+INCLUDE "audio/music/rbytrainerbattle.asm"
+INCLUDE "audio/music/dungeon1.asm"
+INCLUDE "audio/music/dungeon2.asm"
+INCLUDE "audio/music/dungeon3.asm"
 
 SECTION "Extra Songs 1", ROMX
 

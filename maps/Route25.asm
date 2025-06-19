@@ -31,6 +31,7 @@ Route25SuicuneCallback:
 	iftrue .Done
 	disappear ROUTE25_SUICUNE
 .Done: 
+	appear ROUTE25_SUICUNE
 	endcallback
 
 

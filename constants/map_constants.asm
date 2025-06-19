@@ -193,6 +193,12 @@ ENDM
 	map_const ROUTE_21,                                    10, 18 ;  7
 	map_const CINNABAR_ISLAND,                             10,  9 ;  8
 	map_const SEAFOAM_CAVE,                                12, 10 ;  9
+	map_const SEAFOAM_ISLANDS_NORTH,					    5,  4 ; 10
+	map_const SEAFOAM_ISLANDS_1F,						   15,  9 ; 11
+	map_const SEAFOAM_ISLANDS_B1F,						   15,  9 ; 12
+	map_const SEAFOAM_ISLANDS_B2F,						   15,  9 ; 13
+	map_const SEAFOAM_ISLANDS_B3F,						   15,  9 ; 14
+	map_const SEAFOAM_ISLANDS_B4F,						   15,  9 ; 15
 	endgroup
 
 	newgroup CERULEAN                                             ;  7
@@ -213,7 +219,19 @@ ENDM
 	map_const ROUTE_24,                                    10,  9 ; 15
 	map_const ROUTE_25,                                    30,  9 ; 16
 	map_const CERULEAN_CITY,                               20, 18 ; 17
-	map_const CERULEAN_CAVE,                               15,  9 ; 18
+	map_const CERULEAN_CAVE_1F,                               15,  9 ; 18
+    map_const CERULEAN_CAVE_2F,                               15,  9 ; 18
+	map_const CERULEAN_CAVE_B1F,                               15,  9 ; 18
+	map_const CERULEAN_CAVE_B2F,						  15, 9
+	map_const CERULEAN_CAVE_B3F,						  15, 9
+	map_const CERULEAN_CAVE_B4F,						  15, 9
+	map_const CERULEAN_CAVE_B5F,						  15, 9
+	map_const CERULEAN_CAVE_B6F,						  15, 9
+	map_const CERULEAN_CAVE_B7F,						  15, 9
+
+
+
+
 	endgroup
 
 	newgroup AZALEA                                               ;  8

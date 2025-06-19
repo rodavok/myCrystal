@@ -107,4 +107,9 @@ Music:
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
+	dba Music_KantoRBYWildBattle
+	dba Music_RBYTrainerBattle
+	dba Music_Dungeon1
+	dba Music_Dungeon2
+	dba Music_Dungeon3
 	assert_table_length NUM_MUSIC_SONGS

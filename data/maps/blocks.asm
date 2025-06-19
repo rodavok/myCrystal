@@ -1052,8 +1052,25 @@ SECTION "Map Blocks 4", ROMX
 TohjoFallsGiovanniRoom_Blocks:
 	INCBIN "maps/TohjoFallsGiovanniRoom.blk"
 
-CeruleanCave_Blocks:
-	INCBIN "maps/CeruleanCave.blk"
+CeruleanCave1F_Blocks:
+	INCBIN "maps/CeruleanCave1F.blk"
+CeruleanCave2F_Blocks:
+	INCBIN "maps/CeruleanCave2F.blk"
+CeruleanCaveB1F_Blocks:
+	INCBIN "maps/CeruleanCaveB1F.blk"
+CeruleanCaveB2F_Blocks:
+	INCBIN "maps/CeruleanCaveB2F.blk"
+CeruleanCaveB3F_Blocks:
+	INCBIN "maps/CeruleanCaveB3F.blk"
+CeruleanCaveB4F_Blocks:
+	INCBIN "maps/CeruleanCaveB4F.blk"
+CeruleanCaveB5F_Blocks:
+	INCBIN "maps/CeruleanCaveB5F.blk"
+CeruleanCaveB6F_Blocks:
+	INCBIN "maps/CeruleanCaveB6F.blk"
+CeruleanCaveB7F_Blocks:
+	INCBIN "maps/CeruleanCaveB7F.blk"
+
 
 SilverCaveMewRoom_Blocks:
 	INCBIN "maps/SilverCaveMewRoom.blk"
@@ -1086,4 +1103,23 @@ Museum2F_Blocks:
 ViridianForestGateN_Blocks:
 ViridianForestGateS_Blocks:
 	INCBIN "maps/KantoGateNS.blk"
+
+SeafoamIslandsNorth_Blocks:
+	INCBIN "maps/SeafoamIslandsNorth.blk"
+
+SeafoamIslands1F_Blocks:
+	INCBIN "maps/SeafoamIslands1F.blk"
+
+
+SeafoamIslandsB1F_Blocks:
+	INCBIN "maps/SeafoamIslandsB1F.blk"
+
+SeafoamIslandsB2F_Blocks:
+	INCBIN "maps/SeafoamIslandsB2F.blk"
+
+SeafoamIslandsB3F_Blocks:
+	INCBIN "maps/SeafoamIslandsB3F.blk"
+
+SeafoamIslandsB4F_Blocks:
+	INCBIN "maps/SeafoamIslandsB4F.blk"
 

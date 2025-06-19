@@ -1006,6 +1006,12 @@ LassGroup:
 	db 21, MARILL,
 	db -1, end
 
+	; LASS (19)
+	db "MARY@", TRAINERTYPE_NORMAL
+	db 61, NIDORINO
+	db 62, NIDORINA
+	db -1, end
+
 JanineGroup:
 	; JANINE (1)
 	db "JANINE@", TRAINERTYPE_MOVES
@@ -1779,6 +1785,13 @@ BugCatcherGroup:
 	db "WAYNE@", TRAINERTYPE_NORMAL
 	db  8, LEDYBA
 	db 10, PARAS
+	db -1 ; end
+
+	; BUG_CATCHER (20)
+	db "LUIS@", TRAINERTYPE_NORMAL
+	db 69, METAPOD
+	db 69, METAPOD
+	db 65, BUTTERFREE
 	db -1 ; end
 
 FisherGroup:

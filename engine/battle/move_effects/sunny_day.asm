@@ -7,17 +7,17 @@ BattleCommand_StartSun:
 ; 	ld de, wEnemyMonType1
 ; 	ld bc, wEnemyStatLevels
 
-; ; .go
+;  .go
 
-; ; Sunny Day is different for Grass-types.
+; Sunny Day is different for Grass-types.
 
-; 	ld a, [de]
-; 	cp GRASS
-; 	jr z, .grass
-; 	inc de
-; 	ld a, [de]
-; 	cp GRASS
-; 	jr z, .grass 
+	; ld a, [de]
+	; cp GRASS
+	; jr z, .grass
+	; inc de
+	; ld a, [de]
+	; cp GRASS
+	; jr z, .grass 
 
 	ld a, WEATHER_SUN
 	ld [wBattleWeather], a
@@ -29,7 +29,7 @@ BattleCommand_StartSun:
 
 ; .grass
 ; 	ld b, SPEED
-; 	jr BattleCommand_StatUp
+; 	jp BattleCommand_StatUp
 
 ; 	ld a, WEATHER_SUN
 ; 	ld [wBattleWeather], a

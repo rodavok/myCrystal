@@ -147,8 +147,7 @@ INCLUDE "engine/gfx/place_graphic.asm"
 
 SECTION "Effect Commands", ROMX
 
-INCLUDE "engine/battle/effect_commands.asm"
-
+INCLUDE "engine/battle/effect_commands1.asm"
 
 SECTION "Enemy Trainers", ROMX
 
@@ -682,12 +681,15 @@ INCLUDE "data/battle_tower/unknown.asm"
 SECTION "Mobile News Data", ROMX
 
 INCLUDE "mobile/news/news.asm"
+;INCLUDE "engine/battle/effect_commands2.asm"
 
 
 SECTION "Crystal Events", ROMX
 
 INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
+
+
 
 
 SECTION "Stadium 2 Checksums", ROMX[$7DE0], BANK[$7F]

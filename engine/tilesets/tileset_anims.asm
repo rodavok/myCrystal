@@ -277,6 +277,7 @@ TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
 TilesetMuseumAnim:
 TilesetViridianForestAnim:
+TilesetCavernAnim:	; Does NOT belong here
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

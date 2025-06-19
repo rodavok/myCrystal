@@ -349,3 +349,10 @@ TilesetViridianForestMeta::
 INCBIN "data/tilesets/viridianforest_metatiles.bin"
 TilesetViridianForestColl::
 INCLUDE "data/tilesets/viridianforest_collision.asm"
+
+TilesetCavernGFX::
+INCBIN "gfx/tilesets/cavern.2bpp.lz"
+TilesetCavernMeta::
+INCBIN "data/tilesets/cavern_metatiles.bin"
+TilesetCavernColl::
+INCLUDE "data/tilesets/cavern_collision.asm"

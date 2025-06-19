@@ -170,17 +170,69 @@ KantoWaterWildMons:
 	db 45, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons CERULEAN_CAVE
+	def_water_wildmons CERULEAN_CAVE_1F
 	db 10 percent ; encounter rate
 	db 60, SLOWBRO
-	db 62, KINGLER
+	db 62, SEAKING
 	db 60, SEADRA
 	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_B1F
+	db 10 percent ; encounter rate
+	db 60, SLOWBRO
+	db 62, GOLDUCK
+	db 60, SEADRA
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_B2F
+	db 10 percent ; encounter rate
+	db 62, SLOWBRO
+	db 64, SEAKING
+	db 62, SEADRA
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_B4F
+	db 10 percent ; encounter rate
+	db 62, SLOWBRO
+	db 64, KINGLER
+	db 62, SEADRA
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_B5F
+	db 10 percent ; encounter rate
+	db 62, GOLDUCK
+	db 64, SLOWBRO
+	db 62, SEADRA
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_B7F
+	db 10 percent ; encounter rate
+	db 64, SLOWBRO
+	db 66, KINGLER
+	db 64, GOLDUCK
+	end_water_wildmons
+
 
 	def_water_wildmons SAFARI_ZONE_BETA
 	db 10 percent ; encounter rate
 	db 37, PSYDUCK
 	db 38, SLOWPOKE
 	db 39, QWILFISH
+	end_water_wildmons
+	db -1 ; end
+
+	def_water_wildmons SEAFOAM_ISLANDS_B3F
+	db 10 percent ; encounter rate
+	db 41, SEEL
+	db 42, HORSEA
+	db 44, DEWGONG
+	end_water_wildmons
+	db -1 ; end
+
+	def_water_wildmons SEAFOAM_ISLANDS_B4F
+	db 10 percent ; encounter rate
+	db 41, SEEL
+	db 42, HORSEA
+	db 44, DEWGONG
 	end_water_wildmons
 	db -1 ; end

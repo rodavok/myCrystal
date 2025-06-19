@@ -487,7 +487,7 @@ SECTION "Map Scripts 25", ROMX
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/TohjoFallsGiovanniRoom.asm"
-INCLUDE "maps/CeruleanCave.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
 INCLUDE "maps/SilverCaveMewRoom.asm"
 INCLUDE "maps/GoldenrodShore.asm"
 INCLUDE "maps/SeafoamCave.asm"
@@ -501,5 +501,22 @@ INCLUDE "maps/Museum1F.asm"
 INCLUDE "maps/Museum2F.asm"
 INCLUDE "maps/SafariZoneMainOffice.asm"
 INCLUDE "maps/ViridianGym.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
+INCLUDE "maps/CeruleanCaveB1F.asm"
+INCLUDE "maps/CeruleanCaveB2F.asm"
+INCLUDE "maps/CeruleanCaveB3F.asm"
+INCLUDE "maps/CeruleanCaveB4F.asm"
+INCLUDE "maps/CeruleanCaveB5F.asm"
+INCLUDE "maps/CeruleanCaveB6F.asm"
+INCLUDE "maps/CeruleanCaveB7F.asm"
+INCLUDE "maps/SeafoamIslandsNorth.asm"
+INCLUDE "maps/SeafoamIslands1F.asm"
+INCLUDE "maps/SeafoamIslandsB1F.asm"
+INCLUDE "maps/SeafoamIslandsB2F.asm"
+INCLUDE "maps/SeafoamIslandsB3F.asm"
+INCLUDE "maps/SeafoamIslandsB4F.asm"
+
+
+
 
 

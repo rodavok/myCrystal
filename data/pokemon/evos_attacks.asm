@@ -3424,6 +3424,8 @@ RaikouEvosAttacks:
 	db 41, SPARK
 	db 51, REFLECT
 	db 61, CRUNCH
+	db 63, ZAP_CANNON
+	db 65, EXTREMESPEED
 	db 71, THUNDER
 	db 0 ; no more level-up moves
 
@@ -3437,6 +3439,8 @@ EnteiEvosAttacks:
 	db 41, STOMP
 	db 51, FLAMETHROWER
 	db 61, SWAGGER
+	db 63, SACRED_FIRE
+	db 65, EXTREMESPEED
 	db 71, FIRE_BLAST
 	db 0 ; no more level-up moves
 
@@ -3450,6 +3454,8 @@ SuicuneEvosAttacks:
 	db 41, AURORA_BEAM
 	db 51, MIST
 	db 61, MIRROR_COAT
+	db 63, AQUA_RING
+	db 65, EXTREMESPEED
 	db 71, HYDRO_PUMP
 	db 0 ; no more level-up moves
 

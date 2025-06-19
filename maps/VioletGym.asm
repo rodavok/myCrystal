@@ -170,9 +170,9 @@ FalknerRematchText:
 	para "Since then I've g-"
 	line "otten stronger!"
 	
-	para "So! Do you want to"
-	line "take on my ultima-"
-	cont "te bird #MON team?"
+	para "Want to take on my"
+	line "ultimate bird"
+	cont "#MON team?"
 	done
 
 FalknerChallengeAccepted:
