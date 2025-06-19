@@ -539,6 +539,49 @@ DetermineMoveOrder:
 	jp c, .enemy_first
 	jr .speed_check
 
+.weather_check
+	ld de, wBattleMonSpeed
+
+	ld a, [wBattleWeather]
+	cp WEATHER_SUN
+	jr nz, .dont_boost_enemy_speed
+
+	ld hl, wBattleMonType1
+	ld a, [hli]
+	cp GRASS
+	jr z, .boost_player_speed
+
+	ld a, [hl]
+	cp GRASS
+	jr nz, .check_enemy_types
+
+.boost_player_speed
+	ld hl, wBattleMonSpeed
+	call ThreeHalfBoost
+	call LoadHLintoBattleMonTemp
+	ld de, wBattleMonTempStat
+
+.check_enemy_types
+	ld hl, wEnemyMonType1
+	ld a, [hli]
+	cp GRASS
+	jr z, .boost_enemy_speed
+
+	ld a, [hl]
+	cp GRASS
+	jr nz, .dont_boost_enemy_speed
+
+.boost_enemy_speed
+	ld hl, wEnemyMonSpeed
+	call ThreeHalfBoost
+	call LoadHLintoEnemyMonTemp
+	ld hl, wEnemyMonTempStat
+	jr .speed_check
+
+.dont_boost_enemy_speed
+	ld hl, wEnemyMonSpeed
+
+
 .speed_check
 	ld de, wBattleMonSpeed
 	ld hl, wEnemyMonSpeed
@@ -567,6 +610,32 @@ DetermineMoveOrder:
 
 .enemy_first
 	and a
+	ret
+
+ThreeHalfBoost:
+	ld a, [hli]
+	ld l, [hl]
+	ld h, a
+
+	ld b, h ; Copy value into bc
+	ld c, l
+	srl b ; Halve bc
+	rr c
+	add hl, bc ; 2/2 + 1/2 = 3/2
+	ret
+	
+LoadHLintoBattleMonTemp:
+	ld a, h
+	ld [wBattleMonTempStat], a
+	ld a, l
+	ld [wBattleMonTempStat + 1], a
+	ret
+
+LoadHLintoEnemyMonTemp:
+	ld a, h
+	ld [wEnemyMonTempStat], a
+	ld a, l
+	ld [wEnemyMonTempStat + 1], a
 	ret
 
 CheckContestBattleOver:
@@ -3734,6 +3803,48 @@ TryToRunAwayFromBattle:
 	jp .can_escape
 
 .no_flee_item
+
+	ld a, [wBattleWeather]
+	cp WEATHER_SUN
+	jr nz, .no_sun
+
+	push hl
+	ld hl, wBattleMonType1
+	ld a, [hli]
+	cp GRASS
+	jr z, .boost_player_speed
+
+	ld a, [hl]
+	cp GRASS
+	jr nz, .check_enemy_types
+
+.boost_player_speed
+	pop hl
+	call ThreeHalfBoost
+	call LoadHLintoBattleMonTemp
+	ld hl, wBattleMonTempStat
+	push hl
+
+.check_enemy_types
+	ld hl, wEnemyMonType1
+	ld a, [hli]
+	cp GRASS
+	jr z, .boost_enemy_speed
+
+	ld a, [hl]
+	cp GRASS
+	jr nz, .dont_boost_enemy_speed
+
+.boost_enemy_speed
+	ld hl, wEnemyMonSpeed
+	call ThreeHalfBoost
+	call LoadHLintoEnemyMonTemp
+	ld de, wEnemyMonTempStat
+
+.dont_boost_enemy_speed
+	pop hl
+.no_sun
+
 	ld a, [wNumFleeAttempts]
 	inc a
 	ld [wNumFleeAttempts], a

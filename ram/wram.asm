@@ -354,6 +354,10 @@ wBattleMon:: battle_struct wBattleMon
 
 	ds 2
 
+
+wBattleMonTempStat:: dw
+wEnemyMonTempStat:: dw
+	
 wWildMon:: db
 	ds 1
 
