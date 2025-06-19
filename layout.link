@@ -53,9 +53,9 @@ ROMX $09
 	"bank9"
 ROMX $0a
 	"bankA"
-	"Trainer Backpics"
 ROMX $0b
 	"bankB"
+	"Trainer Backpics"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
