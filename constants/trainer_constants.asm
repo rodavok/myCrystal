@@ -89,6 +89,9 @@ DEF KRIS EQU __trainer_class__
 	const CAL2
 	const CAL3
     const CAL4
+	const CAL5
+	const CAL6
+	const CAL7
 
 	trainerclass BRUNO ; d
 	const BRUNO1
@@ -659,6 +662,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass OFFICER ; 41
 	const KEITH
 	const DIRK
+	const COLE
 
 	trainerclass GRUNTF ; 42
 	const GRUNTF_1
@@ -680,5 +684,8 @@ DEF KRIS EQU __trainer_class__
 	const KRIS1
 	const KRIS2
 	const KRIS3
+	const KRIS4
+	const KRIS5
+	const KRIS6
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

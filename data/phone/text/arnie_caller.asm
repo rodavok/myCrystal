@@ -56,23 +56,23 @@ ArnieHangUpText:
 	line "huh?"
 	done
 
-ArnieSwarmText:
-	text "Boy, am I glad I"
-	line "caught you!"
+; ArnieSwarmText:
+; 	text "Boy, am I glad I"
+; 	line "caught you!"
 
-	para "A whole bunch of"
-	line "@"
-	text_ram wStringBuffer4
-	text " have"
+; 	para "A whole bunch of"
+; 	line "@"
+; 	text_ram wStringBuffer4
+; 	text " have"
 
-	para "appeared around"
-	line "@"
-	text_ram wStringBuffer5
-	text "!"
+; 	para "appeared around"
+; 	line "@"
+; 	text_ram wStringBuffer5
+; 	text "!"
 
-	para "You have to see"
-	line "this!"
-	done
+; 	para "You have to see"
+; 	line "this!"
+; 	done
 
 ArnieHaventSeenRareMonText:
 	text "I haven't had any"

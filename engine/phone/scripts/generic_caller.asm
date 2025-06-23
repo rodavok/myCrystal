@@ -879,20 +879,20 @@ GinaRocketRumorScript:
 	promptbutton
 	sjump PhoneScript_HangUpText_Female
 
-ArnieSwarmScript:
-	farwritetext ArnieSwarmText
-	promptbutton
-	sjump PhoneScript_HangUpText_Male
+; ArnieSwarmScript:
+; 	farwritetext ArnieSwarmText
+; 	promptbutton
+; 	sjump PhoneScript_HangUpText_Male
 
 RalphItemScript:
 	farwritetext RalphItemText
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 
-AnthonySwarmScript:
-	farwritetext AnthonySwarmText
-	promptbutton
-	sjump PhoneScript_HangUpText_Male
+; AnthonySwarmScript:
+; 	farwritetext AnthonySwarmText
+; 	promptbutton
+; 	sjump PhoneScript_HangUpText_Male
 
 PhoneScript_FoundItem_Male:
 	readvar VAR_CALLERID

@@ -6,6 +6,7 @@
 	const FASTSHIPCABINS_NNW_NNE_NE_SAILOR
 	const FASTSHIPCABINS_NNW_NNE_NE_GENTLEMAN
 	const FASTSHIPCABINS_NNW_NNE_NE_PHARMACIST
+	const FASTSHIPCABINS_NNW_NNE_NE_CAL_KRIS
 
 FastShipCabins_NNW_NNE_NE_MapScripts:
 	def_scene_scripts
@@ -264,6 +265,127 @@ BurglarCoreyAfterBattleText:
 	line "lost it…"
 	done
 
+KrisBoatSeenScript:
+	faceplayer
+	opentext
+	writetext KrisBoatSeenText
+	yesorno
+	iffalse .refused
+	waitbutton
+	closetext 
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .chikorita
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femcyndaquil
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS6
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femcyndaquil
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL5
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.totodile
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femtotodile
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS4
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femtotodile
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL6
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.chikorita
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .femchikorita
+	winlosstext KrisBeatenText, 0
+	loadtrainer KRIS_T, KRIS5
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.femchikorita
+	winlosstext KrisBeatenText, 0
+	loadtrainer CAL, CAL4
+	startbattle
+	reloadmapafterbattle
+	sjump .returnfrombattle
+.returnfrombattle
+	opentext 
+	writetext KrisAfterBattleText
+	waitbutton
+	closetext
+	setflag EVENT_BEAT_KRIS_BOAT_REMATCH
+	end
+.refused
+	writetext KrisBoatRefusedText
+	waitbutton
+	closetext
+.beaten
+	writetext KrisBoatRematchDoneText
+	waitbutton
+	closetext
+	end
+
+KrisBoatSeenText:
+	text "Hey! Remember me?"
+	line "I'm PROF. ELM's"
+	cont "assistant. I've"
+
+	para "already beaten ev-"
+	line "ery GYM LEADER in"
+	cont "KANTO. I filled up"
+
+	para "my #DEX too!"
+	line "There's nothing"
+	cont "left for me to do."
+
+	para "Care to entertain"
+	line "me? I'm warning"
+	cont "you,"
+
+	para "I'm really tough!"
+	done
+
+KrisBoatRefusedText:
+	text "Fair enough. Come"
+	line "challenge me when"
+	cont "you've cleared the"
+
+	para "KANTO GYM CHALL-"
+	line "ENGE."
+	done
+
+KrisBeatenText:
+	text "Well done!"
+	done
+
+KrisAfterBattleText:
+	text "Good battle."
+	line "I know whan I'm"
+	cont "beat. But I'm hap-"
+
+	para "py to have someone"
+	line "in my league."
+	done
+
+KrisBoatRematchDoneText:
+	text "There's only so"
+	line "much to do."
+	done
+
+
+
+
+
 FastShipCabins_NNW_NNE_NE_MapEvents:
 	db 0, 0 ; filler
 
@@ -287,3 +409,4 @@ FastShipCabins_NNW_NNE_NE_MapEvents:
 	object_event  4, 26, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipLazySailorScript, EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
 	object_event  7, 30, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGentlemanEdward, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	object_event  2, 30, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBurglarCorey, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
+	object_event  1, 15, SPRITE_CAL_KRIS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipCalKris, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND

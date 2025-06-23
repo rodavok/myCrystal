@@ -1,3 +1,5 @@
+	object_const_def
+	const ROUTE7_OFFICER
 Route7_MapScripts:
 	def_scene_scripts
 
@@ -8,6 +10,64 @@ Route7UndergroundPathSign:
 
 Route7LockedDoor:
 	jumptext Route7LockedDoorText
+
+OfficerColeScript:
+	faceplayer
+	opentext
+	checktime NITE
+	iffalse .NoFight
+	checkevent EVENT_BEAT_OFFICER_COLE
+	iftrue .AfterScript
+	playmusic MUSIC_OFFICER_ENCOUNTER
+	writetext OfficerColeSeenText
+	waitbutton
+	closetext
+	winlosstext OfficerColeWinText, 0
+	loadtrainer OFFICER, COLE
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_OFFICER_COLE
+	closetext
+	end
+
+.AfterScript:
+	writetext OfficerColeAfterText
+	waitbutton
+	closetext
+	end
+
+.NoFight:
+	writetext OfficerColeDaytimeText
+	waitbutton
+	closetext
+	end
+
+OfficerColeSeenText:
+	text "Halt!"
+	line "Who goes there?"
+	done
+
+OfficerColeWinText:
+	text "You're alright."
+	done
+
+OfficerColeAfterText:
+	text "Yep, I see nothing"
+	line "wrong today. You"
+
+	para "be good and stay"
+	line "out of trouble."
+	done
+
+OfficerColeDaytimeText:
+	text "We've had to step"
+	line "up patrols after"
+	cont "SLIPH CO. was tak-"
+
+	para "en over by TEAM"
+	line "ROCKET three years"
+	cont "ago."
+	done
 
 Route7UndergroundPathSignText:
 	text "What's this flyer?"
@@ -46,3 +106,4 @@ Route7_MapEvents:
 	bg_event  6,  9, BGEVENT_READ, Route7LockedDoor
 
 	def_object_events
+	object_event  12,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerColeScript, -1

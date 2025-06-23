@@ -1080,6 +1080,7 @@
 	const EVENT_BEAT_KRIS
 	const EVENT_BEAT_BUG_CATCHER_LUIS
 	const EVENT_BEAT_LASS_MARY
+	const EVENT_BEAT_OFFICER_COLE
 
 
 ; Unused: next 112 events

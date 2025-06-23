@@ -6398,17 +6398,19 @@ INCLUDE "engine/battle/move_effects/pursuit.asm"
 
 INCLUDE "engine/battle/move_effects/rapid_spin.asm"
 
-BattleCommand_HealMorn:
-	ld b, MORN_F
-	jr BattleCommand_TimeBasedHealContinue
+BattleCommand_HealWeather:
 
-BattleCommand_HealDay:
-	ld b, DAY_F
-	jr BattleCommand_TimeBasedHealContinue
+; BattleCommand_HealMorn:
+; 	ld b, MORN_F
+; 	jr BattleCommand_TimeBasedHealContinue
 
-BattleCommand_HealNite:
-	ld b, NITE_F
-	; fallthrough
+; BattleCommand_HealDay:
+; 	ld b, DAY_F
+; 	jr BattleCommand_TimeBasedHealContinue
+
+; BattleCommand_HealNite:
+; 	ld b, NITE_F
+; 	; fallthrough
 
 BattleCommand_TimeBasedHealContinue:
 ; Time- and weather-sensitive heal.
@@ -6432,15 +6434,15 @@ BattleCommand_TimeBasedHealContinue:
 	pop bc
 	jr z, .Full
 
-; Don't factor in time of day in link battles.
-	ld a, [wLinkMode]
-	and a
-	jr nz, .Weather
+; ; Don't factor in time of day in link battles.
+; 	ld a, [wLinkMode]
+; 	and a
+; 	jr nz, .Weather
 
-	ld a, [wTimeOfDay]
-	cp b
-	jr z, .Weather
-	dec c ; double
+; 	ld a, [wTimeOfDay]
+; 	cp b
+; 	jr z, .Weather
+; 	dec c ; double
 
 .Weather:
 	ld a, [wBattleWeather]

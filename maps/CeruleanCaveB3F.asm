@@ -28,6 +28,8 @@ CeruleanCaveB3F_MapEvents:
 	warp_event  1,  3, CERULEAN_CAVE_B2F, 6
 	warp_event  3, 11, CERULEAN_CAVE_B2F, 7
 
+	def_coord_events
+
 	def_bg_events
 
 	def_object_events

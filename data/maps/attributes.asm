@@ -709,7 +709,7 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
-	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $03, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $12, 0
 	map_attributes SilverCaveMewRoom, SILVER_CAVE_MEW_ROOM, $09, 0
 	map_attributes SeafoamCave, SEAFOAM_CAVE, $09, 0
 	map_attributes Route3Pokecenter1F, ROUTE_3_POKECENTER_1F, $00, 0
@@ -727,12 +727,12 @@ ENDM
 	map_attributes CeruleanCaveB5F, CERULEAN_CAVE_B5F, $12, 0
 	map_attributes CeruleanCaveB6F, CERULEAN_CAVE_B6F, $12, 0
 	map_attributes CeruleanCaveB7F, CERULEAN_CAVE_B7F, $12, 0
-	map_attributes SeafoamIslandsNorth, SEAFOAM_ISLANDS_NORTH, $3B, 19
-	map_attributes SeafoamIslands1F, SEAFOAM_ISLANDS_1F, $3B, 19
-	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $3B, 19
-	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $3B, 19
-	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $3B, 19
-	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 19
+	map_attributes SeafoamIslandsNorth, SEAFOAM_ISLANDS_NORTH, $3B, 0
+	map_attributes SeafoamIslands1F, SEAFOAM_ISLANDS_1F, $3B, 0
+	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $3B, 0
+	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $3B, 0
+	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $3B, 0
+	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 0
 
 
 

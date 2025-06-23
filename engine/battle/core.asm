@@ -557,7 +557,7 @@ DetermineMoveOrder:
 
 .boost_player_speed
 	ld hl, wBattleMonSpeed
-	call ThreeHalfBoost
+	call SpeedBoost
 	call LoadHLintoBattleMonTemp
 	ld de, wBattleMonTempStat
 
@@ -573,7 +573,7 @@ DetermineMoveOrder:
 
 .boost_enemy_speed
 	ld hl, wEnemyMonSpeed
-	call ThreeHalfBoost
+	call SpeedBoost
 	call LoadHLintoEnemyMonTemp
 	ld hl, wEnemyMonTempStat
 	jr .speed_check
@@ -612,16 +612,16 @@ DetermineMoveOrder:
 	and a
 	ret
 
-ThreeHalfBoost:
+SpeedBoost:
 	ld a, [hli]
 	ld l, [hl]
 	ld h, a
 
-	ld b, h ; Copy value into bc
-	ld c, l
-	srl b ; Halve bc
-	rr c
-	add hl, bc ; 2/2 + 1/2 = 3/2
+	; ld b, h ; Copy value into bc
+	; ld c, l
+	; srl b ; Halve bc
+	; rr c
+	add hl, hl ; multiply by 2  NOT 2/2 + 1/2 = 3/2
 	ret
 	
 LoadHLintoBattleMonTemp:
@@ -3820,7 +3820,7 @@ TryToRunAwayFromBattle:
 
 .boost_player_speed
 	pop hl
-	call ThreeHalfBoost
+	call SpeedBoost
 	call LoadHLintoBattleMonTemp
 	ld hl, wBattleMonTempStat
 	push hl
@@ -3837,7 +3837,7 @@ TryToRunAwayFromBattle:
 
 .boost_enemy_speed
 	ld hl, wEnemyMonSpeed
-	call ThreeHalfBoost
+	call SpeedBoost
 	call LoadHLintoEnemyMonTemp
 	ld de, wEnemyMonTempStat
 

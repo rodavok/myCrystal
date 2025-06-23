@@ -1183,7 +1183,7 @@ MagnetonEvosAttacks:
 
 FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SLASH
+	db 1, FOCUS_ENERGY
 	db 1, PECK
 	db 7, SAND_ATTACK
 	db 10, QUICK_ATTACK
