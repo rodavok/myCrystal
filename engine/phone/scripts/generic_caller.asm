@@ -884,10 +884,10 @@ GinaRocketRumorScript:
 ; 	promptbutton
 ; 	sjump PhoneScript_HangUpText_Male
 
-RalphItemScript:
-	farwritetext RalphItemText
-	promptbutton
-	sjump PhoneScript_HangUpText_Male
+; RalphItemScript:
+; 	farwritetext RalphItemText
+; 	promptbutton
+; 	sjump PhoneScript_HangUpText_Male
 
 ; AnthonySwarmScript:
 ; 	farwritetext AnthonySwarmText

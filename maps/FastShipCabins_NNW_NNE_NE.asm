@@ -313,17 +313,17 @@ KrisBoatSeenScript:
 	reloadmapafterbattle
 	sjump .returnfrombattle
 .femchikorita
-	winlosstext KrisBeatenText, 0
+	winlosstext KrisBoatBeatenText, 0
 	loadtrainer CAL, CAL4
 	startbattle
 	reloadmapafterbattle
 	sjump .returnfrombattle
 .returnfrombattle
 	opentext 
-	writetext KrisAfterBattleText
+	writetext KrisBoatAfterBattleText
 	waitbutton
 	closetext
-	setflag EVENT_BEAT_KRIS_BOAT_REMATCH
+	setflag ENGINE_KRIS_BOAT_REMATCH
 	end
 .refused
 	writetext KrisBoatRefusedText
@@ -364,11 +364,11 @@ KrisBoatRefusedText:
 	line "ENGE."
 	done
 
-KrisBeatenText:
+KrisBoatBeatenText:
 	text "Well done!"
 	done
 
-KrisAfterBattleText:
+KrisBoatAfterBattleText:
 	text "Good battle."
 	line "I know whan I'm"
 	cont "beat. But I'm hap-"
@@ -409,4 +409,4 @@ FastShipCabins_NNW_NNE_NE_MapEvents:
 	object_event  4, 26, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FastShipLazySailorScript, EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
 	object_event  7, 30, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGentlemanEdward, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	object_event  2, 30, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBurglarCorey, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
-	object_event  1, 15, SPRITE_CAL_KRIS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShipCalKris, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
+	object_event  1, 15, SPRITE_CAL_KRIS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KrisBoatSeenScript, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND

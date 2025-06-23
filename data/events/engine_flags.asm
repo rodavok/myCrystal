@@ -140,6 +140,7 @@ EngineFlags:
 	engine_flag wDailyFlags3, DAILYFLAGS3_BROCK_REMATCH_F
 	engine_flag wDailyFlags3, DAILYFLAGS3_BLAINE_REMATCH_F
 	engine_flag wDailyFlags3, DAILYFLAGS3_BLUE_REMATCH_F
+	engine_flag wDailyFlags3, DAILYFLAGS3_KRIS_BOAT_REMATCH_F
 
 	engine_flag wSwarmFlags, SWARMFLAGS_BUENAS_PASSWORD_F
 	engine_flag wSwarmFlags, SWARMFLAGS_GOLDENROD_DEPT_STORE_SALE_F
