@@ -163,9 +163,9 @@ GoldenrodDeptPikaPokefanMenu:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "PIKA DOLL   ¥3500@"
-	db "PIKA POSTER ¥7500@"
-	db "PIKA BED  ¥115000@"
+	db "DOLL   ¥3500@"
+	db "POSTER ¥7500@"
+	db "BED  ¥115000@"
 	
 GoldenrodDeptPikaPokefan_FinishScript:
 	waitsfx
@@ -309,7 +309,7 @@ GoldenrodDeptPikaPokefanShopText:
 	cont "merchandise!"
 
 	para "Want to take look"
-	cont "at mywares?"
+	cont "at my wares?"
 	done
 	
 GoldenrodDeptPikaPokefan_AskWhichPikaText:

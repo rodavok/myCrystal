@@ -217,6 +217,24 @@ TilesetIcePathAnim:
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw vTiles2 tile $31, WriteTileFromAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $D8, ReadTileToAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $D8, WriteTileFromAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $D9, ReadTileToAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $D9, WriteTileFromAnimBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
 	dw NULL,  DoneTileAnimation
 
 TilesetTowerAnim:
@@ -251,9 +269,9 @@ UnusedTilesetAnim5: ; unreferenced
 	dw NULL,  DoneTileAnimation
 
 TilesetCavernAnim:	
-	dw vTiles2 tile $76, ReadTileToAnimBuffer
+	dw vTiles2 tile $14, ReadTileToAnimBuffer
 	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw vTiles2 tile $76, WriteTileFromAnimBuffer
+	dw vTiles2 tile $14, WriteTileFromAnimBuffer
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -262,6 +280,7 @@ TilesetCavernAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
+
 
 
 TilesetBattleTowerOutsideAnim:
