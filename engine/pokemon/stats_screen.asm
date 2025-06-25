@@ -1,7 +1,7 @@
 	const_def 
-	const PINK_PAGE  ; 0
-	const GREEN_PAGE ; 1
-	const BLUE_PAGE  ; 2
+	const PINK_PAGE   ; 0
+	const GREEN_PAGE  ; 1
+	const BLUE_PAGE   ; 2
 	const ORANGE_PAGE ; 3
 DEF NUM_STAT_PAGES EQU const_value 
 
@@ -377,7 +377,8 @@ StatsScreen_JoypadAction:
 .d_left
 	ld a, c
 	dec c
-	and a ; cp PINK_PAGE ; First Page
+	and a ; 
+	cp PINK_PAGE ; First Page
 	jr nz, .set_page
 	ld c, ORANGE_PAGE ; last page
 	jr .set_page
@@ -556,7 +557,6 @@ StatsScreen_LoadGFX:
 .PageTilemap:
 	ld a, [wStatsScreenFlags]
 	maskbits NUM_STAT_PAGES
-	dec a
 	ld hl, .Jumptable
 	rst JumpTable
 	ret
@@ -1045,6 +1045,8 @@ StatsScreen_placeCaughtLevel:
 	ret   
 .MetUnknownLevelString:
 	db "@"
+
+
 
 
 IDNoString:
