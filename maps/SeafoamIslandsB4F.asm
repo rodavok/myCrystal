@@ -49,6 +49,10 @@ SeafoamIslandsB4F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 11,  9, SEAFOAM_ISLANDS_B3F, 6
+	warp_event 25,  3, SEAFOAM_ISLANDS_B3F, 7
+	warp_event  3, 16, SEAFOAM_ISLANDS_B4F, 3 ; Hole ??
+	warp_event  7, 16, SEAFOAM_ISLANDS_B4F, 4 ; Hole ??
 
 	def_coord_events
 
