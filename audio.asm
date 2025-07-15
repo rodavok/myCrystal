@@ -144,6 +144,12 @@ INCLUDE "audio/music/rbytrainerbattle.asm"
 INCLUDE "audio/music/dungeon1.asm"
 INCLUDE "audio/music/dungeon2.asm"
 INCLUDE "audio/music/dungeon3.asm"
+INCLUDE "audio/music/route47.asm"
+INCLUDE "audio/music/safarizonegate.asm"
+INCLUDE "audio/music/lugiabattle.asm"
+INCLUDE "audio/music/hoohbattle.asm"
+INCLUDE "audio/music/mewtwobattle.asm"
+
 
 SECTION "Extra Songs 1", ROMX
 

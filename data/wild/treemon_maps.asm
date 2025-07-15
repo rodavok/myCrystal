@@ -38,6 +38,8 @@ TreeMonMaps:
 	treemon_map BLACKTHORN_CITY,           TREEMON_SET_CITY
 	treemon_map SILVER_CAVE_OUTSIDE,       TREEMON_SET_CITY
 	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST
+	treemon_map ROUTE_47,				   TREEMON_SET_ROUTE
+	treemon_map ROUTE_48,				   TREEMON_SET_ROUTE
 	db -1
 
 RockMonMaps:
@@ -48,6 +50,7 @@ RockMonMaps:
 	treemon_map BURNED_TOWER_1F,		   TREEMON_SET_BURNED
 	treemon_map BURNED_TOWER_B1F,		   TREEMON_SET_BURNED
 	treemon_map GOLDENROD_SHORE,		   TREEMON_SET_ROCK
+	treemon_map CLIFF_CAVE,				   TREEMON_SET_ROCK
 
 	db -1
 

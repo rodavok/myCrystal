@@ -464,6 +464,10 @@ ENDM
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 	map_const GOLDENROD_PIER,							   13, 13
 	map_const GOLDENROD_PIER_GATE, 						    5,  4
+	map_const CLIFF_EDGE_GATE,                             10, 10 
+	map_const ROUTE_47,									   26, 18 
+	map_const ROUTE_48, 								   14, 12
+	map_const CLIFF_CAVE,                                  10, 18
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23

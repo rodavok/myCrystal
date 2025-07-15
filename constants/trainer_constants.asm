@@ -261,6 +261,7 @@ DEF KRIS EQU __trainer_class__
 	const CARA
 	const SOPHIE
 	const DONNA
+	const KAE
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -269,6 +270,7 @@ DEF KRIS EQU __trainer_class__
 	const JULIA
 	const VALERIE
 	const OLIVIA
+	const EDA
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY
@@ -476,6 +478,7 @@ DEF KRIS EQU __trainer_class__
 	const PARRY3
 	const ANTHONY4
 	const ANTHONY5
+	const DEVIN
 
 	trainerclass BIKER ; 2d
 	const DWAYNE
@@ -583,6 +586,7 @@ DEF KRIS EQU __trainer_class__
 	const TODD4
 	const TODD5
 	const QUENTIN
+	const GRANT
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

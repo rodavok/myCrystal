@@ -108,8 +108,13 @@
 	const MUSIC_RBY_WILD_BATTLE              ; 67
 	const MUSIC_RBY_TRAINER_BATTLE			 ; 68
 	const MUSIC_DUNGEON1					 ; 69
-	const MUSIC_DUNGEON2 
-	const MUSIC_DUNGEON3
+	const MUSIC_DUNGEON2 					 ; 6a
+	const MUSIC_DUNGEON3					 ; 6b
+	const MUSIC_ROUTE_47        			 ; 6c
+	const MUSIC_LUGIA_BATTLE                 ; 6d
+	const MUSIC_HOOH_BATTLE                  ; 6f
+	const MUSIC_SAFARI_ZONE_GATE             ; 70
+	const MUSIC_MEWTWO_BATTLE                ; 71
 DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)

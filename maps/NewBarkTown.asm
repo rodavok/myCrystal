@@ -37,9 +37,9 @@ NewBarkKrisCallback:
 	iftrue .KrisDisappears
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iffalse .KrisDisappears
-	appear NEWBARKTOWN_CAL_KRIS
 	checkflag ENGINE_PLAYER_IS_FEMALE
 	iftrue .Cal 
+	appear NEWBARKTOWN_CAL_KRIS
 	variablesprite SPRITE_CAL_KRIS, SPRITE_KRIS
 	special LoadUsedSpritesGFX
 	endcallback

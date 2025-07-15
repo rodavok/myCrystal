@@ -388,6 +388,14 @@ ENDM
 	map_attributes GoldenrodPier, GOLDENROD_PIER, $35, WEST
 	connection west, Route41, ROUTE_41, -7
 
+	map_attributes Route47, ROUTE_47, $35, NORTH
+	connection north, Route48, ROUTE_48, 0
+
+	map_attributes Route48, ROUTE_48, $35, SOUTH
+	connection south, Route47, ROUTE_47, 0
+
+
+
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
 	map_attributes SproutTower2F, SPROUT_TOWER_2F, $00, 0
@@ -733,6 +741,9 @@ ENDM
 	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $3B, 0
 	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $3B, 0
 	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 0
+	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $00, 0
+	map_attributes CliffCave, CLIFF_CAVE, $09, 0
+
 
 
 

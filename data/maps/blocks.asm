@@ -1123,3 +1123,15 @@ SeafoamIslandsB3F_Blocks:
 SeafoamIslandsB4F_Blocks:
 	INCBIN "maps/SeafoamIslandsB4F.blk"
 
+CliffEdgeGate_Blocks:
+	INCBIN "maps/CliffEdgeGate.blk"
+
+Route47_Blocks:
+	INCBIN "maps/Route47.blk"
+
+CliffCave_Blocks:
+	INCBIN "maps/CliffCave.blk"	
+
+Route48_Blocks:	
+	INCBIN "maps/Route48.blk"
+

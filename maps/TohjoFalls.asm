@@ -12,9 +12,9 @@ TohjoFalls_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 13, 15, ROUTE_27, 2
-	warp_event 25, 15, ROUTE_27, 3
-	warp_event  3,  5, TOHJO_FALLS_GIOVANNI_ROOM, 1
+	warp_event 19, 23, ROUTE_27, 2
+	warp_event 31, 23, ROUTE_27, 3
+	warp_event  9, 13, TOHJO_FALLS_GIOVANNI_ROOM, 1
 	
 
 	def_coord_events
@@ -22,5 +22,5 @@ TohjoFalls_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TohjoFallsMoonStone, EVENT_TOHJO_FALLS_MOON_STONE
+	object_event  8, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TohjoFallsMoonStone, EVENT_TOHJO_FALLS_MOON_STONE
 

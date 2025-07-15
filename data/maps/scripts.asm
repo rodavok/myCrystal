@@ -423,6 +423,9 @@ INCLUDE "maps/PewterMart.asm"
 INCLUDE "maps/PewterPokecenter1F.asm"
 INCLUDE "maps/PewterPokecenter2FBeta.asm"
 INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
+INCLUDE "maps/CliffEdgeGate.asm"
+INCLUDE "maps/CliffCave.asm"
+
 
 
 SECTION "Map Scripts 22", ROMX
@@ -436,6 +439,8 @@ INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/Route12.asm"
+INCLUDE "maps/Route47.asm"
+INCLUDE "maps/Route48.asm"
 
 
 SECTION "Map Scripts 23", ROMX
@@ -455,7 +460,6 @@ INCLUDE "maps/CinnabarPokecenter1F.asm"
 INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
 INCLUDE "maps/Route19FuchsiaGate.asm"
 INCLUDE "maps/SeafoamGym.asm"
-
 
 SECTION "Map Scripts 24", ROMX
 

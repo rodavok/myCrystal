@@ -112,4 +112,10 @@ Music:
 	dba Music_Dungeon1
 	dba Music_Dungeon2
 	dba Music_Dungeon3
+	dba Music_Route47HGSS
+	dba Music_LugiaBattleHGSS
+	dba Music_HoOhBattleHGSS
+	dba Music_SafariZoneGateHGSS
+	dba Music_MewtwoBattleStadium
+
 	assert_table_length NUM_MUSIC_SONGS

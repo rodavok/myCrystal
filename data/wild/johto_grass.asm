@@ -1739,3 +1739,95 @@ JohtoGrassWildMons:
 	end_grass_wildmons
 
 	db -1 ; end
+
+	def_grass_wildmons ROUTE_47
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 35, DITTO
+	db 35, FARFETCH_D
+	db 35, MILTANK
+	db 33, RATICATE
+	db 32, SPEAROW
+	db 34, FEAROW
+	db 34, GLOOM
+	; day
+	db 35, DITTO
+	db 35, FARFETCH_D
+	db 35, MILTANK
+	db 33, RATICATE
+	db 32, SPEAROW
+	db 34, FEAROW
+	db 34, GLOOM
+	; nite
+	db 35, DITTO
+	db 35, NOCTOWL
+	db 35, MILTANK
+	db 33, RATICATE
+	db 32, GLOOM
+	db 34, FEAROW
+	db 34, GLOOM
+	end_grass_wildmons
+
+	db -1 ; end
+
+
+	def_grass_wildmons ROUTE_48
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 24, FARFETCH_D
+	db 23, TAUROS
+	db 20, HOPPIP
+	db 22, VULPIX
+	db 21, FEAROW
+	db 22, SKIPLOOM
+	db 20, GIRAFARIG
+	; day
+	db 24, FARFETCH_D
+	db 23, TAUROS
+	db 20, HOPPIP
+	db 22, GROWLITHE
+	db 21, FEAROW
+	db 22, GLOOM
+	db 20, GIRAFARIG
+	; nite
+	db 24, NOCTOWL
+	db 23, TAUROS
+	db 20, GLOOM
+	db 22, HOUNDOUR
+	db 21, FEAROW
+	db 22, GLOOM
+	db 20, GIRAFARIG
+	end_grass_wildmons
+
+	db -1 ; end
+
+
+	def_grass_wildmons CLIFF_CAVE
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 22, GOLBAT
+	db 19, GEODUDE
+	db 20, MACHOP
+	db 22, KRABBY
+	db 21, GRAVELER
+	db 22, KINGLER
+	db 23, STEELIX
+	; day
+	db 22, GOLBAT
+	db 19, GEODUDE
+	db 20, MACHOP
+	db 22, KRABBY
+	db 21, GRAVELER
+	db 22, MACHOKE
+	db 23, STEELIX
+	; nite
+	db 22, GOLBAT
+	db 19, GEODUDE
+	db 20, MACHOP
+	db 22, WOOPER
+	db 21, MISDREAVUS
+	db 22, QUAGSIRE
+	db 23, STEELIX
+	end_grass_wildmons
+
+	db -1 ; end
