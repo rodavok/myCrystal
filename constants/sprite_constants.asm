@@ -105,6 +105,7 @@
 	const SPRITE_CHRIS_RUN ; 67
 	const SPRITE_KRIS_RUN ; 68
 	const SPRITE_ROCKET_BOSS ;69
+	const SPRITE_KRISTAL ; 6a
 DEF NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)

@@ -2,7 +2,8 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_RIVAL
-	const NEWBARKTOWN_CAL_KRIS
+	const NEWBARKTOWN_KRIS ; If Player is Male
+	const NEWBARKTOWN_CAL  ; If Player if Female
 
 
 NewBarkTown_MapScripts:
@@ -13,7 +14,7 @@ NewBarkTown_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, NewBarkTownFlypointCallback
-	callback MAPCALLBACK_OBJECTS, NewBarkKrisCallback
+	callback MAPCALLBACK_OBJECTS, NewBarkTownWhichGenderCallback
 
 
 NewBarkTownNoop1Scene:
@@ -32,26 +33,36 @@ NewBarkTownFlypointCallback:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
 
-NewBarkKrisCallback:
+NewBarkTownWhichGenderCallback:
 	checkevent EVENT_BEAT_KRIS
 	iftrue .KrisDisappears
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iffalse .KrisDisappears
 	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Cal 
-	appear NEWBARKTOWN_CAL_KRIS
-	variablesprite SPRITE_CAL_KRIS, SPRITE_KRIS
+	iftrue .Female
+	disappear NEWBARKTOWN_CAL
+	appear NEWBARKTOWN_KRIS
+	variablesprite SPRITE_CAL_KRIS, SPRITE_KRISTAL
 	special LoadUsedSpritesGFX
-	endcallback
-.Cal 
-	appear NEWBARKTOWN_CAL_KRIS
+	sjump .Done
+.Female:
+	disappear NEWBARKTOWN_KRIS
+	appear NEWBARKTOWN_CAL
 	variablesprite SPRITE_CAL_KRIS, SPRITE_CAL
 	special LoadUsedSpritesGFX
+.Done:
 	endcallback
-.KrisDisappears
-	disappear NEWBARKTOWN_CAL_KRIS
+.KrisDisappears:
+	disappear NEWBARKTOWN_KRIS
+	disappear NEWBARKTOWN_CAL
 	endcallback
 
+; NewBarkKrisCallback:
+; 	checkevent EVENT_BEAT_KRIS
+; 	iftrue .KrisDisappears
+; 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
+; 	iffalse .KrisDisappears
+;
 
 NewBarkTown_TeacherStopsYouScene1:
 	playmusic MUSIC_MOM
@@ -132,19 +143,52 @@ NewBarkTownTeacherScript:
 	closetext
 	end
 
+TalkToKrisScript:
+	faceplayer 
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
+	sjump KrisSeenScript
+.Female 
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL, 15
+	sjump KrisSeenScript
+
 KrisBattle3Scene:
-	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
-	applymovement NEWBARKTOWN_CAL_KRIS, NewBarkTownCalKris2StepsDownMovement
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
+	turnobject PLAYER, UP 
+	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris2StepsDownMovement
+	sjump KrisSeenScript
+.Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL, 15
+	turnobject PLAYER, UP 
+	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris2StepsDownMovement
 	sjump KrisSeenScript
 
 KrisBattle2Scene:
-	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
-	applymovement NEWBARKTOWN_CAL_KRIS, NewBarkTownCalKris1StepDownMovement
-	sjump KrisSeenScript
-KrisBattle1Scene:
-	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL_KRIS, 15
-KrisSeenScript:
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
 	turnobject PLAYER, UP 
+	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris1StepDownMovement
+	sjump KrisSeenScript
+.Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL, 15
+	turnobject PLAYER, UP 
+	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris1StepDownMovement
+	sjump KrisSeenScript
+
+KrisBattle1Scene:
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
+	turnobject PLAYER, UP 
+	sjump KrisSeenScript
+.Female
+	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL, 15
+	turnobject PLAYER, UP 
+KrisSeenScript:
 	opentext 
 	writetext KrisSeenText
 	promptbutton
@@ -203,7 +247,8 @@ KrisSeenScript:
 	setscene SCENE_NEWBARKTOWN_NOOP
 	setevent EVENT_BEAT_KRIS
 	special FadeBlackQuickly
-	disappear NEWBARKTOWN_CAL_KRIS
+	disappear NEWBARKTOWN_KRIS
+	disappear NEWBARKTOWN_CAL
 	special ReloadSpritesNoPalettes
 	pause 15
 	special FadeInQuickly
@@ -447,5 +492,7 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event 17,  6, SPRITE_CAL_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 3, KrisSeenScript, EVENT_BEAT_KRIS
+	object_event 17,  6, SPRITE_CAL_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 3, TalkToKrisScript, EVENT_COPYCAT_1
+	object_event 17,  6, SPRITE_CAL_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 3, TalkToKrisScript, EVENT_COPYCAT_2
+
 
