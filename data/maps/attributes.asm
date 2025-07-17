@@ -389,10 +389,10 @@ ENDM
 	connection west, Route41, ROUTE_41, -7
 
 	map_attributes Route47, ROUTE_47, $35, NORTH
-	connection north, Route48, ROUTE_48, 0
+	connection north, Route48, ROUTE_48, -2
 
 	map_attributes Route48, ROUTE_48, $35, SOUTH
-	connection south, Route47, ROUTE_47, 0
+	connection south, Route47, ROUTE_47, 2
 
 
 
@@ -741,7 +741,7 @@ ENDM
 	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $3B, 0
 	map_attributes SeafoamIslandsB3F, SEAFOAM_ISLANDS_B3F, $3B, 0
 	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 0
-	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $00, 0
+	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $2E, 0
 	map_attributes CliffCave, CLIFF_CAVE, $09, 0
 
 

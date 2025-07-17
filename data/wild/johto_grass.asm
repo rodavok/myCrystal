@@ -1738,8 +1738,6 @@ JohtoGrassWildMons:
 	db 54, SNEASEL
 	end_grass_wildmons
 
-	db -1 ; end
-
 	def_grass_wildmons ROUTE_47
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1767,8 +1765,6 @@ JohtoGrassWildMons:
 	db 34, FEAROW
 	db 34, GLOOM
 	end_grass_wildmons
-
-	db -1 ; end
 
 
 	def_grass_wildmons ROUTE_48
@@ -1798,8 +1794,6 @@ JohtoGrassWildMons:
 	db 22, GLOOM
 	db 20, GIRAFARIG
 	end_grass_wildmons
-
-	db -1 ; end
 
 
 	def_grass_wildmons CLIFF_CAVE

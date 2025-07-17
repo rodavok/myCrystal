@@ -261,7 +261,6 @@ DEF KRIS EQU __trainer_class__
 	const CARA
 	const SOPHIE
 	const DONNA
-	const KAE
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -442,6 +441,7 @@ DEF KRIS EQU __trainer_class__
 	const TERU
 	const HUGH
 	const MARKUS
+	const KAE
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL2_1_CHIKORITA

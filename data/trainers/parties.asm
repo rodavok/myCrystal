@@ -1293,12 +1293,6 @@ CooltrainerFGroup:
 	db 40, ARCANINE, FLAME_WHEEL, CRUNCH, HEADBUTT, DIG
 	db -1 ; end
 
-	; COOLTRAINERF (23)
-	db "KAE@", TRAINERTYPE_NORMAL
-	db 36, MAGMAR
-	db 36, ELECTABUZZ
-	db -1 ; end
-
 BeautyGroup:
 	; BEAUTY (1)
 	db "VICTORIA@", TRAINERTYPE_NORMAL
@@ -1339,8 +1333,9 @@ BeautyGroup:
 
 	; BEAUTY (7)
 	db "EDA@", TRAINERTYPE_NORMAL
-	db 37, CLOYSTER
-	db 40, ONIX
+	db 27, CLOYSTER
+	db 30, ONIX
+	db -1 ; end
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
@@ -2331,6 +2326,12 @@ SuperNerdGroup:
 	db 19, SLOWPOKE,   CURSE, WATER_GUN, GROWL, STRENGTH
 	db -1 ; end
 
+	; SUPER_NERD (23)
+	db "KAE@", TRAINERTYPE_NORMAL
+	db 28, MAGMAR
+	db 28, ELECTABUZZ
+	db -1 ; end
+
 Rival2Group:
 	; RIVAL2 (1)
 	db "?@", TRAINERTYPE_MOVES
@@ -2554,9 +2555,9 @@ HikerGroup:
 
 	; HIKER (23)
 	db "DEVIN@", TRAINERTYPE_NORMAL
-	db 35, DUNSPARCE
-	db 35, DUNSPARCE
-	db 35, DUNSPARCE
+	db 29, DUNSPARCE
+	db 29, DUNSPARCE
+	db 29, DUNSPARCE
 	db -1 ; end
 
 BikerGroup:
@@ -3123,8 +3124,8 @@ CamperGroup:
 
 	; CAMPER (17)
 	db "GRANT@", TRAINERTYPE_NORMAL
-	db 37, SKIPLOOM
-	db 37, MARILL
+	db 27, SKIPLOOM
+	db 30, MARILL
 	db -1 ; end	
 
 ExecutiveFGroup:

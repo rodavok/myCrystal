@@ -260,6 +260,6 @@ MonMenuIconPals:
 	icon_pals PINK, GREEN   ; LICKING
 	assert_table_length NUM_POKEMON
 
-	icon_pals RED,    RED   ; 252
-	icon_pals GREEN,  BLUE  ; EGG
-	icon_pals RED,    RED   ; 254
+	icon_pals RED,  BLUE   ; EGG
+	; icon_pals RED,  BLUE  ; EGG
+	; icon_pals PURPLE,    BLUE   ; 254 

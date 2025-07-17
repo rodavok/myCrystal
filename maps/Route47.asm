@@ -33,13 +33,13 @@ TrainerCamperGrant:
 	closetext
 	end
 
-TrainerCooltrainerFKae:
-	trainer COOLTRAINERF, KAE, EVENT_BEAT_COOLTRAINERF_KAE, CooltrainerFKaeSeenText, CooltrainerFKaeBeatenText, 0, .Script
+TrainerSuperNerdKae:
+	trainer SUPER_NERD, KAE, EVENT_BEAT_SUPERNERD_KAE, SuperNerdKaeSeenText, SuperNerdKaeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext CooltrainerFKaeAfterBattleText
+	writetext SuperNerdKaeAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -111,17 +111,17 @@ CamperGrantAfterBattleText:
 	done
 
 
-CooltrainerFKaeSeenText:
-	text "I'm much stronger"
-	line "from training"
-	cont "out here!"
+SuperNerdKaeSeenText:
+	text "There could be"
+	line "rare #MON out"
+	cont "here… "
 	done
 
-CooltrainerFKaeBeatenText:
+SuperNerdKaeBeatenText:
 	text "You're strong too!"
 	done
 
-CooltrainerFKaeAfterBattleText:
+SuperNerdKaeAfterBattleText:
 	text "I figured you were"
 	line "an ordinary lone"
 	cont "trainer."
@@ -135,7 +135,7 @@ BeautyEdaSeenText:
 	cont "friend are as wide"
 
 	para "and as deep as the"
-	cont "ocean."
+	line "ocean."
 	done
 
 BeautyEdaBeatenText:
@@ -160,7 +160,7 @@ Route47_MapEvents:
 	warp_event 38, 13, CLIFF_CAVE, 4
 	warp_event 26, 15, CLIFF_CAVE, 5
 	warp_event 26, 13, CLIFF_CAVE, 7
-	warp_event 38, 29, CLIFF_CAVE, 10
+	warp_event 40, 29, CLIFF_CAVE, 10
 	warp_event 46, 23, CLIFF_EDGE_GATE, 3
 
 	def_coord_events
@@ -169,10 +169,10 @@ Route47_MapEvents:
 
 	def_object_events
 	object_event 39, 23, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerDevin, -1
-	object_event 28, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerCamperGrant, -1
-	object_event 39, 14, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerFKae, -1
+	object_event 28, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerCamperGrant, -1
+	object_event 39, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdKae, -1
 	object_event 15,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBeautyEda, -1
-	object_event 25, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Revive, REVIVE, -1
-	object_event 23, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Pearl, PEARL, -1
-	object_event  4, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Stardust, STARDUST, -1
-	object_event  5,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47EggTicket, EGG_TICKET, -1
+	object_event 25, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Revive, REVIVE, EVENT_ROUTE_47_REVIVE
+	object_event 23, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Pearl, PEARL, EVENT_ROUTE_47_PEARL
+	object_event  4, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47Stardust, STARDUST, EVENT_ROUTE_47_STARDUST
+	object_event  5,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route47EggTicket, EGG_TICKET, EVENT_ROUTE_47_EGG_TICKET

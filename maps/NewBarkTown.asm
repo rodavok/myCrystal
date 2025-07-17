@@ -154,6 +154,8 @@ TalkToKrisScript:
 	sjump KrisSeenScript
 
 KrisBattle3Scene:
+	checkflag EVENT_BEAT_KRIS
+	iftrue .BeatKris
 	checkflag ENGINE_PLAYER_IS_FEMALE
 	iftrue .Female
 	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
@@ -165,8 +167,12 @@ KrisBattle3Scene:
 	turnobject PLAYER, UP 
 	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris2StepsDownMovement
 	sjump KrisSeenScript
+.BeatKris
+	end
 
 KrisBattle2Scene:
+	checkflag EVENT_BEAT_KRIS
+	iftrue .BeatKris
 	checkflag ENGINE_PLAYER_IS_FEMALE
 	iftrue .Female
 	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
@@ -178,13 +184,19 @@ KrisBattle2Scene:
 	turnobject PLAYER, UP 
 	applymovement NEWBARKTOWN_KRIS, NewBarkTownCalKris1StepDownMovement
 	sjump KrisSeenScript
+.BeatKris
+	end
 
 KrisBattle1Scene:
+	checkflag EVENT_BEAT_KRIS
+	iftrue .BeatKris
 	checkflag ENGINE_PLAYER_IS_FEMALE
 	iftrue .Female
 	showemote EMOTE_SHOCK, NEWBARKTOWN_KRIS, 15
 	turnobject PLAYER, UP 
 	sjump KrisSeenScript
+.BeatKris
+	end
 .Female
 	showemote EMOTE_SHOCK, NEWBARKTOWN_CAL, 15
 	turnobject PLAYER, UP 
