@@ -44,8 +44,19 @@ BattleCommand_Teleport:
 
 .Enemy:
 ; Wildmons don't have anything to switch to, so they will run away
+;But! 
 	ld a, [wBattleMode]
 	dec a ; WILDMON
+	;Should fail sometimes if the wildmon is a lower level
+	; call BattleRandom
+ 	; cp c
+ 	; jr nc, .loop_enemy
+ 	; ; b = player level / 4
+ 	; srl b
+ 	; srl b
+ 	; cp b
+	; jp c, FailedTeleport
+	;Otherwise success
 	jp z, .run_away
 
 	call CheckAnyOtherAliveEnemyMonsTele

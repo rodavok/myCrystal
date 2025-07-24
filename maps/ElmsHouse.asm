@@ -1,6 +1,7 @@
 	object_const_def
 	const ELMSHOUSE_ELMS_WIFE
 	const ELMSHOUSE_ELMS_SON
+	const DEBUG_MAN
 
 ElmsHouse_MapScripts:
 	def_scene_scripts
@@ -79,6 +80,35 @@ ElmsHousePCText:
 	cont "search papers."
 	done
 
+DebugGuyScript:
+	faceplayer
+	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
+	iftrue .FlagIsWrong
+	opentext
+	writetext noclue
+	waitbutton 
+	closetext
+	end
+.FlagIsWrong:
+	opentext
+	writetext FlagIsWrong
+	waitbutton
+	closetext
+	clearevent EVENT_GOT_SS_TICKET_FROM_ELM
+	specialphonecall SPECIALCALL_SSTICKET
+	end
+
+
+FlagIsWrong:
+	text "somehow, the flag"
+	line "was incorrectlyset"
+	done
+
+noclue:
+	text "i have no clue"
+	line "what is going on"
+	done
+
 ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -96,3 +126,4 @@ ElmsHouse_MapEvents:
 	def_object_events
 	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
 	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+	object_event  3,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, DebugGuyScript, -1

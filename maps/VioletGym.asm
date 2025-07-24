@@ -167,8 +167,8 @@ FalknerRematchText:
 	line "Your GYM CHALLENGE"
 	cont "started here."
 
-	para "Since then I've g-"
-	line "otten stronger!"
+	para "Since then I've"
+	line "gotten stronger!"
 	
 	para "Want to take on my"
 	line "ultimate bird"
@@ -195,8 +195,8 @@ FalknerWinLossText:
 
 FalknerWinLossText2:
 	text "Even now, you're"
-	line "soaring higher th-"
-	cont "an me..."
+	line "soaring higher"
+	cont "than me..."
 
 	para "You really"
 	line "are the"

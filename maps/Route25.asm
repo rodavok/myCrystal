@@ -257,6 +257,7 @@ Route25SuicuneBattleScript:
 	startbattle
 	dontrestartmapmusic
 	disappear ROUTE25_SUICUNE
+	reloadmapafterbattle
 	setevent EVENT_FOUGHT_SSUICUNE
 	pause 20
 	playmapmusic

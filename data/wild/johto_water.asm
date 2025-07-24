@@ -279,4 +279,13 @@ JohtoWaterWildMons:
 	db 20, TENTACOOL
 	db 20, TENTACRUEL
 	db 20, MANTINE
+
+
+	def_water_wildmons ROUTE_47
+	db 10 percent ; encounter rate
+	db 25, TENTACOOL
+	db 20, SEEL
+	db 25, STARYU
+	end_water_wildmons
+
 	db -1 ; end

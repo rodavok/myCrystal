@@ -163,9 +163,9 @@ GoldenrodDeptPikaPokefanMenu:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "DOLL   ¥3500@"
-	db "POSTER ¥7500@"
-	db "BED  ¥115000@"
+	db "DOLL   ¥3.5k@"
+	db "POSTER ¥7.5k@"
+	db "BED   ¥11.5k@"
 	
 GoldenrodDeptPikaPokefan_FinishScript:
 	waitsfx
@@ -329,8 +329,9 @@ GoldenrodDeptPikaPokefan_AlreadyHaveDecoText:
 GoldenrodDeptPikaPokefan_HereYouGoText:
 	text "Here you go! We"
 	line "will deliver this"
-	cont "item to your home"
-	cont "without delay!"
+	
+	para "item to your home"
+	line "without delay!"
 	done
 
 GoldenrodDeptPikaPokefanNotEnoughMoneyText:

@@ -436,10 +436,7 @@ _MayPassWhirlpoolText::
 	done
 
 _AskWhirlpoolText::
-	text "A whirlpool is in"
-	line "the way."
-
-	para "Want to use"
+	text "Want to use"
 	line "WHIRLPOOL?"
 	done
 
@@ -454,11 +451,8 @@ _HeadbuttNothingText::
 	done
 
 _AskHeadbuttText::
-	text "A #MON could be"
-	line "in this tree."
-
-	para "Want to HEADBUTT"
-	line "it?"
+	text "Want to HEADBUTT"
+	line "this tree?"
 	done
 
 _UseRockSmashText::
@@ -473,10 +467,7 @@ _MaySmashText::
 	done
 
 _AskRockSmashText::
-	text "This rock looks"
-	line "breakable."
-
-	para "Want to use ROCK"
+	text "Want to use ROCK"
 	line "SMASH?"
 	done
 
@@ -514,10 +505,7 @@ _GotOffBikeText::
 	done
 
 _AskCutText::
-	text "This tree can be"
-	line "CUT!"
-
-	para "Want to use CUT?"
+	text "Want to use CUT?"
 	done
 
 _CanCutText::

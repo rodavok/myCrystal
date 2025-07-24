@@ -1906,6 +1906,7 @@ Music_NoteType:
 ; params: 2
 	; note length
 	call GetMusicByte
+
 	ld hl, CHANNEL_NOTE_LENGTH
 	add hl, bc
 	ld [hl], a
@@ -1954,6 +1955,7 @@ Music_Tempo:
 ; global tempo
 ; params: 2
 ;	de: tempo
+
 	call GetMusicByte
 	ld d, a
 	call GetMusicByte
@@ -2155,6 +2157,12 @@ GetFrequency:
 	and $f
 	; add current octave
 	add d
+    ; MODIFICATION: Lower pitch by one octave for 2x speed
+	; Since Game Boy pitch works inversely (higher values = lower pitch),
+	; we need to ADD 1 to make it one octave lower
+	; This works!! Keep it!!
+	inc a
+
 	push af ; we'll use this later
 	; get starting octave
 	ld hl, CHANNEL_TRANSPOSITION
@@ -2183,6 +2191,7 @@ GetFrequency:
 	rr e
 	inc a
 	jr .loop
+
 
 .ok
 	ld a, d
@@ -2278,11 +2287,13 @@ SetGlobalTempo:
 	pop bc ; restore current channel
 	ret
 
+
 Tempo:
 ; input:
 ; 	de: note length
 	; update Tempo
-	ld hl, CHANNEL_TEMPO * 4 ;slower cuz i play at a high speed
+
+	ld hl, CHANNEL_TEMPO  * 4 ;slower cuz i play at a high speed
 	add hl, bc
 	ld [hl], e
 	inc hl

@@ -233,12 +233,4 @@ KantoWaterWildMons:
 	db 42, HORSEA
 	db 44, DEWGONG
 	end_water_wildmons
-
-
-	def_water_wildmons ROUTE_47
-	db 10 percent ; encounter rate
-	db 25, TENTACOOL
-	db 20, SEEL
-	db 25, STARYU
-	end_water_wildmons
 	db -1 ; end

@@ -1754,9 +1754,9 @@ StarmieEvosAttacks:
 	db 25, SWIFT
 	db 31, BUBBLEBEAM
 	db 37, CONFUSE_RAY
-	db 40, MINIMIZE
-	db 45, LIGHT_SCREEN
-	db 50, HYDRO_PUMP
+	db 42, MINIMIZE
+	db 47, LIGHT_SCREEN
+	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 MrMimeEvosAttacks:

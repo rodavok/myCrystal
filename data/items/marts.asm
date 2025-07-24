@@ -214,16 +214,14 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 9 ; # items
+	db 7 ; # items
 	db RAGECANDYBAR
+	db ENERGYPOWDER
+	db HEAL_POWDER
 	db ENERGY_ROOT
 	db REVIVAL_HERB
 	db ULTRA_BALL
 	db FLOWER_MAIL
-	db FIRE_STONE
-	db WATER_STONE
-	db LEAF_STONE
-	db THUNDERSTONE
 	db -1 ; end
 
 MartBlackthorn:

@@ -11,6 +11,7 @@ DEF GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_PRICE EQU 300
 	const GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	const GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	const GOLDENRODUNDERGROUND_GRANNY
+	const GOLDENRODUNDERGROUND_DOLL_LASS
 
 GoldenrodUnderground_MapScripts:
 	def_scene_scripts
@@ -63,6 +64,7 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	disappear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
 	endcallback
 
 .Monday:
@@ -74,6 +76,8 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	disappear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
+
 	endcallback
 
 .Tuesday:
@@ -81,6 +85,7 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	appear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
 	endcallback
 
 .Wednesday:
@@ -88,6 +93,7 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	disappear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_GRANNY
+	appear GOLDENRODUNDERGROUND_DOLL_LASS
 	endcallback
 
 .Thursday:
@@ -95,6 +101,7 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	appear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
 	endcallback
 
 .Friday:
@@ -102,6 +109,7 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	disappear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
 	endcallback
 
 .Saturday:
@@ -109,6 +117,8 @@ GoldenrodUndergroundCheckDayOfWeekCallback:
 	appear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
 	disappear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	appear GOLDENRODUNDERGROUND_GRANNY
+	disappear GOLDENRODUNDERGROUND_DOLL_LASS
+
 	endcallback
 
 TrainerSupernerdEric:
@@ -418,6 +428,141 @@ GoldenrodUndergroundHiddenSuperPotion:
 GoldenrodUndergroundHiddenAntidote:
 	hiddenitem ANTIDOTE, EVENT_GOLDENROD_UNDERGROUND_HIDDEN_ANTIDOTE
 
+GoldenrodUndergroundDollScript:
+	faceplayer
+	opentext
+	writetext GoldenrodUndergroundDollShopText
+	waitbutton
+GoldenrodUndergroundDoll_LoopScript:
+	writetext GoldenrodUndergroundDoll_AskWhichDollText
+	special PlaceMoneyTopRight
+	loadmenu GoldenrodUndergroundDollMenu
+	verticalmenu
+	closewindow
+	ifequal 1, .Doll1
+	ifequal 2, .Doll2
+	ifequal 3, .Doll3
+	jump GoldenrodUndergroundDoll_Cancel
+	
+.Doll1
+	checkmoney YOUR_MONEY, 3500
+	ifequal HAVE_LESS, GoldenrodUndergroundDollNotEnoughMoney
+	writetext GoldenrodUndergroundDoll_AreYouSureText
+	yesorno
+	iffalse GoldenrodUndergroundDoll_Cancel
+	checkevent EVENT_DECO_WEEDLE_DOLL
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_WEEDLE_DOLL
+	takemoney YOUR_MONEY, 3500
+	jump GoldenrodUndergroundDoll_FinishScript
+	end
+	
+.Doll2
+	checkmoney YOUR_MONEY, 3500
+	ifequal HAVE_LESS, GoldenrodUndergroundDollNotEnoughMoney
+	writetext GoldenrodUndergroundDoll_AreYouSureText
+	yesorno
+	iffalse GoldenrodUndergroundDoll_Cancel
+	checkevent EVENT_DECO_POLIWAG_DOLL
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_POLIWAG_DOLL
+	takemoney YOUR_MONEY, 3500
+	jump GoldenrodUndergroundDoll_FinishScript
+	end
+	
+.Doll3
+	checkmoney YOUR_MONEY, 3500
+	ifequal HAVE_LESS, GoldenrodUndergroundDollNotEnoughMoney
+	writetext GoldenrodUndergroundDoll_AreYouSureText
+	yesorno
+	iffalse GoldenrodUndergroundDoll_Cancel
+	checkevent EVENT_DECO_ODDISH_DOLL
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_ODDISH_DOLL
+	takemoney YOUR_MONEY, 3500
+	jump GoldenrodUndergroundDoll_FinishScript
+	end
+	
+.AlreadyHaveDecorItem
+	writetext GoldenrodUndergroundDoll_AlreadyHaveDecoText
+	waitbutton
+	jump GoldenrodUndergroundDoll_LoopScript
+	
+		
+GoldenrodUndergroundDollMenu:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 4, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "WEEDLE   ¥3.5k@"
+	db "POLIWAG  ¥3.5k@"
+	db "ODDISH   ¥3.5k@"
+	
+GoldenrodUndergroundDoll_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodUndergroundDoll_HereYouGoText
+	waitbutton
+	jump GoldenrodUndergroundDoll_LoopScript
+
+GoldenrodUndergroundDoll_Cancel:
+	writetext GoldenrodUndergroundDollTakeCare
+	waitbutton
+	closetext
+	end
+		
+GoldenrodUndergroundDollNotEnoughMoney:
+	writetext GoldenrodUndergroundDollNotEnoughMoneyText
+	waitbutton
+	closetext
+	end
+
+GoldenrodUndergroundDollShopText:
+	text "I've got the"
+	line "cutest DOLLs in"
+	cont "all of JOHTO!"
+
+	para "Want to check"
+	cont "them out?"
+	done
+	
+GoldenrodUndergroundDoll_AskWhichDollText:
+	text "Which DOLL would"
+	line "you like?"
+	done
+	
+GoldenrodUndergroundDoll_AreYouSureText:
+	text "Are you sure?"
+	done
+
+GoldenrodUndergroundDoll_AlreadyHaveDecoText:
+	text "You already have"
+	line "this DOLL!"
+	done
+
+GoldenrodUndergroundDoll_HereYouGoText:
+	text "Here you go! We"
+	line "will deliver this"
+	
+	para "item to your home"
+	line "without delay!"
+	done
+
+GoldenrodUndergroundDollNotEnoughMoneyText:
+	text "I'm sorry, but it"
+	line "seems you don't"
+	cont "have enough money."
+	done
+	
+GoldenrodUndergroundDollTakeCare:
+	text "It was a pleasure."
+	line "Take care!"
+	done
+
 SupernerdEricSeenText:
 	text "I got booted out"
 	line "of the GAME COR-"
@@ -677,3 +822,4 @@ GoldenrodUnderground_MapEvents:
 	object_event  7, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlderHaircutBrotherScript, EVENT_GOLDENROD_UNDERGROUND_OLDER_HAIRCUT_BROTHER
 	object_event  7, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoungerHaircutBrotherScript, EVENT_GOLDENROD_UNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	object_event  7, 21, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BitterMerchantScript, EVENT_GOLDENROD_UNDERGROUND_GRANNY
+	object_event  7, 21, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodUndergroundDollScript, EVENT_GOLDENROD_UNDERGROUND_DOLL_LASS
