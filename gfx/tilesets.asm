@@ -321,6 +321,13 @@ INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
 TilesetRuinsOfAlphColl::
 INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 
+TilesetFacilityRBYGFX::
+INCBIN "gfx/tilesets/facility_rby.2bpp.lz"
+TilesetFacilityRBYMeta::
+INCBIN "data/tilesets/facility_rby_metatiles.bin"
+TilesetFacilityRBYColl::
+INCLUDE "data/tilesets/facility_rby_collision.asm"
+
 
 SECTION "Tileset Data 8", ROMX
 
@@ -356,3 +363,4 @@ TilesetCavernMeta::
 INCBIN "data/tilesets/cavern_metatiles.bin"
 TilesetCavernColl::
 INCLUDE "data/tilesets/cavern_collision.asm"
+

@@ -1,4 +1,4 @@
-#!/usr/bin/gawk -f
+#!/usr/bin/awk -f
 
 # Usage:  tools/free_space.awk [BANK=<bank_spec>] pokecrystal.map
 

@@ -53,4 +53,5 @@ Tilesets::
 	tileset TilesetMuseum
 	tileset TilesetViridianForest
 	tileset TilesetCavern
+	tileset TilesetFacilityRBY
 	assert_table_length NUM_TILESETS + 1

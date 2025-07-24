@@ -228,6 +228,7 @@ ENDM
 	map_const CERULEAN_CAVE_B5F,						  15, 9
 	map_const CERULEAN_CAVE_B6F,						  15, 9
 	map_const CERULEAN_CAVE_B7F,						  15, 9
+	map_const POWER_PLANT_BF1, 							  20, 8 
 
 
 

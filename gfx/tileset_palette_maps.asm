@@ -114,6 +114,9 @@ INCLUDE "gfx/tilesets/viridianforest_palette_map.asm"
 TilesetCavernPalMap:
 INCLUDE "gfx/tilesets/cavern_palette_map.asm"
 
+TilesetFacilityRBYPalMap:
+INCLUDE "gfx/tilesets/facility_rby_palette_map.asm"
+
 MapGroupPalettes: ; unreferenced
 ; entries correspond to MAPGROUP_* constants
 rept NUM_MAP_GROUPS
