@@ -743,6 +743,8 @@ ENDM
 	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 0
 	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $2E, 0
 	map_attributes CliffCave, CLIFF_CAVE, $09, 0
+	map_attributes PowerPlantB1F, POWER_PLANT_B1F, $00, 0
+
 
 
 

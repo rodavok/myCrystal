@@ -1330,4 +1330,32 @@ KantoGrassWildMons:
 	db 44, DEWGONG
 	end_grass_wildmons
 
+	def_grass_wildmons POWER_PLANT_B1F
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 42, MAGNEMITE
+	db 43, VOLTORB
+	db 44, PIKACHU
+	db 44, MAGNETON
+	db 42, GRIMER
+	db 42, ELECTABUZZ
+	db 46, RAICHU
+	; day
+	db 42, MAGNEMITE
+	db 43, VOLTORB
+	db 44, PIKACHU
+	db 44, MAGNETON
+	db 42, GRIMER
+	db 42, RAICHU
+	db 46, ELECTABUZZ
+	; nite
+	db 42, MAGNEMITE
+	db 43, VOLTORB
+	db 44, GRIMER
+	db 44, MAGNETON
+	db 46, MUK
+	db 42, ELECTABUZZ
+	db 46, RAICHU
+	end_grass_wildmons
+
 	db -1 ; end

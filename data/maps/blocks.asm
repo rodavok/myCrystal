@@ -1135,3 +1135,6 @@ CliffCave_Blocks:
 Route48_Blocks:	
 	INCBIN "maps/Route48.blk"
 
+PowerPlantB1F_Blocks:
+	INCBIN "maps/PowerPlantB1F.blk"
+

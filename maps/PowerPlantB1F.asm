@@ -14,17 +14,17 @@
     const POWERPLANT_POKEBALL4
     const POWERPLANT_POKEBALL5
 
-PowerplantB1F_MapScripts:
+PowerPlantB1F_MapScripts:
 	def_scene_scripts
-	scene_script PowerplantB1FNoopScene ; unusable
+	scene_script PowerPlantB1FNoopScene ; unusable
 
 	def_callbacks
-    callback MAPCALLBACK_OBJECTS, PowerplantB1FZapdosCallback
+    callback MAPCALLBACK_OBJECTS, PowerPlantB1FZapdosCallback
 
-PowerplantB1FNoopScene:
+PowerPlantB1FNoopScene:
 	end
 
-PowerplantB1FZapdosCallback:
+PowerPlantB1FZapdosCallback:
 	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppear
 	checkitem SILVER_WING
@@ -184,7 +184,7 @@ PowerPlantTMThunder:
 PowerPlantRareCandy2:
     itemball RARE_CANDY
 
-PowerplantB1F_MapEvents:
+PowerPlantB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
