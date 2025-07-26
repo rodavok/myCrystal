@@ -313,6 +313,7 @@ TilesetAerodactylWordRoomAnim:
 TilesetMuseumAnim:
 TilesetViridianForestAnim:
 TilesetFacilityRBYAnim:
+TilesetLobbyAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

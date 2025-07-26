@@ -82,31 +82,25 @@ ElmsHousePCText:
 
 DebugGuyScript:
 	faceplayer
-	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
-	iftrue .FlagIsWrong
 	opentext
-	writetext noclue
+	writetext fixin
+	showemote EMOTE_HEART, DEBUG_MAN, 15
 	waitbutton 
 	closetext
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_1F_1A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_1F_2A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B1F_1A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B1F_2A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B3F_3A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B3F_4A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B2F_1A
+	setevent EVENT_BOULDER_IN_SEAFOAM_ISLANDS_B2F_2A
 	end
-.FlagIsWrong:
-	opentext
-	writetext FlagIsWrong
-	waitbutton
-	closetext
-	clearevent EVENT_GOT_SS_TICKET_FROM_ELM
-	specialphonecall SPECIALCALL_SSTICKET
-	end
 
 
-FlagIsWrong:
-	text "somehow, the flag"
-	line "was incorrectlyset"
-	done
-
-noclue:
-	text "i have no clue"
-	line "what is going on"
+fixin:
+	text "i'll fix it for"
+	line "you sweetie!"
 	done
 
 ElmsHouse_MapEvents:

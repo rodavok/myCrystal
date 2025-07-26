@@ -642,12 +642,12 @@ ENDM
 	map_attributes TimeCapsule, TIME_CAPSULE, $00, 0
 	map_attributes MobileTradeRoom, MOBILE_TRADE_ROOM, $00, 0
 	map_attributes MobileBattleRoom, MOBILE_BATTLE_ROOM, $00, 0
-	map_attributes CeladonDeptStore1F, CELADON_DEPT_STORE_1F, $00, 0
-	map_attributes CeladonDeptStore2F, CELADON_DEPT_STORE_2F, $00, 0
-	map_attributes CeladonDeptStore3F, CELADON_DEPT_STORE_3F, $00, 0
-	map_attributes CeladonDeptStore4F, CELADON_DEPT_STORE_4F, $00, 0
-	map_attributes CeladonDeptStore5F, CELADON_DEPT_STORE_5F, $00, 0
-	map_attributes CeladonDeptStore6F, CELADON_DEPT_STORE_6F, $00, 0
+	map_attributes CeladonDeptStore1F, CELADON_DEPT_STORE_1F, $0F, 0
+	map_attributes CeladonDeptStore2F, CELADON_DEPT_STORE_2F, $0F, 0
+	map_attributes CeladonDeptStore3F, CELADON_DEPT_STORE_3F, $0F, 0
+	map_attributes CeladonDeptStore4F, CELADON_DEPT_STORE_4F, $0F, 0
+	map_attributes CeladonDeptStore5F, CELADON_DEPT_STORE_5F, $0F, 0
+	map_attributes CeladonDeptStore6F, CELADON_DEPT_STORE_6F, $0F, 0
 	map_attributes CeladonDeptStoreElevator, CELADON_DEPT_STORE_ELEVATOR, $00, 0
 	map_attributes CeladonMansion1F, CELADON_MANSION_1F, $00, 0
 	map_attributes CeladonMansion2F, CELADON_MANSION_2F, $00, 0
@@ -735,7 +735,7 @@ ENDM
 	map_attributes CeruleanCaveB5F, CERULEAN_CAVE_B5F, $12, 0
 	map_attributes CeruleanCaveB6F, CERULEAN_CAVE_B6F, $12, 0
 	map_attributes CeruleanCaveB7F, CERULEAN_CAVE_B7F, $12, 0
-	map_attributes SeafoamIslandsNorth, SEAFOAM_ISLANDS_NORTH, $3B, 0
+	map_attributes SeafoamIslandsNorth, SEAFOAM_ISLANDS_NORTH, $09, 0
 	map_attributes SeafoamIslands1F, SEAFOAM_ISLANDS_1F, $3B, 0
 	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $3B, 0
 	map_attributes SeafoamIslandsB2F, SEAFOAM_ISLANDS_B2F, $3B, 0

@@ -426,11 +426,11 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 35, SPEAROW
-	db 37, VOLTORB
-	db 35, RATICATE
+	db 37, EKANS
+	db 35, SANDSHREW
 	db 35, FEAROW
 	db 35, MAROWAK
-	db 36, ELECTABUZZ
+	db 40, SANDSLASH
 	db 36, ELECTABUZZ
 	; day
 	db 35, SPEAROW
@@ -438,7 +438,7 @@ KantoGrassWildMons:
 	db 35, RATICATE
 	db 35, FEAROW
 	db 35, MAROWAK
-	db 38, ELECTABUZZ
+	db 40, ARBOK
 	db 38, ELECTABUZZ
 	; nite
 	db 35, VENONAT
@@ -446,7 +446,7 @@ KantoGrassWildMons:
 	db 35, RATICATE
 	db 35, VENOMOTH
 	db 35, ZUBAT
-	db 36, ELECTABUZZ
+	db 36, QUAGSIRE
 	db 36, ELECTABUZZ
 	end_grass_wildmons
 
@@ -1331,7 +1331,7 @@ KantoGrassWildMons:
 	end_grass_wildmons
 
 	def_grass_wildmons POWER_PLANT_B1F
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 42, MAGNEMITE
 	db 43, VOLTORB
@@ -1345,9 +1345,9 @@ KantoGrassWildMons:
 	db 43, VOLTORB
 	db 44, PIKACHU
 	db 44, MAGNETON
-	db 42, GRIMER
+	db 45, ELECTABUZZ
 	db 42, RAICHU
-	db 46, ELECTABUZZ
+	db 46, RAICHU
 	; nite
 	db 42, MAGNEMITE
 	db 43, VOLTORB

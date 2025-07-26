@@ -96,19 +96,19 @@ CeladonDeptStore3F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12,  0, CELADON_DEPT_STORE_2F, 1
-	warp_event 15,  0, CELADON_DEPT_STORE_4F, 2
-	warp_event  2,  0, CELADON_DEPT_STORE_ELEVATOR, 1
+	warp_event 16,  1, CELADON_DEPT_STORE_2F, 1
+	warp_event 12,  1, CELADON_DEPT_STORE_4F, 2
+	warp_event  1,  1, CELADON_DEPT_STORE_ELEVATOR, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 14,  0, BGEVENT_READ, CeladonDeptStore3FDirectory
-	bg_event  3,  0, BGEVENT_READ, CeladonDeptStore3FElevatorButton
+	bg_event 14,  1, BGEVENT_READ, CeladonDeptStore3FDirectory
+	bg_event  2,  1, BGEVENT_READ, CeladonDeptStore3FElevatorButton
 
 	def_object_events
-	object_event  7,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FClerkScript, -1
-	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FYoungsterScript, -1
-	object_event  9,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FGameboyKid1Script, -1
-	object_event 10,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FGameboyKid2Script, -1
-	object_event 13,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FSuperNerdScript, -1
+	object_event 13,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FClerkScript, -1
+	object_event  7,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FYoungsterScript, -1
+	object_event  9,  2, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FGameboyKid1Script, -1
+	object_event 10,  2, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FGameboyKid2Script, -1
+	object_event  8,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FSuperNerdScript, -1

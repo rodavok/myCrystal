@@ -387,27 +387,22 @@ BetaCinnabarPokemonLabRoom3_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaCinnabarPokemonLabRoom3.blk"
 
 GoldenrodDeptStore1F_Blocks:
-CeladonDeptStore1F_Blocks:
 	INCBIN "maps/DeptStore1F.blk"
 
 GoldenrodDeptStore2F_Blocks:
-CeladonDeptStore2F_Blocks:
 	INCBIN "maps/DeptStore2F.blk"
 
 GoldenrodDeptStore3F_Blocks:
-CeladonDeptStore3F_Blocks:
 	INCBIN "maps/DeptStore3F.blk"
 
 GoldenrodDeptStore4F_Blocks:
-CeladonDeptStore4F_Blocks:
+:
 	INCBIN "maps/DeptStore4F.blk"
 
 GoldenrodDeptStore5F_Blocks:
-CeladonDeptStore5F_Blocks:
 	INCBIN "maps/DeptStore5F.blk"
 
 GoldenrodDeptStore6F_Blocks:
-CeladonDeptStore6F_Blocks:
 	INCBIN "maps/DeptStore6F.blk"
 
 GoldenrodDeptStoreElevator_Blocks:
@@ -1137,4 +1132,17 @@ Route48_Blocks:
 
 PowerPlantB1F_Blocks:
 	INCBIN "maps/PowerPlantB1F.blk"
+
+CeladonDeptStore1F_Blocks:
+	INCBIN "maps/CeladonMart1F.blk"
+CeladonDeptStore2F_Blocks:
+	INCBIN "maps/CeladonMart2F.blk"
+CeladonDeptStore3F_Blocks:
+	INCBIN "maps/CeladonMart3F.blk"
+CeladonDeptStore4F_Blocks:
+	INCBIN "maps/CeladonMart4F.blk"
+CeladonDeptStore5F_Blocks:
+	INCBIN "maps/CeladonMart5F.blk"
+CeladonDeptStore6F_Blocks:
+	INCBIN "maps/CeladonMartRoof.blk"
 

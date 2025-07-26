@@ -228,7 +228,7 @@ ENDM
 	map_const CERULEAN_CAVE_B5F,						  15, 9
 	map_const CERULEAN_CAVE_B6F,						  15, 9
 	map_const CERULEAN_CAVE_B7F,						  15, 9
-	map_const POWER_PLANT_B1F, 							  20, 8 
+	map_const POWER_PLANT_B1F, 							  20, 18 
 	endgroup
 
 	newgroup AZALEA                                               ;  8
@@ -418,12 +418,12 @@ ENDM
 	map_const ROUTE_16,                                    15, 10 ;  2
 	map_const ROUTE_17,                                    10, 45 ;  3
 	map_const CELADON_CITY,                                20, 18 ;  4
-	map_const CELADON_DEPT_STORE_1F,                        8,  4 ;  5
-	map_const CELADON_DEPT_STORE_2F,                        8,  4 ;  6
-	map_const CELADON_DEPT_STORE_3F,                        8,  4 ;  7
-	map_const CELADON_DEPT_STORE_4F,                        8,  4 ;  8
-	map_const CELADON_DEPT_STORE_5F,                        8,  4 ;  9
-	map_const CELADON_DEPT_STORE_6F,                        8,  4 ; 10
+	map_const CELADON_DEPT_STORE_1F,                       10,  4 ;  5
+	map_const CELADON_DEPT_STORE_2F,                       10,  4 ;  6
+	map_const CELADON_DEPT_STORE_3F,                       10,  4 ;  7
+	map_const CELADON_DEPT_STORE_4F,                       10,  4 ;  8
+	map_const CELADON_DEPT_STORE_5F,                       10,  4 ;  9
+	map_const CELADON_DEPT_STORE_6F,                       10,  4 ; 10
 	map_const CELADON_DEPT_STORE_ELEVATOR,                  2,  2 ; 11
 	map_const CELADON_MANSION_1F,                           4,  5 ; 12
 	map_const CELADON_MANSION_2F,                           4,  5 ; 13

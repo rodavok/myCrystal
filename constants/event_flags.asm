@@ -327,8 +327,10 @@
 	const EVENT_SEAFOAM_ISLANDS_HIDDEN_ULTRA_BALL
 	const EVENT_SEAFOAM_ISLANDS_TM_BLIZZARD
 
+	const EVENT_POWERPLANTB1F_ESCAPE_ROPE
 
-; Unused: next 288 events
+
+; Unused: next 287 events
 
 	const_next 600
 ; Kurt Apricorn events

@@ -364,3 +364,11 @@ INCBIN "data/tilesets/cavern_metatiles.bin"
 TilesetCavernColl::
 INCLUDE "data/tilesets/cavern_collision.asm"
 
+SECTION "Tileset Data 9", ROMX
+TilesetLobbyGFX::
+INCBIN "gfx/tilesets/lobby.2bpp.lz"
+TilesetLobbyMeta::
+INCBIN "data/tilesets/lobby_metatiles.bin"
+TilesetLobbyColl::
+INCLUDE "data/tilesets/lobby_collision.asm"
+
