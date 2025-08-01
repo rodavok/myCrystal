@@ -219,15 +219,15 @@ TilesetIcePathAnim:
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw vTiles2 tile $31, WriteTileFromAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
-	dw vTiles2 tile $D8, ReadTileToAnimBuffer
+	dw vTiles2 tile $30, ReadTileToAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileRightLeft
 	dw NULL,  FlickeringCaveEntrancePalette
-	dw vTiles2 tile $D8, WriteTileFromAnimBuffer
+	dw vTiles2 tile $30, WriteTileFromAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  FlickeringCaveEntrancePalette
-	dw vTiles2 tile $D9, ReadTileToAnimBuffer
+	dw vTiles2 tile $31, ReadTileToAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  FlickeringCaveEntrancePalette
@@ -235,7 +235,7 @@ TilesetIcePathAnim:
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  FlickeringCaveEntrancePalette
-	dw vTiles2 tile $D9, WriteTileFromAnimBuffer
+	dw vTiles2 tile $31, WriteTileFromAnimBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw NULL,  DoneTileAnimation
 
@@ -284,7 +284,7 @@ TilesetCavernAnim:
 	dw NULL,  DoneTileAnimation
 
 
-
+TilesetPokecenterRBYAnim:
 TilesetBattleTowerOutsideAnim:
 TilesetHouseAnim:
 TilesetPlayersHouseAnim:

@@ -22,9 +22,14 @@ DEF NPCTRADE_STRUCT_LENGTH EQU _RS
 	const NPC_TRADE_KIM    ; 5
 	const NPC_TRADE_FOREST ; 6
 	const NPC_TRADE_PACHI  ; 7
-	const NPC_TRADE_REINA  ; 8
-	const NPC_TRADE_YOSHINO; 9
+	const NPC_TRADE_ELYSSA  ; 8
+	const NPC_TRADE_DONTAE ; 9
 	const NPC_TRADE_GORDON ; 10
+	const NPC_TRADE_SAIGE  ; 11
+	const NPC_TRADE_TURNER ; 12
+	const NPC_TRADE_REYLEY ; 13
+	const NPC_TRADE_PIPIN  ; 14
+
 DEF NUM_NPC_TRADES EQU const_value
 
 ; trade gender limits

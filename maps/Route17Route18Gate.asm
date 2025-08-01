@@ -1,6 +1,5 @@
 	object_const_def
 	const ROUTE17ROUTE18GATE_OFFICER
-	const ROUTE17SUPER_NERD
 
 Route17Route18Gate_MapScripts:
 	def_scene_scripts
@@ -34,14 +33,6 @@ Route17Route18GateCannotPassMovement:
 	turn_head LEFT
 	step_end
 
-Gordon:
-	faceplayer
-	opentext
-	trade NPC_TRADE_GORDON
-	waitbutton
-	closetext
-	end
-
 Route17Route18GateOfficerText:
 	text "CYCLING ROAD"
 	line "Uphill Starts Here"
@@ -64,15 +55,18 @@ Route17Route18Gate_MapEvents:
 	def_warp_events
 	warp_event  0,  4, ROUTE_17, 1
 	warp_event  0,  5, ROUTE_17, 2
-	warp_event  9,  4, ROUTE_18, 1
-	warp_event  9,  5, ROUTE_18, 2
+	warp_event  7,  4, ROUTE_18, 1
+	warp_event  7,  5, ROUTE_18, 2
+	warp_event  6,  8, ROUTE_17_ROUTE_18_GATE_2F, 1
 
 	def_coord_events
-	coord_event  5,  4, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
-	coord_event  5,  5, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
+	coord_event  4,  3, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
+	coord_event  4,  4, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
+	coord_event  4,  5, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
+	coord_event  4,  6, SCENE_ROUTE17ROUTE18GATE_BICYCLE_CHECK, Route17Route18GateBicycleCheck
+
 
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route17Route18GateOfficerScript, -1
-	object_event  1,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Gordon, -1
+	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route17Route18GateOfficerScript, -1

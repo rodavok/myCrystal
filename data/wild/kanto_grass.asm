@@ -1124,30 +1124,114 @@ KantoGrassWildMons:
 	db 68, CHANSEY
 	end_grass_wildmons
 	
-	def_grass_wildmons SAFARI_ZONE_BETA
-	db 10 percent, 10 percent, 15 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons SAFARI_ZONE_CENTER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 39, PARASECT
+	db 36, EXEGGCUTE
+	db 37, NIDORINO
+	db 37, NIDORINA
 	db 36, RHYHORN
-	db 37, EXEGGCUTE
-	db 36, NIDORINA
-	db 36, NIDORINO
-	db 39, KANGASKHAN
+	db 36, PARASECT
+	db 40, SCYTHER
 	db 40, CHANSEY
 	; day
-	db 39, PARASECT
-	db 37, EXEGGCUTE
-	db 36, NIDORINA
-	db 36, NIDORINO
-	db 39, SCYTHER
-	db 37, TAUROS
+	db 36, EXEGGCUTE
+	db 37, NIDORINO
+	db 37, NIDORINA
+	db 36, RHYHORN
+	db 36, PARASECT
+	db 40, SCYTHER
 	db 40, CHANSEY
 	; nite
-	db 39, PARASECT
-	db 36, VENOMOTH
-	db 37, VENONAT
-	db 36, TANGELA
-	db 39, PINSIR
+	db 36, EXEGGCUTE
+	db 37, NIDORINO
+	db 37, NIDORINA
+	db 36, RHYHORN
+	db 36, PARASECT
+	db 40, SCYTHER
+	db 40, CHANSEY
+	end_grass_wildmons
+
+	def_grass_wildmons SAFARI_ZONE_EAST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, DODUO
+	db 37, EXEGGCUTE
+	db 36, PARASECT
+	db 36, CUBONE
+	db 39, TAUROS
+	db 37, PINSIR
+	db 40, CHANSEY
+	; day
+	db 39, DODUO
+	db 37, EXEGGCUTE
+	db 36, PARASECT
+	db 36, CUBONE
+	db 39, TAUROS
+	db 37, PINSIR
+	db 40, CHANSEY
+	; nite
+	db 39, DODUO
+	db 37, EXEGGCUTE
+	db 36, PARASECT
+	db 36, CUBONE
+	db 39, TAUROS
+	db 37, PINSIR
+	db 40, CHANSEY
+	end_grass_wildmons
+
+	def_grass_wildmons SAFARI_ZONE_NORTH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, NIDORINA
+	db 37, EXEGGCUTE
+	db 36, NIDORINO
+	db 36, RHYHORN
+	db 39, KANGASKHAN
+	db 37, VENOMOTH
+	db 40, CHANSEY
+	; day
+	db 39, NIDORINA
+	db 37, EXEGGCUTE
+	db 36, NIDORINO
+	db 36, RHYHORN
+	db 39, KANGASKHAN
+	db 37, VENOMOTH
+	db 40, CHANSEY
+	; nite
+	db 39, NIDORINA
+	db 37, EXEGGCUTE
+	db 36, NIDORINO
+	db 36, RHYHORN
+	db 39, KANGASKHAN
+	db 37, VENOMOTH
+	db 40, CHANSEY
+	end_grass_wildmons
+
+	def_grass_wildmons SAFARI_ZONE_WEST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, NIDORINO
+	db 37, EXEGGCUTE
+	db 36, DODUO
+	db 36, RHYHORN
+	db 40, GIRAFARIG
+	db 37, MAROWAK
+	db 40, CHANSEY
+	; day
+	db 39, NIDORINO
+	db 37, EXEGGCUTE
+	db 36, DODUO
+	db 36, RHYHORN
+	db 40, GIRAFARIG
+	db 37, MAROWAK
+	db 40, CHANSEY
+	; nite
+	db 39, NIDORINO
+	db 37, EXEGGCUTE
+	db 36, DODUO
+	db 36, RHYHORN
+	db 40, GIRAFARIG
 	db 37, MAROWAK
 	db 40, CHANSEY
 	end_grass_wildmons
@@ -1180,8 +1264,6 @@ KantoGrassWildMons:
 	db 44, PIKACHU
 	end_grass_wildmons
 
-	db -1 ; end
-
 	def_grass_wildmons SEAFOAM_ISLANDS_1F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1209,8 +1291,6 @@ KantoGrassWildMons:
 	db 44, SLOWBRO
 	db 44, GOLBAT
 	end_grass_wildmons
-
-	db -1 ; end
 
 	def_grass_wildmons SEAFOAM_ISLANDS_B1F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1240,8 +1320,6 @@ KantoGrassWildMons:
 	db 44, KINGLER
 	end_grass_wildmons
 
-	db -1 ; end
-
 	def_grass_wildmons SEAFOAM_ISLANDS_B2F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1270,8 +1348,6 @@ KantoGrassWildMons:
 	db 44, SLOWBRO
 	end_grass_wildmons
 
-	db -1 ; end
-
 	def_grass_wildmons SEAFOAM_ISLANDS_B3F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1299,8 +1375,6 @@ KantoGrassWildMons:
 	db 44, KINGLER
 	db 44, DEWGONG
 	end_grass_wildmons
-
-	db -1 ; end
 
 	def_grass_wildmons SEAFOAM_ISLANDS_B4F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

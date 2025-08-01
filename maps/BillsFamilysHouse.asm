@@ -188,6 +188,7 @@ BillsGrandpa:
 	special MonCheck
 	iffalse .SaidNo
 	scall .ExcitedToSee
+	refreshscreen
 	pokepic GROWLITHE
 	cry GROWLITHE
 	waitbutton
@@ -204,6 +205,7 @@ BillsGrandpa:
 	special MonCheck
 	iffalse .SaidNo
 	scall .ExcitedToSee
+	refreshscreen
 	pokepic PICHU
 	cry PICHU
 	waitbutton

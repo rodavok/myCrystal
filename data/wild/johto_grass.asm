@@ -1824,4 +1824,33 @@ JohtoGrassWildMons:
 	db 23, STEELIX
 	end_grass_wildmons
 
+	def_grass_wildmons SAFARI_ZONE_BETA
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 24, HOPPIP
+	db 21, CUBONE
+	db 22, JIGGLYPUFF
+	db 24, KRABBY
+	db 23, MAGMAR
+	db 25, SKIPLOOM
+	db 25, WOBBUFFET
+	; day
+	db 24, SENTRET
+	db 21, MACHOP
+	db 22, DODUO
+	db 24, SUNKERN
+	db 23, GIRAFARIG
+	db 24, MACHOKE
+	db 25, LARVITAR
+	; nite
+	db 24, CLEFAIRY
+	db 21, WOOPER
+	db 23, GLOOM
+	db 24, STANTLER
+	db 23, MISDREAVUS
+	db 24, MURKROW
+	db 25, HAUNTER
+	end_grass_wildmons
+
+
 	db -1 ; end

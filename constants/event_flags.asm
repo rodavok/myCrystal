@@ -328,9 +328,10 @@
 	const EVENT_SEAFOAM_ISLANDS_TM_BLIZZARD
 
 	const EVENT_POWERPLANTB1F_ESCAPE_ROPE
+	const EVENT_GOT_CERULEAN_DIG
 
 
-; Unused: next 287 events
+; Unused: next 286 events
 
 	const_next 600
 ; Kurt Apricorn events

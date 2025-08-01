@@ -9,7 +9,28 @@ CeruleanPoliceStation_MapScripts:
 	def_callbacks
 
 CeruleanPoliceStationFishingGuruScript:
-	jumptextfaceplayer CeruleanPoliceStationFishingGuruText
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_CERULEAN_DIG
+	iftrue .GotDig
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedMachinePart
+	writetext CeruleanPoliceStationFishingGuruText
+	waitbutton
+	closetext
+	end
+.ReturnedMachinePart:
+	writetext CeruleanPoliceStationFishingGuruGiveDigText
+	promptbutton
+	verbosegiveitem TM_DIG
+	iffalse .NoRoom
+	setevent EVENT_GOT_CERULEAN_DIG
+.GotDig:
+	writetext CeruleanPoliceStationFishingGuruThankYouText
+	waitbutton
+.NoRoom:
+	closetext
+	end
 
 CeruleanPoliceStationPokefanFScript:
 	jumptextfaceplayer CeruleanPoliceStationPokefanFText
@@ -30,6 +51,29 @@ CeruleanPoliceStationFishingGuruText:
 	para "I won't stand for"
 	line "it if he turns out"
 	cont "to be a thief."
+	done
+
+CeruleanPoliceStationFishingGuruGiveDigText:
+	text "You don't say? The"
+	line "shady character"
+	cont "was actually a"
+
+	para "member of TEAM"
+	line "ROCKET? And you"
+	cont "defeated him?"
+
+	para "Great work! Take"
+	line "this as a reward."
+	done
+
+CeruleanPoliceStationFishingGuruThankYouText:
+	text "I thought TEAM"
+	line "ROCKET was gone"
+	cont "for good."
+
+	para "Anyway, with folks"
+	line "like you around,"
+	cont "we can rest easy."
 	done
 
 CeruleanPoliceStationPokefanFText:

@@ -269,11 +269,11 @@ ENDM
 
 	map_attributes Route20, ROUTE_20, $43, WEST | EAST
 	connection west, CinnabarIsland, CINNABAR_ISLAND, 0
-	connection east, Route19, ROUTE_19, -9
+	connection east, Route19, ROUTE_19, -17
 
 	map_attributes Route19, ROUTE_19, $43, NORTH | WEST
 	connection north, FuchsiaCity, FUCHSIA_CITY, 0
-	connection west, Route20, ROUTE_20, 9
+	connection west, Route20, ROUTE_20, 17
 
 	map_attributes FuchsiaCity, FUCHSIA_CITY, $0f, SOUTH | WEST | EAST
 	connection south, Route19, ROUTE_19, 0
@@ -391,8 +391,12 @@ ENDM
 	map_attributes Route47, ROUTE_47, $35, NORTH
 	connection north, Route48, ROUTE_48, -2
 
-	map_attributes Route48, ROUTE_48, $35, SOUTH
+	map_attributes Route48, ROUTE_48, $35, NORTH | SOUTH
+	connection north, SafariZoneGate, SAFARI_ZONE_GATE, 0
 	connection south, Route47, ROUTE_47, 2
+
+	map_attributes SafariZoneGate, SAFARI_ZONE_GATE, $35, SOUTH
+	connection south, Route48, ROUTE_48, 0
 
 
 
@@ -744,6 +748,17 @@ ENDM
 	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $2E, 0
 	map_attributes CliffCave, CLIFF_CAVE, $09, 0
 	map_attributes PowerPlantB1F, POWER_PLANT_B1F, $00, 0
+	map_attributes SafariZoneCenter, SAFARI_ZONE_CENTER, $00, 0
+	map_attributes SafariZoneEast, SAFARI_ZONE_EAST, $00, 0
+	map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $00, 0
+	map_attributes SafariZoneWest, SAFARI_ZONE_WEST, $00, 0
+	map_attributes Route11Gate, ROUTE_11_GATE, $00, 0
+	map_attributes Route11Gate2F, ROUTE_11_GATE_2F, $00, 0
+	map_attributes Route15FuchsiaGate2F, ROUTE_15_FUCHSIA_GATE_2F, $00, 0
+	map_attributes Route16Gate2F, ROUTE_16_GATE_2F, $00, 0
+	map_attributes Route17Route18Gate2F, ROUTE_17_ROUTE_18_GATE_2F, $00, 0
+	map_attributes SafariZoneBetaGate, SAFARI_ZONE_BETA_GATE, $00, 0
+
 
 
 

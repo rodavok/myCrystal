@@ -11,6 +11,7 @@
 	const ROUTE36NATIONALPARKGATE_YOUNGSTER6
 	const ROUTE36NATIONALPARKGATE_YOUNGSTER7
 	const ROUTE36NATIONALPARKGATE_OFFICER2
+	const ROUTE36NATIONALPARKGATE_LASS2
 
 Route36NationalParkGate_MapScripts:
 	def_scene_scripts
@@ -848,6 +849,14 @@ Route36NationalParkGateOfficer1HeresThePrizeText:
 	cont "for you."
 	done
 
+Pipin:
+	faceplayer
+	opentext
+	trade NPC_TRADE_PIPIN
+	waitbutton
+	closetext
+	end
+
 Route36NationalParkGate_MapEvents:
 	db 0, 0 ; filler
 
@@ -875,3 +884,4 @@ Route36NationalParkGate_MapEvents:
 	object_event  6,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9BScript, EVENT_BUG_CATCHING_CONTESTANT_9B
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36NationalParkGateOfficerScript, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
+	object_event  5,  1, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Pipin, ENGINE_DAILY_BUG_CONTEST ; Should only appear on contest days, after the contest is over

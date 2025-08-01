@@ -15,7 +15,7 @@ CeruleanTradeSpeechHouseGrannyScript:
 CeruleanTradeSpeechHouseGrampsScript:
 	faceplayer
 	opentext
-	trade NPC_TRADE_YOSHINO
+	trade NPC_TRADE_DONTAE
 	waitbutton
 	closetext
 	end

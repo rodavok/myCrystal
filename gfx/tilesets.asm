@@ -372,3 +372,10 @@ INCBIN "data/tilesets/lobby_metatiles.bin"
 TilesetLobbyColl::
 INCLUDE "data/tilesets/lobby_collision.asm"
 
+TilesetPokecenterRBYGFX::
+INCBIN "gfx/tilesets/pokecenter_rby.2bpp.lz"
+TilesetPokecenterRBYMeta::
+INCBIN "data/tilesets/pokecenter_rby_metatiles.bin"
+TilesetPokecenterRBYColl::
+INCLUDE "data/tilesets/pokecenter_rby_collision.asm"
+

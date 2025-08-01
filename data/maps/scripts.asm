@@ -146,6 +146,7 @@ INCLUDE "maps/VermilionPortPassage.asm"
 INCLUDE "maps/MountMoonSquare.asm"
 INCLUDE "maps/MountMoonGiftShop.asm"
 INCLUDE "maps/TinTowerRoof.asm"
+INCLUDE "maps/SafariZoneBetaGate.asm"
 
 
 SECTION "Map Scripts 9", ROMX
@@ -347,6 +348,11 @@ INCLUDE "maps/Colosseum.asm"
 INCLUDE "maps/TimeCapsule.asm"
 INCLUDE "maps/MobileTradeRoom.asm"
 INCLUDE "maps/MobileBattleRoom.asm"
+INCLUDE "maps/SafariZoneCenter.asm"
+INCLUDE "maps/SafariZoneNorth.asm"
+INCLUDE "maps/SafariZoneWest.asm"
+INCLUDE "maps/SafariZoneEast.asm"
+
 
 
 SECTION "Map Scripts 18", ROMX
@@ -520,6 +526,12 @@ INCLUDE "maps/SeafoamIslandsB2F.asm"
 INCLUDE "maps/SeafoamIslandsB3F.asm"
 INCLUDE "maps/SeafoamIslandsB4F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
+INCLUDE "maps/SafariZoneGate.asm"
+INCLUDE "maps/Route11Gate.asm"
+INCLUDE "maps/Route11Gate2F.asm"
+INCLUDE "maps/Route15FuchsiaGate2F.asm"
+INCLUDE "maps/Route16Gate2F.asm"
+INCLUDE "maps/Route17Route18Gate2F.asm"
 
 
 

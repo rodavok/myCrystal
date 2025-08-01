@@ -64,14 +64,18 @@ Route16Gate_MapEvents:
 	def_warp_events
 	warp_event  0,  4, ROUTE_16, 4
 	warp_event  0,  5, ROUTE_16, 5
-	warp_event  9,  4, ROUTE_16, 2
-	warp_event  9,  5, ROUTE_16, 3
+	warp_event  7,  4, ROUTE_16, 2
+	warp_event  7,  5, ROUTE_16, 3
+	warp_event  6,  8, ROUTE_16_GATE_2F, 1
 
 	def_coord_events
-	coord_event  5,  4, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
-	coord_event  5,  5, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
+	coord_event  4,  3, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
+	coord_event  4,  4, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
+	coord_event  4,  5, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
+	coord_event  4,  6, SCENE_ROUTE16GATE_BICYCLE_CHECK, Route16GateBicycleCheck
+
 
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route16GateOfficerScript, -1
+	object_event  4,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route16GateOfficerScript, -1

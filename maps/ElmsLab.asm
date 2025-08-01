@@ -1448,6 +1448,7 @@ ElmLeftoverPartyFull:
 
 	para "you've made"
 	line "space."
+	done
 
 ElmsLab_MapEvents:
 	db 0, 0 ; filler

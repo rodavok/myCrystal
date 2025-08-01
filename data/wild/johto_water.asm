@@ -273,12 +273,15 @@ JohtoWaterWildMons:
 	db 20, TENTACRUEL
 	db 15, TENTACOOL
 	db 20, CHINCHOU
+	end_water_wildmons
+
 
 	def_water_wildmons GOLDENROD_PIER
 	db 6 percent
 	db 20, TENTACOOL
 	db 20, TENTACRUEL
 	db 20, MANTINE
+	end_water_wildmons
 
 
 	def_water_wildmons ROUTE_47

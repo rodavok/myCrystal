@@ -2496,10 +2496,8 @@ YanmatoEvosAttacks:
 	db 25, DETECT
 	db 27, WING_ATTACK
 	db 33, ANCIENTPOWER
-	db 36, DRAGONBREATH
 	db 38, HYPNOSIS
 	db 43, SCREECH
-	db 60, OUTRAGE
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:

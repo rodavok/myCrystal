@@ -450,9 +450,9 @@ GoldenrodUndergroundDoll_LoopScript:
 	writetext GoldenrodUndergroundDoll_AreYouSureText
 	yesorno
 	iffalse GoldenrodUndergroundDoll_Cancel
-	checkevent EVENT_DECO_WEEDLE_DOLL
+	checkevent EVENT_DECO_JIGGLYPUFF_DOLL
 	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_WEEDLE_DOLL
+	setevent EVENT_DECO_JIGGLYPUFF_DOLL
 	takemoney YOUR_MONEY, 3500
 	jump GoldenrodUndergroundDoll_FinishScript
 	end
@@ -463,9 +463,9 @@ GoldenrodUndergroundDoll_LoopScript:
 	writetext GoldenrodUndergroundDoll_AreYouSureText
 	yesorno
 	iffalse GoldenrodUndergroundDoll_Cancel
-	checkevent EVENT_DECO_POLIWAG_DOLL
+	checkevent EVENT_DECO_GRIMER_DOLL
 	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_POLIWAG_DOLL
+	setevent EVENT_DECO_GRIMER_DOLL
 	takemoney YOUR_MONEY, 3500
 	jump GoldenrodUndergroundDoll_FinishScript
 	end
@@ -476,9 +476,9 @@ GoldenrodUndergroundDoll_LoopScript:
 	writetext GoldenrodUndergroundDoll_AreYouSureText
 	yesorno
 	iffalse GoldenrodUndergroundDoll_Cancel
-	checkevent EVENT_DECO_ODDISH_DOLL
+	checkevent EVENT_DECO_VOLTORB_DOLL
 	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_ODDISH_DOLL
+	setevent EVENT_DECO_VOLTORB_DOLL
 	takemoney YOUR_MONEY, 3500
 	jump GoldenrodUndergroundDoll_FinishScript
 	end
@@ -498,9 +498,9 @@ GoldenrodUndergroundDollMenu:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "WEEDLE   ¥3.5k@"
-	db "POLIWAG  ¥3.5k@"
-	db "ODDISH   ¥3.5k@"
+	db "JIGGLYPUFF ¥3.5k@"
+	db "GRIMER     ¥3.5k@"
+	db "VOLTORB    ¥3.5k@"
 	
 GoldenrodUndergroundDoll_FinishScript:
 	waitsfx

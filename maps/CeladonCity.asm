@@ -97,6 +97,7 @@ CeladonCityTutorScript:
 	writetext CeladonTutorFarewellKidText
 	waitbutton
 	closetext
+	end
 
 .MoveMenuHeader:
 	db MENU_BACKUP_TILES ; flags

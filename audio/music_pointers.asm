@@ -117,5 +117,7 @@ Music:
 	dba Music_HoOhBattleHGSS
 	dba Music_SafariZoneGateHGSS
 	dba Music_MewtwoBattleStadium
-
+	dba Music_Cities1
+	dba Music_Cities2
+	dba Music_Cinnabar
 	assert_table_length NUM_MUSIC_SONGS

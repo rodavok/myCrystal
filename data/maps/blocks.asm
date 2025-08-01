@@ -197,19 +197,20 @@ CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
+SafariZoneBetaGate_Blocks:
 SafariZoneFuchsiaGateBeta_Blocks:
-Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
 Route35GoldenrodGate_Blocks:
 Route36RuinsOfAlphGate_Blocks:
 Route34IlexForestGate_Blocks:
-Route6SaffronGate_Blocks:
 Route40BattleTowerGate_Blocks:
-Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
-Route5SaffronGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
+
+
+
+
 
 BetaEcruteakCity_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaEcruteakCity.blk"
@@ -269,11 +270,6 @@ Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
 Route32RuinsOfAlphGate_Blocks:
 IlexForestAzaleaGate_Blocks:
-Route15FuchsiaGate_Blocks:
-Route8SaffronGate_Blocks:
-Route16Gate_Blocks:
-Route7SaffronGate_Blocks:
-Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
 GoldenrodPierGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
@@ -320,15 +316,8 @@ BetaSproutTower8_Blocks: ; unreferenced
 OlivineMart_Blocks:
 EcruteakMart_Blocks:
 BlackthornMart_Blocks:
-CeruleanMart_Blocks:
 AzaleaMart_Blocks:
 VioletMart_Blocks:
-VermilionMart_Blocks:
-PewterMart_Blocks:
-FuchsiaMart_Blocks:
-LavenderMart_Blocks:
-ViridianMart_Blocks:
-SaffronMart_Blocks:
 CherrygroveMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
@@ -345,7 +334,6 @@ BlackthornPokecenter1F_Blocks:
 CinnabarPokecenter1F_Blocks:
 CeruleanPokecenter1F_Blocks:
 Route10Pokecenter1F_Blocks:
-
 Route3Pokecenter1F_Blocks:
 AzaleaPokecenter1F_Blocks:
 VioletPokecenter1F_Blocks:
@@ -353,6 +341,7 @@ Route32Pokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 GoldenrodPokecenter1F_Blocks:
     INCBIN "maps/PokeComCenter.blk"
+
 VermilionPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:
 FuchsiaPokecenter1F_Blocks:
@@ -363,7 +352,7 @@ CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
 CherrygrovePokecenter1F_Blocks:
-	INCBIN "maps/Pokecenter1F.blk"
+	INCBIN "maps/RBYPokecenter.blk"
 
 BetaPewterMuseumOfScience1F_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaPewterMuseumOfScience1F.blk"
@@ -1097,6 +1086,7 @@ Museum2F_Blocks:
 
 ViridianForestGateN_Blocks:
 ViridianForestGateS_Blocks:
+Route2Gate_Blocks:
 	INCBIN "maps/KantoGateNS.blk"
 
 SeafoamIslandsNorth_Blocks:
@@ -1146,3 +1136,50 @@ CeladonDeptStore5F_Blocks:
 CeladonDeptStore6F_Blocks:
 	INCBIN "maps/CeladonMartRoof.blk"
 
+
+Route8SaffronGate_Blocks:
+Route7SaffronGate_Blocks:
+INCBIN "maps/RBYEastWestSaffronGate.blk"
+
+Route19FuchsiaGate_Blocks:
+Route6SaffronGate_Blocks:
+Route5SaffronGate_Blocks:
+INCBIN "maps/RBYNorthSouthSaffronGate.blk"
+
+Route11Gate_Blocks:
+Route16Gate_Blocks:
+Route15FuchsiaGate_Blocks:
+Route17Route18Gate_Blocks:
+INCBIN "maps/RBYRouteGate1F.blk"
+
+Route11Gate2F_Blocks:
+Route16Gate2F_Blocks:
+Route15FuchsiaGate2F_Blocks:
+Route17Route18Gate2F_Blocks:
+INCBIN "maps/RBYRouteGate2F.blk"
+
+
+SafariZoneGate_Blocks:
+INCBIN "maps/SafariZoneGate.blk"
+
+
+CeruleanMart_Blocks:
+VermilionMart_Blocks:
+PewterMart_Blocks:
+FuchsiaMart_Blocks:
+LavenderMart_Blocks:
+ViridianMart_Blocks:
+SaffronMart_Blocks:
+INCBIN "maps/RBYPokemart.blk"
+
+SafariZoneNorth_Blocks:
+INCBIN "maps/SafariZoneNorth.blk"
+
+SafariZoneCenter_Blocks:
+INCBIN "maps/SafariZoneCenter.blk"
+
+SafariZoneEast_Blocks:
+INCBIN "maps/SafariZoneEast.blk"
+
+SafariZoneWest_Blocks:
+INCBIN "maps/SafariZoneWest.blk"

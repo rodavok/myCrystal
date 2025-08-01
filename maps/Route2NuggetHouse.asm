@@ -1,5 +1,6 @@
 	object_const_def
 	const ROUTE2NUGGETHOUSE_FISHER
+	const ROUTE2NUGGETHOUSE_GAMEBOY_KID
 
 Route2NuggetHouse_MapScripts:
 	def_scene_scripts
@@ -49,6 +50,15 @@ Route2NuggetHouseFisherText_GotNugget:
 	line "have to do!"
 	done
 
+Reyley:
+	faceplayer
+	opentext
+	trade NPC_TRADE_REYLEY
+	waitbutton
+	closetext
+	end
+
+
 Route2NuggetHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -62,3 +72,5 @@ Route2NuggetHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  4, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2NuggetHouseFisherScript, -1
+	object_event  5,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Reyley, -1
+	

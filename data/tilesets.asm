@@ -55,4 +55,5 @@ Tilesets::
 	tileset TilesetCavern
 	tileset TilesetFacilityRBY
 	tileset TilesetLobby
+	tileset TilesetPokecenterRBY
 	assert_table_length NUM_TILESETS + 1

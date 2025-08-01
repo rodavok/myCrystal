@@ -31,7 +31,7 @@
 	tilecoll FLOOR, WALL, WALL, WALL ; 1e
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 1f
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 20
-	tilecoll FLOOR, FLOOR, STAIRCASE, FLOOR ; 21
+	tilecoll FLOOR, FLOOR, LADDER, FLOOR ; 21
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 22
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 23
 	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 24
@@ -48,7 +48,7 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2f
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 30
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 31
-	tilecoll STAIRCASE, FLOOR, STAIRCASE, FLOOR ; 32
+	tilecoll LADDER, FLOOR, LADDER, FLOOR ; 32
 	tilecoll WALL, WALL, WALL, WALL ; 33
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 34
 	tilecoll WALL, WALL, WALL, WALL ; 35
@@ -56,7 +56,7 @@
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 37
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 38
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 39
-	tilecoll FLOOR, STAIRCASE, FLOOR, FLOOR ; 3a
+	tilecoll FLOOR, LADDER, FLOOR, FLOOR ; 3a
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 3b
 	tilecoll WALL, WALL, WALL, FLOOR ; 3c
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 3d
@@ -76,7 +76,7 @@
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 4b
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 4c
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 4d
-	tilecoll FLOOR, FLOOR, FLOOR, STAIRCASE ; 4e
+	tilecoll FLOOR, FLOOR, FLOOR, LADDER ; 4e
 	tilecoll WALL, WALL, WALL, WALL ; 4f
 	tilecoll WALL, FLOOR, WALL, WALL ; 50
 	tilecoll FLOOR, WALL, WALL, WALL ; 51
@@ -104,16 +104,16 @@
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 67
 	tilecoll WALL, WALL, WALL, WALL ; 68
 	tilecoll WALL, WALL, WALL, WALL ; 69
-	tilecoll WALL, WALL, STAIRCASE, WALL ; 6a
+	tilecoll WALL, WALL, LADDER, WALL ; 6a
 	tilecoll WALL, WALL, WALL, WALL ; 6b
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 6c
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 6d
-	tilecoll FLOOR, STAIRCASE, FLOOR, FLOOR ; 6e
-	tilecoll FLOOR, STAIRCASE, FLOOR, FLOOR ; 6f
+	tilecoll FLOOR, LADDER, FLOOR, FLOOR ; 6e
+	tilecoll FLOOR, LADDER, FLOOR, FLOOR ; 6f
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 70
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 71
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 72
-	tilecoll WALL, WALL, STAIRCASE, FLOOR ; 73
+	tilecoll WALL, WALL, LADDER, FLOOR ; 73
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 74
 	tilecoll WATER, WATER, WATER, WATER ; 75
 	tilecoll WATER, WATER, WATER, WATER ; 76

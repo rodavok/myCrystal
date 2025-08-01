@@ -14,10 +14,10 @@ VermilionMagnetTrainSpeechHousePokefanFScript:
 VermilionMagnetTrainSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
-Reina:
+Elyssa:
 	faceplayer
 	opentext
-	trade NPC_TRADE_REINA
+	trade NPC_TRADE_ELYSSA
 	waitbutton
 	closetext
 	end
@@ -48,4 +48,4 @@ VermilionMagnetTrainSpeechHouse_MapEvents:
 
 	def_object_events
 	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMagnetTrainSpeechHousePokefanFScript, -1
-	object_event  5,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Reina, -1
+	object_event  5,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Elyssa, -1

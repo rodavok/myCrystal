@@ -149,6 +149,9 @@ INCLUDE "audio/music/safarizonegate.asm"
 INCLUDE "audio/music/lugiabattle.asm"
 INCLUDE "audio/music/hoohbattle.asm"
 INCLUDE "audio/music/mewtwobattle.asm"
+INCLUDE "audio/music/cities1.asm"
+INCLUDE "audio/music/cities2.asm"
+INCLUDE "audio/music/cinnabar.asm"
 
 
 SECTION "Extra Songs 1", ROMX

@@ -85,7 +85,8 @@ CeladonGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_BIKER
-	; 6 of max 9 walking sprites
+	db SPRITE_OFFICER
+	; 7 of max 9 walking sprites
 	db SPRITE_POLIWAG
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE

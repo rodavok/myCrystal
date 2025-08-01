@@ -115,6 +115,9 @@
 	const MUSIC_HOOH_BATTLE                  ; 6f
 	const MUSIC_SAFARI_ZONE_GATE             ; 70
 	const MUSIC_MEWTWO_BATTLE                ; 71
+	const MUSIC_CITIES1					 ; 72
+	const MUSIC_CITIES2					 ; 73
+	const MUSIC_CINNABAR					 ; 74
 DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)
