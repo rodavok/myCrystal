@@ -26,15 +26,15 @@ GoldenrodPier_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-    warp_event 19,  12, GOLDENROD_PIER_GATE, 3
+	warp_event 19,  12, GOLDENROD_PIER_GATE, 3
 	warp_event 19,  13, GOLDENROD_PIER_GATE, 4
 
 
 	def_coord_events
 
 	def_bg_events
-    bg_event 4,  12, BGEVENT_READ, GoldenrodPierSign
+	bg_event 4,  12, BGEVENT_READ, GoldenrodPierSign
 
 	def_object_events
-	object_event  8,  11, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodPierSailorScript, -1
+	object_event 14, 11, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodPierSailorScript, -1
 

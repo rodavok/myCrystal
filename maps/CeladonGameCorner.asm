@@ -137,7 +137,7 @@ CeladonGameCornerSodaCanScript:
 	opentext
 	writetext CeladonGameCornerSodaCanText
 	waitbutton
-	special CardFlip
+	special UnusedMemoryGame
 	closetext
 	end
 

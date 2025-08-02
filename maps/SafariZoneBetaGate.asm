@@ -22,10 +22,10 @@ SafariZoneBetaGate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, ROUTE_43, 1
-	warp_event  5,  0, ROUTE_43, 2
-	warp_event  4,  7, MAHOGANY_TOWN, 5
-	warp_event  5,  7, MAHOGANY_TOWN, 5
+	warp_event  4,  0, SAFARI_ZONE_BETA, 1
+	warp_event  5,  0, SAFARI_ZONE_BETA, 2
+	warp_event  4,  7, SAFARI_ZONE_GATE, 5
+	warp_event  5,  7, SAFARI_ZONE_GATE, 5
 
 	def_coord_events
 

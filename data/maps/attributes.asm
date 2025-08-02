@@ -237,7 +237,7 @@ ENDM
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
 	connection south, Route2, ROUTE_2, 5
-	connection east, Route3, ROUTE_3, 1
+	connection east, Route3, ROUTE_3, 4
 
 	map_attributes Route2, ROUTE_2, $0f, NORTH | SOUTH
 	connection north, PewterCity, PEWTER_CITY, -5
@@ -309,17 +309,17 @@ ENDM
 	connection west, Route15, ROUTE_15, 9
 
 	map_attributes Route13, ROUTE_13, $43, NORTH | SOUTH
-	connection north, Route12, ROUTE_12, 20
+	connection north, Route12, ROUTE_12, 35
 	connection south, Route14, ROUTE_14, 0
 
 	map_attributes Route12, ROUTE_12, $43, NORTH | SOUTH | WEST
 	connection north, LavenderTown, LAVENDER_TOWN, 0
-	connection south, Route13, ROUTE_13, -20
-	connection west, Route11, ROUTE_11, 9
+	connection south, Route13, ROUTE_13, -35
+	connection west, Route11, ROUTE_11, 26
 
 	map_attributes Route11, ROUTE_11, $0f, WEST | EAST
 	connection west, VermilionCity, VERMILION_CITY, 0
-	connection east, Route12, ROUTE_12, -9
+	connection east, Route12, ROUTE_12, -26
 
 	map_attributes LavenderTown, LAVENDER_TOWN, $2c, NORTH | SOUTH | WEST
 	connection north, Route10South, ROUTE_10_SOUTH, 0
@@ -361,12 +361,13 @@ ENDM
 	map_attributes Route25, ROUTE_25, $2c, SOUTH
 	connection south, Route24, ROUTE_24, 0
 
-	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
-	connection west, PewterCity, PEWTER_CITY, -1 ;-1
-	connection east, Route4, ROUTE_4, 0
+	map_attributes Route3, ROUTE_3, $2c, NORTH | WEST
+	connection north, Route4, ROUTE_4, 23
+	connection west, PewterCity, PEWTER_CITY, -4 ;-1
+	
 
-	map_attributes Route4, ROUTE_4, $2c, WEST | EAST
-	connection west, Route3, ROUTE_3, 0
+	map_attributes Route4, ROUTE_4, $2c, SOUTH | EAST
+	connection south, Route3, ROUTE_3, -23
 	connection east, CeruleanCity, CERULEAN_CITY, -5
 
 	map_attributes Route8, ROUTE_8, $2c, WEST | EAST
@@ -747,11 +748,11 @@ ENDM
 	map_attributes SeafoamIslandsB4F, SEAFOAM_ISLANDS_B4F, $3B, 0
 	map_attributes CliffEdgeGate, CLIFF_EDGE_GATE, $2E, 0
 	map_attributes CliffCave, CLIFF_CAVE, $09, 0
-	map_attributes PowerPlantB1F, POWER_PLANT_B1F, $00, 0
-	map_attributes SafariZoneCenter, SAFARI_ZONE_CENTER, $00, 0
-	map_attributes SafariZoneEast, SAFARI_ZONE_EAST, $00, 0
-	map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $00, 0
-	map_attributes SafariZoneWest, SAFARI_ZONE_WEST, $00, 0
+	map_attributes PowerPlantB1F, POWER_PLANT_B1F, $2E, 0
+	map_attributes SafariZoneCenter, SAFARI_ZONE_CENTER, $03, 0
+	map_attributes SafariZoneEast, SAFARI_ZONE_EAST, $03, 0
+	map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $03, 0
+	map_attributes SafariZoneWest, SAFARI_ZONE_WEST, $03, 0
 	map_attributes Route11Gate, ROUTE_11_GATE, $00, 0
 	map_attributes Route11Gate2F, ROUTE_11_GATE_2F, $00, 0
 	map_attributes Route15FuchsiaGate2F, ROUTE_15_FUCHSIA_GATE_2F, $00, 0

@@ -11,17 +11,19 @@ Route11GateOfficerScript:
     jumptextfaceplayer Route11GateOfficerText
 
 Route11GateOfficerText:
-    line "fill this"
+    text "ROUTE 12 is also"
+	line "known as"
+	cont "Silence Bridge."
     done
     
 Route11Gate_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-    warp_event  0,  4, ROUTE_11, 4
-	warp_event  0,  5, ROUTE_11, 5
-	warp_event  7,  4, ROUTE_12, 2
-	warp_event  7,  5, ROUTE_12, 3
+    warp_event  0,  4, ROUTE_11, 1
+	warp_event  0,  5, ROUTE_11, 2
+	warp_event  7,  4, ROUTE_11, 3
+	warp_event  7,  5, ROUTE_11, 4
 	warp_event  6,  8, ROUTE_11_GATE_2F, 1
 
 	def_coord_events

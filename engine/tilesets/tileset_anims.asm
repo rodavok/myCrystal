@@ -36,6 +36,7 @@ _AnimateTileset::
 	jp hl
 
 Tileset0Anim:
+TilesetViridianForestAnim:
 TilesetJohtoModernAnim:
 TilesetKantoAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
@@ -311,7 +312,6 @@ TilesetKabutoWordRoomAnim:
 TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
 TilesetMuseumAnim:
-TilesetViridianForestAnim:
 TilesetFacilityRBYAnim:
 TilesetLobbyAnim:
 	dw NULL,  WaitTileAnimation

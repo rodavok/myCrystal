@@ -1128,7 +1128,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, EXEGGCUTE
-	db 37, NIDORINO
+	db 37, NIDORAN_M
 	db 37, NIDORINA
 	db 36, RHYHORN
 	db 36, PARASECT
@@ -1136,7 +1136,7 @@ KantoGrassWildMons:
 	db 40, CHANSEY
 	; day
 	db 36, EXEGGCUTE
-	db 37, NIDORINO
+	db 37, NIDORAN_M
 	db 37, NIDORINA
 	db 36, RHYHORN
 	db 36, PARASECT
@@ -1144,7 +1144,7 @@ KantoGrassWildMons:
 	db 40, CHANSEY
 	; nite
 	db 36, EXEGGCUTE
-	db 37, NIDORINO
+	db 37, NIDORAN_M
 	db 37, NIDORINA
 	db 36, RHYHORN
 	db 36, PARASECT
@@ -1183,25 +1183,25 @@ KantoGrassWildMons:
 	def_grass_wildmons SAFARI_ZONE_NORTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 39, NIDORINA
+	db 39, NIDORAN_F
 	db 37, EXEGGCUTE
-	db 36, NIDORINO
+	db 38, NIDORINO
 	db 36, RHYHORN
 	db 39, KANGASKHAN
 	db 37, VENOMOTH
 	db 40, CHANSEY
 	; day
-	db 39, NIDORINA
+	db 39, NIDORAN_F
 	db 37, EXEGGCUTE
-	db 36, NIDORINO
+	db 38, NIDORINO
 	db 36, RHYHORN
 	db 39, KANGASKHAN
 	db 37, VENOMOTH
 	db 40, CHANSEY
 	; nite
-	db 39, NIDORINA
+	db 39, NIDORAN_F
 	db 37, EXEGGCUTE
-	db 36, NIDORINO
+	db 38, NIDORINO
 	db 36, RHYHORN
 	db 39, KANGASKHAN
 	db 37, VENOMOTH
@@ -1213,7 +1213,7 @@ KantoGrassWildMons:
 	; morn
 	db 39, NIDORINO
 	db 37, EXEGGCUTE
-	db 36, DODUO
+	db 37, DODUO
 	db 36, RHYHORN
 	db 40, GIRAFARIG
 	db 37, MAROWAK
@@ -1221,7 +1221,7 @@ KantoGrassWildMons:
 	; day
 	db 39, NIDORINO
 	db 37, EXEGGCUTE
-	db 36, DODUO
+	db 37, DODUO
 	db 36, RHYHORN
 	db 40, GIRAFARIG
 	db 37, MAROWAK

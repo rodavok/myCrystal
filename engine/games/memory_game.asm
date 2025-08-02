@@ -463,9 +463,9 @@ MemoryGame_InitStrings:
 .dummy_text
 	db "@"
 .japstr1
-	db "とったもの@"
+	db "HI!@"
 .japstr2
-	db "あと　かい@"
+	db "HELLO@"
 
 MemoryGame_Card2Coord:
 	ld d, 0
