@@ -1645,8 +1645,8 @@ TeacherGroup:
 
 	; TEACHER (2)
 	db "HILLARY@", TRAINERTYPE_NORMAL
-	db 52, AIPOM
-	db 56, CUBONE
+	db 56, AIPOM
+	db 58, CUBONE
 	db -1 ; end
 
 	; TEACHER (3)

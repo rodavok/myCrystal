@@ -453,21 +453,21 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_11
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 34, HOPPIP
+	db 34, PIDGEY
 	db 33, RATICATE
 	db 35, MAGNEMITE
 	db 36, PIDGEOTTO
 	db 36, RATTATA
 	db 36, SKIPLOOM
-	db 36, HOPPIP
+	db 36, MAGNETON
 	; day
-	db 34, HOPPIP
+	db 34, PIDGEY
 	db 33, RATICATE
 	db 35, MAGNEMITE
 	db 36, PIDGEOTTO
 	db 36, RATTATA
 	db 36, SKIPLOOM
-	db 36, HOPPIP
+	db 36, MAGNETON
 	; nite
 	db 34, DROWZEE
 	db 33, MEOWTH
@@ -476,6 +476,34 @@ KantoGrassWildMons:
 	db 36, RATICATE
 	db 36, HYPNO
 	db 36, HYPNO
+	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_12
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 36, PIDGEY
+	db 35, BELLSPROUT
+	db 37, LEDIAN
+	db 36, PIDGEOTTO
+	db 38, WEEPINBELL
+	db 38, FARFETCH_D
+	db 38, SKIPLOOM
+	; morn
+	db 36, PIDGEY
+	db 35, BELLSPROUT
+	db 37, LEDIAN
+	db 36, PIDGEOTTO
+	db 38, WEEPINBELL
+	db 38, FARFETCH_D
+	db 38, SKIPLOOM
+	; nite
+	db 36, HOOTHOOT
+	db 35, ODDISH
+	db 37, ARIADOS
+	db 36, GLOOM
+	db 40, VENONAT
+	db 40, GLOOM
+	db 41, GLOOM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_13
@@ -487,7 +515,7 @@ KantoGrassWildMons:
 	db 35, HOPPIP
 	db 35, HOPPIP
 	db 37, HOPPIP
-	db 40, CHANSEY
+	db 42, CHANSEY
 	; day
 	db 38, NIDORINO
 	db 38, NIDORINA
@@ -495,7 +523,7 @@ KantoGrassWildMons:
 	db 35, HOPPIP
 	db 35, HOPPIP
 	db 37, HOPPIP
-	db 40, CHANSEY
+	db 42, CHANSEY
 	; nite
 	db 38, VENONAT
 	db 38, QUAGSIRE
@@ -503,7 +531,7 @@ KantoGrassWildMons:
 	db 35, VENOMOTH
 	db 35, QUAGSIRE
 	db 37, QUAGSIRE
-	db 40, CHANSEY
+	db 42, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_14

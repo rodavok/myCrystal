@@ -309,12 +309,12 @@ ENDM
 	connection west, Route15, ROUTE_15, 9
 
 	map_attributes Route13, ROUTE_13, $43, NORTH | SOUTH
-	connection north, Route12, ROUTE_12, 35
+	connection north, Route12, ROUTE_12, 30
 	connection south, Route14, ROUTE_14, 0
 
 	map_attributes Route12, ROUTE_12, $43, NORTH | SOUTH | WEST
 	connection north, LavenderTown, LAVENDER_TOWN, 0
-	connection south, Route13, ROUTE_13, -35
+	connection south, Route13, ROUTE_13, -30
 	connection west, Route11, ROUTE_11, 26
 
 	map_attributes Route11, ROUTE_11, $0f, WEST | EAST
