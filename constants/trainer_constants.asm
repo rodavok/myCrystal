@@ -147,6 +147,9 @@ DEF KRIS EQU __trainer_class__
 	const JASON
 	const JOEY4
 	const JOEY5
+	const TEDDY
+	const FINN
+
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -173,6 +176,7 @@ DEF KRIS EQU __trainer_class__
 	const ALAN5
 	const CHAD4
 	const CHAD5
+	const CHIP
 
 	trainerclass BIRD_KEEPER ; 18
 	const ROD
@@ -194,6 +198,7 @@ DEF KRIS EQU __trainer_class__
 	const JOSE3
 	const VANCE2
 	const VANCE3
+	const BUDDY
 
 	trainerclass LASS ; 19
 	const CARRIE
@@ -236,6 +241,7 @@ DEF KRIS EQU __trainer_class__
 	const DARIN
 	const ROSS1
 	const TOMMY1
+	const HUNTER
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -261,6 +267,7 @@ DEF KRIS EQU __trainer_class__
 	const CARA
 	const SOPHIE
 	const DONNA
+	const ALEXA
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -332,6 +339,10 @@ DEF KRIS EQU __trainer_class__
 	const COLETTE
 	const HILLARY
 	const SHIRLEY
+	const SADAYO
+	const ANITA
+	const BETTIE 
+	const DAPHNE
 
 	trainerclass SABRINA ; 23
 	const SABRINA1
@@ -385,6 +396,10 @@ DEF KRIS EQU __trainer_class__
 	const RALPH4
 	const RALPH5
 	const TULLY4
+	const LIAM
+	const TRENT 
+	const VINCE
+	const DALE
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD
@@ -400,6 +415,10 @@ DEF KRIS EQU __trainer_class__
 	const CAMERON
 	const SETH
 	const PARKER
+	const YANG 
+	const LEWIS 
+	const STEVE 
+	const HIDEO
 
 	trainerclass SWIMMERF ; 27
 	const ELAINE
@@ -415,6 +434,8 @@ DEF KRIS EQU __trainer_class__
 	const NIKKI
 	const DIANA
 	const BRIANA
+	const HILDA 
+	const ALIA
 
 	trainerclass SAILOR ; 28
 	const EUGENE
@@ -442,6 +463,7 @@ DEF KRIS EQU __trainer_class__
 	const HUGH
 	const MARKUS
 	const KAE
+	const DEXTER
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL2_1_CHIKORITA
@@ -454,6 +476,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass GUITARIST ; 2b
 	const CLYDE
 	const VINCENT
+	const KERRY
 
 	trainerclass HIKER ; 2c
 	const ANTHONY1
@@ -488,6 +511,12 @@ DEF KRIS EQU __trainer_class__
 	const RILEY
 	const JOEL
 	const GLENN
+	const KIMBER
+	const COOPER 
+	const SMITH 
+	const BARRETT 
+	const KOCH 
+
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1
@@ -510,6 +539,7 @@ DEF KRIS EQU __trainer_class__
 	const IRWIN1
 	const FRITZ
 	const HORTON
+	const JIMBO
 
 	trainerclass BLACKBELT_T ; 32
 	const KENJI
@@ -540,6 +570,7 @@ DEF KRIS EQU __trainer_class__
 	const GILBERT
 	const JARED
 	const RODNEY
+	const EZRA
 
 	trainerclass PICNICKER ; 35
 	const LIZ1

@@ -630,12 +630,24 @@ YoungsterGroup:
 
 	; YOUNGSTER (13)
 	db "JOEY@", TRAINERTYPE_MOVES
-	db 30, RATICATE,   TAIL_WHIP, QUICK_ATTACK, HYPER_FANG, PURSUIT
+	db 36, RATICATE,   TAIL_WHIP, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
 
 	; YOUNGSTER (14)
 	db "JOEY@", TRAINERTYPE_MOVES
-	db 77, RATICATE,   HYPER_BEAM, QUICK_ATTACK, SUPER_FANG, PURSUIT
+	db 80, RATICATE,   HYPER_BEAM, QUICK_ATTACK, SUPER_FANG, PURSUIT
+	db -1 ; end
+
+	; YOUNGSTER (25)
+	db "TEDDY@", TRAINERTYPE_NORMAL
+	db 50, WARTORTLE 
+	db 50, WEEPINBELL
+	db -1 ; end 
+
+	; YOUNGSTER (26)
+	db "FINN@", TRAINERTYPE_NORMAL
+	db 50, FEAROW
+	db 51, RATICATE
 	db -1 ; end
 
 SchoolboyGroup:
@@ -743,14 +755,15 @@ SchoolboyGroup:
 
 	; SCHOOLBOY (17)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 19, MR__MIME
-	db 19, MAGNEMITE
+	db 27, MR__MIME
+	db 27, MAGNEMITE
 	db -1 ; end
 
 	; SCHOOLBOY (18)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 27, MR__MIME
-	db 31, MAGNETON
+	db 37, MR__MIME
+	db 37, MAGNETON
+	db 40, TANGELA
 	db -1 ; end
 
 	; SCHOOLBOY (19)
@@ -785,15 +798,28 @@ SchoolboyGroup:
 
 	; SCHOOLBOY (23)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 30, MR__MIME
-	db 34, MAGNETON
+	db 47, MR__MIME
+	db 47, MAGNETON
+	db 50, TANGELA
+	db 50, QUAGSIRE
 	db -1 ; end
 
 	; SCHOOLBOY (24)
 	db "CHAD@", TRAINERTYPE_MOVES
-	db 34, MR__MIME,   PSYCHIC_M, LIGHT_SCREEN, REFLECT, ENCORE
-	db 38, MAGNETON,   ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
+	db 68, MR__MIME,   PSYCHIC_M, LIGHT_SCREEN, REFLECT, ENCORE
+	db 67, MAGNETON,   ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
+	db 68, TANGELA,    SLEEP_POWDER, HIDDEN_POWER, ANCIENTPOWER, GIGA_DRAIN
+	db 67, QUAGSIRE,   AMNESIA, EARTHQUAKE, SURF, REST
+	db 65, ARCANINE,   OUTRAGE, FLAMETHROWER, EXTREMESPEED, CRUNCH
 	db -1 ; end
+
+	; SCHOOLBOY (25)
+	db "CHIP@", TRAINERTYPE_NORMAL
+	db 54, POLIWHIRL
+	db 53, VICTREEBEL
+	db -1 ; end
+ 
+
 
 BirdKeeperGroup:
 	; BIRD_KEEPER (1)
@@ -909,6 +935,11 @@ BirdKeeperGroup:
 	db "VANCE@", TRAINERTYPE_MOVES
 	db 55, PIDGEOT,    TOXIC, QUICK_ATTACK, WHIRLWIND, FLY
 	db 55,  PIDGEOT,    SWIFT, DETECT, STEEL_WING, FLY
+	db -1 ; end
+
+	; BIRD_KEEPER (20) Buddy
+	db "BUDDY@", TRAINERTYPE_NORMAL
+	db 64, DELIBIRD 
 	db -1 ; end
 
 LassGroup:
@@ -1146,6 +1177,11 @@ CooltrainerMGroup:
 	db 41, KANGASKHAN,  BODY_SLAM, BITE, EARTHQUAKE, ATTRACT
 	db -1 ; end
 
+	; COOLTRAINERM (20)
+	db "HUNTER@", TRAINERTYPE_NORMAL
+	db 53, LAPRAS
+	db -1; end
+
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
 	db "GWEN@", TRAINERTYPE_NORMAL
@@ -1291,6 +1327,11 @@ CooltrainerFGroup:
 	db "DONNA@", TRAINERTYPE_MOVES
 	db 40, SCYTHER,  SWORDS_DANCE, WING_ATTACK, FURY_CUTTER, SLASH
 	db 40, ARCANINE, FLAME_WHEEL, CRUNCH, HEADBUTT, DIG
+	db -1 ; end
+
+	; COOLTRAINERF (24)
+	db "CARA@", TRAINERTYPE_NORMAL
+	db 53, VILEPLUME
 	db -1 ; end
 
 BeautyGroup:
@@ -1654,6 +1695,33 @@ TeacherGroup:
 	db 45, WIGGLYTUFF
 	db -1 ; end
 
+	; TEACHER (4)
+	db "SADAYO@", TRAINERTYPE_NORMAL
+	db 52, PIKACHU
+	db 49, MAROWAK 
+	db 59, BELLOSSOM 
+	db -1 ; end
+
+	; TEACHER (5)
+	db "ANITA@", TRAINERTYPE_NORMAL
+	db 52, NIDOQUEEN 
+	db 53, PERSIAN
+	db -1 ; end
+
+	; TEACHER (6) BETTIE
+	db "BETTIE@", TRAINERTYPE_NORMAL
+	db 54, GRANBULL
+	db 56, SKIPLOOM
+	db 56, JUMPLUFF
+	db -1 ; end
+
+	; TEACHER (7) DAPHNE
+	db "DAPHNE@", TRAINERTYPE_NORMAL
+	db 54, ESPEON
+	db 54, MILTANK
+	db -1 ; end
+
+
 SabrinaGroup:
 	; SABRINA (1)
 	db "SABRINA@", TRAINERTYPE_MOVES
@@ -1964,6 +2032,31 @@ FisherGroup:
 	db 48, NYQWIL,     ROLLOUT, SURF, PIN_MISSILE, TAKE_DOWN
 	db -1 ; end
 
+	; FISHER (26) LIAM
+	db "LIAM@", TRAINERTYPE_MOVES
+	db 55, SHELLDER 
+	db 54, POLIWHIRL 
+	db 54, SEADRA
+	db -1 ; end
+
+	; FISHER (27) TRENT
+	db "TRENT@", TRAINERTYPE_NORMAL
+	db 60, TENTACRUEL 
+	db 60, QWILFISH
+	db -1 ; end
+
+	; FISHER (28) VINCE 
+	db "VINCE@", TRAINERTYPE_NORMAL
+	db 61, REMORAID 
+	db 61, REMORAID 
+	db 62, SEADRA 
+	db -1 ; end
+
+	; FISHER (29) DALE
+	db "DALE@", TRAINERTYPE_NORMAL
+	db 63, GYARADOS 
+	db -1 ; end
+
 SwimmerMGroup:
 	; SWIMMERM (1)
 	db "HAROLD@", TRAINERTYPE_NORMAL
@@ -2048,6 +2141,30 @@ SwimmerMGroup:
 	db 52, HORSEA
 	db 52, HORSEA
 	db 53, SEADRA
+	db -1 ; end
+
+	; SWIMMERM (14)
+	db "YANG@", TRAINERTYPE_NORMAL
+	db 59, SEAKING 
+	db 60, CLOYSTER 
+	db -1 ; end
+
+	; SWIMMERM (15)
+	db "LEWIS@", TRAINERTYPE_NORMAL
+	db 59, DEWGONG
+	db 59, CLOYSTER
+	db -1 ; end
+
+	; SWIMMERM (16)
+	db "STEVE@", TRAINERTYPE_NORMAL
+	db 61, DEWGONG
+	db 61, GYARADOS
+	db -1 ; end
+
+	; SWIMMERM (17)
+	db "HIDEO@", TRAINERTYPE_NORMAL
+	db 62, STARYU
+	db 62, WARTORTLE
 	db -1 ; end
 
 SwimmerFGroup:
@@ -2158,6 +2275,18 @@ SwimmerFGroup:
 	db "BRIANA@", TRAINERTYPE_NORMAL
 	db 51, SEAKING
 	db 52, KINGLER
+	db -1 ; end
+
+	; SWIMMERF (20)
+	db "HILDA@", TRAINERTYPE_NORMAL
+	db 62, STARYU
+	db 62, POLIWHIRL 
+	db -1 ; end
+
+	; SWIMMERF (21)
+	db "ALIA@", TRAINERTYPE_NORMAL 
+	db 60, CLOYSTER 
+	db 60, CLOYSTER 
 	db -1 ; end
 
 SailorGroup:
@@ -2332,6 +2461,12 @@ SuperNerdGroup:
 	db 28, ELECTABUZZ
 	db -1 ; end
 
+	; SUPER_NERD (24) DEXTER
+	db "DEXTER@", TRAINERTYPE_NORMAL
+	db 55, ELECTABUZZ
+	db 55, SLOWBRO
+	db -1 ; end
+
 Rival2Group:
 	; RIVAL2 (1)
 	db "?@", TRAINERTYPE_MOVES
@@ -2405,6 +2540,12 @@ GuitaristGroup:
 	db 43, VOLTORB
 	db 42, MAGNEMITE
 	db 42, MAGNETON
+	db -1 ; end
+
+	; GUITARIST (3)
+	db "KERRY@", TRAINERTYPE_NORMAL
+	db 55, MAGNETON
+	db 55, DUGTRIO 
 	db -1 ; end
 
 HikerGroup:
@@ -2582,8 +2723,8 @@ BikerGroup:
 
 	; BIKER (6)
 	db "CHARLES@", TRAINERTYPE_NORMAL
-	db 53, KOFFING
-	db 53, CHARMELEON
+	db 55, KOFFING
+	db 56, CHARMELEON
 	db 54, WEEZING
 	db -1 ; end
 
@@ -2600,9 +2741,38 @@ BikerGroup:
 
 	; BIKER (9)
 	db "GLENN@", TRAINERTYPE_NORMAL
-	db 53, KOFFING
-	db 53, MAGMAR
-	db 52, WEEZING
+	db 55, KOFFING
+	db 55, MAGMAR
+	db 54, WEEZING
+	db -1 ; end
+
+	; BIKER (10)
+	db "KIMBER@", TRAINERTYPE_NORMAL
+	db 55, GRIMER
+	db 54, MUK 
+	db -1 ; end 
+
+	; BIKER (11) 
+	db "COOPER@", TRAINERTYPE_NORMAL
+	db 55, WEEZING 
+	db -1 ; end 
+
+	; BIKER (12) 
+	db "SMITH@", TRAINERTYPE_NORMAL 
+	db 54, MACHOKE 
+	db 55, PRIMEAPE 
+	db -1 ; end 
+
+	; BIKER (13) 
+	db "BARRETT@", TRAINERTYPE_NORMAL
+	db 54, FLAREON 
+	db 55, WEEZING 
+	db -1 ; end 
+
+	; BIKER (14) 
+	db "KOCH@", TRAINERTYPE_NORMAL
+	db 53, MUK
+	db 56, MAGCARGO 
 	db -1 ; end
 
 BlaineGroup:
@@ -2705,6 +2875,13 @@ JugglerGroup:
 	db 45, ELECTRODE
 	db 45, ELECTRODE
 	db 45, ELECTRODE
+	db -1 ; end
+
+	; JUGGLER (4)
+	db "JIMBO@", TRAINERTYPE_NORMAL
+	db 52, MR__MIME
+	db 52, JYNX 
+	db 53, ELECTRODE
 	db -1 ; end
 
 BlackbeltGroup:
@@ -2864,6 +3041,12 @@ PsychicGroup:
 	db "RODNEY@", TRAINERTYPE_NORMAL
 	db 43, DROWZEE
 	db 43, HYPNO
+	db -1 ; end
+
+	; PSYCHIC_T (13)
+	db "EZRA@", TRAINERTYPE_NORMAL
+	db 55, WOBBUFFET
+	db 52, GIRAFARIG
 	db -1 ; end
 
 PicnickerGroup:
