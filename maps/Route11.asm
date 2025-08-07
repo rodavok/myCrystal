@@ -4,6 +4,9 @@
 	const ROUTE11_YOUNGSTER3
 	const ROUTE11_YOUNGSTER4
 	const ROUTE11_FRUIT_TREE
+	const ROUTE11_TEACHER1
+	const ROUTE11_SUPER_NERD
+	const ROUTE11_TEACHER2
 
 Route11_MapScripts:
 	def_scene_scripts
@@ -143,6 +146,94 @@ Route11SignText:
 	text "ROUTE 11"
 	done
 
+TrainerTeacherBettie:
+	trainer TEACHER, BETTIE, EVENT_BEAT_TEACHER_BETTIE, TeacherBettieSeenText, TeacherBettieBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext TeacherBettieAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TeacherBettieSeenText:
+	text "Class is in"
+	line "session!"
+	done
+
+TeacherBettieBeatenText:
+	text "Well done!"
+	done
+
+TeacherBettieAfterBattleText:
+    text "A good trainer"
+	line "never stops"
+	cont "studying!"
+	done
+
+TrainerSupernerdDexter:
+	trainer SUPER_NERD, DEXTER, EVENT_BEAT_SUPER_NERD_DEXTER, SupernerdDexterSeenText, SupernerdDexterBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SupernerdDexterAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SupernerdDexterSeenText:
+	text "My #DEX has"
+	line "data on over 200"
+	cont "#MON species!"
+
+	para "Let me show you"
+	line "my favorites!"
+	done
+
+SupernerdDexterBeatenText:
+	text "Fascinating!"
+	done
+
+SupernerdDexterAfterBattleText:
+	text "I've caught a lot"
+	line "of #MON, but I'm"
+	cont "poor at battling."
+	done
+
+TrainerTeacherDaphne:
+	trainer TEACHER, DAPHNE, EVENT_BEAT_TEACHER_DAPHNE, TeacherDaphneSeenText, TeacherDaphneBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext TeacherDaphneAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TeacherDaphneSeenText:
+	text "Pop quiz! Show"
+	line "me what you know"
+	cont "about battling!"
+	done
+
+TeacherDaphneBeatenText:
+	text "A+ performance!"
+	done
+
+TeacherDaphneAfterBattleText:
+	text "You clearly know"
+	line "your type match-"
+	cont "ups very well!"
+
+	para "Keep battling"
+	line "and you'll be a"
+	cont "#MON master!"
+	done
+
+
 Route11_MapEvents:
 	db 0, 0 ; filler
 
@@ -166,3 +257,7 @@ Route11_MapEvents:
 	object_event 31,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicHerman, -1
 	object_event 10,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicFidel, -1
 	object_event 44,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1
+	object_event  0,  0, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherBettie, -1
+	object_event  0,  1, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSupernerdDexter, -1
+	object_event  0,  2, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherDaphne, -1
+

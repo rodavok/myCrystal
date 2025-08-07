@@ -3,6 +3,9 @@
 	const ROUTE12_FISHER2
 	const ROUTE12_FISHER3
 	const ROUTE12_FISHER4
+	const ROUTE12_ROCKER
+	const ROUTE12_YOUNGSTER
+	const ROUTE12_FISHER5
 	const ROUTE12_POKE_BALL1
 	const ROUTE12_POKE_BALL2
 
@@ -51,6 +54,36 @@ TrainerFisherBarney:
 	endifjustbattled
 	opentext
 	writetext FisherBarneyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerGuitaristKerry:
+	trainer GUITARIST, KERRY, EVENT_BEAT_GUITARIST_KERRY, GuitaristKerrySeenText, GuitaristKerryBeatenText, 0, .Script 
+.Script:
+	endifjustbattled
+	opentext
+	writetext GuitaristKerryAfterBattleText
+	waitbutton
+	closetext
+	end 
+
+TrainerSchoolboyChip:
+	trainer SCHOOLBOY, CHIP, EVENT_BEAT_SCHOOLBOY_CHIP, SchoolboyChipSeenText, SchoolboyChipBeatenText, 0, .Script 
+.Script:
+	endifjustbattled
+	opentext
+	writetext SchoolboyChipAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerFisherLiam:
+	trainer FISHER, LIAM, EVENT_BEAT_FISHER_LIAM, FisherLiamSeenText, FisherLiamBeatenText, 0, .Script 
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherLiamAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -164,6 +197,55 @@ FishingSpotSignText:
 	text "FISHING SPOT"
 	done
 
+GuitaristKerrySeenText:
+	text "My guitar and my"
+	line "#MON rock in"
+	cont "perfect harmony!"
+	done
+
+GuitaristKerryBeatenText:
+	text "That was off-key!"
+	done
+
+GuitaristKerryAfterBattleText:
+	text "Music and #MON"
+	line "both need lots"
+	cont "of practice!"
+	done
+
+SchoolboyChipSeenText:
+	text "I've been study-"
+	line "ing #MON all"
+	cont "year long!"
+	done
+
+SchoolboyChipBeatenText:
+	text "Need more study!"
+	done
+
+SchoolboyChipAfterBattleText:
+	text "Studying isn't"
+	line "enough to win in"
+	cont "#MON battles."
+
+	para "You need to train"
+	line "your #MON, too!"
+	done
+
+FisherLiamSeenText:
+	text "Watch the hook!"
+	done
+
+FisherLiamBeatenText:
+	text "This one got away!"
+	done
+
+FisherLiamAfterBattleText:
+	text "Fishing teaches"
+	line "you patience and"
+	cont "persistence!"
+	done
+
 Route12_MapEvents:
 	db 0, 0 ; filler
 
@@ -185,5 +267,8 @@ Route12_MapEvents:
 	object_event 14, 44, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherStephen, -1
 	object_event  9, 80, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerFisherBarney, -1
 	object_event  6,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherKyle, -1
+	object_event  0,  0, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerGuitaristKerry, -1 
+	object_event  0,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerSchoolboyChip, -1
+	object_event  0,  2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerFisherLiam, -1
 	object_event  4, 86, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Calcium, EVENT_ROUTE_12_CALCIUM
 	object_event  6, 99, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Nugget, EVENT_ROUTE_12_NUGGET

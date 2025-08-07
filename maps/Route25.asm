@@ -11,6 +11,8 @@
 	const ROUTE25_COOLTRAINER_M2
 	const ROUTE25_POKE_BALL
 	const ROUTE25_SUICUNE
+	const ROUTE25_COOLTRAINER_F
+	const ROUTE25_COOLTRAINER_M3
 
 Route25_MapScripts:
 	def_scene_scripts
@@ -459,6 +461,58 @@ UnusedBillsHouseSignText: ; unreferenced
 	text "BILL'S HOUSE"
 	done
 
+TrainerCooltrainermHunter:
+	trainer COOLTRAINERM, HUNTER, EVENT_BEAT_COOLTRAINERM_HUNTER, CooltrainermHunterSeenText, CooltrainermHunterBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermHunterAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainermHunterSeenText:
+	text "One last trainer!"
+	done
+
+CooltrainermHunterBeatenText:
+	text "Excellent work!"
+	done
+
+CooltrainermHunterAfterBattleText:
+	text "Trainers wait on"
+	line "ROUTE 25 for the"
+	cont "chance to battle"
+
+	para "skilled opponents."
+	done
+
+TrainerCooltrainerfAlexa:
+	trainer COOLTRAINERF, ALEXA, EVENT_BEAT_COOLTRAINERF_ALEXA, CooltrainerfAlexaSeenText, CooltrainerfAlexaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfAlexaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerfAlexaSeenText:
+	text "But wait,"
+	line "there's more!"
+	done
+
+CooltrainerfAlexaBeatenText:
+	text "You got me!"
+	done
+
+CooltrainerfAlexaAfterBattleText:
+	text "I'm here for the"
+	line "thrill of battle!"
+	done
+
 Route25_MapEvents:
 	db 0, 0 ; filler
 
@@ -466,6 +520,8 @@ Route25_MapEvents:
 	warp_event 59,  3, BILLS_HOUSE, 1
 
 	def_coord_events
+	coord_event 55,  4, SCENE_ROUTE25_MISTYS_DATE, Route25MistyDate1Script
+	coord_event 55,  5, SCENE_ROUTE25_MISTYS_DATE, Route25MistyDate1Script
 	coord_event 55,  6, SCENE_ROUTE25_MISTYS_DATE, Route25MistyDate1Script
 	coord_event 55,  7, SCENE_ROUTE25_MISTYS_DATE, Route25MistyDate2Script
 
@@ -486,4 +542,7 @@ Route25_MapEvents:
 	object_event 51,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerCooltrainermKevin, -1
 	object_event 38,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route25Protein, EVENT_ROUTE_25_PROTEIN
 	object_event 60,  9, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route25SuicuneBattleScript, EVENT_FOUGHT_SSUICUNE
+	object_event  0,  0, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermHunter, -1
+	object_event  0,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfAlexa, -1
+
 

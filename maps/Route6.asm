@@ -2,6 +2,9 @@
 	const ROUTE6_POKEFAN_M1
 	const ROUTE6_POKEFAN_M2
 	const ROUTE6_POKEFAN_M3
+	const ROUTE6_YOUNGSTER1
+	const ROUTE6_TEACHER 
+	const ROUTE6_YOUNGSTER2
 
 Route6_MapScripts:
 	def_scene_scripts
@@ -89,6 +92,86 @@ PokefanmAllanAfterBattleText:
 	cont "your heart melt?"
 	done
 
+TrainerYoungsterTeddy:
+	trainer YOUNGSTER, TEDDY, EVENT_BEAT_YOUNGSTER_TEDDY, YoungsterTeddySeenText, YoungsterTeddyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterTeddyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+YoungsterTeddySeenText:
+	text "I'm on a field"
+	line "trip with my"
+	cont "teacher!"
+	done
+
+YoungsterTeddyBeatenText:
+	text "Aww, I lost..."
+	done
+
+YoungsterTeddyAfterBattleText:
+	text "Even though I"
+	line "lost, battling is"
+	cont "so much fun!"
+	done
+
+TrainerTeacherSadayo:
+	trainer TEACHER, SADAYO, EVENT_BEAT_TEACHER_SADAYO, TeacherSadayoSeenText, TeacherSadayoBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext TeacherSadayoAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TeacherSadayoSeenText:
+	text "Time for a lesson"
+	line "in battling!"
+	done
+
+TeacherSadayoBeatenText:
+	text "Class dismissed!"
+	done
+
+TeacherSadayoAfterBattleText:
+	para "Remember: type"
+	line "advantages are"
+	cont "key to victory!"
+	done
+
+TrainerYoungsterFinn:
+	trainer YOUNGSTER, FINN, EVENT_BEAT_YOUNGSTER_FINN, YoungsterFinnSeenText, YoungsterFinnBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext YoungsterFinnAfterBattleText
+	waitbutton
+	closetext
+	end
+
+YoungsterFinnSeenText:
+	text "Not so fast!"
+	done
+
+YoungsterFinnBeatenText:
+	text "Yeowch!"
+	done
+
+YoungsterFinnAfterBattleText:
+	text "KANTO is thick"
+	line "with trainers!"
+
+	para "You better carry"
+	line "lots of POTIONs!"
+	done
+
 Route6_MapEvents:
 	db 0, 0 ; filler
 
@@ -105,3 +188,6 @@ Route6_MapEvents:
 	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 2, Route6PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event  9, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmRex, -1
 	object_event 10, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmAllan, -1
+	object_event  0,  0, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerYoungsterTeddy, -1
+	object_event  0,  1, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerTeacherSadayo, -1
+	object_event  0,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerYoungsterFinn, -1

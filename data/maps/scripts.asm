@@ -410,7 +410,6 @@ INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
 INCLUDE "maps/CianwoodGym.asm"
-INCLUDE "maps/Route31VioletGate.asm"
 
 
 
@@ -466,6 +465,8 @@ INCLUDE "maps/CinnabarPokecenter1F.asm"
 INCLUDE "maps/CinnabarPokecenter2FBeta.asm"
 INCLUDE "maps/Route19FuchsiaGate.asm"
 INCLUDE "maps/SeafoamGym.asm"
+INCLUDE "maps/Route31VioletGate.asm"
+
 
 SECTION "Map Scripts 24", ROMX
 
@@ -532,6 +533,7 @@ INCLUDE "maps/Route11Gate2F.asm"
 INCLUDE "maps/Route15FuchsiaGate2F.asm"
 INCLUDE "maps/Route16Gate2F.asm"
 INCLUDE "maps/Route17Route18Gate2F.asm"
+
 
 
 

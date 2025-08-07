@@ -5,6 +5,9 @@
 	const ROUTE8_SUPER_NERD1
 	const ROUTE8_SUPER_NERD2
 	const ROUTE8_FRUIT_TREE
+	const ROUTE8_YOUNGSTER1 
+	const ROUTE8_YOUNGSTER2 
+	const ROUTE8_TEACHER
 
 Route8_MapScripts:
 	def_scene_scripts
@@ -170,6 +173,89 @@ Route8UndergroundPathSignText:
 	line "read…"
 	done
 
+TrainerJugglerJimbo:
+	trainer JUGGLER, JIMBO, EVENT_BEAT_JUGGLER_JIMBO, JugglerJimboSeenText, JugglerJimboBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext JugglerJimboAfterBattleText
+	waitbutton
+	closetext
+	end
+
+JugglerJimboSeenText:
+	text "I'll make a fool"
+	line "out of you!"
+	done
+
+JugglerJimboBeatenText:
+	text "I folded like a"
+	line "cheap suit!"
+	done
+
+JugglerJimboAfterBattleText:
+	text "Looks like we"
+	line "found out who the"
+	cont "real joker is!"
+	done
+
+TrainerPsychicEzra:
+	trainer PSYCHIC_T, EZRA, EVENT_BEAT_PSYCHIC_EZRA, PsychicEzraSeenText, PsychicEzraBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext PsychicEzraAfterBattleText
+	waitbutton
+	closetext
+	end
+
+PsychicEzraSeenText:
+	text "I can read your"
+	line "mind completely!"
+
+	para "You're thinking"
+	line "about #MON!"
+	done
+
+PsychicEzraBeatenText:
+	text "My mind is blank!"
+	done
+
+PsychicEzraAfterBattleText:
+	text "Psychic powers"
+	line "come from deep"
+	cont "meditation."
+	done
+
+TrainerTeacherAnita:
+	trainer TEACHER, ANITA, EVENT_BEAT_TEACHER_ANITA, TeacherAnitaSeenText, TeacherAnitaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext TeacherAnitaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TeacherAnitaSeenText:
+	text "Let me teach you"
+	line "a thing or two!"
+	done
+
+TeacherAnitaBeatenText:
+	text "You're a quick"
+	line "learner!"
+	done
+
+TeacherAnitaAfterBattleText:
+	text "I love teaching"
+	line "eager students"
+	cont "new techniques."
+	done
+
 Route8_MapEvents:
 	db 0, 0 ; filler
 
@@ -190,3 +276,7 @@ Route8_MapEvents:
 	object_event 29,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdSam, -1
 	object_event 39, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSupernerdTom, -1
 	object_event 42,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
+	object_event  0,  0, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerJugglerJimbo, -1
+	object_event  0,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerPsychicEzra, -1
+	object_event  0,  2, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerTeacherAnita, -1
+
