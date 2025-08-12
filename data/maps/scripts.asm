@@ -398,6 +398,8 @@ INCLUDE "maps/Route43Gate.asm"
 INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
+INCLUDE "maps/GoldenrodPier.asm"
+INCLUDE "maps/GoldenrodPierGate.asm"
 
 
 SECTION "Map Scripts 20", ROMX
@@ -407,7 +409,6 @@ INCLUDE "maps/Route35.asm"
 INCLUDE "maps/Route43.asm"
 INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
-INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
 INCLUDE "maps/CianwoodGym.asm"
 
@@ -430,6 +431,8 @@ INCLUDE "maps/PewterPokecenter2FBeta.asm"
 INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
 INCLUDE "maps/CliffEdgeGate.asm"
 INCLUDE "maps/CliffCave.asm"
+INCLUDE "maps/Route19.asm"
+
 
 
 
@@ -492,6 +495,9 @@ INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/Route23.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
+INCLUDE "maps/Route11Gate.asm"
+INCLUDE "maps/Route11Gate2F.asm"
+INCLUDE "maps/Route15FuchsiaGate2F.asm"
 
 SECTION "Map Scripts 25", ROMX
 
@@ -503,8 +509,6 @@ INCLUDE "maps/SilverCaveMewRoom.asm"
 INCLUDE "maps/GoldenrodShore.asm"
 INCLUDE "maps/SeafoamCave.asm"
 INCLUDE "maps/Route3Pokecenter1F.asm"
-INCLUDE "maps/GoldenrodPier.asm"
-INCLUDE "maps/GoldenrodPierGate.asm"
 INCLUDE "maps/ViridianForest.asm"
 INCLUDE "maps/ViridianForestGateN.asm"
 INCLUDE "maps/ViridianForestGateS.asm"
@@ -528,9 +532,6 @@ INCLUDE "maps/SeafoamIslandsB3F.asm"
 INCLUDE "maps/SeafoamIslandsB4F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
 INCLUDE "maps/SafariZoneGate.asm"
-INCLUDE "maps/Route11Gate.asm"
-INCLUDE "maps/Route11Gate2F.asm"
-INCLUDE "maps/Route15FuchsiaGate2F.asm"
 INCLUDE "maps/Route16Gate2F.asm"
 INCLUDE "maps/Route17Route18Gate2F.asm"
 

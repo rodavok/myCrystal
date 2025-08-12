@@ -330,6 +330,12 @@
 	const EVENT_POWERPLANTB1F_ESCAPE_ROPE
 	const EVENT_GOT_CERULEAN_DIG
 
+	const EVENT_GOT_ROUTE_2_SCOPE_LENS
+	const EVENT_GOT_ROUTE_11_AMULET_COIN
+	const EVENT_GOT_ROUTE_15_PP_UP
+	const EVENT_ROUTE_6_HIDDEN_HP_UP
+
+
 
 ; Unused: next 286 events
 
@@ -1156,7 +1162,7 @@
 
 
 
-; Unused: next 108 events
+; Unused: next 80 events
 
 	const_next 1600
 ; Sprite visibility flags

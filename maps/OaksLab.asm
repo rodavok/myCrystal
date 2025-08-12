@@ -32,7 +32,6 @@ Oak:
 .CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
-	special ProfOaksPCBoot
 	checkevent EVENT_GOT_151_OAK_MON
     iffalse .CheckCaughtMons
 	writetext OakLabGoodbyeText

@@ -7,7 +7,30 @@ Route2Gate_MapScripts:
 	def_callbacks
 
 Route2GateScientistScript:
-	jumptextfaceplayer Route2GateScientistText
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_ROUTE_2_SCOPE_LENS
+	iftrue .GotScopeLens
+	writetext Route2GateScientistText
+	waitbutton
+	readvar VAR_DEXCAUGHT
+	ifgreater 125, .GiveScopeLens
+	writetext LessThan125Text
+	waitbutton
+	closetext
+	end
+.GiveScopeLens:
+	writetext WowMoreThan125Text
+	promptbutton
+	verbosegiveitem SCOPE_LENS
+	iffalse .NoRoom
+	setevent EVENT_GOT_ROUTE_2_SCOPE_LENS
+.GotScopeLens:
+	writetext GotScopeLensText
+	waitbutton
+.NoRoom:
+	closetext 
+	end
 
 Route2GateScientistText:
 	text "Are you <PLAY_G>?"
@@ -15,12 +38,41 @@ Route2GateScientistText:
 	para "I work as PROF."
 	line "OAK's AIDE."
 
-	para "I had no idea that"
-	line "you were out here."
+	para "I was told to give"
+	line "you this when"
+	cont "you've caught at"
 
-	para "PROF.OAK's LAB is"
-	line "nearby in PALLET"
-	cont "TOWN."
+	para "least 125 kinds"
+	line "of #MON."
+
+	para "Let's see how many"
+	line "#MON you've"
+	cont "caught…"
+	done
+
+WowMoreThan125Text:
+	text "Wow! You've caught"
+	line "more than 125"
+	cont "kinds of #MON!"
+
+	para "Please take this!"
+	done
+
+LessThan125Text:
+	text "It looks like you"
+	line "haven't caught"
+	cont "enough #MON…"
+	done
+
+
+GotScopeLensText:
+	text "The SCOPE LENS is"
+	line "sure to give you"
+	cont "an edge in battle."
+
+	para "PROF. OAK has many"
+	line "assistants. Keep"
+	cont "an eye out for us!"
 	done
 
 	

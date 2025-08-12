@@ -37,7 +37,28 @@ _AnimateTileset::
 
 Tileset0Anim:
 TilesetViridianForestAnim:
+	dw vTiles2 tile $14, AnimateWaterTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
 TilesetJohtoModernAnim:
+	dw vTiles2 tile $14, AnimateWaterTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateFlowerTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
 TilesetKantoAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
@@ -47,6 +68,12 @@ TilesetKantoAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
 	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateLavaBubbleTile2
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateLavaBubbleTile1
 	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation

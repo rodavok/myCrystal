@@ -2,6 +2,9 @@
 	const ROUTE20_SWIMMER_GIRL1
 	const ROUTE20_SWIMMER_GIRL2
 	const ROUTE20_SWIMMER_GUY
+	const ROUTE20_YOUNGSTER
+	const ROUTE20_SWIMMER_GIRL3
+	const ROUTE20_SWIMMER_GUY2
 
 Route20_MapScripts:
 	def_scene_scripts
@@ -45,6 +48,91 @@ TrainerSwimmermCameron:
 	waitbutton
 	closetext
 	end
+
+TrainerBirdkeeperBuddy:
+	trainer BIRD_KEEPER, BUDDY, EVENT_BEAT_BIRDKEEPER_BUDDY, BirdkeeperBuddySeenText, BirdkeeperBuddyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BirdkeeperBuddyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerSwimmerfAlia:
+	trainer SWIMMERF, ALIA, EVENT_BEAT_SWIMMERF_ALIA, SwimmerfAliaSeenText, SwimmerfAliaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerfAliaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerSwimmermSteve:
+	trainer SWIMMERM, STEVE, EVENT_BEAT_SWIMMERM_STEVE, SwimmermSteveSeenText, SwimmermSteveBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermSteveAfterBattleText
+	waitbutton
+	closetext
+	end
+
+BirdkeeperBuddySeenText:
+	text "Ho ho ho! My bird"
+	line "#MON carried" 
+	cont "me here!"
+	done
+
+BirdkeeperBuddyBeatenText:
+	text "Brrr! Ice cold!"
+	done
+
+BirdkeeperBuddyAfterBattleText:
+	text "I flew here on"
+	line "my DELIBIRD."
+
+	para "Rumor has it that"
+	line "an even stronger"
+	cont "ICE #MON"
+
+	para "lives in the"
+	line "depths of SEAFOAM"
+	cont "ISLANDS."
+	done
+
+SwimmerfAliaSeenText:
+	text "I'm c-c-cold!"
+	done
+
+SwimmerfAliaBeatenText:
+	text "I'm all washed up!"
+	done
+
+SwimmerfAliaAfterBattleText:
+	text "Cold water training"
+	line "builds character!"
+	cont "Try it sometime!"
+	done
+
+SwimmermSteveSeenText:
+	text "SEAFOAM ISLANDS"
+	line "are freezing cold!"
+	done
+
+SwimmermSteveBeatenText:
+	text "Sunk like a stone!"
+	done
+
+SwimmermSteveAfterBattleText:
+	text "The currents around"
+	line "these caves are"
+	cont "really strong!"
+	done
 
 CinnabarGymSign:
 	jumptext CinnabarGymSignText
@@ -125,4 +213,7 @@ Route20_MapEvents:
 	def_object_events
 	object_event 77,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNicole, -1
 	object_event 67, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfLori, -1
-	object_event 15, 13, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCameron, -1
+	object_event 15, 13, SPRITE_SWIMMER_GUY,  SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCameron, -1
+	object_event 52,  2, SPRITE_YOUNGSTER,    SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdkeeperBuddy, -1
+	object_event 36, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfAlia, -1
+	object_event 21,  5, SPRITE_SWIMMER_GUY,  SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermSteve, -1

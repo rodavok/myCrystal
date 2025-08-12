@@ -232,6 +232,89 @@ CarefulSwimmingSignText:
 	para "FUCHSIA POLICE"
 	done
 
+
+Route19SwimmerfHildaScript:
+	trainer SWIMMERF, HILDA, EVENT_BEAT_SWIMMERF_HILDA, SwimmerfHildaSeenText, SwimmerfHildaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerfHildaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+Route19SwimmermYangScript:
+	trainer SWIMMERM, YANG, EVENT_BEAT_SWIMMERM_YANG, SwimmermYangSeenText, SwimmermYangBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermYangAfterBattleText
+	waitbutton
+	closetext
+	end
+
+Route19SwimmermLewisScript:
+	trainer SWIMMERM, LEWIS, EVENT_BEAT_SWIMMERM_LEWIS, SwimmermLewisSeenText, SwimmermLewisBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermLewisAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SwimmerfHildaSeenText:
+	text "Eek! Something"
+	line "bit me!"
+	done
+
+SwimmerfHildaBeatenText:
+	text "You're stronger"
+	line "than the current!"
+	done
+
+SwimmerfHildaAfterBattleText:
+	text "We're far from the"
+	line "mainland."
+	
+	para "It's scary being"
+	line "this far out."
+	done
+
+SwimmermYangSeenText:
+	text "The water's great!"
+	line "Want to battle?"
+	done
+
+SwimmermYangBeatenText:
+	text "Whoa! Nice moves!"
+	done
+
+SwimmermYangAfterBattleText:
+	text "WATER #MON are"
+	line "perfect for ocean"
+	cont "swimming trips."
+	done
+
+SwimmermLewisSeenText:
+	text "I swim here every"
+	line "day for exercise!"
+	done
+
+SwimmermLewisBeatenText:
+	text "You're stronger"
+	line "than the current!"
+	done
+
+SwimmermLewisAfterBattleText:
+	text "Swimming builds"
+	line "endurance for"
+	cont "#MON battles!"
+	done
+
 Route19_MapEvents:
 	db 0, 0 ; filler
 
@@ -251,3 +334,7 @@ Route19_MapEvents:
 	object_event  8, 27, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSwimmermTucker, -1
 	object_event  9,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 1, Route19Fisher1Script, -1
 	object_event 11,  5, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, Route19Fisher2Script, -1
+	object_event  5, 31, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, Route19SwimmerfHildaScript, -1
+	object_event 14, 46, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, Route19SwimmermYangScript, -1
+	object_event  1, 43, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, Route19SwimmermLewisScript, -1
+

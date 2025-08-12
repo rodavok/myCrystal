@@ -220,7 +220,7 @@ TeacherDaphneSeenText:
 	done
 
 TeacherDaphneBeatenText:
-	text "A+ performance!"
+	text "A plus!"
 	done
 
 TeacherDaphneAfterBattleText:
@@ -239,9 +239,9 @@ Route11_MapEvents:
 
 	def_warp_events
 	warp_event  43,   8, ROUTE_11_GATE, 1
-    warp_event  43,   9, ROUTE_11_GATE, 2 
-    warp_event  50,   8, ROUTE_11_GATE, 3
-    warp_event  50,   9, ROUTE_11_GATE, 4
+	warp_event  43,   9, ROUTE_11_GATE, 2
+	warp_event  50,   8, ROUTE_11_GATE, 3
+	warp_event  50,   9, ROUTE_11_GATE, 4
 
 
 	def_coord_events
@@ -257,7 +257,7 @@ Route11_MapEvents:
 	object_event 31,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicHerman, -1
 	object_event 10,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicFidel, -1
 	object_event 44,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1
-	object_event  0,  0, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherBettie, -1
-	object_event  0,  1, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSupernerdDexter, -1
-	object_event  0,  2, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherDaphne, -1
+	object_event 16, 11, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherBettie, -1
+	object_event 17,  0, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSupernerdDexter, -1
+	object_event 38, 14, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerTeacherDaphne, -1
 
