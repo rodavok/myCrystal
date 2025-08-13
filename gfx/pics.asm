@@ -359,7 +359,6 @@ GruntmPic:           INCBIN "gfx/trainers/grunt_m.2bpp.lz"
 GloomBackpic:        INCBIN "gfx/pokemon/gloom/back.2bpp.lz"
 MagcargoBackpic:     INCBIN "gfx/pokemon/magcargo/back.2bpp.lz"
 KabutopsBackpic:     INCBIN "gfx/pokemon/kabutops/back.2bpp.lz"
-BeedrillBackpic:     INCBIN "gfx/pokemon/beedrill/back.2bpp.lz"
 ArcanineBackpic:     INCBIN "gfx/pokemon/arcanine/back.2bpp.lz"
 FlareonBackpic:      INCBIN "gfx/pokemon/flareon/back.2bpp.lz"
 GoldeenBackpic:      INCBIN "gfx/pokemon/goldeen/back.2bpp.lz"
@@ -412,6 +411,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
+
 
 
 SECTION "Pics 14", ROMX
@@ -572,6 +572,7 @@ PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
 UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
 
 
+
 SECTION "Pics 17", ROMX
 
 ParasBackpic:        INCBIN "gfx/pokemon/paras/back.2bpp.lz"
@@ -717,6 +718,8 @@ YanmatoFrontpic: INCBIN "gfx/pokemon/yanmato/front.animated.2bpp.lz"
 YanmatoBackpic:  INCBIN "gfx/pokemon/yanmato/back.2bpp.lz"
 MediumPic:       INCBIN "gfx/trainers/medium.2bpp.lz"
 ZapdosBackpic:       INCBIN "gfx/pokemon/zapdos/back.2bpp.lz"
+BeedrillBackpic:     INCBIN "gfx/pokemon/beedrill/back.2bpp.lz"
+
 
 
 

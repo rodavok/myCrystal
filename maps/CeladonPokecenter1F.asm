@@ -88,6 +88,16 @@ CeladonPokecenter1FPharmacistText:
 
 	para "Oh, wait. That was"
 	line "three years ago."
+
+	para "Word is that it's"
+	line "been replaced by a"
+	 
+	para "new adults-only"
+	line "gaming lounge."
+
+	para "A kid like you"
+	line "wouldn't be"
+	cont "allowed in."
 	done
 
 CeladonEusineText1:

@@ -303,6 +303,7 @@ DEF BUG_CONTESTANT_SIZE EQU 4
 	const HEALMACHINE_POKECENTER   ; 0
 	const HEALMACHINE_ELMS_LAB     ; 1
 	const HEALMACHINE_HALL_OF_FAME ; 2
+	const HEALMACHINE_KANTO_POKECENTER ; 3
 
 ; UnownPuzzle setval arguments
 ; LoadUnownPuzzlePiecesGFX.LZPointers indexes (see engine/games/unown_puzzle.asm)

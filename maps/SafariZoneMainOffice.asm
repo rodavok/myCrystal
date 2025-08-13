@@ -89,13 +89,14 @@ FuchsiaTutorScript:
 
 Fuchsiaaskteachamovetext:
 	text "I can teach your"
-	line "#MON moves that"
+	line "#MON moves "
 
-	para "affect STATS."
-	line "Would you like"
-
-	para "me to teach a"
-	line "new move?"
+	para "cause various"
+	line "STATUS effects."
+	
+	para "Would you like"
+	line "me to teach a"
+	cont "new move?"
 	done
 
 
