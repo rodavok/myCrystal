@@ -117,7 +117,15 @@ PokecenterNurseScript:
 	pause 10
 	special HealParty
 	playmusic MUSIC_NONE
+
+	; Check if player is in Kanto and set appropriate heal machine animation
+	; call IsInJohto
+	; iffalse .johto_pokecenter
+	setval HEALMACHINE_KANTO_POKECENTER
+	sjump .heal_animation
+.johto_pokecenter
 	setval HEALMACHINE_POKECENTER
+.heal_animation
 	special HealMachineAnim
 	pause 30
 	special RestartMapMusic

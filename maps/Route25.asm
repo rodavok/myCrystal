@@ -13,6 +13,8 @@
 	const ROUTE25_SUICUNE
 	const ROUTE25_COOLTRAINER_F
 	const ROUTE25_COOLTRAINER_M3
+	const ROUTE25_SLOWBRO
+	const ROUTE25_SKARMORY
 
 Route25_MapScripts:
 	def_scene_scripts
@@ -264,6 +266,39 @@ Route25SuicuneBattleScript:
 	pause 20
 	playmapmusic
 	end
+
+Route25SlowbroBattleScript:
+	opentext
+	writetext SurpriseText
+	cry SLOWBRO
+	pause 20
+	closetext
+	loadwildmon SLOWBRO, 100
+	loadvar VAR_BATTLETYPE, BATTLETYPE_BOSS_WILDMON
+	startbattle
+	dontrestartmapmusic
+	disappear ROUTE25_SLOWBRO
+	reloadmapafterbattle
+	pause 20
+	playmapmusic
+	end
+
+Route25SkarmoryBattleScript:
+	opentext
+	writetext SurpriseText
+	cry SKARMORY
+	pause 20
+	closetext
+	loadwildmon SKARMORY, 100
+	loadvar VAR_BATTLETYPE, BATTLETYPE_BOSS_WILDMON
+	startbattle
+	dontrestartmapmusic
+	disappear ROUTE25_SKARMORY
+	reloadmapafterbattle
+	pause 20
+	playmapmusic
+	end
+
 
 SurpriseText:
 	text "...!"
@@ -544,5 +579,9 @@ Route25_MapEvents:
 	object_event 60,  9, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route25SuicuneBattleScript, EVENT_FOUGHT_SSUICUNE
 	object_event 47,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermHunter, -1
 	object_event 49,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerfAlexa, -1
+	object_event 59,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route25SlowbroBattleScript, -1
+	object_event 61,  9, SPRITE_BIRD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route25SkarmoryBattleScript, -1
+
+
 
 

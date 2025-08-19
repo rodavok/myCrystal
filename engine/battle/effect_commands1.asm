@@ -4956,6 +4956,8 @@ BattleCommand_ForceSwitch:
 	jp z, .fail
 	cp BATTLETYPE_SUICUNE
 	jp z, .fail
+	cp BATTLETYPE_BOSS_WILDMON
+	jp z, .fail
 	ldh a, [hBattleTurn]
 	and a
 	jp nz, .force_player_switch

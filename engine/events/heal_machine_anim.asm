@@ -16,6 +16,7 @@ HealMachineAnim:
 	; 0: Up and left (Pokemon Center)
 	; 1: Left (Elm's Lab)
 	; 2: Up (Hall of Fame)
+	; 3: Up and left, but not that up or left (Kanto Pokemon Center)
 	ld a, [wScriptVar]
 	ld [wHealMachineAnimType], a
 	ldh a, [rOBP1]
@@ -58,6 +59,7 @@ HealMachineAnim:
 	dw .Pokecenter
 	dw .ElmsLab
 	dw .HallOfFame
+	dw .KantoPokecenter
 
 MACRO healmachineanimseq
 	rept _NARG
@@ -72,6 +74,8 @@ ENDM
 	healmachineanimseq LOADGFX, PCLOADBALLS, PLAYMUSIC, FINISH
 .HallOfFame:
 	healmachineanimseq LOADGFX, HOFLOADBALLS, HOFPLAYSFX, FINISH
+.KantoPokecenter:
+	healmachineanimseq LOADGFX, PCLOADBALLS, PLAYMUSIC, FINISH
 
 .Jumptable:
 ; entries correspond to HEALMACHINESTATE_* constants
@@ -234,14 +238,16 @@ INCLUDE "gfx/overworld/heal_machine.pal"
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
 	ret
-
 .PlaceHealingMachineTile:
 	push bc
 	ld a, [wHealMachineAnimType]
 	bcpixel 2, 4
 	cp HEALMACHINE_ELMS_LAB
 	jr z, .okay
-	bcpixel 0, 0
+	bcpixel 2, 1  ; Kanto Pokemon Center offset (down and right)
+	cp HEALMACHINE_KANTO_POKECENTER
+	jr z, .okay
+	bcpixel 0, 0  ; Default (regular Pokemon Center and Hall of Fame)
 
 .okay
 	ld a, [de]

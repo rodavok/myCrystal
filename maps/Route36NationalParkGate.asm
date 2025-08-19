@@ -464,10 +464,6 @@ BugCatchingContestant10BScript:
 	closetext
 	end
 
-UnusedBugCatchingContestExplanationSign: ; unreferenced
-; duplicate of BugCatchingContestExplanationSign in Route35NationalParkGate.asm
-	jumptext UnusedBugCatchingContestExplanationText
-
 Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	big_step DOWN
 	big_step RIGHT
@@ -796,38 +792,38 @@ BugCatchingContestant10BStillCompetingText:
 	line "win."
 	done
 
-UnusedSilphScope2Text: ; unreferenced
-; This text is referring to Sudowoodo.
-; The SILPHSCOPE2 was later reworked into the SQUIRTBOTTLE.
-	text "I hear there's a"
-	line "#MON that looks"
-	cont "just like a tree."
+; UnusedSilphScope2Text: ; unreferenced
+; ; This text is referring to Sudowoodo.
+; ; The SILPHSCOPE2 was later reworked into the SQUIRTBOTTLE.
+; 	text "I hear there's a"
+; 	line "#MON that looks"
+; 	cont "just like a tree."
 
-	para "You can reveal its"
-	line "identity using a"
-	cont "SILPHSCOPE 2."
-	done
+; 	para "You can reveal its"
+; 	line "identity using a"
+; 	cont "SILPHSCOPE 2."
+; 	done
 
-UnusedBugCatchingContestExplanationText:
-; duplicate of BugCatchingContestExplanationText in Route35NationalParkGate.asm
-	text "The Bug-Catching"
-	line "Contest is held on"
+; UnusedBugCatchingContestExplanationText:
+; ; duplicate of BugCatchingContestExplanationText in Route35NationalParkGate.asm
+; 	text "The Bug-Catching"
+; 	line "Contest is held on"
 
-	para "Tuesday, Thursday"
-	line "and Saturday."
+; 	para "Tuesday, Thursday"
+; 	line "and Saturday."
 
-	para "Not only do you"
-	line "earn a prize just"
+; 	para "Not only do you"
+; 	line "earn a prize just"
 
-	para "for participating,"
-	line "you also get to"
+; 	para "for participating,"
+; 	line "you also get to"
 
-	para "keep the bug"
-	line "#MON you may"
+; 	para "keep the bug"
+; 	line "#MON you may"
 
-	para "have at the end of"
-	line "the contest."
-	done
+; 	para "have at the end of"
+; 	line "the contest."
+; 	done
 
 Route36NationalParkGateOfficer1WellHoldPrizeText:
 	text "Uh-oh… Your PACK"
@@ -884,4 +880,4 @@ Route36NationalParkGate_MapEvents:
 	object_event  6,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9BScript, EVENT_BUG_CATCHING_CONTESTANT_9B
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
 	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36NationalParkGateOfficerScript, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
-	object_event  5,  1, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Pipin, ENGINE_DAILY_BUG_CONTEST ; Should only appear on contest days, after the contest is over
+	object_event  6,  1, SPRITE_TWIN, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Pipin, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY

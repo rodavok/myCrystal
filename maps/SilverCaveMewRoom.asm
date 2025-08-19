@@ -28,7 +28,7 @@ Mew:
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEW
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGENDARY
 	loadwildmon MEW, 50
 	startbattle
 	disappear SILVER_CAVE_MEW_ROOM_MEW

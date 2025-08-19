@@ -133,104 +133,104 @@ SGB_ApplyPartyMenuHPPals:
 	ld [hl], e
 	ret
 
-Intro_LoadMagikarpPalettes: ; unreferenced
-	call CheckCGB
-	ret z
+; Intro_LoadMagikarpPalettes: ; unreferenced
+; 	call CheckCGB
+; 	ret z
 
-; CGB only
-	ld hl, .MagikarpBGPal
-	ld de, wBGPals1
-	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
+; ; CGB only
+; 	ld hl, .MagikarpBGPal
+; 	ld de, wBGPals1
+; 	ld bc, 1 palettes
+; 	ld a, BANK(wBGPals1)
+; 	call FarCopyWRAM
 
-	ld hl, .MagikarpOBPal
-	ld de, wOBPals1
-	ld bc, 1 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
+; 	ld hl, .MagikarpOBPal
+; 	ld de, wOBPals1
+; 	ld bc, 1 palettes
+; 	ld a, BANK(wOBPals1)
+; 	call FarCopyWRAM
 
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
+; 	call ApplyPals
+; 	ld a, TRUE
+; 	ldh [hCGBPalUpdate], a
+; 	ret
 
-.MagikarpBGPal:
-INCLUDE "gfx/intro/gs_magikarp_bg.pal"
+; .MagikarpBGPal:
+; INCLUDE "gfx/intro/gs_magikarp_bg.pal"
 
-.MagikarpOBPal:
-INCLUDE "gfx/intro/gs_magikarp_ob.pal"
+; .MagikarpOBPal:
+; INCLUDE "gfx/intro/gs_magikarp_ob.pal"
 
-Intro_LoadAllPal0: ; unreferenced
-	call CheckCGB
-	ret nz
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, BlkPacket_AllPal0
-	jp PushSGBPals
+; Intro_LoadAllPal0: ; unreferenced
+; 	call CheckCGB
+; 	ret nz
+; 	ldh a, [hSGB]
+; 	and a
+; 	ret z
+; 	ld hl, BlkPacket_AllPal0
+; 	jp PushSGBPals
 
-Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_BetaIntroVenusaur
-	jp PushSGBPals
+; Intro_LoadBetaIntroVenusaurPalettes: ; unreferenced
+; 	call CheckCGB
+; 	jr nz, .cgb
+; 	ldh a, [hSGB]
+; 	and a
+; 	ret z
+; 	ld hl, PalPacket_BetaIntroVenusaur
+; 	jp PushSGBPals
 
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
+; .cgb
+; 	ld de, wOBPals1
+; 	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
+; 	call GetPredefPal
+; 	jp LoadHLPaletteIntoDE
 
-Intro_LoadPackPalettes: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_Pack
-	jp PushSGBPals
+; Intro_LoadPackPalettes: ; unreferenced
+; 	call CheckCGB
+; 	jr nz, .cgb
+; 	ldh a, [hSGB]
+; 	and a
+; 	ret z
+; 	ld hl, PalPacket_Pack
+; 	jp PushSGBPals
 
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
+; .cgb
+; 	ld de, wOBPals1
+; 	ld a, PREDEFPAL_PACK
+; 	call GetPredefPal
+; 	jp LoadHLPaletteIntoDE
 
-GSIntro_LoadMonPalette: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld a, c
-	push af
-	ld hl, PalPacket_Pal01
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop af
-	call GetMonPalettePointer
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hl]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	jp PushSGBPals
+; GSIntro_LoadMonPalette: ; unreferenced
+; 	call CheckCGB
+; 	jr nz, .cgb
+; 	ldh a, [hSGB]
+; 	and a
+; 	ret z
+; 	ld a, c
+; 	push af
+; 	ld hl, PalPacket_Pal01
+; 	ld de, wSGBPals
+; 	ld bc, PALPACKET_LENGTH
+; 	call CopyBytes
+; 	pop af
+; 	call GetMonPalettePointer
+; 	ld a, [hli]
+; 	ld [wSGBPals + 3], a
+; 	ld a, [hli]
+; 	ld [wSGBPals + 4], a
+; 	ld a, [hli]
+; 	ld [wSGBPals + 5], a
+; 	ld a, [hl]
+; 	ld [wSGBPals + 6], a
+; 	ld hl, wSGBPals
+; 	jp PushSGBPals
 
-.cgb
-	ld de, wOBPals1
-	ld a, c
-	call GetMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-	ret
+; .cgb
+; 	ld de, wOBPals1
+; 	ld a, c
+; 	call GetMonPalettePointer
+; 	call LoadPalette_White_Col1_Col2_Black
+; 	ret
 
 LoadTrainerClassPaletteAsNthBGPal:
 	ld a, [wTrainerClass]
@@ -268,35 +268,35 @@ LoadNthMiddleBGPal:
 	call LoadPalette_White_Col1_Col2_Black
 	ret
 
-LoadBetaPokerPalettes: ; unreferenced
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wBetaPokerSGBPals
-	jp PushSGBPals
+; LoadBetaPokerPalettes: ; unreferenced
+; 	ldh a, [hCGB]
+; 	and a
+; 	jr nz, .cgb
+; 	ld hl, wBetaPokerSGBPals
+; 	jp PushSGBPals
 
-.cgb
-	ld a, [wBetaPokerSGBCol]
-	ld c, a
-	ld a, [wBetaPokerSGBRow]
-	hlcoord 0, 0, wAttrmap
-	ld de, SCREEN_WIDTH
-.loop
-	and a
-	jr z, .done
-	add hl, de
-	dec a
-	jr .loop
+; .cgb
+; 	ld a, [wBetaPokerSGBCol]
+; 	ld c, a
+; 	ld a, [wBetaPokerSGBRow]
+; 	hlcoord 0, 0, wAttrmap
+; 	ld de, SCREEN_WIDTH
+; .loop
+; 	and a
+; 	jr z, .done
+; 	add hl, de
+; 	dec a
+; 	jr .loop
 
-.done
-	ld b, 0
-	add hl, bc
-	lb bc, 6, 4
-	ld a, [wBetaPokerSGBAttr]
-	and $3
-	call FillBoxCGB
-	call CopyTilemapAtOnce
-	ret
+; .done
+; 	ld b, 0
+; 	add hl, bc
+; 	lb bc, 6, 4
+; 	ld a, [wBetaPokerSGBAttr]
+; 	and $3
+; 	call FillBoxCGB
+; 	call CopyTilemapAtOnce
+; 	ret
 
 ApplyMonOrTrainerPals:
 	call CheckCGB

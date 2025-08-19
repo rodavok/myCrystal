@@ -3767,6 +3767,8 @@ TryToRunAwayFromBattle:
 	jp z, .cant_escape
 	cp BATTLETYPE_SUICUNE
 	jp z, .cant_escape
+	cp BATTLETYPE_BOSS_WILDMON
+	jp z, .cant_escape
 
 	ld a, [wLinkMode]
 	and a
@@ -6126,8 +6128,13 @@ LoadEnemyMon:
 ; Used for Ho-Oh, Lugia and Snorlax encounters
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
+	jr z, .forceitem
+	cp BATTLETYPE_HO_OH
+	jr nz, .SkipForceItem
+	.forceitem
 	ld a, [wBaseItem1]
 	jr z, .UpdateItem
+	.SkipForceItem
 
 ; Failing that, it's all up to chance
 ;  Effective chances:

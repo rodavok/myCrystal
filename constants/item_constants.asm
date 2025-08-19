@@ -325,6 +325,7 @@ DEF MT01 EQU const_value
 	;add_mt MIRROR_MOVE
 	;add_mt LICK
 	;add_mt SWEET_KISS
+	;add_mt PAIN_SPLIT
 
 	;Cherrygrove
 	add_mt CHARM

@@ -215,6 +215,11 @@ PokeBallEffect:
 	dec a
 	jp nz, UseBallInTrainerBattle
 
+	; Check if this is a BATTLETYPE_BOSS_WILDMON battle
+	ld a, [wBattleType]
+	cp BATTLETYPE_BOSS_WILDMON
+	jp z, UseBallInTrainerBattle
+
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
 	jr nz, .room_in_party

@@ -64,6 +64,20 @@ PlayBattleMusic:
 	jp z, .done
 	cp BATTLETYPE_ROAMING
 	jp z, .done
+	cp BATTLETYPE_HO_OH
+	ld de, MUSIC_HOOH_BATTLE
+	jp z, .done
+	cp BATTLETYPE_LUGIA
+	ld de, MUSIC_LUGIA_BATTLE
+	jp z, .done
+	cp BATTLETYPE_MEWTWO
+	ld de, MUSIC_MEWTWO_BATTLE
+	jp z, .done
+	cp BATTLETYPE_KANTO_LEGENDARY
+	ld de, MUSIC_RBY_WILD_BATTLE  
+	jp z, .done
+	cp BATTLETYPE_BOSS_WILDMON
+	jp z, .done
 
 	; Are we fighting a trainer?
 	ld a, [wOtherTrainerClass]

@@ -47,7 +47,7 @@ Zapdos:
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_ZAPDOS
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadvar VAR_BATTLETYPE, BATTLETYPE_KANTO_LEGENDARY
 	loadwildmon ZAPDOS, 45
 	startbattle
 	disappear POWERPLANT_ZAPDOS

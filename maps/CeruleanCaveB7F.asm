@@ -33,7 +33,7 @@ Mewtwo:
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEWTWO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadvar VAR_BATTLETYPE, BATTLETYPE_MEWTWO
 	loadwildmon MEWTWO, 75
 	startbattle
 	disappear CERULEAN_CAVE_MEWTWO
