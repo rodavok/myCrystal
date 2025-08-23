@@ -337,7 +337,7 @@ DEF MT01 EQU const_value
 	add_mt TELEPORT ;gen 1 tm
 	add_mt DRAGON_RAGE
 	add_mt METRONOME    ;gen 1 tm
-	add_mt RAZOR_WIND ; gen 1 tm
+	add_mt PAIN_SPLIT; hgss move tutor
 
 	;Goldenrod
 	add_mt BUBBLEBEAM	;gen 1 tm

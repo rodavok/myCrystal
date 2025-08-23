@@ -466,7 +466,7 @@ AzaleaTutorScript:
 	ifequal 1, .Teleport
 	ifequal 2, .DragonRage
 	ifequal 3, .Metronome
-	ifequal 4, .RazorWind
+	ifequal 4, .PainSplit
 	sjump .Incompatible
 
 .Teleport:
@@ -490,8 +490,8 @@ AzaleaTutorScript:
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
-.RazorWind:
-	setval RAZOR_WIND
+.PainSplit:
+	setval PAIN_SPLIT
 	writetext AzaleaTutorMoveText
 	special MoveTutor
 	ifequal FALSE, .TeachMove
@@ -529,7 +529,7 @@ AzaleaTutorScript:
 	db "TELEPORT@"
 	db "DRAGON RAGE@"
 	db "METRONOME@"
-	db "RAZOR WIND@"
+	db "PAIN SPLIT@"
 	db "CANCEL@"
 
 azaleaaskteachamovetext:
