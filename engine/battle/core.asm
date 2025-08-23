@@ -3768,7 +3768,7 @@ TryToRunAwayFromBattle:
 	cp BATTLETYPE_SUICUNE
 	jp z, .cant_escape
 	cp BATTLETYPE_BOSS_WILDMON
-	jp z, .cant_escape
+	jp z, .cant_run_from_mon
 
 	ld a, [wLinkMode]
 	and a
@@ -3919,6 +3919,9 @@ TryToRunAwayFromBattle:
 
 .cant_run_from_trainer
 	ld hl, BattleText_TheresNoEscapeFromTrainerBattle
+
+.cant_run_from_mon
+	ld hl, BattleText_CantEscapeFromThisMon
 
 .print_inescapable_text
 	call StdBattleTextbox

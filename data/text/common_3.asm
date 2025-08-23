@@ -1378,6 +1378,16 @@ _BallDontBeAThiefText::
 	text "Don't be a thief!"
 	prompt
 
+_BallBlockedByMonText::
+	text "The #MON"
+	line "blocked the BALL!"
+	prompt
+
+_BallCantBeCaughtText::
+	text "This #MON"
+	line "can't be caught!"
+	prompt
+
 _NoCyclingText::
 	text "Cycling isn't"
 	line "allowed here."

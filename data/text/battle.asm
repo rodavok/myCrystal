@@ -265,6 +265,11 @@ BattleText_TheresNoEscapeFromTrainerBattle:
 	scroll "trainer battle!"
 	prompt
 
+BattleText_CantEscapeFromThisMon:
+	text "Can't escape from"
+	line "this #MON!"
+	prompt
+
 BattleText_GotAwaySafely:
 	text "Got away safely!"
 	prompt

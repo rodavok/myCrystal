@@ -218,7 +218,7 @@ PokeBallEffect:
 	; Check if this is a BATTLETYPE_BOSS_WILDMON battle
 	ld a, [wBattleType]
 	cp BATTLETYPE_BOSS_WILDMON
-	jp z, UseBallInTrainerBattle
+	jp z, UseBallInBossPKMNBattle
 
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
@@ -2627,6 +2627,24 @@ UseBallInTrainerBattle:
 	call PrintText
 	jr UseDisposableItem
 
+UseBallInBossPKMNBattle:
+	call ReturnToBattle_UseBall
+	ld de, ANIM_THROW_POKE_BALL
+	ld a, e
+	ld [wFXAnimID], a
+	ld a, d
+	ld [wFXAnimID + 1], a
+	xor a
+	ld [wBattleAnimParam], a
+	ldh [hBattleTurn], a
+	ld [wNumHits], a
+	predef PlayBattleAnim
+	ld hl, BallBlockedByMonText
+	call PrintText
+	ld hl, BallCantBeCaughtText
+	call PrintText
+	jr UseDisposableItem
+
 WontHaveAnyEffect_NotUsedMessage:
 	ld hl, ItemWontHaveEffectText
 	call PrintText
@@ -2705,6 +2723,14 @@ BallBlockedText:
 
 BallDontBeAThiefText:
 	text_far _BallDontBeAThiefText
+	text_end
+
+BallBlockedByMonText:
+	text_far _BallBlockedByMonText
+	text_end
+
+BallCantBeCaughtText:
+	text_far _BallCantBeCaughtText
 	text_end
 
 NoCyclingText:
